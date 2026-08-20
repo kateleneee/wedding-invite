@@ -10,6 +10,8 @@ import ChurchOutlinedIcon from "@mui/icons-material/ChurchOutlined";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import ArrowOutwardRoundedIcon from "@mui/icons-material/ArrowOutwardRounded";
 import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";
+import church from "../assets/images/church1.jpg";
+import reception from "../assets/images/reception.png";
 
 const colors = {
   powderBlue: "#DCEBF3",
@@ -26,7 +28,7 @@ const venues = [
     type: "CEREMONY",
     title: "Sta. Rita de Cascia Parish (Diocese of Cubao)",
     subtitle: "Church",
-    image: "/images/church1.jpg",
+    image: church,
 
     address:
       "Sta. Rita De Cascia Church, GXHX+F3M, Quirino Ave, Baclaran, Parañaque, 1702 Kalakhang Maynila",
@@ -41,7 +43,7 @@ const venues = [
     type: "RECEPTION",
     title: "Sta. Rita de Cascia Parish Building",
     subtitle: "Reception",
-    image: "/images/reception.png",
+    image: reception,
     address:
       "3rd Floor, Sta. Rita de Cascia Parish Building, Phil-Am Homes, Quezon City, Metro Manila",
 

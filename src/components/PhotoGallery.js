@@ -9,30 +9,36 @@ import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
 
 import "./PhotoGallery.css";
+import photo1 from "../assets/images/photo1.jpg";
+import photo2 from "../assets/images/photo2.jpg";
+import photo3 from "../assets/images/photo3.jpg";
+import photo4 from "../assets/images/photo4.jpg";
+import photo5 from "../assets/images/photo5.jpg";
+
 
 const photos = [
   {
-    src: "/images/photo1.jpg",
+    src: photo1,
     caption: "Where it all began",
     rotation: "-4deg",
   },
   {
-    src: "/images/photo2.jpg",
+    src: photo2,
     caption: "Little adventures",
     rotation: "3deg",
   },
   {
-    src: "/images/photo3.jpg",
+    src: photo3,
     caption: "Our favorite people",
     rotation: "-2deg",
   },
   {
-    src: "/images/photo4.jpg",
+    src: photo4,
     caption: "Just us",
     rotation: "5deg",
   },
   {
-    src: "/images/photo5.jpg",
+    src: photo5,
     caption: "Making memories",
     rotation: "-3deg",
   },
