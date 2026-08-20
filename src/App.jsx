@@ -12,6 +12,9 @@ import {
   Users,
   ArrowLeft,
 } from "lucide-react";
+import Fab from "@mui/material/Fab";
+import Tooltip from "@mui/material/Tooltip";
+import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 
 import "./App2.css";
 
@@ -144,13 +147,47 @@ function App() {
 
           {/* BACK TO ENVELOPE */}
 
-          <button
+          {/* <button
             className="back-envelope-button"
             onClick={handleBackToEnvelope}
           >
             <ArrowLeft size={17} />
             <span>Back to envelope</span>
-          </button>
+          </button> */}
+
+          <Tooltip title="Back to envelope" placement="left">
+            <Fab
+              aria-label="Back to envelope"
+              onClick={handleBackToEnvelope}
+              sx={{
+                position: "fixed",
+                right: { xs: 16, sm: 24 },
+                bottom: { xs: 16, sm: 24 },
+                zIndex: 999,
+
+                width: { xs: 48, sm: 56 },
+                height: { xs: 48, sm: 56 },
+
+                backgroundColor: "#c7dce8",
+                color: "#435c68",
+
+                boxShadow:
+                  "0 8px 25px rgba(67, 83, 91, 0.20)",
+
+                "&:hover": {
+                  backgroundColor: "#b8d2df",
+                  boxShadow:
+                    "0 12px 30px rgba(67, 83, 91, 0.25)",
+                },
+
+                "&:active": {
+                  transform: "scale(0.95)",
+                },
+              }}
+            >
+              <ArrowBackRoundedIcon />
+            </Fab>
+          </Tooltip>
 
           {/* HERO */}
 
@@ -169,9 +206,9 @@ function App() {
             </p>
 
             <h1 className="couple-name">
-              Sofia
+              Daniel
               <span>&</span>
-              Miguel
+              Kaylene
             </h1>
 
             <p className="hero-description">
@@ -584,7 +621,7 @@ function App() {
             />
 
             <h2>
-              Sofia & Miguel
+              Daniel & Kaylene
             </h2>
 
             <p>
@@ -592,7 +629,7 @@ function App() {
             </p>
 
             <small>
-              #SofiaAndMiguel
+              #DanielAndKaylene
             </small>
 
           </footer>
