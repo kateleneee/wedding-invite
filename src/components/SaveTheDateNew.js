@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Box, Container, Typography, Stack } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 
 import ChurchOutlinedIcon from "@mui/icons-material/ChurchOutlined";
 import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
