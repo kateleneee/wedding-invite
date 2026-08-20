@@ -1,8 +1,6 @@
 import { useState } from "react";
 import {
   CalendarDays,
-  Clock,
-  MapPin,
   Heart,
   ChevronDown,
   ExternalLink,
@@ -10,7 +8,6 @@ import {
   Gift,
   Camera,
   Users,
-  ArrowLeft,
 } from "lucide-react";
 import Fab from "@mui/material/Fab";
 import Tooltip from "@mui/material/Tooltip";
@@ -19,8 +16,8 @@ import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 import "./App2.css";
 import Envelope from "./components/Envelope";
 import PhotoGallery from "./components/PhotoGallery";
-import SaveTheDate from "./components/SaveTheDate";
-import SaveTheDateTimer from "./components/SaveTheDateTimer";
+// import SaveTheDate from "./components/SaveTheDate";
+// import SaveTheDateTimer from "./components/SaveTheDateTimer";
 import SaveTheDateNew from "./components/SaveTheDateNew";
 import WeddingDetails from "./components/WeddingDetails";
 import { TimerOutlined } from "@mui/icons-material";
