@@ -1,3 +1,6 @@
+import envelope from "../assets/images/envelope.png";
+import waxSeal from "./assets/images/wax-seal.png";
+
 function Envelope({ handleOpen }) {
   return (
 
@@ -20,14 +23,14 @@ function Envelope({ handleOpen }) {
           <div className="envelope-image-wrapper">
 
             <img
-              src="../assets/images/envelope.png"
+              src={envelope}
               alt="Wedding invitation envelope"
               className="envelope-image"
             />
 
             <div className="wax-seal">
               <img
-                src="/images/wax-seal.png"
+                src={waxSeal}
                 alt=""
                 className="wax-seal-image"
               />
