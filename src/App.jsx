@@ -43,6 +43,18 @@ function App() {
       target: "story",
     },
     {
+      title: "Gallery",
+      subtitle: "A few favorite moments",
+      icon: <Camera size={24} />,
+      target: "gallery",
+    },
+    {
+      title: "Timeline",
+      subtitle: "A few favorite moments",
+      icon: <TimerOutlined size={24} />,
+      target: "timeline",
+    },
+    {
       title: "Entourage",
       subtitle: "Our favorite people",
       icon: <Users size={24} />,
@@ -59,18 +71,6 @@ function App() {
       subtitle: "Your presence is enough",
       icon: <Gift size={24} />,
       target: "gifts",
-    },
-    {
-      title: "Gallery",
-      subtitle: "A few favorite moments",
-      icon: <Camera size={24} />,
-      target: "gallery",
-    },
-    {
-      title: "Timeline",
-      subtitle: "A few favorite moments",
-      icon: <TimerOutlined size={24} />,
-      target: "timeline",
     },
   ];
 
@@ -405,6 +405,50 @@ function App() {
 
           </section>
 
+          {/* GALLERY */}
+
+          {/* <section
+            id="gallery"
+            className="section gallery-section"
+          >
+
+            <div className="section-label">
+              OUR MOMENTS
+            </div>
+
+            <h2>
+              A little glimpse
+              <br />
+              of us
+            </h2>
+
+            <div className="gallery-grid">
+
+              <div className="gallery-item">
+                PHOTO 01
+              </div>
+
+              <div className="gallery-item">
+                PHOTO 02
+              </div>
+
+              <div className="gallery-item">
+                PHOTO 03
+              </div>
+
+              <div className="gallery-item">
+                PHOTO 04
+              </div>
+
+            </div>
+
+          </section> */}
+          <PhotoGallery />
+
+          {/* TIMELINE */}
+          <WeddingTimeline />
+
+
           {/* ENTOURAGE */}
 
           <section
@@ -547,48 +591,6 @@ function App() {
 
           </section>
 
-          {/* GALLERY */}
-
-          {/* <section
-            id="gallery"
-            className="section gallery-section"
-          >
-
-            <div className="section-label">
-              OUR MOMENTS
-            </div>
-
-            <h2>
-              A little glimpse
-              <br />
-              of us
-            </h2>
-
-            <div className="gallery-grid">
-
-              <div className="gallery-item">
-                PHOTO 01
-              </div>
-
-              <div className="gallery-item">
-                PHOTO 02
-              </div>
-
-              <div className="gallery-item">
-                PHOTO 03
-              </div>
-
-              <div className="gallery-item">
-                PHOTO 04
-              </div>
-
-            </div>
-
-          </section> */}
-          <PhotoGallery />
-
-          {/* TIMELINE */}
-          <WeddingTimeline />
 
           {/* FOOTER */}
 
