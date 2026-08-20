@@ -25,6 +25,7 @@ import SaveTheDateNew from "./components/SaveTheDateNew";
 import WeddingDetails from "./components/WeddingDetails";
 import { TimerOutlined } from "@mui/icons-material";
 import WeddingTimeline from "./components/WeddingTimeline";
+import WeddingPlaylist from "./components/WeddingPlaylist";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -61,11 +62,18 @@ function App() {
       target: "entourage",
     },
     {
+      title: "Wedding playlist",
+      subtitle: "A few songs close to our hearts",
+      icon: <Gift size={24} />,
+      target: "playlist",
+    },
+    {
       title: "RSVP",
       subtitle: "We'd love to celebrate with you",
       icon: <Mail size={24} />,
       target: "rsvp",
     },
+
     {
       title: "Gift Guide",
       subtitle: "Your presence is enough",
@@ -503,6 +511,9 @@ function App() {
             </div>
 
           </section>
+
+          {/* WEDDING PLAYLIST */}
+          <WeddingPlaylist />
 
           {/* RSVP */}
 

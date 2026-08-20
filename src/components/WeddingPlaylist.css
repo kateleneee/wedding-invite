@@ -1,0 +1,56 @@
+.playlist-float {
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  pointer-events: none;
+}
+
+.playlist-note {
+  animation: playlistFloat 4s ease-in-out infinite alternate;
+}
+
+.playlist-heart {
+  animation: playlistHeart 3.5s ease-in-out infinite alternate;
+}
+
+.playlist-star {
+  animation: playlistSparkle 2.8s ease-in-out infinite alternate;
+}
+
+@keyframes playlistFloat {
+  from {
+    transform: translateY(0) rotate(-8deg);
+  }
+
+  to {
+    transform: translateY(-15px) rotate(8deg);
+  }
+}
+
+@keyframes playlistHeart {
+  from {
+    transform: translateY(0) rotate(-10deg);
+  }
+
+  to {
+    transform: translateY(12px) rotate(8deg);
+  }
+}
+
+@keyframes playlistSparkle {
+  from {
+    transform: scale(0.8) rotate(0deg);
+    opacity: 0.25;
+  }
+
+  to {
+    transform: scale(1.15) rotate(30deg);
+    opacity: 0.7;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .playlist-float {
+    animation: none;
+  }
+}
