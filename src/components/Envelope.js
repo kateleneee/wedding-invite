@@ -20,7 +20,7 @@ function Envelope({ handleOpen }) {
           <div className="envelope-image-wrapper">
 
             <img
-              src="/images/envelope.png"
+              src="../assets/images/envelope.png"
               alt="Wedding invitation envelope"
               className="envelope-image"
             />
