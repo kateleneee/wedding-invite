@@ -1,0 +1,220 @@
+.timeline-page {
+  isolation: isolate;
+}
+
+/* =========================================
+   FLOATING DECORATIONS
+========================================= */
+
+.timeline-float {
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.timeline-float-1 {
+  animation-name: floatOne;
+  animation-duration: 4s;
+}
+
+.timeline-float-2 {
+  animation-name: sparkle;
+  animation-duration: 2.8s;
+}
+
+.timeline-float-3 {
+  animation-name: ribbonFloat;
+  animation-duration: 5s;
+}
+
+.timeline-float-4 {
+  animation-name: floatTwo;
+  animation-duration: 4.5s;
+}
+
+.timeline-float-5 {
+  animation-name: sparkle;
+  animation-duration: 3.2s;
+}
+
+
+/* =========================================
+   TIMELINE LINE
+========================================= */
+
+.hand-drawn-line {
+  position: relative;
+  min-height: 60px;
+
+  background: transparent !important;
+}
+
+/*
+  Creates a slightly imperfect
+  hand-drawn looking line.
+*/
+
+.hand-drawn-line::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 2px;
+  height: 100%;
+
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      #D3B84C 0px,
+      #D3B84C 8px,
+      transparent 8px,
+      transparent 12px
+    );
+
+  transform:
+    translateX(-50%)
+    rotate(1deg);
+
+  opacity: 0.65;
+}
+
+
+/* =========================================
+   TIMELINE DOT
+========================================= */
+
+.timeline-dot {
+  animation:
+    gentlePulse
+    3s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================================
+   EVENT CARDS
+========================================= */
+
+.timeline-event-card {
+  transform-origin: center bottom;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes floatOne {
+  from {
+    transform:
+      translateY(0)
+      rotate(-12deg);
+  }
+
+  to {
+    transform:
+      translateY(-12px)
+      rotate(8deg);
+  }
+}
+
+
+@keyframes floatTwo {
+  from {
+    transform:
+      translateY(0)
+      rotate(10deg);
+  }
+
+  to {
+    transform:
+      translateY(-15px)
+      rotate(-8deg);
+  }
+}
+
+
+@keyframes ribbonFloat {
+  from {
+    transform:
+      translateY(0)
+      rotate(-5deg);
+  }
+
+  to {
+    transform:
+      translateY(18px)
+      rotate(8deg);
+  }
+}
+
+
+@keyframes sparkle {
+  0% {
+    opacity: 0.25;
+    transform:
+      scale(0.85)
+      rotate(0deg);
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 0.3;
+    transform:
+      scale(1.15)
+      rotate(25deg);
+  }
+}
+
+
+@keyframes gentlePulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .hand-drawn-line::before {
+    transform:
+      translateX(-50%)
+      rotate(0.5deg);
+  }
+
+  .timeline-event-card {
+    box-shadow:
+      4px 5px 0 currentColor;
+  }
+}
+
+
+/* =========================================
+   REDUCE MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-float,
+  .timeline-dot {
+    animation: none;
+  }
+
+  .timeline-event-card {
+    transition: none;
+  }
+}

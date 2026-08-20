@@ -21,6 +21,10 @@ import Envelope from "./components/Envelope";
 import PhotoGallery from "./components/PhotoGallery";
 import SaveTheDate from "./components/SaveTheDate";
 import SaveTheDateTimer from "./components/SaveTheDateTimer";
+import SaveTheDateNew from "./components/SaveTheDateNew";
+import WeddingDetails from "./components/WeddingDetails";
+import { TimerOutlined } from "@mui/icons-material";
+import WeddingTimeline from "./components/WeddingTimeline";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -61,6 +65,12 @@ function App() {
       subtitle: "A few favorite moments",
       icon: <Camera size={24} />,
       target: "gallery",
+    },
+    {
+      title: "Timeline",
+      subtitle: "A few favorite moments",
+      icon: <TimerOutlined size={24} />,
+      target: "timeline",
     },
   ];
 
@@ -170,14 +180,14 @@ function App() {
               their wedding day
             </p>
 
-            <div className="hero-date">
+            {/* <div className="hero-date">
               <span>25</span>
 
               <div>
                 <small>DECEMBER</small>
                 <strong>2026</strong>
               </div>
-            </div>
+            </div> */}
 
             <button
               className="scroll-button"
@@ -330,8 +340,12 @@ function App() {
             </a>
 
           </section> */}
-          <SaveTheDate />
-          <SaveTheDateTimer />
+          {/* <SaveTheDate /> */}
+          {/* <SaveTheDateTimer /> */}
+          <SaveTheDateNew />
+
+          {/* WEDDING DETAILS*/}
+          <WeddingDetails />
 
 
           {/* STORY */}
@@ -342,9 +356,14 @@ function App() {
           >
 
             <div className="story-image">
-              <div className="image-placeholder">
+              {/* <div className="image-placeholder">
                 YOUR PHOTO
-              </div>
+              </div> */}
+              <img
+                src={'/images/engagement1.jpg'}
+                alt={"engagement"}
+                className="lightbox-image"
+              />
             </div>
 
             <div className="story-content">
@@ -410,7 +429,7 @@ function App() {
                   Parents of the Bride
                 </h3>
                 <p>
-                  Juan & Maria Santos
+                  Joel & Edna Panlilio
                 </p>
               </div>
 
@@ -419,21 +438,21 @@ function App() {
                   Parents of the Groom
                 </h3>
                 <p>
-                  Pedro & Ana Cruz
+                  Monico & Susan Bolibol
                 </p>
               </div>
 
               <div className="entourage-group">
                 <h3>Maid of Honor</h3>
                 <p>
-                  Isabella Santos
+                  Katelene Panlilio
                 </p>
               </div>
 
               <div className="entourage-group">
                 <h3>Best Man</h3>
                 <p>
-                  Daniel Cruz
+                  Joshua Soriano
                 </p>
               </div>
 
@@ -567,6 +586,9 @@ function App() {
 
           </section> */}
           <PhotoGallery />
+
+          {/* TIMELINE */}
+          <WeddingTimeline />
 
           {/* FOOTER */}
 
