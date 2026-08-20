@@ -17,6 +17,10 @@ import Tooltip from "@mui/material/Tooltip";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 
 import "./App2.css";
+import Envelope from "./components/Envelope";
+import PhotoGallery from "./components/PhotoGallery";
+import SaveTheDate from "./components/SaveTheDate";
+import SaveTheDateTimer from "./components/SaveTheDateTimer";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -94,48 +98,7 @@ function App() {
       ================================= */}
 
       {!opened && (
-        <main className="envelope-screen">
-          <div className="background-flower flower-one">
-            ✿
-          </div>
-
-          <div className="background-flower flower-two">
-            ✽
-          </div>
-
-          <div className="envelope-wrapper">
-
-            <button
-              className="envelope-button"
-              onClick={handleOpen}
-              aria-label="Open wedding invitation"
-            >
-              <div className="envelope-image-wrapper">
-
-                <img
-                  src="/images/envelope.png"
-                  alt="Wedding invitation envelope"
-                  className="envelope-image"
-                />
-
-                <div className="wax-seal">
-                  <img
-                    src="/images/wax-seal.png"
-                    alt=""
-                    className="wax-seal-image"
-                  />
-                </div>
-
-              </div>
-            </button>
-
-            <div className="open-text">
-              {/* <ChevronDown size={16} /> */}
-              <span>Click to open</span>
-            </div>
-
-          </div>
-        </main>
+        <Envelope handleOpen={handleOpen} />
       )}
 
       {/* ================================
@@ -144,16 +107,6 @@ function App() {
 
       {opened && (
         <main className="invite">
-
-          {/* BACK TO ENVELOPE */}
-
-          {/* <button
-            className="back-envelope-button"
-            onClick={handleBackToEnvelope}
-          >
-            <ArrowLeft size={17} />
-            <span>Back to envelope</span>
-          </button> */}
 
           <Tooltip title="Back to envelope" placement="left">
             <Fab
@@ -218,10 +171,10 @@ function App() {
             </p>
 
             <div className="hero-date">
-              <span>15</span>
+              <span>25</span>
 
               <div>
-                <small>NOVEMBER</small>
+                <small>DECEMBER</small>
                 <strong>2026</strong>
               </div>
             </div>
@@ -300,7 +253,7 @@ function App() {
 
           {/* WEDDING */}
 
-          <section
+          {/* <section
             id="wedding"
             className="section wedding-section"
           >
@@ -336,7 +289,7 @@ function App() {
                 <span>DATE</span>
 
                 <strong>
-                  Sunday, November 15
+                  Wednesday, December 2
                 </strong>
               </div>
 
@@ -376,7 +329,10 @@ function App() {
               <ExternalLink size={16} />
             </a>
 
-          </section>
+          </section> */}
+          <SaveTheDate />
+          <SaveTheDateTimer />
+
 
           {/* STORY */}
 
@@ -574,7 +530,7 @@ function App() {
 
           {/* GALLERY */}
 
-          <section
+          {/* <section
             id="gallery"
             className="section gallery-section"
           >
@@ -609,7 +565,8 @@ function App() {
 
             </div>
 
-          </section>
+          </section> */}
+          <PhotoGallery />
 
           {/* FOOTER */}
 
