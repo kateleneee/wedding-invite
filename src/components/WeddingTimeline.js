@@ -16,7 +16,7 @@ import MusicNoteRoundedIcon from "@mui/icons-material/MusicNoteRounded";
 import AutoAwesomeRoundedIcon from "@mui/icons-material/AutoAwesomeRounded";
 import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
 import CelebrationRoundedIcon from "@mui/icons-material/CelebrationRounded";
-import LocalFloristRoundedIcon from "@mui/icons-material/LocalFloristRounded";
+// import LocalFloristRoundedIcon from "@mui/icons-material/LocalFloristRounded";
 
 import "./WeddingTimeline.css";
 
