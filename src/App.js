@@ -23,7 +23,7 @@ import WeddingDetails from "./components/WeddingDetails";
 import { TimerOutlined } from "@mui/icons-material";
 import WeddingTimeline from "./components/WeddingTimeline";
 import WeddingPlaylist from "./components/WeddingPlaylist";
-import engagement from "../assets/images/engagement.png";
+import engagement from "./assets/images/engagement1.jpg";
 
 function App() {
   const [opened, setOpened] = useState(false);
