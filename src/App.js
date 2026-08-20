@@ -23,6 +23,7 @@ import WeddingDetails from "./components/WeddingDetails";
 import { TimerOutlined } from "@mui/icons-material";
 import WeddingTimeline from "./components/WeddingTimeline";
 import WeddingPlaylist from "./components/WeddingPlaylist";
+import engagement from "../assets/images/engagement.png";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -365,7 +366,7 @@ function App() {
                 YOUR PHOTO
               </div> */}
               <img
-                src={'/images/engagement1.jpg'}
+                src={engagement}
                 alt={"engagement"}
                 className="lightbox-image"
               />
