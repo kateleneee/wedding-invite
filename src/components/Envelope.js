@@ -1,5 +1,6 @@
 import envelope from "../assets/images/envelope.png";
-import waxSeal from "./assets/images/wax-seal.png";
+import waxSeal from "../assets/images/wax-seal.png";
+
 
 function Envelope({ handleOpen }) {
   return (
