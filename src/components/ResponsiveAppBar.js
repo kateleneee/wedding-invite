@@ -108,11 +108,12 @@ export default function ResponsiveAppBar() {
                     background: "transparent",
                     cursor: "pointer",
                     color: "#66727A",
-                    px: 2,
-                    py: 1,
-                    fontFamily: "inherit",
-                    fontSize: "0.9rem",
-                    letterSpacing: "0.05em",
+                    p: 1,
+                    // fontFamily: "inherit",
+                    fontFamily: "'Cormorant Garamond', serif",
+                    fontWeight: 700,
+                    // fontSize: "1.1rem",
+                    letterSpacing: "0.03em",
                     transition: "all 0.2s ease",
 
                     "&:hover": {
@@ -121,7 +122,9 @@ export default function ResponsiveAppBar() {
                     },
                   }}
                 >
+                  {/* <Typography> */}
                   {item.label}
+                  {/* </Typography> */}
                 </Box>
               ))}
             </Box>
@@ -152,10 +155,11 @@ export default function ResponsiveAppBar() {
         }}
         PaperProps={{
           sx: {
-            width: { xs: "80%", sm: 320 },
+            width: { xs: "82%", sm: 320 },
             maxWidth: 360,
             backgroundColor: "#FAF9F0",
             color: "#66727A",
+            boxShadow: "-8px 0 30px rgba(67, 83, 91, 0.12)",
           },
         }}
       >
@@ -165,8 +169,8 @@ export default function ResponsiveAppBar() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            px: 2,
-            py: 1.5,
+            px: 3,
+            py: 2,
             borderBottom: "1px solid rgba(94, 118, 144, 0.15)",
           }}
         >
@@ -176,6 +180,7 @@ export default function ResponsiveAppBar() {
               fontSize: "1.4rem",
               fontWeight: 600,
               color: "#5E7690",
+              // letterSpacing: "0.08em",
             }}
           >
             D & K
@@ -183,7 +188,6 @@ export default function ResponsiveAppBar() {
 
           <IconButton
             onClick={handleDrawerToggle}
-            aria-label="close navigation menu"
             sx={{
               color: "#5E7690",
             }}
@@ -192,8 +196,8 @@ export default function ResponsiveAppBar() {
           </IconButton>
         </Box>
 
-        {/* Drawer Navigation */}
-        <List sx={{ px: 1, py: 2 }}>
+        {/* Navigation */}
+        <List sx={{ px: 2, }}>
           {menuItems.map((item) => (
             <ListItem
               key={item.id}
@@ -204,22 +208,26 @@ export default function ResponsiveAppBar() {
                 onClick={() => handleNavigation(item.id)}
                 sx={{
                   borderRadius: 2,
-                  py: 1.5,
                   px: 2,
-
                   "&:hover": {
+                    backgroundColor: "rgba(220, 235, 243, 0.65)",
+                  },
+                  "&:active": {
                     backgroundColor: "#DCEBF3",
                   },
                 }}
               >
                 <ListItemText
                   primary={item.label}
-                  primaryTypographyProps={{
-                    sx: {
-                      fontFamily: "'Cormorant Garamond', serif",
-                      fontSize: "1.1rem",
-                      color: "#66727A",
-                      letterSpacing: "0.03em",
+                  slotProps={{
+                    primary: {
+                      sx: {
+                        fontWeight: 700,
+                        fontFamily: "'Cormorant Garamond', serif",
+                        fontSize: "1.1rem",
+                        color: "#5E7690",
+                        letterSpacing: "0.03em",
+                      }
                     },
                   }}
                 />
