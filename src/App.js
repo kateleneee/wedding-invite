@@ -1,13 +1,13 @@
 import { useState } from "react";
 import {
-  CalendarDays,
+  // CalendarDays,
   Heart,
   ChevronDown,
   ExternalLink,
-  Mail,
+  // Mail,
   Gift,
-  Camera,
-  Users,
+  // Camera,
+  // Users,
 } from "lucide-react";
 import Fab from "@mui/material/Fab";
 import Tooltip from "@mui/material/Tooltip";
@@ -20,7 +20,7 @@ import PhotoGallery from "./components/PhotoGallery";
 // import SaveTheDateTimer from "./components/SaveTheDateTimer";
 import SaveTheDateNew from "./components/SaveTheDateNew";
 import WeddingDetails from "./components/WeddingDetails";
-import { TimerOutlined } from "@mui/icons-material";
+// import { TimerOutlined } from "@mui/icons-material";
 import WeddingTimeline from "./components/WeddingTimeline";
 import WeddingPlaylist from "./components/WeddingPlaylist";
 import engagement from "./assets/images/engagement1.jpg";
@@ -29,57 +29,57 @@ import ResponsiveAppBar from "./components/ResponsiveAppBar";
 function App() {
   const [opened, setOpened] = useState(false);
 
-  const links = [
-    {
-      title: "The Wedding",
-      subtitle: "When & where",
-      icon: <CalendarDays size={24} />,
-      target: "wedding",
-    },
-    {
-      title: "Our Story",
-      subtitle: "How it all began",
-      icon: <Heart size={24} />,
-      target: "story",
-    },
-    {
-      title: "Gallery",
-      subtitle: "A few favorite moments",
-      icon: <Camera size={24} />,
-      target: "gallery",
-    },
-    {
-      title: "Timeline",
-      subtitle: "A few favorite moments",
-      icon: <TimerOutlined size={24} />,
-      target: "timeline",
-    },
-    {
-      title: "Entourage",
-      subtitle: "Our favorite people",
-      icon: <Users size={24} />,
-      target: "entourage",
-    },
-    {
-      title: "Our Songs",
-      subtitle: "A few songs close to our hearts",
-      icon: <Gift size={24} />,
-      target: "playlist",
-    },
-    {
-      title: "RSVP",
-      subtitle: "We'd love to celebrate with you",
-      icon: <Mail size={24} />,
-      target: "rsvp",
-    },
+  // const links = [
+  //   {
+  //     title: "The Wedding",
+  //     subtitle: "When & where",
+  //     icon: <CalendarDays size={24} />,
+  //     target: "wedding",
+  //   },
+  //   {
+  //     title: "Our Story",
+  //     subtitle: "How it all began",
+  //     icon: <Heart size={24} />,
+  //     target: "story",
+  //   },
+  //   {
+  //     title: "Gallery",
+  //     subtitle: "A few favorite moments",
+  //     icon: <Camera size={24} />,
+  //     target: "gallery",
+  //   },
+  //   {
+  //     title: "Timeline",
+  //     subtitle: "A few favorite moments",
+  //     icon: <TimerOutlined size={24} />,
+  //     target: "timeline",
+  //   },
+  //   {
+  //     title: "Entourage",
+  //     subtitle: "Our favorite people",
+  //     icon: <Users size={24} />,
+  //     target: "entourage",
+  //   },
+  //   {
+  //     title: "Our Songs",
+  //     subtitle: "A few songs close to our hearts",
+  //     icon: <Gift size={24} />,
+  //     target: "playlist",
+  //   },
+  //   {
+  //     title: "RSVP",
+  //     subtitle: "We'd love to celebrate with you",
+  //     icon: <Mail size={24} />,
+  //     target: "rsvp",
+  //   },
 
-    {
-      title: "Gift Guide",
-      subtitle: "Your presence is enough",
-      icon: <Gift size={24} />,
-      target: "gifts",
-    },
-  ];
+  //   {
+  //     title: "Gift Guide",
+  //     subtitle: "Your presence is enough",
+  //     icon: <Gift size={24} />,
+  //     target: "gifts",
+  //   },
+  // ];
 
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({
