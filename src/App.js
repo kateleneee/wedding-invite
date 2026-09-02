@@ -24,6 +24,7 @@ import { TimerOutlined } from "@mui/icons-material";
 import WeddingTimeline from "./components/WeddingTimeline";
 import WeddingPlaylist from "./components/WeddingPlaylist";
 import engagement from "./assets/images/engagement1.jpg";
+import ResponsiveAppBar from "./components/ResponsiveAppBar";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -60,7 +61,7 @@ function App() {
       target: "entourage",
     },
     {
-      title: "Wedding playlist",
+      title: "Our Songs",
       subtitle: "A few songs close to our hearts",
       icon: <Gift size={24} />,
       target: "playlist",
@@ -158,9 +159,11 @@ function App() {
             </Fab>
           </Tooltip>
 
+          {/* STICKY APP BAR */}
+          <ResponsiveAppBar />
           {/* HERO */}
 
-          <section className="hero">
+          <section className="hero" id="home">
 
             <div className="hero-decoration top-left">
               ✿
@@ -209,7 +212,7 @@ function App() {
 
           {/* NAVIGATION */}
 
-          <section
+          {/* <section
             id="navigation"
             className="navigation-section"
           >
@@ -265,7 +268,7 @@ function App() {
 
             </div>
 
-          </section>
+          </section> */}
 
           {/* WEDDING */}
 

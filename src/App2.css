@@ -42,10 +42,11 @@ button {
 
 .envelope-screen {
   min-height: 100vh;
+  max-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  /* position: relative;
   overflow: hidden;
   background:
     radial-gradient(
@@ -53,10 +54,10 @@ button {
       rgba(255,255,255,.8),
       transparent 30%
     ),
-    var(--blue);
+    var(--blue); */
 }
 
-.envelope-wrapper {
+/* .envelope-wrapper {
   text-align: center;
   position: relative;
   z-index: 2;
@@ -70,9 +71,9 @@ button {
   position: relative;
   perspective: 1000px;
   transition: transform .3s ease;
-}
+} */
 
-.envelope:hover {
+/* .envelope:hover {
   transform: translateY(-8px);
 }
 
@@ -148,12 +149,12 @@ button {
   justify-content: center;
   align-items: center;
   gap: 5px;
-}
+} */
 
-.background-flower {
+/* .background-flower {
   position: absolute;
   font-size: 150px;
-  color: rgba(255,255,255,.3);
+  color: #F8C8DC;
 }
 
 .flower-one {
@@ -164,18 +165,23 @@ button {
 .flower-two {
   right: -30px;
   top: 50px;
-}
+} */
 
 /* =========================
    GENERAL
 ========================= */
 
 .invite {
-  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
 }
 
 .hero {
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  /* min-height: calc(100vh-64px); */
+  /* height: calc(100vh-64px); */
+  min-height: calc(100vh - 64px);
+  max-height: calc(100vh - 64px);
   background: var(--blue);
   display: flex;
   flex-direction: column;
@@ -184,6 +190,12 @@ button {
   text-align: center;
   position: relative;
   padding: 40px 20px;
+}
+@media (min-width: 900px) {
+  .hero {
+    min-height: calc(100vh - 72px);
+    max-height: calc(100vh - 72px);
+  }
 }
 
 .eyebrow,
@@ -745,7 +757,7 @@ button {
     transform: rotate(360deg);
   }
 }
-.envelope-button {
+/* .envelope-button {
   border: 0;
   padding: 0;
   margin: 0;
@@ -760,9 +772,15 @@ button {
   justify-content: center;
 
   cursor: pointer;
-}
+} */
+.envelope-button:hover .envelope-image-wrapper {
+  transform: translateY(-8px) scale(1.05);
 
-.envelope-image-wrapper {
+  filter: drop-shadow(
+    0 20px 25px rgba(67, 83, 91, 0.18)
+  );
+}
+/* .envelope-image-wrapper {
   width: 360px;
   position: relative;
 
@@ -787,4 +805,5 @@ button {
 
   user-select: none;
   -webkit-user-drag: none;
-}
+} */
+ 
