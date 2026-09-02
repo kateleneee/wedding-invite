@@ -9,20 +9,34 @@ import './Envelope.css'
 // import envelopeBackground from "../assets/images/bg-test-2.jpg";
 // import envelopeBackground from "../assets/images/bg-test-3.jpg";
 import envelopeBackground from "../assets/images/bg-test-4.jpg";
+import { useState } from "react";
 // import envelopeBackground from "../assets/images/bg-test-5.png";
 
 function Envelope({ handleOpen }) {
+  const [isOpening, setIsOpening] = useState(false);
+  const handleEnvelopeClick = () => {
+    setIsOpening(true);
+
+    // Wait for the animation to finish
+    setTimeout(() => {
+      handleOpen();
+    }, 600);
+  };
+
   return (
 
     <main
-      className="envelope-screen"
+      // className="envelope-screen"
+      className={`envelope-screen ${isOpening ? "opening" : ""}`}
       style={{
         backgroundImage: `url(${envelopeBackground})`,
-      }}>
+      }}
+    >
+      <div className="transition-overlay" />
       <div className="envelope-wrapper">
         <button
           className="envelope-button"
-          onClick={handleOpen}
+          onClick={handleEnvelopeClick}
           aria-label="Open wedding invitation"
         >
           <div className="envelope-image-wrapper">

@@ -28,6 +28,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition:
+    opacity 1.2s ease,
+    transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .envelope-image {
@@ -35,6 +38,8 @@
   max-height: 68vh;
   height: auto;
   width: auto;
+ transition:
+    transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* .open-text {
@@ -65,5 +70,49 @@
   cursor: pointer;
   text-transform: uppercase;
   gap: 5px;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
 
+}
+
+/* Background slowly zooms */
+.envelope-screen.opening .envelope-background {
+  opacity: 0;
+  transform: scale(1.08);
+}
+
+/* Envelope comes slightly toward the viewer */
+.envelope-screen.opening .envelope-wrapper {
+  opacity: 0;
+  transform: scale(1.08) translateY(-10px);
+}
+
+/* Button disappears first */
+.envelope-screen.opening .open-text {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+/* Envelope itself expands slightly */
+.envelope-screen.opening .envelope-image {
+  transform: scale(1.08);
+}
+.transition-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: #faf9f0;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  z-index: 10;
+
+  transition: opacity 1.4s ease;
+}
+
+.envelope-screen.opening .transition-overlay {
+  opacity: 1;
 }
