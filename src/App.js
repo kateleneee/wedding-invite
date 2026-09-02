@@ -163,7 +163,7 @@ function App() {
           <ResponsiveAppBar />
           {/* HERO */}
 
-          <section className="hero">
+          <section className="hero" id="home">
 
             <div className="hero-decoration top-left">
               ✿

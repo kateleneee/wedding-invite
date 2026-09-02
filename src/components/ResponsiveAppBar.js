@@ -18,7 +18,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 const menuItems = [
-  { label: "Home", id: "wedding" },
+  { label: "Home", id: "home" },
+  { label: "Wedding", id: "wedding" },
   { label: "Our Story", id: "story" },
   { label: "Gallery", id: "gallery" },
   { label: "Timeline", id: "timeline" },
