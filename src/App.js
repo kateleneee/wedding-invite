@@ -25,6 +25,7 @@ import WeddingTimeline from "./components/WeddingTimeline";
 import WeddingPlaylist from "./components/WeddingPlaylist";
 import engagement from "./assets/images/engagement1.jpg";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
+import SaveTheDate2 from "./components/SaveTheDate2";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -351,6 +352,8 @@ function App() {
           </section> */}
           {/* <SaveTheDate /> */}
           {/* <SaveTheDateTimer /> */}
+
+          <SaveTheDate2 />
           <SaveTheDateNew />
 
           {/* WEDDING DETAILS*/}
