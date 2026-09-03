@@ -7,17 +7,17 @@ import photo3 from "../assets/images/photo3.jpg";
 import photo4 from "../assets/images/photo4.jpg";
 import photo5 from "../assets/images/photo5.jpg";
 import photo6 from "../assets/images/photo6.jpg";
-import photo7 from "../assets/images/KDR-12.jpg";
+// import photo7 from "../assets/images/KDR-12.jpg";
 import photo8 from "../assets/images/KDR-127.jpg";
 import photo9 from "../assets/images/KDR-153.jpg";
 import photo10 from "../assets/images/KDR-158.jpg";
 import photo11 from "../assets/images/KDR-211.jpg";
-import photo12 from "../assets/images/KDR-256.jpg";
+// import photo12 from "../assets/images/KDR-256.jpg";
 import photo13 from "../assets/images/KDR-266.jpg";
 import photo14 from "../assets/images/KDR-273.jpg";
 import photo15 from "../assets/images/KDR-293.jpg";
 import photo16 from "../assets/images/KDR-32.jpg";
-import photo17 from "../assets/images/KDR-37.jpg";
+// import photo17 from "../assets/images/KDR-37.jpg";
 import photo18 from "../assets/images/KDR-376.jpg";
 import photo19 from "../assets/images/KDR-390.jpg";
 import photo20 from "../assets/images/KDR-90.jpg";
@@ -27,14 +27,15 @@ import photo23 from "../assets/images/fb (3).jpg";
 import photo24 from "../assets/images/fb (4).jpg";
 import photo25 from "../assets/images/fb (5).jpg";
 
-function srcset(image, size, rows = 1, cols = 1) {
-  return {
-    src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
-    srcSet: `${image}?w=${size * cols}&h=${
-      size * rows
-    }&fit=crop&auto=format&dpr=2 2x`,
-  };
-}
+// function srcset(image, size, rows = 1, cols = 1) {
+//   return {
+//     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
+//     srcSet: `${image}?w=${size * cols}&h=${
+//       size * rows
+//     }&fit=crop&auto=format&dpr=2 2x`,
+//   };
+// }
+
 export default function PhotoGallery2() {
   return (
     <section id="gallery" className="scrapbook-gallery">
