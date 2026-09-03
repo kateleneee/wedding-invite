@@ -6,7 +6,7 @@ function Landing({
   coverImage,
   firstName = "Daniel",
   secondName = "Kaylene",
-  weddingDate = "December 2, 2026",
+  weddingDate = "Dec 02, 2026",
 }) {
   return (
     <section
@@ -23,43 +23,40 @@ function Landing({
       <div className="landing-frame" aria-hidden="true" />
 
       <div className="landing-content">
-        <p className="landing-eyebrow">Together with their families</p>
+        <div>
+          <p className="landing-eyebrow">The Wedding of</p>
 
-        <h1 className="landing-names">
-          <span>{firstName}</span>
+          <h1 className="landing-names">
+            <span>{firstName}</span>
+            {/* <span>&</span> */}
+            <span className="landing-ampersand">&amp;</span>
 
-          <span className="landing-ampersand">&amp;</span>
+            <span>{secondName}</span>
+          </h1>
+          <p className="landing-eyebrow">{weddingDate}</p>
+        </div>
 
-          <span>{secondName}</span>
-        </h1>
-
-        <p className="landing-date">{weddingDate}</p>
-
-        <p className="landing-invitation">
-          Joyfully invite you to share in the celebration of their wedding day
-        </p>
-        {/* <button
-          className="landing-button"
-          onClick={() =>
-            document.getElementById("wedding")?.scrollIntoView({
-              behavior: "smooth",
-            })
-          }
-        >
-          Explore Our Invitation
-        </button> */}
-        <button
-          className="scroll-button"
-          // onClick={() => scrollToSection("wedding")}
-          onClick={() =>
-            document.getElementById("wedding")?.scrollIntoView({
-              behavior: "smooth",
-            })
-          }
-        >
-          Explore our invitation
-          <ChevronDown size={18} />
-        </button>
+        <div
+          style={{
+            // background: "red",
+            height: 100,
+            display: "flex",
+            flexGrow: 1,
+          }}
+        ></div>
+        <div className="scroll-button-container">
+          <button
+            className="scroll-button"
+            onClick={() =>
+              document.getElementById("wedding")?.scrollIntoView({
+                behavior: "smooth",
+              })
+            }
+          >
+            Explore our invitation
+            <ChevronDown size={18} />
+          </button>
+        </div>
       </div>
     </section>
   );
