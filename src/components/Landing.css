@@ -1,0 +1,207 @@
+.landing {
+  position: relative;
+
+  width: 100%;
+  min-height: calc(100vh - 64px);
+  max-height: calc(100vh - 64px);
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+  isolation: isolate;
+
+  background-color: #2f352d;
+  /* background-image: url("../assets/images/landing-yellow-escolta.png"); */
+  background-image: url("../assets/images/KDR-153.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 900px) {
+  .landing {
+    min-height: calc(100vh - 72px);
+    max-height: calc(100vh - 72px);
+  }
+}
+
+@media (max-width: 700px) {
+  .landing {
+    background-image: url("../assets/images/KDR-153.jpg");
+    background-size: fill;
+    background-position: 70% center;
+  }
+}
+
+.landing-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.landing-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background:
+    linear-gradient(180deg,
+      rgba(18, 24, 18, 0.18) 0%,
+      rgba(18, 24, 18, 0.38) 50%,
+      rgba(18, 24, 18, 0.65) 100%);
+}
+
+.landing-frame {
+  position: absolute;
+  inset: clamp(14px, 3vw, 36px);
+  z-index: 2;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  pointer-events: none;
+}
+
+.landing-frame::before,
+.landing-frame::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+
+  width: clamp(45px, 8vw, 90px);
+  height: 1px;
+
+  background-color: rgba(255, 255, 255, 0.7);
+
+  transform: translateX(-50%);
+}
+
+.landing-frame::before {
+  top: clamp(14px, 2vw, 24px);
+}
+
+.landing-frame::after {
+  bottom: clamp(14px, 2vw, 24px);
+}
+
+.landing-content {
+  position: relative;
+  z-index: 3;
+
+  width: min(88%, 760px);
+
+  padding:
+    clamp(3rem, 8vw, 6rem) clamp(1rem, 4vw, 2rem);
+
+  color: #fffdf8;
+  text-align: center;
+}
+
+.landing-eyebrow {
+  margin: 0 0 clamp(1.25rem, 3vw, 2rem);
+
+  font-family: Arial, sans-serif;
+  font-size: clamp(0.6rem, 1.4vw, 0.8rem);
+  font-weight: 400;
+
+  letter-spacing: clamp(0.18rem, 0.7vw, 0.45rem);
+  line-height: 1.6;
+
+  text-transform: uppercase;
+}
+
+.landing-names {
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(3rem, 11vw, 7.5rem);
+  font-weight: 400;
+  line-height: 0.82;
+
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+}
+
+.landing-ampersand {
+  margin: 0.2em 0;
+
+  font-size: 0.55em;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.landing-date {
+  margin:
+    clamp(1.75rem, 5vw, 3rem) 0 0;
+
+  font-family: Arial, sans-serif;
+  font-size: clamp(0.7rem, 1.8vw, 1rem);
+  font-weight: 400;
+
+  letter-spacing: clamp(0.15rem, 0.6vw, 0.35rem);
+  line-height: 1.5;
+
+  text-transform: uppercase;
+}
+
+.landing-invitation {
+  max-width: 500px;
+
+  margin:
+    clamp(1rem, 3vw, 1.5rem) auto 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1rem, 2.6vw, 1.4rem);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Small-screen adjustments */
+@media (max-width: 480px) {
+  .landing-content {
+    width: 82%;
+
+    .landing-cover {
+      object-position: center;
+    }
+
+    .landing-names {
+      line-height: 0.9;
+    }
+
+    .landing-invitation {
+      max-width: 290px;
+    }
+  }
+}
+
+/* Landscape mobile screens */
+@media (max-height: 600px) and (orientation: landscape) {
+  .landing-content {
+    padding-block: 2rem
+  }
+
+  .landing-names {
+    font-size: clamp(2.5rem, 9vw, 5rem);
+  }
+
+  .landing-eyebrow {
+    margin-bottom: 1rem;
+  }
+
+  .landing-date {
+    margin-top: 1.25rem;
+  }
+}

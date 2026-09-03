@@ -26,6 +26,8 @@ import WeddingPlaylist from "./components/WeddingPlaylist";
 import engagement from "./assets/images/engagement1.jpg";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import SaveTheDate2 from "./components/SaveTheDate2";
+import Landing from "./components/Landing";
+import CoverImage from "./assets/images/landing-yellow-escolta.png";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -159,7 +161,7 @@ function App() {
           <ResponsiveAppBar />
           {/* HERO */}
 
-          <section className="hero" id="home">
+          {/* <section className="hero" id="home">
             <div className="hero-decoration top-left">✿</div>
 
             <div className="hero-decoration top-right">✽</div>
@@ -177,16 +179,6 @@ function App() {
               <br />
               their wedding day
             </p>
-
-            {/* <div className="hero-date">
-              <span>25</span>
-
-              <div>
-                <small>DECEMBER</small>
-                <strong>2026</strong>
-              </div>
-            </div> */}
-
             <button
               className="scroll-button"
               onClick={() => scrollToSection("wedding")}
@@ -194,7 +186,8 @@ function App() {
               Explore our invitation
               <ChevronDown size={18} />
             </button>
-          </section>
+          </section> */}
+          <Landing coverImage={CoverImage} />
 
           {/* NAVIGATION */}
 
