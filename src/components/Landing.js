@@ -1,9 +1,9 @@
-import React from "react";
+// import React from "react";
 import "./Landing.css";
 import { ChevronDown } from "lucide-react";
 
 function Landing({
-  coverImage,
+  // coverImage,
   firstName = "Daniel",
   secondName = "Kaylene",
   weddingDate = "Dec 02, 2026",
