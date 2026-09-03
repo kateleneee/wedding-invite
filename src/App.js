@@ -2,7 +2,7 @@ import { useState } from "react";
 import {
   // CalendarDays,
   Heart,
-  ChevronDown,
+  // ChevronDown,
   ExternalLink,
   // Mail,
   Gift,
@@ -84,11 +84,11 @@ function App() {
   //   },
   // ];
 
-  const scrollToSection = (id) => {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
+  // const scrollToSection = (id) => {
+  //   document.getElementById(id)?.scrollIntoView({
+  //     behavior: "smooth",
+  //   });
+  // };
 
   const handleOpen = () => {
     setOpened(true);
