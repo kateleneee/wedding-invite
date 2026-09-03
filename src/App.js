@@ -32,64 +32,6 @@ import CoverImage from "./assets/images/landing-yellow-escolta.png";
 function App() {
   const [opened, setOpened] = useState(false);
 
-  // const links = [
-  //   {
-  //     title: "The Wedding",
-  //     subtitle: "When & where",
-  //     icon: <CalendarDays size={24} />,
-  //     target: "wedding",
-  //   },
-  //   {
-  //     title: "Our Story",
-  //     subtitle: "How it all began",
-  //     icon: <Heart size={24} />,
-  //     target: "story",
-  //   },
-  //   {
-  //     title: "Gallery",
-  //     subtitle: "A few favorite moments",
-  //     icon: <Camera size={24} />,
-  //     target: "gallery",
-  //   },
-  //   {
-  //     title: "Timeline",
-  //     subtitle: "A few favorite moments",
-  //     icon: <TimerOutlined size={24} />,
-  //     target: "timeline",
-  //   },
-  //   {
-  //     title: "Entourage",
-  //     subtitle: "Our favorite people",
-  //     icon: <Users size={24} />,
-  //     target: "entourage",
-  //   },
-  //   {
-  //     title: "Our Songs",
-  //     subtitle: "A few songs close to our hearts",
-  //     icon: <Gift size={24} />,
-  //     target: "playlist",
-  //   },
-  //   {
-  //     title: "RSVP",
-  //     subtitle: "We'd love to celebrate with you",
-  //     icon: <Mail size={24} />,
-  //     target: "rsvp",
-  //   },
-
-  //   {
-  //     title: "Gift Guide",
-  //     subtitle: "Your presence is enough",
-  //     icon: <Gift size={24} />,
-  //     target: "gifts",
-  //   },
-  // ];
-
-  // const scrollToSection = (id) => {
-  //   document.getElementById(id)?.scrollIntoView({
-  //     behavior: "smooth",
-  //   });
-  // };
-
   const handleOpen = () => {
     setOpened(true);
 
@@ -161,93 +103,9 @@ function App() {
           <ResponsiveAppBar />
           {/* HERO */}
 
-          {/* <section className="hero" id="home">
-            <div className="hero-decoration top-left">✿</div>
-
-            <div className="hero-decoration top-right">✽</div>
-
-            <p className="eyebrow">TOGETHER WITH THEIR FAMILIES</p>
-
-            <h1 className="couple-name">
-              Daniel
-              <span>&</span>
-              Kaylene
-            </h1>
-
-            <p className="hero-description">
-              Joyfully invite you to celebrate
-              <br />
-              their wedding day
-            </p>
-            <button
-              className="scroll-button"
-              onClick={() => scrollToSection("wedding")}
-            >
-              Explore our invitation
-              <ChevronDown size={18} />
-            </button>
-          </section> */}
           <Landing coverImage={CoverImage} />
 
           {/* NAVIGATION */}
-
-          {/* <section
-            id="navigation"
-            className="navigation-section"
-          >
-
-            <div className="section-heading">
-
-              <span>WELCOME</span>
-
-              <h2>
-                We saved a little
-                <br />
-                something for you
-              </h2>
-
-              <p>
-                Tap any card below to explore our
-                wedding details.
-              </p>
-
-            </div>
-
-            <div className="link-grid">
-
-              {links.map((link) => (
-
-                <button
-                  key={link.target}
-                  className="link-card"
-                  onClick={() =>
-                    scrollToSection(link.target)
-                  }
-                >
-
-                  <div className="link-icon">
-                    {link.icon}
-                  </div>
-
-                  <div className="link-text">
-
-                    <h3>{link.title}</h3>
-
-                    <p>
-                      {link.subtitle}
-                    </p>
-
-                  </div>
-
-                  <ExternalLink size={16} />
-
-                </button>
-
-              ))}
-
-            </div>
-
-          </section> */}
 
           {/* WEDDING */}
 
@@ -464,7 +322,6 @@ function App() {
           <WeddingPlaylist />
 
           {/* RSVP */}
-
           <section id="rsvp" className="section rsvp-section">
             <div className="section-label">RSVP</div>
 
@@ -526,9 +383,7 @@ function App() {
             <Heart size={22} fill="currentColor" />
 
             <h2>Daniel & Kaylene</h2>
-
             <p>We can't wait to celebrate with you.</p>
-
             <small>#DanielAndKaylene</small>
           </footer>
         </main>

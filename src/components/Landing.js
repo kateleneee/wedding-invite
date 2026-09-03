@@ -6,7 +6,7 @@ function Landing({
   // coverImage,
   firstName = "Daniel",
   secondName = "Kaylene",
-  weddingDate = "Dec 02, 2026",
+  weddingDate = "02 · December · 2026",
 }) {
   return (
     <section

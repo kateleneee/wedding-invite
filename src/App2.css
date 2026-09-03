@@ -39,23 +39,14 @@ button {
 /* =========================
    ENVELOPE
 ========================= */
-
+/* 
 .envelope-screen {
   min-height: 100vh;
   max-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(
-      circle at 20% 20%,
-      rgba(255,255,255,.8),
-      transparent 30%
-    ),
-    var(--blue); */
-}
+} */
 
 /* .envelope-wrapper {
   text-align: center;
@@ -171,15 +162,12 @@ button {
    GENERAL
 ========================= */
 
-.invite {
+/* .invite {
   width: 100%;
   min-height: 100vh;
-}
+} */
 
-.hero {
-  /* min-height: 100vh; */
-  /* min-height: calc(100vh-64px); */
-  /* height: calc(100vh-64px); */
+/* .hero {
   min-height: calc(100vh - 64px);
   max-height: calc(100vh - 64px);
   background: var(--blue);
@@ -197,9 +185,9 @@ button {
     min-height: calc(100vh - 72px);
     max-height: calc(100vh - 72px);
   }
-}
+} */
 
-.eyebrow,
+/* .eyebrow,
 .section-label {
   font-size: 11px;
   letter-spacing: 3px;
@@ -254,7 +242,7 @@ button {
 .hero-date strong {
   font-family: "Cormorant Garamond";
   font-size: 25px;
-}
+} */
 
 /* .scroll-button {
   background: var(--cream);
@@ -268,7 +256,7 @@ button {
   margin: 2rem auto 0;
 } */
 
-.hero-decoration {
+/* .hero-decoration {
   position: absolute;
   font-size: 100px;
   color: rgba(255, 255, 255, .45);
@@ -282,7 +270,7 @@ button {
 .top-right {
   bottom: 40px;
   right: 40px;
-}
+} */
 
 /* =========================
    NAVIGATION

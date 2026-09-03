@@ -1,14 +1,23 @@
+/* =========================
+   ENVELOPE
+========================= */
 
-/* .envelope-wrapper {
-  position: relative;
-
+.envelope-screen {
+  min-height: 100vh;
+  max-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  z-index: 1;
-} */
+  /* position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(255,255,255,.8),
+      transparent 30%
+    ),
+    var(--blue); */
+}
 
 .envelope-button {
   border: none;
@@ -30,7 +39,7 @@
   align-items: center;
   transition:
     opacity 1.2s ease,
-    transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transform 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .envelope-image {
@@ -38,14 +47,10 @@
   max-height: 68vh;
   height: auto;
   width: auto;
- transition:
+  transition:
     transform 1.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .open-text {
-  margin-top: 20px;
-  text-align: center;
-} */
 .open-text {
   margin-top: 24px;
 
@@ -98,6 +103,7 @@
 .envelope-screen.opening .envelope-image {
   transform: scale(1.08);
 }
+
 .transition-overlay {
   position: absolute;
   inset: 0;
