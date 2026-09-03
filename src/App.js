@@ -15,7 +15,7 @@ import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 
 import "./App2.css";
 import Envelope from "./components/Envelope";
-import PhotoGallery from "./components/PhotoGallery";
+// import PhotoGallery from "./components/PhotoGallery";
 import PhotoGallery2 from "./components/PhotoGallery2";
 // import SaveTheDate from "./components/SaveTheDate";
 // import SaveTheDateTimer from "./components/SaveTheDateTimer";
