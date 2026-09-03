@@ -26,6 +26,7 @@ import photo22 from "../assets/images/fb (2).jpg";
 import photo23 from "../assets/images/fb (3).jpg";
 import photo24 from "../assets/images/fb (4).jpg";
 import photo25 from "../assets/images/fb (5).jpg";
+import "./PhotoGallery.css";
 
 // function srcset(image, size, rows = 1, cols = 1) {
 //   return {
