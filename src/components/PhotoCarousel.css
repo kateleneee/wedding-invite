@@ -1,0 +1,868 @@
+/* =========================================
+   PHOTO CAROUSEL
+========================================= */
+
+.photo-carousel {
+  --blue: #5e7690;
+  --powder-blue: #dcebf3;
+  --light-blue: #eaf5f8;
+  --yellow: #f8ebaa;
+  --gold: #d3b84c;
+  --cream: #fffdf7;
+  --text: #66727a;
+
+  position: relative;
+
+  width: 100%;
+  overflow: hidden;
+
+  padding: 6rem 0 5rem;
+
+  background:
+    radial-gradient(
+      circle at 8% 18%,
+      rgba(196, 224, 237, 0.9) 0%,
+      rgba(220, 235, 243, 0.6) 23%,
+      transparent 48%
+    ),
+    radial-gradient(
+      circle at 92% 75%,
+      rgba(248, 235, 170, 0.75) 0%,
+      rgba(248, 235, 170, 0.3) 23%,
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255, 255, 255, 0.95) 0%,
+      transparent 38%
+    ),
+    linear-gradient(
+      135deg,
+      #e7f3f8 0%,
+      #f6fafb 48%,
+      #e8f3f7 100%
+    );
+}
+
+
+/* =========================================
+   DECORATIVE BACKGROUND CIRCLES
+========================================= */
+
+.photo-carousel::before,
+.photo-carousel::after {
+  content: "";
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+.photo-carousel::before {
+  width: 480px;
+  height: 480px;
+
+  left: -250px;
+  top: 12%;
+
+  border: 1px solid rgba(94, 118, 144, 0.1);
+
+  box-shadow:
+    0 0 0 35px rgba(94, 118, 144, 0.025),
+    0 0 0 75px rgba(94, 118, 144, 0.018),
+    0 0 0 115px rgba(94, 118, 144, 0.012);
+}
+
+.photo-carousel::after {
+  width: 400px;
+  height: 400px;
+
+  right: -210px;
+  bottom: 4%;
+
+  border: 1px solid rgba(211, 184, 76, 0.13);
+
+  box-shadow:
+    0 0 0 35px rgba(211, 184, 76, 0.035),
+    0 0 0 75px rgba(211, 184, 76, 0.02);
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.photo-carousel-container {
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.photo-carousel-header {
+  text-align: center;
+
+  /* margin-bottom: 2.5rem; */
+
+  /* padding: 0 1rem; */
+}
+
+.photo-carousel-eyebrow {
+  display: block;
+
+  margin-bottom: 0.7rem;
+
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 0.65rem;
+  font-weight: 500;
+
+  letter-spacing: 0.3em;
+
+  color: var(--blue);
+}
+
+.photo-carousel-title {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: clamp(2.6rem, 5vw, 3.5rem);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: var(--text);
+}
+
+
+/* =========================================
+   CAROUSEL STAGE
+========================================= */
+
+.photo-carousel-stage {
+  position: relative;
+
+  width: 100%;
+  height: 520px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  perspective: 1400px;
+
+  overflow: visible;
+}
+
+
+/* =========================================
+   SLIDES
+========================================= */
+
+.carousel-slide {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: min(560px, 42vw);
+  height: 390px;
+
+  cursor: pointer;
+
+  transform-origin: center center;
+
+  transition:
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.65s ease,
+    filter 0.65s ease;
+
+  will-change: transform, opacity;
+}
+
+
+/* =========================================
+   ACTIVE SLIDE
+========================================= */
+
+.carousel-slide-active {
+  transform:
+    translate(-50%, -50%)
+    translateX(0)
+    scale(1.04);
+
+  opacity: 1;
+
+  filter: none;
+
+  z-index: 5;
+
+  cursor: default;
+}
+
+
+/* =========================================
+   PREVIOUS SLIDE
+========================================= */
+
+.carousel-slide-prev {
+  transform:
+    translate(-50%, -50%)
+    translateX(-48%)
+    scale(0.76);
+
+  opacity: 0.58;
+
+  filter: saturate(0.75);
+
+  z-index: 3;
+}
+
+
+/* =========================================
+   NEXT SLIDE
+========================================= */
+
+.carousel-slide-next {
+  transform:
+    translate(-50%, -50%)
+    translateX(48%)
+    scale(0.76);
+
+  opacity: 0.58;
+
+  filter: saturate(0.75);
+
+  z-index: 3;
+}
+
+
+/* =========================================
+   HIDDEN SLIDES
+========================================= */
+
+.carousel-slide-hidden {
+  transform:
+    translate(-50%, -50%)
+    scale(0.5);
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   PHOTO FRAME
+========================================= */
+
+.carousel-image-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 12px;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 253, 247, 0.98);
+
+  border: 1px solid rgba(211, 184, 76, 0.65);
+
+  border-radius: 20px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 55px rgba(94, 118, 144, 0.18),
+    0 8px 20px rgba(94, 118, 144, 0.08);
+
+  transition:
+    box-shadow 0.6s ease,
+    border-color 0.6s ease;
+}
+
+
+/* =========================================
+   INNER GOLD FRAME
+========================================= */
+
+.carousel-image-wrapper::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 7px;
+
+  border: 1px solid rgba(211, 184, 76, 0.35);
+
+  border-radius: 15px;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   SOFT IMAGE HIGHLIGHT
+========================================= */
+
+.carousel-image-wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.28),
+      transparent 35%
+    );
+
+  pointer-events: none;
+
+  z-index: 3;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 12px;
+
+  transition:
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.6s ease;
+}
+
+
+/* =========================================
+   ACTIVE IMAGE EFFECT
+========================================= */
+
+.carousel-slide-active
+.carousel-image-wrapper {
+  box-shadow:
+    0 35px 80px rgba(94, 118, 144, 0.25),
+    0 12px 30px rgba(211, 184, 76, 0.12);
+}
+
+.carousel-slide-active
+.carousel-image {
+  transform: scale(1.015);
+}
+
+
+/* =========================================
+   SIDE IMAGE EFFECT
+========================================= */
+
+.carousel-slide-prev
+.carousel-image-wrapper,
+.carousel-slide-next
+.carousel-image-wrapper {
+  box-shadow:
+    0 15px 35px rgba(94, 118, 144, 0.12);
+}
+
+.carousel-slide-prev
+.carousel-image,
+.carousel-slide-next
+.carousel-image {
+  filter: saturate(0.72);
+}
+
+
+/* =========================================
+   ARROWS
+========================================= */
+
+.carousel-arrow {
+  position: absolute;
+
+  top: 50%;
+
+  width: 48px;
+  height: 48px;
+
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform: translateY(-50%);
+
+  border: 1px solid rgba(211, 184, 76, 0.65);
+
+  border-radius: 50%;
+
+  background: rgba(255, 253, 247, 0.94);
+
+  color: var(--blue);
+
+  font-family: Georgia, serif;
+
+  font-size: 1.25rem;
+
+  cursor: pointer;
+
+  z-index: 10;
+
+  box-shadow:
+    0 8px 25px rgba(94, 118, 144, 0.12);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.carousel-arrow:hover {
+  background: var(--blue);
+
+  color: var(--yellow);
+
+  border-color: var(--blue);
+
+  transform:
+    translateY(-50%)
+    scale(1.06);
+
+  box-shadow:
+    0 12px 30px rgba(94, 118, 144, 0.2);
+}
+
+.carousel-arrow:active {
+  transform:
+    translateY(-50%)
+    scale(0.94);
+}
+
+.carousel-arrow-left {
+  left: 7%;
+}
+
+.carousel-arrow-right {
+  right: 7%;
+}
+
+
+/* =========================================
+   CAPTION
+========================================= */
+
+.carousel-caption {
+  width: min(600px, 80%);
+
+  margin: 0 auto;
+
+  text-align: center;
+
+  animation:
+    carouselCaptionEnter
+    0.65s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.carousel-caption h3 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: clamp(1.5rem, 4vw, 3rem);
+
+  font-weight: 400;
+
+  line-height: 1.05;
+
+  color: var(--text);
+}
+
+.carousel-caption-line {
+  width: 42px;
+  height: 1px;
+
+  margin: 0.75rem auto;
+
+  background: var(--gold);
+}
+
+.carousel-caption p {
+  max-width: 520px;
+
+  margin: 0 auto;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: clamp(1rem, 2vw, 1.2rem);
+
+  font-style: italic;
+
+  line-height: 1.5;
+
+  color: #7b8588;
+}
+
+
+/* =========================================
+   CAPTION ANIMATION
+========================================= */
+
+@keyframes carouselCaptionEnter {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================
+   INDICATORS
+========================================= */
+
+.carousel-indicators {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 1.8rem;
+}
+
+.carousel-indicator {
+  width: 7px;
+  height: 7px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(94, 118, 144, 0.3);
+
+  cursor: pointer;
+
+  transition:
+    width 0.35s ease,
+    background 0.35s ease,
+    transform 0.3s ease;
+}
+
+.carousel-indicator:hover {
+  background: var(--blue);
+
+  transform: scale(1.15);
+}
+
+.carousel-indicator-active {
+  width: 24px;
+
+  border-radius: 10px;
+
+  background: var(--gold);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .photo-carousel {
+    padding: 5rem 0 4rem;
+  }
+
+  .photo-carousel-stage {
+    height: 450px;
+  }
+
+  .carousel-slide {
+    width: 48vw;
+    height: 335px;
+  }
+
+  .carousel-slide-prev {
+    transform:
+      translate(-50%, -50%)
+      translateX(-52%)
+      scale(0.72);
+  }
+
+  .carousel-slide-next {
+    transform:
+      translate(-50%, -50%)
+      translateX(52%)
+      scale(0.72);
+  }
+
+  .carousel-arrow-left {
+    left: 3%;
+  }
+
+  .carousel-arrow-right {
+    right: 3%;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .photo-carousel {
+    padding: 4rem 0 3.5rem;
+  }
+
+
+  /* Header */
+
+  .photo-carousel-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .photo-carousel-eyebrow {
+    font-size: 0.55rem;
+
+    letter-spacing: 0.24em;
+  }
+
+  .photo-carousel-title {
+    font-size: 2rem;
+  }
+
+
+  /* Stage */
+
+  .photo-carousel-stage {
+    height: 390px;
+
+    perspective: 1000px;
+  }
+
+
+  /* Slides */
+
+  .carousel-slide {
+    width: 72vw;
+    height: 290px;
+  }
+
+
+  /* Active */
+
+  .carousel-slide-active {
+    transform:
+      translate(-50%, -50%)
+      translateX(0)
+      scale(1);
+  }
+
+
+  /* Previous */
+
+  .carousel-slide-prev {
+    transform:
+      translate(-50%, -50%)
+      translateX(-72%)
+      scale(0.68);
+
+    opacity: 0.35;
+  }
+
+
+  /* Next */
+
+  .carousel-slide-next {
+    transform:
+      translate(-50%, -50%)
+      translateX(72%)
+      scale(0.68);
+
+    opacity: 0.35;
+  }
+
+
+  /* Frame */
+
+  .carousel-image-wrapper {
+    padding: 8px;
+
+    border-radius: 16px;
+  }
+
+  .carousel-image-wrapper::before {
+    inset: 5px;
+
+    border-radius: 12px;
+  }
+
+  .carousel-image {
+    border-radius: 9px;
+  }
+
+
+  /* Arrows */
+
+  .carousel-arrow {
+    width: 38px;
+    height: 38px;
+
+    font-size: 1rem;
+  }
+
+  .carousel-arrow-left {
+    left: 4%;
+  }
+
+  .carousel-arrow-right {
+    right: 4%;
+  }
+
+
+  /* Caption */
+
+  .carousel-caption {
+    width: 82%;
+  }
+
+  .carousel-caption h3 {
+    font-size: 2.1rem;
+  }
+
+  .carousel-caption p {
+    font-size: 1rem;
+
+    line-height: 1.45;
+  }
+
+
+  /* Indicators */
+
+  .carousel-indicators {
+    margin-top: 1.5rem;
+
+    gap: 7px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .photo-carousel {
+    padding-top: 3.5rem;
+  }
+
+  .photo-carousel-title {
+    font-size: 1.9rem;
+  }
+
+  .photo-carousel-stage {
+    height: 350px;
+  }
+
+  .carousel-slide {
+    width: 75vw;
+    height: 250px;
+  }
+
+  .carousel-slide-prev {
+    transform:
+      translate(-50%, -50%)
+      translateX(-75%)
+      scale(0.64);
+  }
+
+  .carousel-slide-next {
+    transform:
+      translate(-50%, -50%)
+      translateX(75%)
+      scale(0.64);
+  }
+
+  .carousel-arrow {
+    width: 34px;
+    height: 34px;
+  }
+
+  .carousel-caption h3 {
+    font-size: 1.9rem;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .carousel-slide,
+  .carousel-image,
+  .carousel-arrow,
+  .carousel-indicator,
+  .carousel-caption {
+    transition: none;
+    animation: none;
+  }
+}

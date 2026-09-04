@@ -25,6 +25,7 @@ import SaveTheDate from "./components/SaveTheDate";
 import Landing from "./components/Landing";
 import CoverImage from "./assets/images/landing-yellow-escolta.png";
 import WeddingCarousel from "./components/Carousel";
+import PhotoCarousel from "./components/PhotoCarousel";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -111,6 +112,9 @@ function App() {
           {/* STORY */}
           <section id="story">
             <WeddingCarousel />
+          </section>
+          <section id="story">
+            <PhotoCarousel />
           </section>
           {/* <section id="story" className="section story-section">
             <div className="story-image">
