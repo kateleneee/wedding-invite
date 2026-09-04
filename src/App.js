@@ -13,7 +13,7 @@ import Fab from "@mui/material/Fab";
 import Tooltip from "@mui/material/Tooltip";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 
-import "./App2.css";
+import "./App.css";
 import Envelope from "./components/Envelope";
 import PhotoGallery2 from "./components/PhotoGallery2";
 import Venues from "./components/Venues";
