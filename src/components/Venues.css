@@ -140,17 +140,11 @@
  .venues-header .eyebrow {
   display: inline-block;
   padding: 7px 14px;
-
   background: var(--powder-blue);
-
   border: 1px solid rgba(94, 118, 144, 0.18);
-
   color: var(--deep-blue);
-
   font-size: 0.58rem;
-
   letter-spacing: 0.2em;
-
   transform: rotate(-2deg);
 }
 

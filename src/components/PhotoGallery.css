@@ -40,16 +40,29 @@
 .image-box {
   width: 70vw;
   margin: 0;
-  padding: 2px 16px;
+  padding: 0px 14px;
   justify-self: center;
-  background-color: var(--blue-dark);
+  color: var(--blue-dark);
+  background-color: var(--gold-secondary);
+  border: 1px solid var(--blue-dark);
   /* background: red; */
+}
+
+.eyebrow {
+  display: inline-block;
+  padding: 7px 14px;
+  background: var(--gold-secondary);
+  border: 1px solid var(--blue-dark);
+  color: var(--deep-blue);
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  transform: rotate(-2deg);
 }
 
 /* =========================================
    DESKTOP SCRAPBOOK
 ========================================= */
-
+/* 
 .polaroid-container {
   position: relative;
 
@@ -148,13 +161,13 @@
   height: 14px !important;
 
   color: #d99da5;
-}
+} */
 
 /* =========================================
    DESKTOP POSITIONS
 ========================================= */
 
-.polaroid-1 {
+/* .polaroid-1 {
   left: 6%;
   top: 45px;
 }
@@ -177,7 +190,7 @@
 .polaroid-5 {
   right: 18%;
   top: 330px;
-}
+} */
 
 
 /* =========================================

@@ -41,7 +41,7 @@ export default function PhotoGallery() {
   return (
     <section id="gallery" className="scrapbook-gallery">
       <div className="gallery-heading">
-        <span>OUR MOMENTS</span>
+        <span className="eyebrow">OUR MOMENTS</span>
 
         <h3>
           A little glimpse
@@ -54,7 +54,7 @@ export default function PhotoGallery() {
       </div>
 
       <Box className="image-box">
-        <ImageList variant="masonry" cols={3} gap={8}>
+        <ImageList variant="masonry" cols={3} gap={10}>
           {itemData.map((item) => (
             <ImageListItem key={item.img}>
               <img
