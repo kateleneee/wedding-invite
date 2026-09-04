@@ -5,7 +5,7 @@ export const weddingData = {
     },
 
     date: {
-        date: "2",
+        date: "02",
         month: "December",
         complete: "2026-12-01",
         year: "2026",

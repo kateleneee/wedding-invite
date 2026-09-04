@@ -21,7 +21,7 @@ import WeddingTimeline from "./components/WeddingTimeline";
 import WeddingPlaylist from "./components/WeddingPlaylist";
 import engagement from "./assets/images/engagement1.jpg";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
-import SaveTheDate2 from "./components/SaveTheDate2";
+import SaveTheDate from "./components/SaveTheDate";
 import Landing from "./components/Landing";
 import CoverImage from "./assets/images/landing-yellow-escolta.png";
 
@@ -102,7 +102,7 @@ function App() {
           <Landing coverImage={CoverImage} />
 
           {/* SAVE THE DATE */}
-          <SaveTheDate2 />
+          <SaveTheDate />
 
           {/* VENUE */}
           <Venues />

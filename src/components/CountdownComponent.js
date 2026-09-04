@@ -69,8 +69,6 @@ export default function CountdownComponent() {
         <CountdownUnit value={timeLeft.minutes} label="Minutes" />
         <CountdownUnit value={timeLeft.seconds} label="Seconds" />
       </div>
-      <br />
-      <br />
 
       <div className="countdown-heading">
         <span className="countdown-heading-line" aria-hidden="true" />

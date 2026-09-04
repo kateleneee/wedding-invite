@@ -150,13 +150,6 @@
     0 4px 16px rgba(203, 183, 106, 0.1);
 }
 
-.invitation-message {
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(1rem, 2.7vw, 1.2rem);
-  font-weight: 500;
-  color: var(--wedding-text);
-}
-
 /* Gold divider below the title */
 /* 
 .invitation-title::after {
@@ -197,16 +190,6 @@
     padding-bottom: 1rem;
     /* font-size: clamp(3.2rem, 15vw, 4.5rem); */
   }
-
-  .invitation-message {
-    max-width: 320px;
-    /* font-size: 1.15rem; */
-    /* line-height: 1.6; */
-  }
-
-  .invitation-message br {
-    display: none;
-  }
 }
 
 
@@ -217,8 +200,30 @@
     padding: 1.25rem 0.75rem;
     margin: 0;
   }
+}
 
+.invitation-message {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1rem, 2.7vw, 1.2rem);
+  font-weight: 500;
+  color: var(--wedding-text);
+  text-align: center;
+  /* line-height: 1.8; */
+  /* max-width: 750px; */
+  /* margin: 0 auto; */
+}
+
+.invitation-message span {
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
   .invitation-message {
-    max-width: 285px;
+    padding: 0 24px;
+  }
+
+  .invitation-message span {
+    display: inline;
   }
 }

@@ -18,15 +18,13 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-
   width: min(100%, 600px);
-  margin: 0 auto 2rem;
+  margin: 2rem auto;
 }
 
 .countdown-heading-line {
   flex: 1;
   height: 1px;
-
   background-color: var(--countdown-gold);
   opacity: 0.5;
 }
@@ -36,10 +34,8 @@
 }
 
 .countdown-heading-text {
-  margin: 0;
-
+  /* margin: 10px; */
   color: var(--countdown-gold);
-
   font-family: Arial, sans-serif;
   font-size: clamp(0.58rem, 1.4vw, 0.72rem);
   font-weight: 600;

@@ -5,7 +5,7 @@ import photo2 from "../assets/images/photo2.jpg";
 import photo5 from "../assets/images/photo5.jpg";
 import photo6 from "../assets/images/photo6.jpg";
 import CountdownComponent from "./CountdownComponent";
-import "./SaveTheDate2.css";
+import "./SaveTheDate.css";
 
 const dateItems = [
   {
@@ -38,13 +38,7 @@ function Invitation() {
         You are invited!
       </p>
 
-      <p className="invitation-message">
-        Together with our families,
-        <br />
-        we joyfully invite you to join us, as we celebrate our love,
-        <br />
-        our marriage, and our future together.
-      </p>
+      <p className="invitation-message"> <span>Together with our families, we joyfully invite you to join us,</span> <span>as we celebrate our love, our marriage, and our future together.</span> </p>
     </section>
   );
 }
@@ -74,6 +68,9 @@ export default function SaveTheDateS() {
           />
         ))}
       </div>
+      {/* <br />
+      <br />
+      <br /> */}
       <CountdownComponent />
     </section>
   );
