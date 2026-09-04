@@ -37,7 +37,7 @@ const photos = [
 
 function PhotoCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  // const [isPaused, setIsPaused] = useState(false);
 
   const nextSlide = () => {
     setActiveIndex((current) => (current + 1) % photos.length);
@@ -55,14 +55,14 @@ function PhotoCarousel() {
 
   // AUTOPLAY
   useEffect(() => {
-    if (isPaused) return;
+    // if (isPaused) return;
 
     const interval = setInterval(() => {
       nextSlide();
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [isPaused]);
+  }, []);
 
   /*
     Calculates where each image should appear relative
