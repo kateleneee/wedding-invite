@@ -19,8 +19,9 @@ import Envelope from "./components/Envelope";
 import PhotoGallery2 from "./components/PhotoGallery2";
 // import SaveTheDate from "./components/SaveTheDate";
 // import SaveTheDateTimer from "./components/SaveTheDateTimer";
-import SaveTheDateNew from "./components/SaveTheDateNew";
-import WeddingDetails from "./components/WeddingDetails";
+// import SaveTheDateNew from "./components/SaveTheDateNew";
+// import WeddingDetails from "./components/WeddingDetails";
+import Venues from "./components/Venues";
 // import { TimerOutlined } from "@mui/icons-material";
 import WeddingTimeline from "./components/WeddingTimeline";
 import WeddingPlaylist from "./components/WeddingPlaylist";
@@ -191,10 +192,13 @@ function App() {
           {/* <SaveTheDateTimer /> */}
 
           <SaveTheDate2 />
-          <SaveTheDateNew />
+          {/* <SaveTheDateNew /> */}
 
           {/* WEDDING DETAILS*/}
-          <WeddingDetails />
+          {/* <WeddingDetails /> */}
+          <section id="venues">
+            <Venues />
+          </section>
 
           {/* STORY */}
 

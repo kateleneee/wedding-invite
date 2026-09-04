@@ -53,6 +53,26 @@ const venues = [
     icon: LocationOnOutlinedIcon,
   },
 ];
+// const venues = [
+//   {
+//     type: "Ceremony",
+//     title: "Sta. Rita de Cascia Parish (Diocese of Cubao)",
+//     time: "2:00 PM",
+//     address: "Sta. Rita De Cascia Church, South Lawin cor. Baguio Road, Philam Homes Quezon City, Metro Manila",
+
+//     image: church,
+//     mapUrl:
+//       "https://www.google.com/maps?q=Our+Lady+of+the+Holy+Rosary+Parish&output=embed",
+//   },
+//   {
+//     type: "Reception",
+//     title: "The Garden Ballroom",
+//     time: "7:00 PM",
+//     image: reception,
+//     // mapUrl:
+//     //   "https://www.google.com/maps?q=The+Garden+Ballroom+Manila&output=embed",
+//   },
+// ];
 
 export default function WeddingDetails() {
   return (

@@ -1,0 +1,808 @@
+/* =========================================
+   VENUES SECTION
+========================================= */
+.venues-section {
+  --powder-blue: #dcebf3;
+  --deep-blue: #5e7690;
+  --champagne: #d6b86a;
+  --champagne-light: #ead9a3;
+  --butter: #f8ebaA;
+  --cream: #faf9f0;
+  --text: #66727a;
+
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 2% 7%;
+
+  overflow: hidden;
+
+  color: var(--text);
+
+  /*
+    Playful paper-like background
+  */
+  background:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(248, 235, 170, 0.55) 0,
+      rgba(248, 235, 170, 0.25) 100px,
+      transparent 230px
+    ),
+
+    radial-gradient(
+      circle at 92% 28%,
+      rgba(220, 235, 243, 0.9) 0,
+      rgba(220, 235, 243, 0.55) 140px,
+      transparent 300px
+    ),
+
+    radial-gradient(
+      circle at 15% 85%,
+      rgba(220, 235, 243, 0.75) 0,
+      transparent 280px
+    ),
+
+    radial-gradient(
+      circle at 85% 90%,
+      rgba(248, 235, 170, 0.35) 0,
+      transparent 250px
+    ),
+
+    var(--cream);
+}
+
+
+/* =========================================
+   PLAYFUL BACKGROUND BLOBS
+========================================= */
+
+.venues-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 300px;
+
+  top: 180px;
+  left: -170px;
+
+  background: var(--powder-blue);
+
+  opacity: 0.35;
+
+  border-radius:
+    58% 42% 65% 35% /
+    45% 55% 45% 55%;
+
+  transform: rotate(-18deg);
+
+  pointer-events: none;
+}
+
+
+/* Second blob */
+
+.venues-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 360px;
+  height: 300px;
+
+  right: -130px;
+  bottom: 250px;
+
+  background: var(--butter);
+
+  opacity: 0.28;
+
+  border-radius:
+    42% 58% 35% 65% /
+    55% 40% 60% 45%;
+
+  transform: rotate(15deg);
+
+  pointer-events: none;
+}
+
+
+/* Keep content above decorations */
+
+.venues-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.venues-header {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* .eyebrow {
+  margin: 0 0 14px;
+
+  color: var(--champagne);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+} */
+ .venues-header .eyebrow {
+  display: inline-block;
+
+  padding: 7px 14px;
+
+
+  background: var(--powder-blue);
+
+  border: 1px solid rgba(94, 118, 144, 0.18);
+
+  color: var(--deep-blue);
+
+  font-size: 0.58rem;
+
+  letter-spacing: 0.2em;
+
+  transform: rotate(-2deg);
+}
+
+.venues-header h3 {
+  margin: 0;
+
+  color: var(--deep-blue);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 500;
+  line-height: 0.95;
+}
+
+.venues-header h3 span {
+  color: var(--champagne);
+  font-style: italic;
+}
+
+.venues-intro {
+  margin: 25px auto 0;
+
+  color: var(--text);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+}
+
+/* =========================
+   TWO COLUMN VENUES
+========================= */
+
+.venues-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 55px;
+
+  align-items: start;
+}
+
+
+.header-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 30px;
+}
+
+.header-ornament span {
+  width: 55px;
+  height: 1px;
+  background: var(--champagne);
+}
+
+.header-ornament b {
+  color: var(--champagne);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+
+/* =========================================
+   VENUES CONTAINER
+========================================= */
+
+.venues-container {
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+
+/* =========================================
+   VENUE CARD
+========================================= */
+
+.venue-card {
+  position: relative;
+
+  padding: 55px;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  border: 1px solid rgba(214, 184, 106, 0.35);
+
+  box-shadow:
+    0 20px 50px rgba(94, 118, 144, 0.08);
+
+  backdrop-filter: blur(5px);
+}
+
+.venue-card:nth-child(even) {
+  background: rgba(220, 235, 243, 0.24);
+}
+
+
+/* =========================================
+   VENUE HEADING
+========================================= */
+
+.venue-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  margin-bottom: 55px;
+}
+
+.venue-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 45px;
+  height: 45px;
+
+  border: 1px solid var(--champagne);
+
+  color: var(--champagne);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.1rem;
+
+  transform: rotate(-5deg);
+}
+
+.venue-type {
+  margin: 0;
+
+  color: var(--deep-blue);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+}
+
+.venue-heading-line {
+  width: 80px;
+  height: 1px;
+
+  margin-top: 8px;
+
+  background: var(--champagne);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.venue-content {
+  display: grid;
+  grid-template-columns: minmax(350px, 1.15fr) minmax(280px, 0.85fr);
+
+  align-items: center;
+  gap: 90px;
+}
+
+
+/* =========================================
+   PHOTO
+========================================= */
+
+.venue-photo-wrapper {
+  position: relative;
+
+  width: 100%;
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  padding: 20px;
+}
+
+
+/*
+   Main image
+*/
+
+.venue-photo {
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+  aspect-ratio: 4 / 3;
+
+  overflow: hidden;
+
+  background: var(--powder-blue);
+
+  box-shadow:
+    0 20px 40px rgba(94, 118, 144, 0.14);
+}
+
+.venue-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.7s ease;
+}
+
+.venue-card:hover .venue-photo img {
+  transform: scale(1.035);
+}
+
+
+/* =========================================
+   RANDOM HAND-DRAWN STYLE FRAMES
+========================================= */
+
+.photo-frame {
+  position: absolute;
+
+  pointer-events: none;
+}
+
+.photo-frame-one {
+  z-index: 1;
+
+  inset: 8px 0 0 10px;
+
+  border: 1.5px solid var(--champagne);
+
+  transform: rotate(-2deg);
+}
+
+.photo-frame-two {
+  z-index: 2;
+
+  inset: 0 10px 8px -2px;
+
+  border: 1px solid var(--deep-blue);
+
+  opacity: 0.6;
+
+  transform: rotate(1.8deg);
+}
+
+.photo-frame-three {
+  z-index: 1;
+
+  inset: 15px -3px -4px 8px;
+
+  border: 1px solid var(--champagne-light);
+
+  transform: rotate(3deg);
+}
+
+
+/* =========================================
+   PHOTO CORNERS
+========================================= */
+
+.photo-corner {
+  position: absolute;
+  z-index: 4;
+
+  width: 35px;
+  height: 35px;
+
+  pointer-events: none;
+}
+
+.photo-corner-top {
+  top: 14px;
+  left: 14px;
+
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+}
+
+.photo-corner-bottom {
+  right: 14px;
+  bottom: 14px;
+
+  border-right: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+
+/* =========================================
+   BLUE DECORATIVE DOTS
+========================================= */
+
+.blue-dot {
+  position: absolute;
+
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: var(--deep-blue);
+
+  opacity: 0.7;
+
+  z-index: 4;
+}
+
+.blue-dot-one {
+  top: 3px;
+  right: 30px;
+}
+
+.blue-dot-two {
+  bottom: 3px;
+  left: 25px;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.venue-details {
+  padding: 10px 0;
+}
+
+.venue-label {
+  margin: 0 0 18px;
+
+  color: var(--champagne);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+}
+
+.venue-details h3 {
+  margin: 0;
+
+  color: var(--deep-blue);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 500;
+  line-height: 1.05;
+}
+
+.gold-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin: 25px 0;
+}
+
+.gold-divider::before,
+.gold-divider::after {
+  content: "";
+
+  width: 45px;
+  height: 1px;
+
+  background: var(--champagne);
+}
+
+.gold-divider span {
+  color: var(--champagne);
+
+  font-size: 0.65rem;
+}
+
+.venue-time {
+  margin: 0 0 12px;
+
+  color: var(--deep-blue);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+.venue-address {
+  max-width: 300px;
+
+  margin: 0;
+
+  color: var(--text);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   GOOGLE MAP BUTTON
+========================================= */
+
+.maps-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: 28px;
+  padding: 12px 18px;
+
+  border: 1px solid var(--champagne);
+
+  color: var(--deep-blue);
+
+  background: transparent;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.maps-button:hover {
+  background: var(--champagne);
+  color: white;
+
+  transform: translateY(-2px);
+}
+
+.map-pin {
+  font-size: 1rem;
+}
+
+
+/* =========================================
+   MAP
+========================================= */
+
+.map-section {
+  max-width: 1200px;
+  gap: 50px;
+  margin: 40px auto 0;
+}
+
+.map-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  margin-bottom: 18px;
+
+  color: var(--champagne);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+}
+
+.map-label-line {
+  width: 45px;
+  height: 1px;
+
+  background: var(--champagne);
+}
+
+.map-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 280px;
+
+  overflow: hidden;
+
+  border: 6px solid white;
+
+  box-shadow:
+    0 10px 30px rgba(94, 118, 144, 0.1);
+}
+
+.map-wrapper::after {
+  content: "";
+
+  position: absolute;
+  inset: 5px;
+
+  border: 1px solid rgba(214, 184, 106, 0.7);
+
+  pointer-events: none;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+
+  filter: saturate(0.75);
+}
+
+
+/* =========================================
+   ALTERNATING CARD
+========================================= */
+
+.venue-card:nth-child(even) .venue-content {
+  direction: rtl;
+}
+
+.venue-card:nth-child(even) .venue-content > * {
+  direction: ltr;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+  .venues-section {
+    padding: 80px 5%;
+  }
+
+  .venue-card {
+    padding: 40px;
+  }
+
+  .venue-content {
+    grid-template-columns: 1fr;
+
+    gap: 55px;
+  }
+
+  .venue-card:nth-child(even) .venue-content {
+    direction: ltr;
+  }
+
+  .venue-photo-wrapper {
+    max-width: 650px;
+  }
+
+  .venue-details {
+    text-align: center;
+  }
+
+  .venue-address {
+    margin: auto;
+  }
+
+  .gold-divider {
+    justify-content: center;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+  .venues-section {
+    padding: 65px 18px;
+  }
+
+  .venues-header {
+    margin-bottom: 60px;
+  }
+
+  /* .venues-header h3 {
+    font-size: 3rem;
+  } */
+
+  .venues-intro {
+    font-size: 0.78rem;
+  }
+
+  .venues-container {
+    gap: 80px;
+  }
+
+  .venue-card {
+    padding: 30px 20px;
+  }
+
+  .venue-heading {
+    margin-bottom: 35px;
+  }
+
+  .venue-number {
+    width: 38px;
+    height: 38px;
+
+    font-size: 0.95rem;
+  }
+
+  .venue-type {
+    font-size: 0.65rem;
+  }
+
+  .venue-photo-wrapper {
+    padding: 13px;
+  }
+
+  /* .venue-details h3 {
+    font-size: 2.6rem;
+  } */
+
+  .venue-time {
+    font-size: 1.25rem;
+  }
+
+  .map-section {
+    margin-top: 45px;
+  }
+
+  .map-wrapper {
+    height: 230px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+  .venues-section {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .venue-card {
+    padding: 25px 15px;
+  }
+
+  /* .venue-details h3 {
+    font-size: 1.3rem;
+  } */
+
+  .venue-photo-wrapper {
+    padding: 10px;
+  }
+
+  .map-wrapper {
+    height: 210px;
+  }
+}
