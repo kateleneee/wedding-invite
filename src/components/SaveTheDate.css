@@ -177,6 +177,12 @@
   /* .wedding-date {
     padding: 2.5rem 0.75rem 4rem;
   } */
+   /* Mobile */
+  .wedding-date {
+    min-height: auto;
+    height: auto;
+    padding: 3.7rem;
+  }
 
   .invitation {
     width: 100%;

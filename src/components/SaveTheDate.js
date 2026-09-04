@@ -53,7 +53,7 @@ function DateCard({ image, number, label, alt }) {
   );
 }
 
-export default function SaveTheDateS() {
+export default function SaveTheDate() {
   return (
     <section className="wedding-date" id="wedding">
       <Invitation />
