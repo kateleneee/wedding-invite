@@ -1,0 +1,198 @@
+.wedding-carousel {
+  --wedding-blue: #5e7690;
+  --wedding-powder-blue: #e4f0f5;
+  --wedding-yellow: #fff7d6;
+  --wedding-gold: #cbb76a;
+  --wedding-cream: #faf9f0;
+
+  width: 100%;
+  height: 100vh;
+  padding: 3rem 0;
+  /* border: 10px solid orangered; */
+  background: var(--wedding-cream);
+}
+
+.carousel-wrapper {
+  width: 100%;
+  /* overflow: hidden; */
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.carousel-image {
+  position: relative;
+
+  width: 100%;
+  height: clamp(500px, 70vh, 720px);
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: flex-end;
+
+  transition: background-image 0.4s ease;
+
+  /* Elegant framing */
+  border-top: 1px solid rgba(203, 183, 106, 0.5);
+  border-bottom: 1px solid rgba(203, 183, 106, 0.5);
+}
+
+/* =========================
+   IMAGE OVERLAY
+========================= */
+
+.carousel-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(38, 55, 68, 0.82) 0%,
+      rgba(38, 55, 68, 0.45) 35%,
+      rgba(38, 55, 68, 0.05) 70%,
+      rgba(38, 55, 68, 0.05) 100%
+    );
+
+  pointer-events: none;
+}
+
+/* =========================
+   CAPTION
+========================= */
+
+.carousel-caption {
+  position: relative;
+  z-index: 2;
+
+  width: min(680px, 80%);
+
+  margin: 0 auto;
+  padding: 4rem 0 6rem;
+
+  text-align: center;
+
+  color: white;
+}
+
+.carousel-eyebrow {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 0.68rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.3em !important;
+
+  color: var(--wedding-yellow) !important;
+
+  margin-bottom: 0.8rem !important;
+}
+
+.carousel-title {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+
+  font-size: clamp(2.2rem, 5vw, 4rem) !important;
+  font-weight: 400 !important;
+
+  line-height: 1.05 !important;
+
+  color: white !important;
+}
+
+.gold-divider {
+  width: 45px;
+  height: 1px;
+
+  margin: 1.2rem auto;
+
+  background: var(--wedding-gold);
+}
+
+.carousel-description {
+  max-width: 500px;
+  margin: 0 auto !important;
+
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-size: clamp(1.05rem, 2vw, 1.3rem) !important;
+
+  line-height: 1.6 !important;
+  font-style: italic;
+
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+/* =========================
+   ARROWS
+========================= */
+
+.carousel-arrow {
+  position: absolute !important;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  z-index: 3;
+
+  width: 48px !important;
+  height: 48px !important;
+
+  border: 1px solid rgba(255, 247, 214, 0.7) !important;
+
+  background: rgba(94, 118, 144, 0.45) !important;
+
+  color: var(--wedding-yellow) !important;
+
+  backdrop-filter: blur(5px);
+
+  transition: all 0.3s ease !important;
+}
+
+.carousel-arrow:hover {
+  background: rgba(255, 247, 214, 0.9) !important;
+  color: var(--wedding-blue) !important;
+
+  border-color: var(--wedding-gold) !important;
+}
+
+.carousel-arrow-left {
+  left: 2rem;
+}
+
+.carousel-arrow-right {
+  right: 2rem;
+}
+
+/* =========================
+   DOTS
+========================= */
+
+.carousel-stepper {
+  position: absolute !important;
+
+  z-index: 3;
+
+  bottom: 1.5rem;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: transparent !important;
+
+  padding: 0 !important;
+}
+
+.carousel-stepper .MuiMobileStepper-dot {
+  width: 6px;
+  height: 6px;
+
+  margin: 0 5px;
+
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel-stepper .MuiMobileStepper-dotActive {
+  background-color: var(--wedding-yellow);
+}

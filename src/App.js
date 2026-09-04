@@ -24,6 +24,7 @@ import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import SaveTheDate from "./components/SaveTheDate";
 import Landing from "./components/Landing";
 import CoverImage from "./assets/images/landing-yellow-escolta.png";
+import WeddingCarousel from "./components/Carousel";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -108,11 +109,14 @@ function App() {
           <Venues />
 
           {/* STORY */}
-          <section id="story" className="section story-section">
+          <section id="story">
+            <WeddingCarousel />
+          </section>
+          {/* <section id="story" className="section story-section">
             <div className="story-image">
-              {/* <div className="image-placeholder">
+              <div className="image-placeholder">
                 YOUR PHOTO
-              </div> */}
+              </div>
               <img
                 src={engagement}
                 alt={"engagement"}
@@ -150,7 +154,7 @@ function App() {
                 <span />
               </div>
             </div>
-          </section>
+          </section> */}
 
           {/* GALLERY */}
           <PhotoGallery />
