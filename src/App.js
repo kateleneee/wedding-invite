@@ -22,6 +22,7 @@ import PhotoGallery2 from "./components/PhotoGallery2";
 // import SaveTheDateNew from "./components/SaveTheDateNew";
 // import WeddingDetails from "./components/WeddingDetails";
 import Venues from "./components/Venues";
+import Venues2 from "./components/Venues2";
 // import { TimerOutlined } from "@mui/icons-material";
 import WeddingTimeline from "./components/WeddingTimeline";
 import WeddingPlaylist from "./components/WeddingPlaylist";
@@ -199,6 +200,7 @@ function App() {
           <section id="venues">
             <Venues />
           </section>
+          <Venues2 />
 
           {/* STORY */}
 
