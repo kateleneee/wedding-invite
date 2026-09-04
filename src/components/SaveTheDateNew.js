@@ -18,8 +18,7 @@ const colors = {
 const WEDDING_DATE = new Date("2026-12-02T09:00:00");
 
 const calculateTimeLeft = () => {
-  const difference =
-    WEDDING_DATE.getTime() - new Date().getTime();
+  const difference = WEDDING_DATE.getTime() - new Date().getTime();
 
   if (difference <= 0) {
     return {
@@ -31,21 +30,12 @@ const calculateTimeLeft = () => {
   }
 
   return {
-    days: Math.floor(
-      difference / (1000 * 60 * 60 * 24)
-    ),
-    hours: Math.floor(
-      (difference / (1000 * 60 * 60)) % 24
-    ),
-    minutes: Math.floor(
-      (difference / (1000 * 60)) % 60
-    ),
-    seconds: Math.floor(
-      (difference / 1000) % 60
-    ),
+    days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+    minutes: Math.floor((difference / (1000 * 60)) % 60),
+    seconds: Math.floor((difference / 1000) % 60),
   };
 };
-
 
 /* =========================================
    COUNTDOWN UNIT
@@ -64,8 +54,7 @@ const CountdownUnit = ({ value, label }) => (
   >
     <Typography
       sx={{
-        fontFamily:
-          "'Cormorant Garamond', serif",
+        fontFamily: "'Cormorant Garamond', serif",
 
         fontSize: {
           xs: "2.15rem",
@@ -78,8 +67,7 @@ const CountdownUnit = ({ value, label }) => (
 
         color: colors.deepBlue,
 
-        fontVariantNumeric:
-          "tabular-nums",
+        fontVariantNumeric: "tabular-nums",
 
         letterSpacing: "-0.02em",
 
@@ -93,8 +81,7 @@ const CountdownUnit = ({ value, label }) => (
       sx={{
         mt: 1,
 
-        fontFamily:
-          "'Cormorant Garamond', serif",
+        fontFamily: "'Cormorant Garamond', serif",
 
         fontSize: {
           xs: "0.58rem",
@@ -125,8 +112,7 @@ const CountdownUnit = ({ value, label }) => (
 ========================================= */
 
 export default function SaveTheDateNew() {
-  const [timeLeft, setTimeLeft] =
-    useState(calculateTimeLeft());
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -138,7 +124,6 @@ export default function SaveTheDateNew() {
 
   return (
     <section id="wedding">
-
       <Box
         sx={{
           minHeight: "100svh",
@@ -173,7 +158,6 @@ export default function SaveTheDateNew() {
           `,
         }}
       >
-
         {/* =================================
             DECORATIVE BACKGROUND ELEMENTS
         ================================= */}
@@ -218,8 +202,7 @@ export default function SaveTheDateNew() {
 
               border: `1px solid ${colors.gold}`,
 
-              borderRadius:
-                "50% 10px 50% 10px",
+              borderRadius: "50% 10px 50% 10px",
 
               transform: "rotate(25deg)",
             }}
@@ -239,14 +222,12 @@ export default function SaveTheDateNew() {
 
               border: `1px solid ${colors.gold}`,
 
-              borderRadius:
-                "10px 50% 10px 50%",
+              borderRadius: "10px 50% 10px 50%",
 
               transform: "rotate(-25deg)",
             }}
           />
         </Box>
-
 
         {/* Top right church */}
 
@@ -266,8 +247,7 @@ export default function SaveTheDateNew() {
 
             opacity: 0.35,
 
-            transform:
-              "rotate(4deg)",
+            transform: "rotate(4deg)",
 
             pointerEvents: "none",
           }}
@@ -283,7 +263,6 @@ export default function SaveTheDateNew() {
             }}
           />
         </Box>
-
 
         {/* Tiny sparkle */}
 
@@ -309,7 +288,6 @@ export default function SaveTheDateNew() {
           }}
         />
 
-
         {/* Tiny heart */}
 
         <FavoriteBorderRoundedIcon
@@ -332,11 +310,9 @@ export default function SaveTheDateNew() {
 
             opacity: 0.4,
 
-            transform:
-              "rotate(-12deg)",
+            transform: "rotate(-12deg)",
           }}
         />
-
 
         {/* Bottom decorative flowers */}
 
@@ -367,7 +343,6 @@ export default function SaveTheDateNew() {
           ✿
         </Typography>
 
-
         <Typography
           sx={{
             position: "absolute",
@@ -395,7 +370,6 @@ export default function SaveTheDateNew() {
           ♡
         </Typography>
 
-
         {/* =================================
             CONTENT
         ================================= */}
@@ -411,7 +385,6 @@ export default function SaveTheDateNew() {
             textAlign: "center",
           }}
         >
-
           {/* TOP ICONS */}
 
           <Box
@@ -458,13 +431,11 @@ export default function SaveTheDateNew() {
             </Box>
           </Box>
 
-
           {/* EYEBROW */}
 
           <Typography
             sx={{
-              fontFamily:
-                "'Cormorant Garamond', serif",
+              fontFamily: "'Cormorant Garamond', serif",
 
               fontSize: {
                 xs: "0.65rem",
@@ -473,8 +444,7 @@ export default function SaveTheDateNew() {
 
               fontWeight: 600,
 
-              letterSpacing:
-                "0.3em",
+              letterSpacing: "0.3em",
 
               color: colors.deepBlue,
 
@@ -484,7 +454,6 @@ export default function SaveTheDateNew() {
             The countdown begins
           </Typography>
 
-
           {/* MAIN TITLE */}
 
           <Typography
@@ -493,8 +462,7 @@ export default function SaveTheDateNew() {
               mt: 2.5,
               mb: 2,
 
-              fontFamily:
-                "'Cormorant Garamond', serif",
+              fontFamily: "'Cormorant Garamond', serif",
 
               fontSize: {
                 xs: "3.rem",
@@ -512,7 +480,6 @@ export default function SaveTheDateNew() {
           >
             Until
             <br />
-
             <Box
               component="span"
               sx={{
@@ -523,7 +490,6 @@ export default function SaveTheDateNew() {
             </Box>
           </Typography>
 
-
           {/* DESCRIPTION */}
 
           <Typography
@@ -532,8 +498,7 @@ export default function SaveTheDateNew() {
 
               mx: "auto",
 
-              fontFamily:
-                "'Cormorant Garamond', serif",
+              fontFamily: "'Cormorant Garamond', serif",
 
               fontSize: {
                 xs: "0.95rem",
@@ -549,7 +514,6 @@ export default function SaveTheDateNew() {
             <br />
             until we say “I do.”
           </Typography>
-
 
           {/* =================================
               COUNTDOWN CARD
@@ -574,22 +538,17 @@ export default function SaveTheDateNew() {
                 sm: 3.5,
               },
 
-              backgroundColor:
-                "rgba(255,255,255,0.62)",
+              backgroundColor: "rgba(255,255,255,0.62)",
 
-              border:
-                "1px solid rgba(94,118,144,0.12)",
+              border: "1px solid rgba(94,118,144,0.12)",
 
               borderRadius: "18px",
 
-              boxShadow:
-                "0 12px 35px rgba(94,118,144,0.08)",
+              boxShadow: "0 12px 35px rgba(94,118,144,0.08)",
 
-              backdropFilter:
-                "blur(8px)",
+              backdropFilter: "blur(8px)",
             }}
           >
-
             {/* Tiny top ornament */}
 
             <Typography
@@ -600,13 +559,11 @@ export default function SaveTheDateNew() {
 
                 left: "50%",
 
-                transform:
-                  "translateX(-50%)",
+                transform: "translateX(-50%)",
 
                 px: 1.5,
 
-                background:
-                  "#F4F5EF",
+                background: "#F4F5EF",
 
                 fontSize: "0.75rem",
 
@@ -618,15 +575,13 @@ export default function SaveTheDateNew() {
               ✦
             </Typography>
 
-
             <Box
               sx={{
                 width: "100%",
 
                 display: "grid",
 
-                gridTemplateColumns:
-                  "1fr auto 1fr auto 1fr auto 1fr",
+                gridTemplateColumns: "1fr auto 1fr auto 1fr auto 1fr",
 
                 alignItems: "start",
 
@@ -640,35 +595,21 @@ export default function SaveTheDateNew() {
                 mx: "auto",
               }}
             >
-              <CountdownUnit
-                value={timeLeft.days}
-                label="Days"
-              />
+              <CountdownUnit value={timeLeft.days} label="Days" />
 
               <CountdownDivider />
 
-              <CountdownUnit
-                value={timeLeft.hours}
-                label="Hours"
-              />
+              <CountdownUnit value={timeLeft.hours} label="Hours" />
 
               <CountdownDivider />
 
-              <CountdownUnit
-                value={timeLeft.minutes}
-                label="Minutes"
-              />
+              <CountdownUnit value={timeLeft.minutes} label="Minutes" />
 
               <CountdownDivider />
 
-              <CountdownUnit
-                value={timeLeft.seconds}
-                label="Seconds"
-              />
+              <CountdownUnit value={timeLeft.seconds} label="Seconds" />
             </Box>
-
           </Box>
-
 
           {/* =================================
               DATE
@@ -692,8 +633,7 @@ export default function SaveTheDateNew() {
 
                 display: "grid",
 
-                gridTemplateColumns:
-                  "1fr auto 1fr",
+                gridTemplateColumns: "1fr auto 1fr",
 
                 alignItems: "center",
 
@@ -708,16 +648,14 @@ export default function SaveTheDateNew() {
                 sx={{
                   height: "1px",
                   width: "100%",
-                  backgroundColor:
-                    "rgba(94,118,144,0.25)",
+                  backgroundColor: "rgba(94,118,144,0.25)",
                 }}
               />
 
               {/* Date */}
               <Typography
                 sx={{
-                  fontFamily:
-                    "'Cormorant Garamond', serif",
+                  fontFamily: "'Cormorant Garamond', serif",
 
                   fontSize: {
                     xs: "0.7rem",
@@ -744,13 +682,11 @@ export default function SaveTheDateNew() {
                 sx={{
                   height: "1px",
                   width: "100%",
-                  backgroundColor:
-                    "rgba(94,118,144,0.25)",
+                  backgroundColor: "rgba(94,118,144,0.25)",
                 }}
               />
             </Box>
           </Box>
-
 
           {/* BOTTOM ORNAMENT */}
 
@@ -780,24 +716,13 @@ export default function SaveTheDateNew() {
                   opacity: 0.5,
                 }}
               />
-
-              <Typography
+              <FavoriteBorderRoundedIcon
                 sx={{
-                  fontFamily:
-                    "'Great Vibes', cursive",
-
-                  fontSize: "1.3rem",
-
+                  width: 17,
+                  height: 17,
                   color: colors.gold,
-
-                  lineHeight: 1,
-
-                  whiteSpace: "nowrap",
                 }}
-              >
-                with love
-              </Typography>
-
+              />
               <Box
                 sx={{
                   width: 35,
@@ -808,15 +733,11 @@ export default function SaveTheDateNew() {
               />
             </Box>
           </Box>
-
         </Container>
-
       </Box>
-
     </section>
   );
 }
-
 
 /* =========================================
    COUNTDOWN DIVIDER
@@ -847,8 +768,7 @@ function CountdownDivider() {
     >
       <Typography
         sx={{
-          fontFamily:
-            "'Cormorant Garamond', serif",
+          fontFamily: "'Cormorant Garamond', serif",
 
           fontSize: {
             xs: "1.4rem",
