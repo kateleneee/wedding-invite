@@ -53,20 +53,32 @@ export default function PhotoGallery() {
         <br />
       </div>
 
-      <Box >
-        <ImageList variant="masonry" cols={3} gap={10}>
-          {itemData.map((item) => (
-            <ImageListItem key={item.img}>
-              <img
-                srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                src={`${item.img}`}
-                alt={item.title}
-                loading="eager"
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
-      </Box>
+      {/* <Box > */}
+      <ImageList
+        variant="masonry" cols={3} gap={10}
+        sx={{
+          width: "100%",
+          maxWidth: "70vw",
+          margin: "0 auto",
+
+          gridTemplateColumns: {
+            xs: "repeat(2, 1fr)",
+            sm: "repeat(3, 1fr)",
+            md: "repeat(4, 1fr)",
+          },
+        }}>
+        {itemData.map((item) => (
+          <ImageListItem key={item.img}>
+            <img
+              srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+              src={`${item.img}`}
+              alt={item.title}
+              loading="eager"
+            />
+          </ImageListItem>
+        ))}
+      </ImageList>
+      {/* </Box> */}
     </section>
   );
 }
