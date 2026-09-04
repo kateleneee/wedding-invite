@@ -1,8 +1,8 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
-  IconButton,
   Typography,
+  IconButton,
   MobileStepper,
 } from "@mui/material";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
@@ -44,36 +44,62 @@ const photos = [
 
 export default function WeddingCarousel() {
   const [activeStep, setActiveStep] = useState(0);
-
-  const maxSteps = photos.length;
-
-  const handleNext = () => {
-    setActiveStep((prev) => (prev + 1) % maxSteps);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prev) => (prev - 1 + maxSteps) % maxSteps);
-  };
+  const [slideDirection, setSlideDirection] = useState("next");
 
   const currentPhoto = photos[activeStep];
 
+  const handleNext = () => {
+    setSlideDirection("next");
+    setActiveStep((prev) => (prev + 1) % photos.length);
+  };
+
+  const handlePrevious = () => {
+    setSlideDirection("prev");
+    setActiveStep(
+      (prev) => (prev - 1 + photos.length) % photos.length
+    );
+  };
+
+  // Auto-play
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSlideDirection("next");
+      setActiveStep((prev) => (prev + 1) % photos.length);
+    }, 4000); // 4 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="wedding-carousel">
-      <Box className="carousel-wrapper">
+      <Box className="carousel-container">
 
-        {/* IMAGE */}
+        {/* BACKGROUND IMAGE */}
         <Box
-          className="carousel-image"
+          className="carousel-background"
           sx={{
             backgroundImage: `url(${currentPhoto.image})`,
           }}
-        >
+        />
 
-          {/* Soft overlay */}
-          <Box className="carousel-overlay" />
+        {/* DARK OVERLAY */}
+        <Box className="carousel-overlay" />
 
-          {/* Caption */}
+        {/* CONTENT */}
+        <Box className={`carousel-content slide-${slideDirection}`} key={currentPhoto.image}>
+
+          {/* FOREGROUND IMAGE */}
+          <Box className="carousel-photo-frame">
+            <img
+              src={currentPhoto.image}
+              alt={currentPhoto.title}
+              className="carousel-photo"
+            />
+          </Box>
+
+          {/* CAPTION */}
           <Box className="carousel-caption">
+
             <Typography className="carousel-eyebrow">
               OUR STORY
             </Typography>
@@ -82,42 +108,44 @@ export default function WeddingCarousel() {
               {currentPhoto.title}
             </Typography>
 
-            <Box className="gold-divider" />
+            <Box className="carousel-divider" />
 
             <Typography className="carousel-description">
               {currentPhoto.caption}
             </Typography>
+
           </Box>
-
-          {/* LEFT BUTTON */}
-          <IconButton
-            onClick={handleBack}
-            className="carousel-arrow carousel-arrow-left"
-            aria-label="Previous photo"
-          >
-            <KeyboardArrowLeftIcon />
-          </IconButton>
-
-          {/* RIGHT BUTTON */}
-          <IconButton
-            onClick={handleNext}
-            className="carousel-arrow carousel-arrow-right"
-            aria-label="Next photo"
-          >
-            <KeyboardArrowRightIcon />
-          </IconButton>
-
-          {/* STEP INDICATOR */}
-          <MobileStepper
-            variant="dots"
-            steps={maxSteps}
-            position="static"
-            activeStep={activeStep}
-            className="carousel-stepper"
-            nextButton={null}
-            backButton={null}
-          />
         </Box>
+
+        {/* PREVIOUS */}
+        <IconButton
+          className="carousel-arrow carousel-arrow-left"
+          onClick={handlePrevious}
+          aria-label="Previous photo"
+        >
+          <KeyboardArrowLeftIcon />
+        </IconButton>
+
+        {/* NEXT */}
+        <IconButton
+          className="carousel-arrow carousel-arrow-right"
+          onClick={handleNext}
+          aria-label="Next photo"
+        >
+          <KeyboardArrowRightIcon />
+        </IconButton>
+
+        {/* DOTS */}
+        <MobileStepper
+          variant="dots"
+          steps={photos.length}
+          position="static"
+          activeStep={activeStep}
+          backButton={null}
+          nextButton={null}
+          className="carousel-stepper"
+        />
+
       </Box>
     </section>
   );
