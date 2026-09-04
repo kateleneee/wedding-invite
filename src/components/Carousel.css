@@ -236,20 +236,47 @@
   background: transparent !important;
 
   padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.carousel-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
-.carousel-stepper .MuiMobileStepper-dot {
+.carousel-dot:hover {
+  background: rgba(255, 247, 214, 0.8);
+  transform: scale(1.2);
+}
+
+.carousel-dot.active {
+  width: 22px;
+  border-radius: 10px;
+  background: var(--wedding-yellow);
+}
+
+/* .carousel-stepper .MuiMobileStepper-dot {
   width: 6px;
   height: 6px;
-
   margin: 0 5px;
-
   background-color: rgba(255, 255, 255, 0.4);
 }
 
 .carousel-stepper .MuiMobileStepper-dotActive {
   background-color: var(--wedding-yellow);
-}
+} */
 
 .carousel-content {
   animation: carouselFade 0.8s ease;

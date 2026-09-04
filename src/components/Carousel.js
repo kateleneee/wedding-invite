@@ -65,7 +65,7 @@ export default function WeddingCarousel() {
     const interval = setInterval(() => {
       setSlideDirection("next");
       setActiveStep((prev) => (prev + 1) % photos.length);
-    }, 4000); // 4 seconds
+    }, 6000); // 6 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -136,7 +136,7 @@ export default function WeddingCarousel() {
         </IconButton>
 
         {/* DOTS */}
-        <MobileStepper
+        {/* <MobileStepper
           variant="dots"
           steps={photos.length}
           position="static"
@@ -144,7 +144,21 @@ export default function WeddingCarousel() {
           backButton={null}
           nextButton={null}
           className="carousel-stepper"
-        />
+        /> */}
+        <Box className="carousel-stepper">
+          {photos.map((photo, index) => (
+            <button
+              key={photo.image}
+              className={`carousel-dot ${activeStep === index ? "active" : ""
+                }`}
+              onClick={() => {
+                setSlideDirection(index > activeStep ? "next" : "prev");
+                setActiveStep(index);
+              }}
+              aria-label={`Go to photo ${index + 1}`}
+            />
+          ))}
+        </Box>
 
       </Box>
     </section>
