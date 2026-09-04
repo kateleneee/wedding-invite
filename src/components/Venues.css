@@ -11,8 +11,8 @@
   --text: #66727a;
 
   position: relative;
-  width: 100%;
-  min-height: 100vh;
+  min-width: 100%;
+  /* min-height: 100vh; */
 
   padding: 2% 7%;
 
@@ -139,9 +139,7 @@
 } */
  .venues-header .eyebrow {
   display: inline-block;
-
   padding: 7px 14px;
-
 
   background: var(--powder-blue);
 
@@ -218,15 +216,57 @@
 /* =========================================
    VENUES CONTAINER
 ========================================= */
-
+/* Two venue cards side-by-side */
 .venues-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 70px 50px;
+}
+
+@media (min-width: 1100px) {
+  .venues-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Photo ABOVE details */
+.venue-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .venues-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+/* .venues-container {
   max-width: 1200px;
   margin: auto;
 
   display: flex;
   flex-direction: column;
   gap: 50px;
-}
+} */
+ /* .venues-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 80px 50px;
+  width: 100%;
+} */
+/* =========================
+   WIDE SCREENS
+========================= */
+
+/* @media (min-width: 100px) {
+  .venues-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 70px 50px;
+  }
+} */
 
 
 /* =========================================
@@ -308,13 +348,13 @@
    CONTENT
 ========================================= */
 
-.venue-content {
+/* .venue-content {
   display: grid;
   grid-template-columns: minmax(350px, 1.15fr) minmax(280px, 0.85fr);
 
   align-items: center;
   gap: 90px;
-}
+} */
 
 
 /* =========================================
@@ -534,18 +574,28 @@
   font-family: "Cormorant Garamond", serif;
   font-size: 1.4rem;
   font-style: italic;
+  /* border: 2px solid #d6b86a; */
 }
 
 .venue-address {
-  max-width: 300px;
-
-  margin: 0;
+  /* border: 2px solid #d6b86a; */
+  /* max-width: 300px; */
+  /* margin: auto; */
 
   color: var(--text);
 
   font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
-  line-height: 1.8;
+  /* line-height: 1.8; */
+}
+.venue-address-text {
+  /* border: 2px solid #d6b86a; */
+  /* max-width: 300px; */
+  /* margin: auto; */
+  color: var(--text);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  /* line-height: 1.8; */
 }
 
 
@@ -595,83 +645,178 @@
 /* =========================================
    MAP
 ========================================= */
+/* =========================
+   MAP SECTION
+========================= */
 
 .map-section {
-  max-width: 1200px;
-  gap: 50px;
-  margin: 40px auto 0;
+  width: 100%;
+  max-width: 1100px;
+  margin: 100px auto 0;
+  padding: 0 30px;
 }
 
-.map-label {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
+/* HEADER */
 
-  margin-bottom: 18px;
+.map-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
 
-  color: var(--champagne);
+.map-eyebrow {
+  display: block;
+  margin-bottom: 10px;
 
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.6rem;
-  font-weight: 600;
+  font-size: 0.7rem;
   letter-spacing: 0.25em;
+  color: #5e7690;
 }
 
-.map-label-line {
-  width: 45px;
-  height: 1px;
+.map-header h2 {
+  margin: 0;
 
-  background: var(--champagne);
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 500;
+
+  color: #5e7690;
 }
 
-.map-wrapper {
+.map-header p {
+  margin: 8px 0 0;
+
+  font-size: 0.95rem;
+  color: #66727a;
+}
+
+/* =========================
+   MAP CARD
+========================= */
+
+.map-card {
   position: relative;
 
   width: 100%;
-  height: 280px;
+  padding: 18px;
+
+  background: #faf9f0;
+
+  border: 1px solid rgba(94, 118, 144, 0.15);
+
+  box-shadow:
+    8px 10px 0 rgba(220, 235, 243, 0.85),
+    0 12px 30px rgba(94, 118, 144, 0.08);
+
+  /* transform: rotate(-1deg); */
+}
+
+/* MAP FRAME */
+
+.map-frame {
+  position: relative;
+
+  width: 100%;
+  height: 480px;
 
   overflow: hidden;
 
-  border: 6px solid white;
+  background: #dcebf3;
+
+  border: 8px solid #ffffff;
 
   box-shadow:
-    0 10px 30px rgba(94, 118, 144, 0.1);
+    0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.map-wrapper::after {
-  content: "";
+.map-frame iframe {
+  display: block;
 
-  position: absolute;
-  inset: 5px;
-
-  border: 1px solid rgba(214, 184, 106, 0.7);
-
-  pointer-events: none;
-}
-
-.map-wrapper iframe {
   width: 100%;
   height: 100%;
 
   border: 0;
-
-  filter: saturate(0.75);
 }
 
+/* =========================
+   DECORATIVE CORNERS
+========================= */
+
+.map-decoration {
+  position: absolute;
+
+  width: 35px;
+  height: 35px;
+
+  background: #f8ebaa;
+
+  border-radius: 50%;
+
+  box-shadow: 2px 3px 0 rgba(94, 118, 144, 0.12);
+
+  pointer-events: none;
+}
+
+.map-decoration-one {
+  top: -12px;
+  left: 25%;
+}
+
+.map-decoration-two {
+  bottom: -12px;
+  right: 20%;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+  .map-section {
+    margin-top: 70px;
+    padding: 0 20px;
+  }
+
+  .map-header {
+    margin-bottom: 30px;
+  }
+
+  .map-card {
+    padding: 12px;
+
+    /* transform: rotate(-0.5deg); */
+  }
+
+  .map-frame {
+    height: 350px;
+    border-width: 6px;
+  }
+
+  .map-decoration {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 450px) {
+  .map-section {
+    padding: 0 15px;
+  }
+
+  .map-frame {
+    height: 300px;
+  }
+}
 
 /* =========================================
    ALTERNATING CARD
 ========================================= */
-
-.venue-card:nth-child(even) .venue-content {
-  direction: rtl;
+.venue-card:nth-child(even) {
+  transform: rotate(1.2deg);
 }
 
-.venue-card:nth-child(even) .venue-content > * {
-  direction: ltr;
+.venue-card:nth-child(odd) {
+  transform: rotate(-1.2deg);
 }
-
 
 /* =========================================
    RESPONSIVE
@@ -700,13 +845,13 @@
     max-width: 650px;
   }
 
-  .venue-details {
+  /* .venue-details {
     text-align: center;
-  }
+  } */
 
-  .venue-address {
+  /* .venue-address {
     margin: auto;
-  }
+  } */
 
   .gold-divider {
     justify-content: center;

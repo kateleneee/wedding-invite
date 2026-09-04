@@ -20,6 +20,7 @@ import CloseIcon from "@mui/icons-material/Close";
 const menuItems = [
   { label: "Home", id: "home" },
   { label: "Wedding", id: "wedding" },
+  { label: "Venues", id: "venues" },
   { label: "Our Story", id: "story" },
   { label: "Gallery", id: "gallery" },
   { label: "Timeline", id: "timeline" },
