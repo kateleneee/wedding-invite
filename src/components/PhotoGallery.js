@@ -53,7 +53,7 @@ export default function PhotoGallery() {
         <br />
       </div>
 
-      <Box className="image-box">
+      <Box >
         <ImageList variant="masonry" cols={3} gap={10}>
           {itemData.map((item) => (
             <ImageListItem key={item.img}>

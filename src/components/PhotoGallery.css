@@ -3,11 +3,11 @@
 ========================================= */
 
 .scrapbook-gallery {
-  width: 100%;
+  /* width: 100%; */
   min-height: 100vh;
   padding: 90px 20px;
   background: var(--blue);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .gallery-heading {
