@@ -1,17 +1,6 @@
 import { useEffect, useState } from "react";
 import "./CountdownComponent.css";
-import { Box } from "@mui/material";
 import FavoriteBorderRoundedIcon from "@mui/icons-material/FavoriteBorderRounded";
-
-const colors = {
-  powderBlue: "#DCEBF3",
-  deepBlue: "#5E7690",
-  butterYellow: "#F8EBAA",
-  gold: "#D3B84C",
-  cream: "#FAF9F0",
-  text: "#66727A",
-  muted: "#929B9F",
-};
 
 const WEDDING_DATE = new Date("2026-12-02T09:00:00");
 

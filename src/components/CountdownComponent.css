@@ -118,9 +118,9 @@
 }
 
 @media (max-width: 600px) {
-  .wedding-countdown {
+  /* .wedding-countdown {
     margin-top: 4rem;
-  }
+  } */
 
   .countdown-heading {
     gap: 0.6rem;

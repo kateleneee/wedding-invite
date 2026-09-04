@@ -31,25 +31,23 @@ const dateItems = [
   },
 ];
 
-// function Invitation() {
-//   return (
-//     <section className="invitation" aria-labelledby="invitation-title">
-//       <p id="invitation-title" className="invitation-title">
-//         You Are Invited!!
-//       </p>
+function Invitation() {
+  return (
+    <section className="invitation" aria-labelledby="invitation-title">
+      <p id="invitation-title" className="invitation-title">
+        You are invited!
+      </p>
 
-//       <p className="invitation-message">
-//         Together with our families,
-//         <br />
-//         we joyfully invite you to join us,
-//         <br />
-//         as we celebrate our love,
-//         <br />
-//         our marriage, and our future together.
-//       </p>
-//     </section>
-//   );
-// }
+      <p className="invitation-message">
+        Together with our families,
+        <br />
+        we joyfully invite you to join us, as we celebrate our love,
+        <br />
+        our marriage, and our future together.
+      </p>
+    </section>
+  );
+}
 
 function DateCard({ image, number, label, alt }) {
   return (
@@ -64,7 +62,7 @@ function DateCard({ image, number, label, alt }) {
 export default function SaveTheDateS() {
   return (
     <section className="wedding-date" id="wedding">
-      {/* <Invitation /> */}
+      <Invitation />
       <div className="date-images">
         {dateItems.map((item) => (
           <DateCard
