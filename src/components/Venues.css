@@ -124,7 +124,7 @@
 
 .venues-header {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 2% auto;
   text-align: center;
 }
 
@@ -302,7 +302,7 @@
   align-items: center;
   gap: 18px;
 
-  margin-bottom: 55px;
+  margin-bottom: 40px;
 }
 
 .venue-number {
@@ -517,6 +517,7 @@
 ========================================= */
 
 .venue-details {
+  text-align: center;
   padding: 10px 0;
 }
 
@@ -537,17 +538,18 @@
   color: var(--deep-blue);
 
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  font-weight: 500;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 600;
   line-height: 1.05;
 }
 
 .gold-divider {
   display: flex;
   align-items: center;
+  justify-self: center;
   gap: 10px;
 
-  margin: 25px 0;
+  margin: 10px 0;
 }
 
 .gold-divider::before,
@@ -867,10 +869,10 @@
   .venues-section {
     padding: 65px 18px;
   }
-
+/* 
   .venues-header {
     margin-bottom: 60px;
-  }
+  } */
 
   /* .venues-header h3 {
     font-size: 3rem;

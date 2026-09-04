@@ -59,7 +59,7 @@ function VenueCard({ venue, index }) {
 
         {/* DETAILS */}
         <div className="venue-details">
-          <p className="venue-label">WHERE WE'LL BE</p>
+          {/* <p className="venue-label">WHERE WE'LL BE</p> */}
 
           <h3>{venue.title}</h3>
 
@@ -144,7 +144,7 @@ export default function Venues() {
       <section className="map-section">
         <div className="venues-header">
           <span className="eyebrow">FIND YOUR WAY</span>
-          <p>We'll see you there.</p>
+          <p className="venues-intro">We'll see you there.</p>
         </div>
 
         <div className="map-card">
