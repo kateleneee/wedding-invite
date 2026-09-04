@@ -1,26 +1,19 @@
 // import React from "react";
+import { weddingData } from "../data/weddingData";
 import "./Landing.css";
 import { ChevronDown } from "lucide-react";
 
+const newDate = new Date(weddingData.date.complete)
+const monthAbbreviation = newDate.toLocaleString('default', { month: 'short' })
 function Landing({
-  // coverImage,
-  firstName = "Daniel",
-  secondName = "Kaylene",
-  weddingDate = "02 · Dec · 2026",
+  firstName = weddingData.couple.groom.firstName,
+  secondName = weddingData.couple.bride.firstName,
+  // weddingDate = "02 · Dec · 2026",
+  weddingDate = `${weddingData.date.date} · ${monthAbbreviation} · ${weddingData.date.year}`,
 }) {
   return (
-    <section
-      className="landing"
-      // style={{
-      //   backgroundImage: `url(${coverImage})`,
-
-      // }}
-      id="home"
-    >
-      {/* {coverImage} */}
-
+    <section id="home" className=" landing-section">
       <div className="landing-overlay" aria-hidden="true" />
-
       <div className="landing-frame" aria-hidden="true" />
 
       <div className="landing-content">

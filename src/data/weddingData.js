@@ -1,12 +1,13 @@
 export const weddingData = {
     couple: {
-        bride: "Kaylene",
-        groom: "Daniel",
+        bride: { firstName: "Kaylene", middleName: "Panganiban", lastName: "Panlilio" },
+        groom: { firstName: "Daniel", secondName: "Jan", middleName: "Dela Cruz", lastName: "Bolibol" },
     },
 
     date: {
         date: "2",
         month: "December",
+        complete: "2026-12-01",
         year: "2026",
         day: "Wednesday"
     },

@@ -97,22 +97,17 @@ function App() {
 
           {/* STICKY APP BAR */}
           <ResponsiveAppBar />
-          {/* HERO */}
 
+          {/* LANDING */}
           <Landing coverImage={CoverImage} />
 
+          {/* SAVE THE DATE */}
           <SaveTheDate2 />
-          {/* <SaveTheDateNew /> */}
 
-          {/* WEDDING DETAILS*/}
-          {/* <WeddingDetails /> */}
-          <section id="venues">
-            <Venues />
-          </section>
-          {/* <Venues2 /> */}
+          {/* VENUE */}
+          <Venues />
 
           {/* STORY */}
-
           <section id="story" className="section story-section">
             <div className="story-image">
               {/* <div className="image-placeholder">
@@ -158,51 +153,12 @@ function App() {
           </section>
 
           {/* GALLERY */}
-
-          {/* <section
-            id="gallery"
-            className="section gallery-section"
-          >
-
-            <div className="section-label">
-              OUR MOMENTS
-            </div>
-
-            <h2>
-              A little glimpse
-              <br />
-              of us
-            </h2>
-
-            <div className="gallery-grid">
-
-              <div className="gallery-item">
-                PHOTO 01
-              </div>
-
-              <div className="gallery-item">
-                PHOTO 02
-              </div>
-
-              <div className="gallery-item">
-                PHOTO 03
-              </div>
-
-              <div className="gallery-item">
-                PHOTO 04
-              </div>
-
-            </div>
-
-          </section> */}
-          {/* <PhotoGallery /> */}
           <PhotoGallery2 />
 
           {/* TIMELINE */}
           <WeddingTimeline />
 
           {/* ENTOURAGE */}
-
           <section id="entourage" className="section entourage-section">
             <div className="section-label">OUR ENTOURAGE</div>
 
@@ -270,7 +226,6 @@ function App() {
           </section>
 
           {/* GIFTS */}
-
           <section id="gifts" className="section gifts-section">
             <div className="section-label">GIFT GUIDE</div>
 
@@ -295,7 +250,6 @@ function App() {
           </section>
 
           {/* FOOTER */}
-
           <footer className="footer">
             <Heart size={22} fill="currentColor" />
 

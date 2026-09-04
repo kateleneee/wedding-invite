@@ -1,25 +1,17 @@
-:root {
-  --gold-primary: #f7d774;
-  --gold-secondary: #f4e6a1;
-  --gold-light: #fff4d6;
-}
 
-.landing {
+/* =========================
+   LANDING
+========================= */
+.landing-section {
   position: relative;
-
   width: 100%;
   min-height: calc(100vh - 64px);
   max-height: calc(100vh - 64px);
-
   display: grid;
   place-items: center;
-
   overflow: hidden;
   isolation: isolate;
-
-  /* background-color: #2f352d; */
   background-color: var(--gold-light);
-  /* background-image: url("../assets/images/landing-yellow-escolta.png"); */
   background-image: url("../assets/images/KDR-153.jpg");
   background-size: cover;
   background-position: center;
@@ -27,14 +19,14 @@
 }
 
 @media (min-width: 900px) {
-  .landing {
+  .landing-section {
     min-height: calc(100vh - 72px);
     max-height: calc(100vh - 72px);
   }
 }
 
 @media (max-width: 700px) {
-  .landing {
+  .landing-section {
     background-image: url("../assets/images/KDR-153.jpg");
     background-size: fill;
     background-position: 70% center;
@@ -45,12 +37,9 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-
   width: 100%;
   height: 100%;
-
   display: block;
-
   object-fit: cover;
   object-position: center;
 }
@@ -59,7 +48,6 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-
   background:
     linear-gradient(180deg,
       rgba(18, 24, 18, 0.18) 0%,
@@ -71,24 +59,18 @@
   position: absolute;
   inset: clamp(14px, 3vw, 36px);
   z-index: 2;
-
   border: 1px solid rgba(255, 255, 255, 0.55);
-
   pointer-events: none;
 }
 
 .landing-frame::before,
 .landing-frame::after {
   content: "";
-
   position: absolute;
   left: 50%;
-
   width: clamp(45px, 8vw, 90px);
   height: 1px;
-
   background-color: rgba(255, 255, 255, 0.7);
-
   transform: translateX(-50%);
 }
 
@@ -103,13 +85,10 @@
 .landing-content {
   position: relative;
   z-index: 3;
-
   width: min(88%, 760px);
   height: 70vh;
-
   padding:
     clamp(1rem, 4vw, 2rem);
-
   color: #fffdf8;
   text-align: center;
 
@@ -253,29 +232,10 @@
 
 }
 
-.landing-invitation {
-  max-width: 700px;
-
-  margin:
-    clamp(1rem, 3vw, 1.5rem) auto 0;
-
-  font-family: "Cormorant Garamond", Georgia, serif;
-  font-size: clamp(1rem, 2.6vw, 1.4rem);
-  font-weight: 00;
-  line-height: 1.6;
-  color: var(--gold-secondary);
-}
-
 /* Small-screen adjustments */
 @media (max-width: 480px) {
-  /* .landing {
-    min-height: calc(100vh - 72px);
-    max-height: calc(100vh - 72px);
-  } */
-
   .landing-content {
     width: 82%;
-    /* background-color: red; */
     height: 80vh;
 
     .landing-cover {
@@ -284,10 +244,6 @@
 
     .landing-names {
       line-height: 0.9;
-    }
-
-    .landing-invitation {
-      max-width: 290px;
     }
   }
 }
@@ -312,8 +268,7 @@
 }
 
 .landing-eyebrow,
-.landing-date,
-.landing-invitation {
+.landing-date {
   color: rgba(255, 255, 255, 0.95);
   text-shadow:
     0 1px 4px rgba(0, 0, 0, 0.4);

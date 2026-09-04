@@ -12,6 +12,9 @@
   font-family: "DM Sans", sans-serif;
   color: var(--text);
   background: var(--cream);
+  --gold-primary: #f7d774;
+  --gold-secondary: #f4e6a1;
+  --gold-light: #fff4d6;
 }
 
 * {
