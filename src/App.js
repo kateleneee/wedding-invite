@@ -15,7 +15,7 @@ import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 
 import "./App.css";
 import Envelope from "./components/Envelope";
-import PhotoGallery2 from "./components/PhotoGallery2";
+import PhotoGallery from "./components/PhotoGallery";
 import Venues from "./components/Venues";
 import WeddingTimeline from "./components/WeddingTimeline";
 import WeddingPlaylist from "./components/WeddingPlaylist";
@@ -153,7 +153,7 @@ function App() {
           </section>
 
           {/* GALLERY */}
-          <PhotoGallery2 />
+          <PhotoGallery />
 
           {/* TIMELINE */}
           <WeddingTimeline />

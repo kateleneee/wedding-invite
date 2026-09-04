@@ -134,7 +134,7 @@ export default function PhotoGallery() {
             <img
               src={selectedPhoto.src}
               alt={selectedPhoto.caption}
-              className="lightbox-image"
+            // className="lightbox-image"
             />
 
             <Typography

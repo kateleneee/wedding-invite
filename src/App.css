@@ -500,6 +500,17 @@ button {
   background: var(--blue-dark);
 }
 
+/* =========================================
+   LIGHTBOX
+========================================= */
+
+.lightbox-image {
+  width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  display: block;
+}
+
 /* =========================
    ENTOURAGE
 ========================= */
