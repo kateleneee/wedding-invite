@@ -15,15 +15,8 @@ import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 
 import "./App2.css";
 import Envelope from "./components/Envelope";
-// import PhotoGallery from "./components/PhotoGallery";
 import PhotoGallery2 from "./components/PhotoGallery2";
-// import SaveTheDate from "./components/SaveTheDate";
-// import SaveTheDateTimer from "./components/SaveTheDateTimer";
-// import SaveTheDateNew from "./components/SaveTheDateNew";
-// import WeddingDetails from "./components/WeddingDetails";
 import Venues from "./components/Venues";
-// import Venues2 from "./components/Venues2";
-// import { TimerOutlined } from "@mui/icons-material";
 import WeddingTimeline from "./components/WeddingTimeline";
 import WeddingPlaylist from "./components/WeddingPlaylist";
 import engagement from "./assets/images/engagement1.jpg";
@@ -107,90 +100,6 @@ function App() {
           {/* HERO */}
 
           <Landing coverImage={CoverImage} />
-
-          {/* NAVIGATION */}
-
-          {/* WEDDING */}
-
-          {/* <section
-            id="wedding"
-            className="section wedding-section"
-          >
-
-            <div className="section-label">
-              THE WEDDING
-            </div>
-
-            <h2>
-              Save the
-              <br />
-              date
-            </h2>
-
-            <div className="date-card">
-
-              <div className="date-number">
-                15
-              </div>
-
-              <div className="date-info">
-                <span>NOVEMBER</span>
-                <strong>2026</strong>
-              </div>
-
-            </div>
-
-            <div className="details-grid">
-
-              <div className="detail">
-                <CalendarDays />
-
-                <span>DATE</span>
-
-                <strong>
-                  Wednesday, December 2
-                </strong>
-              </div>
-
-              <div className="detail">
-                <Clock />
-
-                <span>TIME</span>
-
-                <strong>
-                  4:00 PM
-                </strong>
-              </div>
-
-              <div className="detail">
-                <MapPin />
-
-                <span>VENUE</span>
-
-                <strong>
-                  The Garden Venue
-                </strong>
-
-                <small>
-                  Makati City, Philippines
-                </small>
-              </div>
-
-            </div>
-
-            <a
-              className="primary-button"
-              href="https://maps.google.com"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View venue on Google Maps
-              <ExternalLink size={16} />
-            </a>
-
-          </section> */}
-          {/* <SaveTheDate /> */}
-          {/* <SaveTheDateTimer /> */}
 
           <SaveTheDate2 />
           {/* <SaveTheDateNew /> */}

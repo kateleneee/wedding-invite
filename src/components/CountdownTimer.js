@@ -85,7 +85,6 @@ export default function SaveTheDate() {
   return (
     <section
       id="wedding"
-      className="section wedding-section"
     >
       <Box
         sx={{

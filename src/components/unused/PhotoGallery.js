@@ -8,7 +8,7 @@ import {
 import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import FavoriteRoundedIcon from "@mui/icons-material/FavoriteRounded";
 
-import "./PhotoGallery.css";
+// import "./PhotoGallery.css";
 import photo1 from "../assets/images/photo1.jpg";
 import photo2 from "../assets/images/photo2.jpg";
 import photo3 from "../assets/images/photo3.jpg";
