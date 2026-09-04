@@ -6,7 +6,7 @@ function Landing({
   // coverImage,
   firstName = "Daniel",
   secondName = "Kaylene",
-  weddingDate = "02 · December · 2026",
+  weddingDate = "02 · Dec · 2026",
 }) {
   return (
     <section
@@ -15,6 +15,7 @@ function Landing({
       //   backgroundImage: `url(${coverImage})`,
 
       // }}
+      id="home"
     >
       {/* {coverImage} */}
 

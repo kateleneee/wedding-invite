@@ -43,13 +43,16 @@ export default function ResponsiveAppBar() {
 
   const handleNavigation = (id) => {
     setDrawerOpen(false);
-
+    const appBar = document.querySelector(".MuiAppBar-root");
+    const appBarHeight = appBar?.offsetHeight || 0;
     const section = document.getElementById(id);
+    const y =
+      section.getBoundingClientRect().top + window.pageYOffset - appBarHeight;
 
     if (section) {
-      section.scrollIntoView({
+      window.scrollTo({
+        top: y,
         behavior: "smooth",
-        block: "start",
       });
     }
   };
@@ -197,13 +200,9 @@ export default function ResponsiveAppBar() {
         </Box>
 
         {/* Navigation */}
-        <List sx={{ px: 2, }}>
+        <List sx={{ px: 2 }}>
           {menuItems.map((item) => (
-            <ListItem
-              key={item.id}
-              disablePadding
-              sx={{ mb: 0.5 }}
-            >
+            <ListItem key={item.id} disablePadding sx={{ mb: 0.5 }}>
               <ListItemButton
                 onClick={() => handleNavigation(item.id)}
                 sx={{
@@ -227,7 +226,7 @@ export default function ResponsiveAppBar() {
                         fontSize: "1.1rem",
                         color: "#5E7690",
                         letterSpacing: "0.03em",
-                      }
+                      },
                     },
                   }}
                 />

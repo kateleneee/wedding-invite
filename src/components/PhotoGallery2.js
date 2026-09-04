@@ -67,7 +67,7 @@ export default function PhotoGallery2() {
                 srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                 src={`${item.img}`}
                 alt={item.title}
-                loading="lazy"
+                loading="eager"
               />
             </ImageListItem>
           ))}

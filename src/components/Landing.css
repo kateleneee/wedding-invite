@@ -268,15 +268,15 @@
 
 /* Small-screen adjustments */
 @media (max-width: 480px) {
-  .landing {
+  /* .landing {
     min-height: calc(100vh - 72px);
     max-height: calc(100vh - 72px);
-  }
+  } */
 
   .landing-content {
     width: 82%;
     /* background-color: red; */
-    height: 70vh;
+    height: 80vh;
 
     .landing-cover {
       object-position: center;
