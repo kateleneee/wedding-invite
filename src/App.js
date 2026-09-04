@@ -19,7 +19,7 @@ import PhotoGallery from "./components/PhotoGallery";
 import Venues from "./components/Venues";
 import WeddingTimeline from "./components/WeddingTimeline";
 import WeddingPlaylist from "./components/WeddingPlaylist";
-import engagement from "./assets/images/engagement1.jpg";
+// import engagement from "./assets/images/engagement1.jpg";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import SaveTheDate from "./components/SaveTheDate";
 import Landing from "./components/Landing";

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./PhotoCarousel.css";
+import engagement from "../assets/images/engagement1.jpg";
 import photo1 from "../assets/images/photo1.jpg";
 import photo2 from "../assets/images/photo2.jpg";
 import photo3 from "../assets/images/photo3.jpg";
@@ -11,6 +12,11 @@ const photos = [
     image: photo1,
     title: "A Beautiful Beginning",
     caption: "Every love story has a beginning, and ours starts here.",
+  },
+  {
+    image: engagement,
+    title: "A New Chapter Awakens",
+    caption: "With love as our guide, we step gently into a new chapter of our story.",
   },
   {
     image: photo2,
