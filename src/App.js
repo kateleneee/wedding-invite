@@ -27,6 +27,7 @@ import CoverImage from "./assets/images/landing-yellow-escolta.png";
 import WeddingCarousel from "./components/Carousel";
 import PhotoCarousel from "./components/PhotoCarousel";
 import FloralVideo from "./components/FloralVideo";
+import CinematicVideo from "./components/CinematicVideo";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -163,6 +164,7 @@ function App() {
 
           {/* VIDEO */}
           <FloralVideo />
+          <CinematicVideo />
 
           {/* GALLERY */}
           <PhotoGallery />

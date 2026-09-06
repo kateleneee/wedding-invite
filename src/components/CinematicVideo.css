@@ -1,0 +1,329 @@
+/* =========================================
+   CINEMATIC VIDEO-IN-VIDEO
+========================================= */
+
+.cinematic-video-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 850px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #5e7690;
+}
+
+
+/* =========================================
+   BACKGROUND VIDEO
+========================================= */
+
+.cinematic-background {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+
+  filter:
+    blur(2px)
+    saturate(0.7);
+
+  transform: scale(1.04);
+}
+
+
+/* =========================================
+   BACKGROUND DIMMING
+========================================= */
+
+.cinematic-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(28, 48, 64, 0.62),
+      rgba(28, 48, 64, 0.72)
+    );
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.cinematic-content {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 90px 20px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.cinematic-eyebrow {
+  margin: 0 0 8px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 14px;
+
+  letter-spacing: 0.35em;
+
+  text-transform: uppercase;
+
+  color: #f8ebaA;
+}
+
+
+.cinematic-title {
+  margin: 0 0 45px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: clamp(42px, 6vw, 72px);
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  color: #faf9f0;
+
+  text-shadow:
+    0 3px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   MAIN VIDEO
+========================================= */
+
+.cinematic-video-wrapper {
+  position: relative;
+
+  width: min(680px, 82vw);
+
+  padding: 10px;
+
+  background: rgba(250, 249, 240, 0.95);
+
+  box-shadow:
+    0 35px 90px rgba(0, 0, 0, 0.35),
+    0 10px 30px rgba(0, 0, 0, 0.2);
+
+  transform: rotate(-1deg);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+
+/* Slight interaction */
+
+.cinematic-video-wrapper:hover {
+  transform: rotate(0deg) scale(1.015);
+
+  box-shadow:
+    0 45px 100px rgba(0, 0, 0, 0.4),
+    0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   VIDEO BORDER
+========================================= */
+
+.cinematic-video-border {
+  position: relative;
+
+  padding: 5px;
+
+  background: #dcebf3;
+
+  border: 1px solid rgba(94, 118, 144, 0.35);
+}
+
+
+/* =========================================
+   MAIN VIDEO
+========================================= */
+
+.cinematic-main-video {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  max-height: 65vh;
+
+  object-fit: contain;
+
+  background: #1d2c36;
+}
+
+
+/* =========================================
+   YELLOW ACCENT
+========================================= */
+
+.cinematic-accent {
+  position: absolute;
+
+  width: 65px;
+  height: 65px;
+
+  right: -30px;
+  bottom: -30px;
+
+  border-radius: 50%;
+
+  background: #f8ebaA;
+
+  z-index: -1;
+}
+
+
+/* =========================================
+   CAPTION
+========================================= */
+
+.cinematic-caption {
+  margin: 35px 0 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 21px;
+
+  font-style: italic;
+
+  color: #faf9f0;
+
+  text-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================
+   FLOWERS
+========================================= */
+
+.cinematic-flower {
+  position: absolute;
+
+  z-index: 3;
+
+  font-family: Georgia, serif;
+
+  font-size: 100px;
+
+  color: #f8ebaA;
+
+  opacity: 0.9;
+
+  text-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.15);
+
+  pointer-events: none;
+}
+
+
+.cinematic-flower-left {
+  left: 5%;
+  top: 12%;
+
+  transform: rotate(-20deg);
+}
+
+
+.cinematic-flower-right {
+  right: 5%;
+  bottom: 12%;
+
+  color: #faf9f0;
+
+  transform: rotate(20deg);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .cinematic-video-section {
+    min-height: 750px;
+  }
+
+  .cinematic-content {
+    padding: 70px 15px;
+  }
+
+  .cinematic-title {
+    margin-bottom: 30px;
+  }
+
+  .cinematic-video-wrapper {
+    width: 88vw;
+
+    padding: 7px;
+  }
+
+  .cinematic-video-border {
+    padding: 4px;
+  }
+
+  .cinematic-main-video {
+    max-height: 60vh;
+  }
+
+  .cinematic-accent {
+    width: 45px;
+    height: 45px;
+
+    right: -18px;
+    bottom: -18px;
+  }
+
+  .cinematic-flower {
+    font-size: 55px;
+  }
+
+  .cinematic-flower-left {
+    left: -15px;
+    top: 10%;
+  }
+
+  .cinematic-flower-right {
+    right: -15px;
+    bottom: 10%;
+  }
+}
