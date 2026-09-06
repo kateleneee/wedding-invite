@@ -17,7 +17,8 @@ import "./App.css";
 import Envelope from "./components/Envelope";
 import PhotoGallery from "./components/PhotoGallery";
 import Venues from "./components/Venues";
-import WeddingTimeline from "./components/WeddingTimeline";
+// import WeddingTimeline from "./components/WeddingTimeline";
+// import WeddingTimelineV2 from "./components/WeddingTimelineV2";
 import WeddingPlaylist from "./components/WeddingPlaylist";
 // import engagement from "./assets/images/engagement1.jpg";
 import ResponsiveAppBar from "./components/ResponsiveAppBar";
@@ -28,6 +29,10 @@ import WeddingCarousel from "./components/Carousel";
 import PhotoCarousel from "./components/PhotoCarousel";
 import FloralVideo from "./components/FloralVideo";
 import CinematicVideo from "./components/CinematicVideo";
+import WeddingTimelineCard from "./components/WeddingTimelineCard";
+import WeddingTimelineCard2 from "./components/WeddingTimelineCard2";
+import WeddingTimelineElegant from "./components/WeddingTimelineElegant";
+import WeddingTimelineScroll from "./components/WeddingTimelineScroll";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -170,7 +175,13 @@ function App() {
           <PhotoGallery />
 
           {/* TIMELINE */}
-          <WeddingTimeline />
+          <section id="timeline">
+            {/* <WeddingTimelineV2 /> */}
+            <WeddingTimelineCard />
+            <WeddingTimelineCard2 />
+            {/* <WeddingTimelineElegant /> */}
+            <WeddingTimelineScroll />
+          </section>
 
           {/* ENTOURAGE */}
           <section id="entourage" className="section entourage-section">

@@ -1,0 +1,1069 @@
+:root {
+  --wts2-blue: #356f96;
+  --wts2-deep-blue: #285675;
+  --wts2-yellow: #f5dc63;
+  --wts2-soft-yellow: #f8e58a;
+
+  --wts2-paper: #fffdf6;
+
+  --wts2-text: #30495a;
+  --wts2-muted: #657783;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.wts2-section {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 70px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      135deg,
+      #edf7fa 0%,
+      #fffbea 50%,
+      #eaf5f9 100%
+    );
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.wts2-card {
+  position: relative;
+
+  width: min(920px, 94vw);
+
+  padding: 11px;
+
+  background: var(--wts2-paper);
+
+  border: 4px solid var(--wts2-deep-blue);
+
+  box-shadow:
+    0 20px 55px rgba(40, 86, 117, 0.15),
+    0 5px 15px rgba(40, 86, 117, 0.08);
+
+  box-sizing: border-box;
+
+  animation:
+    wts2-card-enter
+    1s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+
+/* =====================================================
+   INNER FRAME
+===================================================== */
+
+.wts2-frame {
+  position: absolute;
+
+  inset: 13px;
+
+  border: 2px solid var(--wts2-blue);
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CORNERS
+===================================================== */
+
+.wts2-corner {
+  position: absolute;
+
+  width: 24px;
+  height: 24px;
+
+  z-index: 5;
+}
+
+
+.wts2-corner::before {
+  content: "";
+
+  position: absolute;
+
+  width: 24px;
+  height: 2px;
+
+  background: var(--wts2-deep-blue);
+}
+
+
+.wts2-corner::after {
+  content: "";
+
+  position: absolute;
+
+  width: 2px;
+  height: 24px;
+
+  background: var(--wts2-deep-blue);
+}
+
+
+.wts2-corner-tl {
+  top: 17px;
+  left: 17px;
+}
+
+
+.wts2-corner-tl::before {
+  top: 0;
+  left: 0;
+}
+
+
+.wts2-corner-tl::after {
+  top: 0;
+  left: 0;
+}
+
+
+.wts2-corner-tr {
+  top: 17px;
+  right: 17px;
+}
+
+
+.wts2-corner-tr::before {
+  top: 0;
+  right: 0;
+}
+
+
+.wts2-corner-tr::after {
+  top: 0;
+  right: 0;
+}
+
+
+.wts2-corner-bl {
+  bottom: 17px;
+  left: 17px;
+}
+
+
+.wts2-corner-bl::before {
+  bottom: 0;
+  left: 0;
+}
+
+
+.wts2-corner-bl::after {
+  bottom: 0;
+  left: 0;
+}
+
+
+.wts2-corner-br {
+  bottom: 17px;
+  right: 17px;
+}
+
+
+.wts2-corner-br::before {
+  bottom: 0;
+  right: 0;
+}
+
+
+.wts2-corner-br::after {
+  bottom: 0;
+  right: 0;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.wts2-content {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 72px 75px 55px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.wts2-header {
+  text-align: center;
+
+  margin-bottom: 68px;
+
+  animation:
+    wts2-header-enter
+    0.9s
+    0.2s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+
+.wts2-eyebrow {
+  display: block;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.3em;
+
+  color: var(--wts2-blue);
+}
+
+
+.wts2-header-rule {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 16px auto;
+}
+
+
+.wts2-header-rule span {
+  width: 48px;
+  height: 2px;
+
+  background: var(--wts2-blue);
+}
+
+
+.wts2-header-rule i {
+  width: 7px;
+  height: 7px;
+
+  background: var(--wts2-yellow);
+
+  border: 1px solid var(--wts2-deep-blue);
+
+  transform: rotate(45deg);
+
+  animation:
+    wts2-diamond
+    3s
+    ease-in-out
+    infinite;
+}
+
+
+.wts2-header h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: clamp(44px, 5.5vw, 64px);
+
+  font-weight: 600;
+
+  line-height: 0.95;
+
+  color: var(--wts2-deep-blue);
+}
+
+
+.wts2-header p {
+  margin: 19px 0 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 17px;
+
+  line-height: 1.5;
+
+  color: var(--wts2-muted);
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.wts2-timeline {
+  position: relative;
+
+  width: 100%;
+}
+
+
+/* =====================================================
+   SPINE
+===================================================== */
+
+.wts2-spine {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 2px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(53, 111, 150, 0.4) 5%,
+      rgba(53, 111, 150, 0.4) 95%,
+      transparent
+    );
+
+  transform-origin: top;
+
+  animation:
+    wts2-spine-draw
+    1.8s
+    0.5s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+
+/* =====================================================
+   EVENTS
+===================================================== */
+
+.wts2-event {
+  position: relative;
+
+  display: flex;
+
+  width: 100%;
+
+  min-height: 135px;
+
+  margin-bottom: 18px;
+
+  box-sizing: border-box;
+}
+
+
+.wts2-event:last-child {
+  margin-bottom: 0;
+}
+
+
+.wts2-event-left {
+  justify-content: flex-start;
+}
+
+
+.wts2-event-right {
+  justify-content: flex-end;
+}
+
+
+/* =====================================================
+   EVENT CONTENT
+===================================================== */
+
+.wts2-event-content {
+  width: calc(50% - 45px);
+
+  padding: 0 25px;
+
+  box-sizing: border-box;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s
+      cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* Left enters from left */
+
+.wts2-event-left .wts2-event-content {
+  text-align: right;
+
+  transform: translateX(-50px);
+}
+
+
+/* Right enters from right */
+
+.wts2-event-right .wts2-event-content {
+  text-align: left;
+
+  transform: translateX(50px);
+}
+
+
+/* =====================================================
+   INDIVIDUAL SCROLL REVEAL
+===================================================== */
+
+.wts2-event.wts2-visible
+  .wts2-event-content {
+
+  opacity: 1;
+
+  transform: translateX(0);
+}
+
+
+/* =====================================================
+   TIME
+===================================================== */
+
+.wts2-time {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  color: var(--wts2-blue);
+
+  opacity: 0;
+
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.45s ease 0.12s,
+    transform 0.45s
+      cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.wts2-event.wts2-visible .wts2-time {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.wts2-event h3 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 30px;
+
+  font-weight: 600;
+
+  line-height: 1.05;
+
+  color: var(--wts2-deep-blue);
+
+  opacity: 0;
+
+  transform: translateY(12px);
+
+  transition:
+    opacity 0.55s ease 0.2s,
+    transform 0.55s
+      cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.25s ease;
+}
+
+
+.wts2-event.wts2-visible h3 {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+.wts2-event:hover h3 {
+  color: var(--wts2-blue);
+}
+
+
+/* =====================================================
+   EVENT RULE
+===================================================== */
+
+.wts2-event-rule {
+  width: 0;
+  height: 2px;
+
+  margin: 10px 0;
+
+  background: var(--wts2-yellow);
+
+  transition:
+    width 0.55s
+      cubic-bezier(0.22, 1, 0.36, 1)
+      0.35s;
+}
+
+
+.wts2-event-left .wts2-event-rule {
+  margin-left: auto;
+}
+
+
+.wts2-event-right .wts2-event-rule {
+  margin-right: auto;
+}
+
+
+.wts2-event.wts2-visible
+  .wts2-event-rule {
+
+  width: 38px;
+}
+
+
+.wts2-event:hover .wts2-event-rule {
+  width: 55px;
+
+  background: var(--wts2-deep-blue);
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.wts2-event p {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 16px;
+
+  line-height: 1.45;
+
+  color: var(--wts2-text);
+
+  opacity: 0;
+
+  transform: translateY(10px);
+
+  transition:
+    opacity 0.55s ease 0.42s,
+    transform 0.55s ease 0.42s;
+}
+
+
+.wts2-event.wts2-visible p {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+
+/* =====================================================
+   SQUARE MARKER
+===================================================== */
+
+.wts2-marker {
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+
+  width: 25px;
+  height: 25px;
+
+  transform:
+    translateX(-50%)
+    scale(0.3);
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: var(--wts2-paper);
+
+  border: 2px solid var(--wts2-deep-blue);
+
+  /*
+    Square instead of circle
+  */
+  border-radius: 2px;
+
+  box-sizing: border-box;
+
+  z-index: 4;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.55s
+      cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+/* Marker appears when THAT event scrolls in */
+
+.wts2-event.wts2-visible .wts2-marker {
+  opacity: 1;
+
+  transform:
+    translateX(-50%)
+    scale(1);
+}
+
+
+/* Inner yellow square */
+
+.wts2-marker span {
+  width: 9px;
+  height: 9px;
+
+  background: var(--wts2-yellow);
+
+  border: 1px solid var(--wts2-deep-blue);
+
+  border-radius: 1px;
+
+  transform: scale(0);
+
+  transition:
+    transform 0.4s
+      cubic-bezier(0.175, 0.885, 0.32, 1.275)
+      0.2s,
+    background 0.25s ease;
+}
+
+
+.wts2-event.wts2-visible
+  .wts2-marker span {
+
+  transform: scale(1);
+}
+
+
+.wts2-event:hover .wts2-marker {
+  background: var(--wts2-yellow);
+
+  transform:
+    translateX(-50%)
+    scale(1.1);
+}
+
+
+.wts2-event:hover .wts2-marker span {
+  background: var(--wts2-paper);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.wts2-footer {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 62px;
+
+  opacity: 0;
+
+  transform: translateY(15px);
+
+  animation:
+    wts2-footer-enter
+    0.8s
+    1.5s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+
+.wts2-footer span {
+  width: 85px;
+  height: 2px;
+
+  background: var(--wts2-blue);
+}
+
+
+.wts2-footer b {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 21px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  color: var(--wts2-deep-blue);
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes wts2-card-enter {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(25px)
+      scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+@keyframes wts2-header-enter {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes wts2-spine-draw {
+
+  from {
+    transform:
+      translateX(-50%)
+      scaleY(0);
+  }
+
+  to {
+    transform:
+      translateX(-50%)
+      scaleY(1);
+  }
+}
+
+
+@keyframes wts2-footer-enter {
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes wts2-diamond {
+
+  0%,
+  100% {
+    transform: rotate(45deg);
+  }
+
+  50% {
+    transform:
+      rotate(135deg)
+      translateY(-2px);
+  }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 750px) {
+
+  .wts2-section {
+    padding: 45px 12px;
+  }
+
+
+  .wts2-card {
+    width: 96vw;
+  }
+
+
+  .wts2-content {
+    padding: 60px 35px 48px;
+  }
+
+
+  .wts2-header {
+    margin-bottom: 55px;
+  }
+
+
+  .wts2-header h2 {
+    font-size: 45px;
+  }
+
+
+  /*
+    IMPORTANT:
+    Keep alternating layout.
+  */
+
+  .wts2-event-content {
+    width: calc(50% - 25px);
+
+    padding: 0 12px;
+  }
+
+
+  .wts2-event h3 {
+    font-size: 26px;
+  }
+
+
+  .wts2-event p {
+    font-size: 15px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 500px) {
+
+  .wts2-section {
+    padding: 25px 7px;
+  }
+
+
+  .wts2-card {
+    width: 98vw;
+
+    padding: 8px;
+
+    border-width: 4px;
+  }
+
+
+  .wts2-frame {
+    inset: 9px;
+
+    border-width: 1px;
+  }
+
+
+  .wts2-content {
+    padding: 50px 12px 40px;
+  }
+
+
+  .wts2-header {
+    margin-bottom: 45px;
+  }
+
+
+  .wts2-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 0.18em;
+  }
+
+
+  .wts2-header-rule span {
+    width: 28px;
+  }
+
+
+  .wts2-header h2 {
+    font-size: 38px;
+  }
+
+
+  .wts2-header p {
+    font-size: 14px;
+  }
+
+
+  /*
+    =================================================
+    ALTERNATING LAYOUT IS RETAINED
+    =================================================
+  */
+
+  .wts2-event {
+    min-height: 155px;
+
+    margin-bottom: 8px;
+  }
+
+
+  .wts2-event-content {
+    width: calc(50% - 15px);
+
+    padding: 0 4px;
+  }
+
+
+  .wts2-event-left .wts2-event-content {
+    padding-right: 9px;
+  }
+
+
+  .wts2-event-right .wts2-event-content {
+    padding-left: 9px;
+  }
+
+
+  .wts2-event h3 {
+    font-size: 21px;
+  }
+
+
+  .wts2-event p {
+    font-size: 13px;
+
+    line-height: 1.3;
+  }
+
+
+  .wts2-time {
+    font-size: 7.5px;
+
+    letter-spacing: 0.08em;
+  }
+
+
+  .wts2-event-rule {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+
+  .wts2-event.wts2-visible
+    .wts2-event-rule {
+
+    width: 27px;
+  }
+
+
+  /* Square marker */
+
+  .wts2-marker {
+    width: 19px;
+    height: 19px;
+
+    border-width: 1px;
+
+    border-radius: 1px;
+  }
+
+
+  .wts2-marker span {
+    width: 6px;
+    height: 6px;
+  }
+
+
+  .wts2-footer {
+    margin-top: 45px;
+  }
+
+
+  .wts2-footer span {
+    width: 40px;
+  }
+
+
+  .wts2-footer b {
+    font-size: 18px;
+  }
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .wts2-card,
+  .wts2-header,
+  .wts2-spine,
+  .wts2-footer,
+  .wts2-header-rule i,
+  .wts2-event-content,
+  .wts2-time,
+  .wts2-event h3,
+  .wts2-event-rule,
+  .wts2-event p,
+  .wts2-marker,
+  .wts2-marker span {
+    animation: none !important;
+
+    transition: none !important;
+
+    transform: none !important;
+
+    opacity: 1 !important;
+  }
+}

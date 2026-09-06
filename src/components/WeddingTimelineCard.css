@@ -1,0 +1,1015 @@
+/* =====================================================
+   WEDDING TIMELINE CARD
+
+   Vibrant Blue + Yellow
+   Vintage Editorial / Decorative Line Style
+===================================================== */
+
+.wtc-section {
+  --blue: #3f7195;
+  --deep-blue: #285675;
+  --bright-blue: #78abc9;
+
+  --yellow: #f6df69;
+  --bright-yellow: #f9e889;
+  --gold: #c6a83f;
+
+  --cream: #fffdf5;
+  --paper: #fcfaf0;
+
+  --dark-text: #304b5e;
+  --muted-text: #617483;
+
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 100px 20px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #d7ebf5 0%,
+      #c4dfed 50%,
+      #e4f0f4 100%
+    );
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.wtc-card {
+  position: relative;
+
+  width: min(900px, 94vw);
+
+  padding: 65px 75px 55px;
+
+  background:
+    var(--paper);
+
+  border:
+    4px solid var(--deep-blue);
+
+  box-shadow:
+    0 30px 70px rgba(40, 86, 117, 0.2),
+    0 8px 20px rgba(40, 86, 117, 0.12);
+
+  overflow: hidden;
+
+  animation:
+    cardEnter 0.9s ease both;
+}
+
+
+/* Inner border */
+
+.wtc-card::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 12px;
+
+  border:
+    1px solid var(--blue);
+
+  pointer-events: none;
+
+  opacity: 0.65;
+}
+
+
+/* Yellow offset edge */
+
+.wtc-card::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 14px;
+  height: 100%;
+
+  background:
+    var(--yellow);
+
+  z-index: 0;
+}
+
+
+/* =====================================================
+   TOP ORNAMENT
+===================================================== */
+
+.wtc-top-ornament {
+  position: relative;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+}
+
+.wtc-top-ornament span {
+  width: 85px;
+
+  height: 1px;
+
+  background:
+    var(--blue);
+}
+
+.wtc-top-ornament i {
+  position: relative;
+
+  width: 12px;
+  height: 12px;
+
+  display: block;
+
+  background:
+    var(--yellow);
+
+  border:
+    2px solid var(--deep-blue);
+
+  transform:
+    rotate(45deg);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.wtc-header {
+  position: relative;
+
+  z-index: 2;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   MONOGRAM
+===================================================== */
+
+.wtc-monogram {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 16px;
+
+  padding: 5px 14px 6px;
+
+  background:
+    var(--deep-blue);
+
+  color:
+    var(--cream);
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 22px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.05em;
+
+  border:
+    2px solid var(--yellow);
+
+  box-shadow:
+    4px 4px 0 var(--yellow);
+}
+
+.wtc-monogram span {
+  margin: 0 3px;
+
+  color:
+    var(--yellow);
+
+  font-style: italic;
+}
+
+
+/* =====================================================
+   LABEL
+===================================================== */
+
+.wtc-label {
+  margin: 0 0 9px;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.3em;
+
+  color:
+    var(--blue);
+
+  text-transform: uppercase;
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.wtc-header h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size:
+    clamp(48px, 7vw, 70px);
+
+  line-height: 0.95;
+
+  font-weight: 600;
+
+  letter-spacing: -0.025em;
+
+  color:
+    var(--deep-blue);
+
+  animation:
+    titleReveal 0.9s 0.15s ease both;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.wtc-intro {
+  max-width: 470px;
+
+  margin: 18px auto 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 19px;
+
+  line-height: 1.45;
+
+  color:
+    var(--muted-text);
+}
+
+
+/* =====================================================
+   WAVE DIVIDER
+===================================================== */
+
+.wtc-wave-divider {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  height: 40px;
+
+  margin:
+    25px auto
+    55px;
+}
+
+.wtc-wave-divider svg {
+  width: 100%;
+  height: 100%;
+}
+
+.wtc-wave-divider path {
+  fill: none;
+
+  stroke:
+    var(--blue);
+
+  stroke-width: 2;
+
+  stroke-linecap: round;
+
+  stroke-dasharray: 900;
+
+  stroke-dashoffset: 900;
+
+  animation:
+    drawWave 2s 0.4s ease forwards;
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.wtc-timeline {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 720px;
+
+  margin: 0 auto;
+}
+
+
+/* =====================================================
+   MAIN LINE
+===================================================== */
+
+.wtc-main-line {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 3px;
+
+  transform:
+    translateX(-50%);
+
+  background:
+    var(--bright-blue);
+
+  opacity: 0.8;
+}
+
+
+/* Yellow center accent */
+
+.wtc-main-line::before,
+.wtc-main-line::after {
+  content: "";
+
+  position: absolute;
+
+  left: 50%;
+
+  width: 7px;
+  height: 7px;
+
+  transform:
+    translateX(-50%)
+    rotate(45deg);
+
+  background:
+    var(--yellow);
+
+  border:
+    1px solid var(--deep-blue);
+}
+
+.wtc-main-line::before {
+  top: 0;
+}
+
+.wtc-main-line::after {
+  bottom: 0;
+}
+
+
+/* =====================================================
+   EVENT
+===================================================== */
+
+.wtc-event {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    50px
+    1fr;
+
+  align-items: start;
+
+  min-height: 115px;
+
+  opacity: 0;
+
+  animation:
+    eventAppear 0.7s var(--event-delay) ease forwards;
+}
+
+
+/* =====================================================
+   LEFT EVENT
+===================================================== */
+
+.wtc-event-left .wtc-event-time {
+  grid-column: 1;
+
+  text-align: right;
+
+  padding-right: 25px;
+}
+
+.wtc-event-left .wtc-event-content {
+  grid-column: 3;
+
+  padding-left: 25px;
+}
+
+
+/* =====================================================
+   RIGHT EVENT
+===================================================== */
+
+.wtc-event-right .wtc-event-time {
+  grid-column: 3;
+  grid-row: 1;
+
+  text-align: left;
+
+  padding-left: 25px;
+}
+
+.wtc-event-right .wtc-event-content {
+  grid-column: 1;
+  grid-row: 1;
+
+  text-align: right;
+
+  padding-right: 25px;
+}
+
+
+/* =====================================================
+   TIME
+===================================================== */
+
+.wtc-event-time {
+  padding-top: 5px;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  color:
+    var(--blue);
+}
+
+
+/* =====================================================
+   CENTER MARKER
+===================================================== */
+
+.wtc-event-marker {
+  grid-column: 2;
+
+  position: relative;
+
+  z-index: 4;
+
+  display: flex;
+
+  justify-content: center;
+
+  width: 50px;
+}
+
+
+/* =====================================================
+   DOT
+===================================================== */
+
+.wtc-event-marker span {
+  display: block;
+
+  width: 21px;
+  height: 21px;
+
+  margin-top: 3px;
+
+  background:
+    var(--yellow);
+
+  border:
+    3px solid var(--deep-blue);
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 0 5px var(--paper);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+.wtc-event:hover .wtc-event-marker span {
+  transform:
+    scale(1.25);
+
+  background:
+    var(--bright-yellow);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.wtc-event-content h3 {
+  margin: 0 0 5px;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 28px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  color:
+    var(--deep-blue);
+
+  transition:
+    transform 0.3s ease;
+}
+
+.wtc-event:hover .wtc-event-content h3 {
+  transform:
+    translateY(-2px);
+}
+
+.wtc-event-content p {
+  max-width: 260px;
+
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 16px;
+
+  line-height: 1.4;
+
+  color:
+    var(--muted-text);
+}
+
+
+/* =====================================================
+   ALTERNATING YELLOW ACCENT
+===================================================== */
+
+.wtc-event:nth-child(odd)
+.wtc-event-content::before {
+
+  content: "";
+
+  display: inline-block;
+
+  width: 25px;
+
+  height: 2px;
+
+  margin-bottom: 8px;
+
+  background:
+    var(--yellow);
+}
+
+.wtc-event:nth-child(even)
+.wtc-event-content::before {
+
+  content: "";
+
+  display: inline-block;
+
+  width: 25px;
+
+  height: 2px;
+
+  margin-bottom: 8px;
+
+  background:
+    var(--bright-blue);
+}
+
+
+/* =====================================================
+   BOTTOM ORNAMENT
+===================================================== */
+
+.wtc-bottom-ornament {
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 45px;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   SMALL WAVE
+===================================================== */
+
+.wtc-small-wave {
+  width: 260px;
+
+  height: 30px;
+
+  margin: 0 auto 15px;
+}
+
+.wtc-small-wave svg {
+  width: 100%;
+  height: 100%;
+}
+
+.wtc-small-wave path {
+  fill: none;
+
+  stroke:
+    var(--blue);
+
+  stroke-width: 2;
+
+  stroke-linecap: round;
+
+  opacity: 0.8;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.wtc-footer-text {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 3px;
+}
+
+.wtc-footer-text strong {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 23px;
+
+  color:
+    var(--deep-blue);
+}
+
+.wtc-footer-text span {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.2em;
+
+  color:
+    var(--blue);
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes cardEnter {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(30px)
+      rotate(-1deg);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+}
+
+
+@keyframes titleReveal {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@keyframes eventAppear {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@keyframes drawWave {
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .wtc-section {
+    padding:
+      70px
+      15px;
+  }
+
+  .wtc-card {
+    padding:
+      55px
+      40px
+      45px;
+  }
+
+  .wtc-card::after {
+    width: 9px;
+  }
+
+  .wtc-top-ornament span {
+    width: 55px;
+  }
+
+  .wtc-event {
+    grid-template-columns:
+      1fr
+      42px
+      1fr;
+  }
+
+  .wtc-event-marker {
+    width: 42px;
+  }
+
+  .wtc-event-left .wtc-event-time {
+    padding-right: 18px;
+  }
+
+  .wtc-event-left .wtc-event-content {
+    padding-left: 18px;
+  }
+
+  .wtc-event-right .wtc-event-time {
+    padding-left: 18px;
+  }
+
+  .wtc-event-right .wtc-event-content {
+    padding-right: 18px;
+  }
+
+  .wtc-event-content h3 {
+    font-size: 25px;
+  }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 540px) {
+
+  .wtc-section {
+    padding:
+      45px
+      8px;
+  }
+
+  .wtc-card {
+    width: 98vw;
+
+    padding:
+      45px
+      22px
+      40px;
+
+    border-width: 3px;
+  }
+
+  .wtc-card::before {
+    inset: 8px;
+  }
+
+  .wtc-top-ornament span {
+    width: 35px;
+  }
+
+  .wtc-header h2 {
+    font-size: 49px;
+  }
+
+  .wtc-intro {
+    font-size: 18px;
+  }
+
+  .wtc-wave-divider {
+    margin-bottom: 40px;
+  }
+
+
+  /* Mobile timeline becomes single column */
+
+  .wtc-main-line {
+    left: 23px;
+
+    transform: none;
+  }
+
+  .wtc-event {
+    display: grid;
+
+    grid-template-columns:
+      46px
+      1fr;
+
+    min-height: 120px;
+  }
+
+
+  .wtc-event-marker {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+
+    width: 46px;
+
+    justify-content: center;
+  }
+
+  .wtc-event-marker span {
+    width: 19px;
+    height: 19px;
+  }
+
+
+  .wtc-event-time,
+  .wtc-event-left .wtc-event-time,
+  .wtc-event-right .wtc-event-time {
+
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+
+    padding:
+      0 0 5px 15px;
+
+    text-align: left;
+  }
+
+
+  .wtc-event-content,
+  .wtc-event-left .wtc-event-content,
+  .wtc-event-right .wtc-event-content {
+
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+
+    padding:
+      28px 0 25px 15px;
+
+    text-align: left;
+  }
+
+
+  .wtc-event-content h3 {
+    font-size: 25px;
+  }
+
+  .wtc-event-content p {
+    font-size: 15px;
+
+    max-width: 100%;
+  }
+
+  .wtc-event:nth-child(odd)
+  .wtc-event-content::before,
+  .wtc-event:nth-child(even)
+  .wtc-event-content::before {
+    margin-bottom: 6px;
+  }
+
+
+  .wtc-small-wave {
+    width: 200px;
+  }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .wtc-card,
+  .wtc-header h2,
+  .wtc-event,
+  .wtc-wave-divider path {
+    animation: none;
+
+    opacity: 1;
+  }
+
+  .wtc-event-marker span,
+  .wtc-event-content h3 {
+    transition: none;
+  }
+}

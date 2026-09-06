@@ -1,0 +1,1085 @@
+:root {
+  --wte-blue: #356f96;
+  --wte-deep-blue: #285675;
+  --wte-bright-blue: #5f96b8;
+
+  --wte-yellow: #f5dc63;
+  --wte-soft-yellow: #f8e58a;
+
+  --wte-paper: #fffdf6;
+  --wte-text: #30495a;
+  --wte-muted: #657783;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.wte-section {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 70px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      135deg,
+      #edf7fa 0%,
+      #fffbea 50%,
+      #eaf5f9 100%
+    );
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.wte-card {
+  position: relative;
+
+  width: min(920px, 94vw);
+
+  padding: 11px;
+
+  background: var(--wte-paper);
+
+  /*
+    Thicker and more vibrant border
+  */
+  border: 4px solid var(--wte-deep-blue);
+
+  box-shadow:
+    0 20px 55px rgba(40, 86, 117, 0.15),
+    0 5px 15px rgba(40, 86, 117, 0.08);
+
+  box-sizing: border-box;
+
+  animation: wteCardEntrance 1s cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+
+/* =====================================================
+   INNER FRAME
+===================================================== */
+
+.wte-frame {
+  position: absolute;
+
+  inset: 13px;
+
+  border: 2px solid var(--wte-blue);
+
+  pointer-events: none;
+
+  animation: wteFrameReveal 1.2s ease both;
+}
+
+
+/* =====================================================
+   CORNERS
+===================================================== */
+
+.wte-corner {
+  position: absolute;
+
+  width: 24px;
+  height: 24px;
+
+  z-index: 5;
+}
+
+
+/* horizontal */
+
+.wte-corner::before {
+  content: "";
+
+  position: absolute;
+
+  width: 24px;
+  height: 2px;
+
+  background: var(--wte-deep-blue);
+}
+
+
+/* vertical */
+
+.wte-corner::after {
+  content: "";
+
+  position: absolute;
+
+  width: 2px;
+  height: 24px;
+
+  background: var(--wte-deep-blue);
+}
+
+
+.wte-corner-tl {
+  top: 17px;
+  left: 17px;
+}
+
+.wte-corner-tl::before {
+  top: 0;
+  left: 0;
+}
+
+.wte-corner-tl::after {
+  top: 0;
+  left: 0;
+}
+
+
+.wte-corner-tr {
+  top: 17px;
+  right: 17px;
+}
+
+.wte-corner-tr::before {
+  top: 0;
+  right: 0;
+}
+
+.wte-corner-tr::after {
+  top: 0;
+  right: 0;
+}
+
+
+.wte-corner-bl {
+  bottom: 17px;
+  left: 17px;
+}
+
+.wte-corner-bl::before {
+  bottom: 0;
+  left: 0;
+}
+
+.wte-corner-bl::after {
+  bottom: 0;
+  left: 0;
+}
+
+
+.wte-corner-br {
+  bottom: 17px;
+  right: 17px;
+}
+
+.wte-corner-br::before {
+  bottom: 0;
+  right: 0;
+}
+
+.wte-corner-br::after {
+  bottom: 0;
+  right: 0;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.wte-content {
+  position: relative;
+
+  z-index: 2;
+
+  padding: 72px 75px 55px;
+
+  box-sizing: border-box;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.wte-header {
+  text-align: center;
+
+  margin-bottom: 68px;
+
+  animation:
+    wteHeaderReveal 0.9s 0.25s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+
+.wte-eyebrow {
+  display: block;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.3em;
+
+  color: var(--wte-blue);
+}
+
+
+/* =====================================================
+   HEADER RULE
+===================================================== */
+
+.wte-header-rule {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  margin: 16px auto;
+}
+
+
+.wte-header-rule span {
+  width: 48px;
+  height: 2px;
+
+  background: var(--wte-blue);
+}
+
+
+.wte-header-rule i {
+  width: 7px;
+  height: 7px;
+
+  background: var(--wte-yellow);
+
+  border: 1px solid var(--wte-deep-blue);
+
+  transform: rotate(45deg);
+
+  animation: wteDiamond 2.5s ease-in-out infinite;
+}
+
+
+.wte-header h2 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: clamp(44px, 5.5vw, 64px);
+
+  font-weight: 600;
+
+  line-height: 0.95;
+
+  color: var(--wte-deep-blue);
+
+  letter-spacing: -0.02em;
+}
+
+
+.wte-header p {
+  margin: 19px 0 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 17px;
+
+  line-height: 1.5;
+
+  color: var(--wte-muted);
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.wte-timeline {
+  position: relative;
+
+  width: 100%;
+}
+
+
+/* =====================================================
+   CENTRAL SPINE
+===================================================== */
+
+.wte-spine {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 2px;
+
+  transform: translateX(-50%);
+
+  background: rgba(53, 111, 150, 0.25);
+
+  overflow: hidden;
+}
+
+
+.wte-spine-progress {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  background: var(--wte-blue);
+
+  transform-origin: top;
+
+  animation: wteLineDraw 1.8s
+    0.5s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+
+/* =====================================================
+   EVENT
+===================================================== */
+
+.wte-event {
+  position: relative;
+
+  display: flex;
+
+  width: 100%;
+
+  min-height: 130px;
+
+  margin-bottom: 18px;
+
+  box-sizing: border-box;
+}
+
+
+.wte-event:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =====================================================
+   LEFT / RIGHT
+===================================================== */
+
+.wte-event-left {
+  justify-content: flex-start;
+}
+
+
+.wte-event-right {
+  justify-content: flex-end;
+}
+
+
+/* =====================================================
+   EVENT CONTENT
+===================================================== */
+
+.wte-event-content {
+  width: calc(50% - 45px);
+
+  padding: 0 25px;
+
+  box-sizing: border-box;
+}
+
+
+.wte-event-left .wte-event-content {
+  text-align: right;
+}
+
+
+.wte-event-right .wte-event-content {
+  text-align: left;
+}
+
+
+/* =====================================================
+   EVENT ANIMATION
+===================================================== */
+
+.wte-event-left .wte-event-content {
+  animation:
+    wteLeftReveal 0.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+
+.wte-event-right .wte-event-content {
+  animation:
+    wteRightReveal 0.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+
+/* stagger */
+
+.wte-event:nth-child(2) .wte-event-content {
+  animation-delay: 0.55s;
+}
+
+.wte-event:nth-child(3) .wte-event-content {
+  animation-delay: 0.7s;
+}
+
+.wte-event:nth-child(4) .wte-event-content {
+  animation-delay: 0.85s;
+}
+
+.wte-event:nth-child(5) .wte-event-content {
+  animation-delay: 1s;
+}
+
+.wte-event:nth-child(6) .wte-event-content {
+  animation-delay: 1.15s;
+}
+
+.wte-event:nth-child(7) .wte-event-content {
+  animation-delay: 1.3s;
+}
+
+
+/* =====================================================
+   TIME
+===================================================== */
+
+.wte-time {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  color: var(--wte-blue);
+}
+
+
+/* =====================================================
+   EVENT TITLE
+===================================================== */
+
+.wte-event h3 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 30px;
+
+  font-weight: 600;
+
+  line-height: 1.05;
+
+  color: var(--wte-deep-blue);
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+
+.wte-event:hover h3 {
+  color: var(--wte-blue);
+
+  transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   EVENT RULE
+===================================================== */
+
+.wte-event-rule {
+  width: 38px;
+  height: 2px;
+
+  margin: 10px 0;
+
+  background: var(--wte-yellow);
+
+  transition:
+    width 0.35s ease,
+    background 0.35s ease;
+}
+
+
+.wte-event-left .wte-event-rule {
+  margin-left: auto;
+}
+
+
+.wte-event-right .wte-event-rule {
+  margin-right: auto;
+}
+
+
+.wte-event:hover .wte-event-rule {
+  width: 55px;
+
+  background: var(--wte-deep-blue);
+}
+
+
+/* =====================================================
+   DESCRIPTION
+===================================================== */
+
+.wte-event p {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 16px;
+
+  line-height: 1.45;
+
+  color: var(--wte-text);
+}
+
+
+/* =====================================================
+   MARKER
+===================================================== */
+
+.wte-marker {
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+
+  width: 25px;
+  height: 25px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  background: var(--wte-paper);
+
+  border: 2px solid var(--wte-deep-blue);
+
+  border-radius: 50%;
+
+  box-sizing: border-box;
+
+  z-index: 4;
+
+  animation:
+    wteMarkerReveal 0.5s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+
+/* Yellow diamond */
+
+.wte-marker span {
+  width: 8px;
+  height: 8px;
+
+  background: var(--wte-yellow);
+
+  border: 1px solid var(--wte-deep-blue);
+
+  transform: rotate(45deg);
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+}
+
+
+.wte-event:hover .wte-marker span {
+  transform: rotate(135deg) scale(1.25);
+
+  background: var(--wte-soft-yellow);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.wte-footer {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 62px;
+
+  animation:
+    wteFooterReveal 0.8s 1.35s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+
+.wte-footer span {
+  width: 85px;
+  height: 2px;
+
+  background: var(--wte-blue);
+}
+
+
+.wte-footer b {
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 21px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+
+  color: var(--wte-deep-blue);
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes wteCardEntrance {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(25px)
+      scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+
+@keyframes wteFrameReveal {
+  from {
+    opacity: 0;
+
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: scale(1);
+  }
+}
+
+
+@keyframes wteHeaderReveal {
+  from {
+    opacity: 0;
+
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes wteLineDraw {
+  from {
+    transform: scaleY(0);
+  }
+
+  to {
+    transform: scaleY(1);
+  }
+}
+
+
+@keyframes wteLeftReveal {
+  from {
+    opacity: 0;
+
+    transform: translateX(-25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes wteRightReveal {
+  from {
+    opacity: 0;
+
+    transform: translateX(25px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateX(0);
+  }
+}
+
+
+@keyframes wteMarkerReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateX(-50%)
+      scale(0);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateX(-50%)
+      scale(1);
+  }
+}
+
+
+@keyframes wteFooterReveal {
+  from {
+    opacity: 0;
+
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes wteDiamond {
+  0%,
+  100% {
+    transform: rotate(45deg);
+  }
+
+  50% {
+    transform: rotate(225deg);
+  }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 750px) {
+
+  .wte-section {
+    padding: 45px 12px;
+  }
+
+
+  .wte-card {
+    width: 96vw;
+
+    border-width: 4px;
+  }
+
+
+  .wte-content {
+    padding: 60px 35px 48px;
+  }
+
+
+  .wte-header {
+    margin-bottom: 55px;
+  }
+
+
+  .wte-header h2 {
+    font-size: 45px;
+  }
+
+
+  /*
+    Keep alternating timeline.
+    We DON'T collapse everything to one side.
+  */
+
+  .wte-event-content {
+    width: calc(50% - 25px);
+
+    padding: 0 12px;
+  }
+
+
+  .wte-event h3 {
+    font-size: 26px;
+  }
+
+
+  .wte-event p {
+    font-size: 15px;
+  }
+
+
+  .wte-time {
+    font-size: 9px;
+  }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 500px) {
+
+  .wte-section {
+    padding: 25px 8px;
+  }
+
+
+  .wte-card {
+    width: 98vw;
+
+    padding: 8px;
+
+    border-width: 4px;
+  }
+
+
+  .wte-frame {
+    inset: 9px;
+
+    border-width: 1px;
+  }
+
+
+  .wte-corner {
+    width: 18px;
+    height: 18px;
+  }
+
+
+  .wte-corner::before {
+    width: 18px;
+  }
+
+
+  .wte-corner::after {
+    height: 18px;
+  }
+
+
+  .wte-corner-tl,
+  .wte-corner-tr {
+    top: 12px;
+  }
+
+
+  .wte-corner-bl,
+  .wte-corner-br {
+    bottom: 12px;
+  }
+
+
+  .wte-corner-tl,
+  .wte-corner-bl {
+    left: 12px;
+  }
+
+
+  .wte-corner-tr,
+  .wte-corner-br {
+    right: 12px;
+  }
+
+
+  .wte-content {
+    padding: 50px 18px 40px;
+  }
+
+
+  .wte-header {
+    margin-bottom: 45px;
+  }
+
+
+  .wte-eyebrow {
+    font-size: 9px;
+
+    letter-spacing: 0.22em;
+  }
+
+
+  .wte-header-rule span {
+    width: 30px;
+  }
+
+
+  .wte-header h2 {
+    font-size: 39px;
+  }
+
+
+  .wte-header p {
+    font-size: 14px;
+  }
+
+
+  /*
+    IMPORTANT:
+    Alternating layout remains intact.
+  */
+
+  .wte-event {
+    min-height: 145px;
+
+    margin-bottom: 12px;
+  }
+
+
+  .wte-event-content {
+    width: calc(50% - 18px);
+
+    padding: 0 7px;
+  }
+
+
+  .wte-event-left .wte-event-content {
+    padding-right: 12px;
+  }
+
+
+  .wte-event-right .wte-event-content {
+    padding-left: 12px;
+  }
+
+
+  .wte-event h3 {
+    font-size: 22px;
+
+    line-height: 1.05;
+  }
+
+
+  .wte-event p {
+    font-size: 13px;
+
+    line-height: 1.35;
+  }
+
+
+  .wte-time {
+    font-size: 8px;
+
+    letter-spacing: 0.12em;
+  }
+
+
+  .wte-event-rule {
+    width: 27px;
+
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+
+  .wte-event:hover .wte-event-rule {
+    width: 35px;
+  }
+
+
+  /* Timeline stays exactly in the center */
+
+  .wte-spine {
+    width: 1px;
+  }
+
+
+  .wte-marker {
+    width: 20px;
+    height: 20px;
+
+    border-width: 1px;
+  }
+
+
+  .wte-marker span {
+    width: 6px;
+    height: 6px;
+  }
+
+
+  .wte-footer {
+    margin-top: 45px;
+
+    gap: 10px;
+  }
+
+
+  .wte-footer span {
+    width: 40px;
+  }
+
+
+  .wte-footer b {
+    font-size: 18px;
+  }
+}

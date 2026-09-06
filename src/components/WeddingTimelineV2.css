@@ -1,0 +1,836 @@
+/* =========================================
+   WEDDING TIMELINE
+   D&K — Powder Blue / Butter Yellow
+========================================= */
+
+.wedding-timeline {
+  --powder-blue: #dcebf3;
+  --deep-blue: #526b82;
+  --dark-text: #465766;
+  --soft-text: #687681;
+  --butter-yellow: #f8ebaa;
+  --gold: #c9ae45;
+  --cream: #faf9f0;
+  --white: #ffffff;
+
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  padding: 110px 24px 100px;
+
+  background:
+    radial-gradient(
+      circle at 15% 15%,
+      rgba(248, 235, 170, 0.48),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 90% 70%,
+      rgba(255, 255, 255, 0.65),
+      transparent 28%
+    ),
+    var(--powder-blue);
+
+  color: var(--dark-text);
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.timeline-header {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 720px;
+
+  margin: 0 auto 100px;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   MONOGRAM
+========================================= */
+
+.timeline-monogram {
+  width: 72px;
+  height: 72px;
+
+  margin: 0 auto 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2px;
+
+  border-radius: 50%;
+
+  background: var(--butter-yellow);
+
+  border: 1px solid rgba(82, 107, 130, 0.25);
+
+  box-shadow:
+    0 10px 30px rgba(82, 107, 130, 0.12);
+
+  color: var(--deep-blue);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  animation:
+    monogramFloat 5s ease-in-out infinite;
+}
+
+.timeline-monogram span {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.timeline-monogram small {
+  font-size: 13px;
+
+  margin: 0 -1px;
+
+  font-style: italic;
+}
+
+
+/* =========================================
+   EYEBROW
+========================================= */
+
+.timeline-eyebrow {
+  margin: 0 0 15px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.28em;
+
+  text-transform: uppercase;
+
+  color: var(--deep-blue);
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.timeline-title {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: clamp(48px, 7vw, 82px);
+
+  line-height: 0.92;
+
+  font-weight: 600;
+
+  letter-spacing: -0.025em;
+
+  color: var(--dark-text);
+
+  animation: titleReveal 1s ease both;
+}
+
+.timeline-title em {
+  font-weight: 500;
+
+  color: var(--deep-blue);
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.timeline-intro {
+  max-width: 500px;
+
+  margin: 28px auto 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 20px;
+
+  line-height: 1.5;
+
+  color: var(--soft-text);
+}
+
+
+/* =========================================
+   TIMELINE CONTAINER
+========================================= */
+
+.timeline {
+  position: relative;
+
+  width: min(1050px, 100%);
+
+  margin: 0 auto;
+
+  padding: 20px 0 40px;
+}
+
+
+/* =========================================
+   CENTRAL LINE
+========================================= */
+
+.timeline-line {
+  position: absolute;
+
+  top: 0;
+  bottom: 0;
+
+  left: 50%;
+
+  width: 1px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      to bottom,
+      transparent,
+      rgba(82, 107, 130, 0.35) 8%,
+      rgba(82, 107, 130, 0.35) 92%,
+      transparent
+    );
+}
+
+
+/* =========================================
+   TIMELINE ITEM
+========================================= */
+
+.timeline-item {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  margin-bottom: 75px;
+
+  animation: cardReveal 0.8s ease both;
+}
+
+
+/* stagger animation */
+
+.timeline-item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.timeline-item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.timeline-item:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.timeline-item:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.timeline-item:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+.timeline-item:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+
+/* =========================================
+   LEFT / RIGHT POSITION
+========================================= */
+
+.timeline-item-left {
+  justify-content: flex-start;
+
+  padding-right: calc(50% + 55px);
+}
+
+.timeline-item-right {
+  justify-content: flex-end;
+
+  padding-left: calc(50% + 55px);
+}
+
+
+/* =========================================
+   MARKER
+========================================= */
+
+.timeline-marker {
+  position: absolute;
+
+  top: 25px;
+
+  left: 50%;
+
+  width: 46px;
+  height: 46px;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 4px solid var(--powder-blue);
+
+  z-index: 4;
+
+  box-shadow:
+    0 5px 15px rgba(82, 107, 130, 0.15);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.timeline-marker.yellow {
+  background: var(--butter-yellow);
+  color: var(--deep-blue);
+}
+
+.timeline-marker.blue {
+  background: var(--cream);
+  color: var(--deep-blue);
+}
+
+.timeline-marker span {
+  font-family: Georgia, serif;
+
+  font-size: 18px;
+}
+
+.timeline-item:hover .timeline-marker {
+  transform:
+    translateX(-50%)
+    rotate(10deg)
+    scale(1.12);
+
+  box-shadow:
+    0 8px 25px rgba(82, 107, 130, 0.22);
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.timeline-card {
+  position: relative;
+
+  width: 100%;
+
+  padding: 28px 30px 30px;
+
+  background:
+    rgba(250, 249, 240, 0.92);
+
+  border: 1px solid rgba(82, 107, 130, 0.12);
+
+  box-shadow:
+    0 15px 40px rgba(82, 107, 130, 0.10);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  border-radius: 3px;
+}
+
+
+/* playful alternating rotation */
+
+.timeline-item-left .timeline-card {
+  transform: rotate(-1deg);
+}
+
+.timeline-item-right .timeline-card {
+  transform: rotate(1deg);
+}
+
+.timeline-item-left:hover .timeline-card,
+.timeline-item-right:hover .timeline-card {
+  transform: rotate(0deg) translateY(-5px);
+
+  box-shadow:
+    0 22px 45px rgba(82, 107, 130, 0.16);
+}
+
+
+/* =========================================
+   CARD TOP
+========================================= */
+
+.timeline-card-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.timeline-number {
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  color: var(--gold);
+}
+
+.timeline-time {
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
+  color: var(--deep-blue);
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.timeline-card h3 {
+  margin: 0 0 10px;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 31px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  color: var(--dark-text);
+}
+
+
+/* =========================================
+   CARD DESCRIPTION
+========================================= */
+
+.timeline-card p {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 18px;
+
+  line-height: 1.45;
+
+  color: var(--soft-text);
+}
+
+
+/* =========================================
+   SMALL DECORATIVE FLOWERS
+========================================= */
+
+.timeline-card::after {
+  content: "✿";
+
+  position: absolute;
+
+  right: 15px;
+  bottom: 10px;
+
+  font-size: 18px;
+
+  color: rgba(201, 174, 69, 0.45);
+
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.timeline-card:hover::after {
+  transform: rotate(25deg) scale(1.2);
+
+  opacity: 0.9;
+}
+
+
+/* =========================================
+   BACKGROUND FLOWERS
+========================================= */
+
+.timeline-bg-flower {
+  position: absolute;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  font-family: Georgia, serif;
+
+  color: rgba(250, 249, 240, 0.75);
+
+  text-shadow:
+    0 8px 25px rgba(82, 107, 130, 0.08);
+}
+
+.timeline-bg-flower-one {
+  top: 5%;
+
+  left: -20px;
+
+  font-size: 130px;
+
+  transform: rotate(-18deg);
+
+  animation: flowerFloat 7s ease-in-out infinite;
+}
+
+.timeline-bg-flower-two {
+  top: 42%;
+
+  right: -15px;
+
+  font-size: 110px;
+
+  color: rgba(248, 235, 170, 0.7);
+
+  transform: rotate(15deg);
+
+  animation: flowerFloat 8s ease-in-out infinite reverse;
+}
+
+.timeline-bg-flower-three {
+  bottom: 5%;
+
+  left: 8%;
+
+  font-size: 80px;
+
+  color: rgba(248, 235, 170, 0.65);
+
+  transform: rotate(10deg);
+
+  animation: flowerFloat 6s ease-in-out infinite;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.timeline-footer {
+  position: relative;
+
+  z-index: 5;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  margin-top: 30px;
+
+  text-align: center;
+}
+
+.footer-line {
+  width: 80px;
+  height: 1px;
+
+  margin-bottom: 22px;
+
+  background: rgba(82, 107, 130, 0.3);
+}
+
+.footer-monogram {
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 38px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.04em;
+
+  color: var(--deep-blue);
+}
+
+.footer-monogram span {
+  font-size: 22px;
+
+  font-style: italic;
+
+  margin: 0 2px;
+
+  color: var(--gold);
+}
+
+.timeline-footer p {
+  margin: 8px 0 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+
+  font-size: 18px;
+
+  font-style: italic;
+
+  color: var(--soft-text);
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes titleReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+@keyframes cardReveal {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes monogramFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+
+@keyframes flowerFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(-18deg);
+  }
+
+  50% {
+    transform:
+      translateY(-10px)
+      rotate(-12deg);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .wedding-timeline {
+    padding: 80px 18px 75px;
+  }
+
+  .timeline-header {
+    margin-bottom: 65px;
+  }
+
+  .timeline-monogram {
+    width: 62px;
+    height: 62px;
+  }
+
+  .timeline-title {
+    font-size: clamp(45px, 13vw, 65px);
+  }
+
+  .timeline-intro {
+    font-size: 19px;
+  }
+
+
+  /* Move line to left */
+
+  .timeline-line {
+    left: 24px;
+
+    transform: none;
+  }
+
+
+  .timeline-item {
+    display: block;
+
+    padding-left: 65px;
+    padding-right: 0;
+
+    margin-bottom: 45px;
+  }
+
+
+  /* All cards same side */
+
+  .timeline-item-left,
+  .timeline-item-right {
+    justify-content: flex-start;
+
+    padding-left: 65px;
+    padding-right: 0;
+  }
+
+
+  .timeline-marker {
+    left: 24px;
+
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .timeline-card {
+    padding: 23px 22px 25px;
+  }
+
+
+  .timeline-item-left .timeline-card {
+    transform: rotate(-0.7deg);
+  }
+
+  .timeline-item-right .timeline-card {
+    transform: rotate(0.7deg);
+  }
+
+
+  .timeline-card h3 {
+    font-size: 28px;
+  }
+
+  .timeline-card p {
+    font-size: 17px;
+  }
+
+
+  .timeline-bg-flower-one {
+    font-size: 80px;
+
+    left: -30px;
+  }
+
+  .timeline-bg-flower-two {
+    font-size: 70px;
+
+    right: -25px;
+  }
+
+  .timeline-bg-flower-three {
+    font-size: 55px;
+
+    left: -10px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL DEVICES
+========================================= */
+
+@media (max-width: 430px) {
+
+  .wedding-timeline {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .timeline-item,
+  .timeline-item-left,
+  .timeline-item-right {
+    padding-left: 55px;
+  }
+
+  .timeline-line {
+    left: 20px;
+  }
+
+  .timeline-marker {
+    left: 20px;
+  }
+
+  .timeline-card {
+    padding: 20px 18px 23px;
+  }
+
+  .timeline-card h3 {
+    font-size: 25px;
+  }
+
+  .timeline-card p {
+    font-size: 16px;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .timeline-monogram,
+  .timeline-bg-flower,
+  .timeline-item,
+  .timeline-title {
+    animation: none;
+  }
+
+  .timeline-card,
+  .timeline-marker {
+    transition: none;
+  }
+}
