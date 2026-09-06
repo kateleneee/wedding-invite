@@ -1,0 +1,341 @@
+/* =========================================
+   FLORAL VIDEO SECTION
+   Powder Blue + Butter Yellow
+========================================= */
+
+.floral-video-section {
+  position: relative;
+  width: 100%;
+  min-height: 720px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(248, 235, 170, 0.45),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 255, 255, 0.7),
+      transparent 35%
+    ),
+    #dcebf3;
+
+  padding: 90px 24px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.floral-video-content {
+  position: relative;
+  z-index: 5;
+
+  width: min(900px, 100%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.floral-eyebrow {
+  margin: 0 0 10px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 14px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+
+  color: #5e7690;
+}
+
+.floral-title {
+  margin: 0 0 40px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 500;
+  line-height: 0.95;
+
+  color: #5e7690;
+}
+
+
+/* =========================================
+   VIDEO FRAME
+========================================= */
+
+.floral-video-frame {
+  position: relative;
+
+  width: min(780px, 92vw);
+
+  padding: 14px;
+
+  background: #f8ebaA;
+
+  transform: rotate(-1deg);
+
+  box-shadow:
+    0 25px 60px rgba(94, 118, 144, 0.18),
+    0 8px 20px rgba(94, 118, 144, 0.1);
+}
+
+
+/* Inner cream border */
+
+.floral-frame-inner {
+  position: relative;
+
+  padding: 8px;
+
+  background: #faf9f0;
+
+  border: 1px solid rgba(94, 118, 144, 0.2);
+}
+
+
+/* =========================================
+   VIDEO
+========================================= */
+
+.floral-video {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  max-height: 500px;
+
+  object-fit: cover;
+
+  background: #cbdde7;
+}
+
+
+/* =========================================
+   CORNER DETAILS
+========================================= */
+
+.frame-corner {
+  position: absolute;
+
+  width: 30px;
+  height: 30px;
+
+  border-color: #5e7690;
+  border-style: solid;
+
+  z-index: 3;
+}
+
+.frame-corner-tl {
+  top: -7px;
+  left: -7px;
+
+  border-width: 2px 0 0 2px;
+}
+
+.frame-corner-tr {
+  top: -7px;
+  right: -7px;
+
+  border-width: 2px 2px 0 0;
+}
+
+.frame-corner-bl {
+  bottom: -7px;
+  left: -7px;
+
+  border-width: 0 0 2px 2px;
+}
+
+.frame-corner-br {
+  bottom: -7px;
+  right: -7px;
+
+  border-width: 0 2px 2px 0;
+}
+
+
+/* =========================================
+   CAPTION
+========================================= */
+
+.floral-caption {
+  margin: 35px 0 0;
+
+  max-width: 500px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+  font-style: italic;
+
+  color: #66727a;
+}
+
+
+/* =========================================
+   FLOWERS
+========================================= */
+
+.floral {
+  position: absolute;
+
+  font-family: Georgia, serif;
+
+  color: #f8ebaA;
+
+  z-index: 2;
+
+  text-shadow:
+    0 4px 12px rgba(94, 118, 144, 0.15);
+
+  pointer-events: none;
+}
+
+.flower-top-left {
+  top: 8%;
+  left: 8%;
+
+  font-size: 90px;
+
+  transform: rotate(-20deg);
+}
+
+.flower-top-right {
+  top: 10%;
+  right: 8%;
+
+  font-size: 75px;
+
+  color: #faf9f0;
+
+  transform: rotate(15deg);
+}
+
+.flower-bottom-left {
+  bottom: 8%;
+  left: 10%;
+
+  font-size: 65px;
+
+  color: #faf9f0;
+
+  transform: rotate(15deg);
+}
+
+.flower-bottom-right {
+  bottom: 7%;
+  right: 9%;
+
+  font-size: 90px;
+
+  transform: rotate(-15deg);
+}
+
+
+/* =========================================
+   DECORATIVE DOTS
+========================================= */
+
+.floral-dot {
+  position: absolute;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #d3b84c;
+}
+
+.dot-1 {
+  top: 25%;
+  left: 18%;
+}
+
+.dot-2 {
+  top: 30%;
+  right: 18%;
+}
+
+.dot-3 {
+  bottom: 20%;
+  right: 25%;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .floral-video-section {
+    min-height: auto;
+
+    padding: 70px 18px;
+  }
+
+  .floral-title {
+    margin-bottom: 30px;
+  }
+
+  .floral-video-frame {
+    width: 95vw;
+
+    padding: 9px;
+  }
+
+  .floral-frame-inner {
+    padding: 5px;
+  }
+
+  .floral-video {
+    max-height: 65vh;
+  }
+
+  .flower-top-left {
+    left: -15px;
+    top: 8%;
+
+    font-size: 60px;
+  }
+
+  .flower-top-right {
+    right: -15px;
+    top: 12%;
+
+    font-size: 50px;
+  }
+
+  .flower-bottom-left {
+    left: -10px;
+    bottom: 5%;
+
+    font-size: 45px;
+  }
+
+  .flower-bottom-right {
+    right: -10px;
+    bottom: 5%;
+
+    font-size: 60px;
+  }
+}
