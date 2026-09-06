@@ -31,7 +31,7 @@ import FloralVideo from "./components/FloralVideo";
 import CinematicVideo from "./components/CinematicVideo";
 import WeddingTimelineCard from "./components/WeddingTimelineCard";
 import WeddingTimelineCard2 from "./components/WeddingTimelineCard2";
-import WeddingTimelineElegant from "./components/WeddingTimelineElegant";
+// import WeddingTimelineElegant from "./components/WeddingTimelineElegant";
 import WeddingTimelineScroll from "./components/WeddingTimelineScroll";
 
 function App() {
