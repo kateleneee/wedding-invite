@@ -608,15 +608,14 @@
 @media (max-width: 600px) {
   .story-grid {
     grid-template-columns: 1fr;
-    gap: 24px 14px;
+    gap: 30px 14px;
     width: 100%;
-    padding: 10px;
+    padding: 40px;
   }
 
   .our-story-header {
-    margin: 0 auto 25px;
+    margin: 0 auto 15px;
   }
-
 
   .story-card {
     padding: 7px;
