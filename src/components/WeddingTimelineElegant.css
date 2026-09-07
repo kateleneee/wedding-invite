@@ -20,7 +20,7 @@
   width: 100%;
   min-height: 100vh;
 
-  padding: 70px 20px;
+  padding: 70px 50px;
 
   display: flex;
   align-items: center;
@@ -29,12 +29,10 @@
   box-sizing: border-box;
 
   background:
-    linear-gradient(
-      135deg,
+    linear-gradient(135deg,
       #edf7fa 0%,
       #fffbea 50%,
-      #eaf5f9 100%
-    );
+      #eaf5f9 100%);
 }
 
 
@@ -62,8 +60,7 @@
 
   box-sizing: border-box;
 
-  animation: wteCardEntrance 1s cubic-bezier(0.22, 1, 0.36, 1)
-    both;
+  animation: wteCardEntrance 1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 
@@ -215,9 +212,7 @@
   margin-bottom: 68px;
 
   animation:
-    wteHeaderReveal 0.9s 0.25s
-    cubic-bezier(0.22, 1, 0.36, 1)
-    both;
+    wteHeaderReveal 0.9s 0.25s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 
@@ -352,10 +347,7 @@
 
   transform-origin: top;
 
-  animation: wteLineDraw 1.8s
-    0.5s
-    cubic-bezier(0.22, 1, 0.36, 1)
-    both;
+  animation: wteLineDraw 1.8s 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 
@@ -426,17 +418,13 @@
 
 .wte-event-left .wte-event-content {
   animation:
-    wteLeftReveal 0.8s
-    cubic-bezier(0.22, 1, 0.36, 1)
-    both;
+    wteLeftReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 
 .wte-event-right .wte-event-content {
   animation:
-    wteRightReveal 0.8s
-    cubic-bezier(0.22, 1, 0.36, 1)
-    both;
+    wteRightReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 
@@ -607,9 +595,7 @@
   z-index: 4;
 
   animation:
-    wteMarkerReveal 0.5s
-    cubic-bezier(0.22, 1, 0.36, 1)
-    both;
+    wteMarkerReveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 
@@ -653,9 +639,7 @@
   margin-top: 62px;
 
   animation:
-    wteFooterReveal 0.8s 1.35s
-    cubic-bezier(0.22, 1, 0.36, 1)
-    both;
+    wteFooterReveal 0.8s 1.35s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 
@@ -692,16 +676,14 @@
     opacity: 0;
 
     transform:
-      translateY(25px)
-      scale(0.98);
+      translateY(25px) scale(0.98);
   }
 
   to {
     opacity: 1;
 
     transform:
-      translateY(0)
-      scale(1);
+      translateY(0) scale(1);
   }
 }
 
@@ -782,16 +764,14 @@
     opacity: 0;
 
     transform:
-      translateX(-50%)
-      scale(0);
+      translateX(-50%) scale(0);
   }
 
   to {
     opacity: 1;
 
     transform:
-      translateX(-50%)
-      scale(1);
+      translateX(-50%) scale(1);
   }
 }
 
@@ -812,6 +792,7 @@
 
 
 @keyframes wteDiamond {
+
   0%,
   100% {
     transform: rotate(45deg);

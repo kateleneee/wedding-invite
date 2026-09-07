@@ -14,7 +14,7 @@
   min-width: 100%;
   /* min-height: 100vh; */
 
-  padding: 2% 7%;
+  padding: 2% 15%;
 
   overflow: hidden;
 
@@ -24,31 +24,23 @@
     Playful paper-like background
   */
   background:
-    radial-gradient(
-      circle at 8% 15%,
+    radial-gradient(circle at 8% 15%,
       rgba(248, 235, 170, 0.55) 0,
       rgba(248, 235, 170, 0.25) 100px,
-      transparent 230px
-    ),
+      transparent 230px),
 
-    radial-gradient(
-      circle at 92% 28%,
+    radial-gradient(circle at 92% 28%,
       rgba(220, 235, 243, 0.9) 0,
       rgba(220, 235, 243, 0.55) 140px,
-      transparent 300px
-    ),
+      transparent 300px),
 
-    radial-gradient(
-      circle at 15% 85%,
+    radial-gradient(circle at 15% 85%,
       rgba(220, 235, 243, 0.75) 0,
-      transparent 280px
-    ),
+      transparent 280px),
 
-    radial-gradient(
-      circle at 85% 90%,
+    radial-gradient(circle at 85% 90%,
       rgba(248, 235, 170, 0.35) 0,
-      transparent 250px
-    ),
+      transparent 250px),
 
     var(--cream);
 }
@@ -74,8 +66,7 @@
   opacity: 0.35;
 
   border-radius:
-    58% 42% 65% 35% /
-    45% 55% 45% 55%;
+    58% 42% 65% 35% / 45% 55% 45% 55%;
 
   transform: rotate(-18deg);
 
@@ -101,8 +92,7 @@
   opacity: 0.28;
 
   border-radius:
-    42% 58% 35% 65% /
-    55% 40% 60% 45%;
+    42% 58% 35% 65% / 55% 40% 60% 45%;
 
   transform: rotate(15deg);
 
@@ -112,7 +102,7 @@
 
 /* Keep content above decorations */
 
-.venues-section > * {
+.venues-section>* {
   position: relative;
   z-index: 2;
 }
@@ -137,7 +127,7 @@
   font-weight: 600;
   letter-spacing: 0.3em;
 } */
- .venues-header .eyebrow {
+.venues-header .eyebrow {
   display: inline-block;
   padding: 7px 14px;
   background: var(--powder-blue);
@@ -229,13 +219,8 @@
   gap: 30px;
 }
 
-/* Mobile */
-@media (max-width: 700px) {
-  .venues-container {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-}
+
+
 /* .venues-container {
   max-width: 1200px;
   margin: auto;
@@ -244,7 +229,7 @@
   flex-direction: column;
   gap: 50px;
 } */
- /* .venues-container {
+/* .venues-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 80px 50px;
@@ -268,16 +253,11 @@
 
 .venue-card {
   position: relative;
-
-  padding: 55px;
-
+  padding: 25px;
   background: rgba(255, 255, 255, 0.55);
-
   border: 1px solid rgba(214, 184, 106, 0.35);
-
   box-shadow:
     0 20px 50px rgba(94, 118, 144, 0.08);
-
   backdrop-filter: blur(5px);
 }
 
@@ -294,8 +274,8 @@
   display: flex;
   align-items: center;
   gap: 18px;
-
-  margin-bottom: 40px;
+  /* background-color: red; */
+  margin-bottom: 25px;
 }
 
 .venue-number {
@@ -527,11 +507,9 @@
 
 .venue-details h3 {
   margin: 0;
-
   color: var(--deep-blue);
-
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-size: clamp(1.8rem, 4vw, 2rem);
   font-weight: 600;
   line-height: 1.05;
 }
@@ -562,13 +540,12 @@
 }
 
 .venue-time {
-  margin: 0 0 12px;
-
+  margin: 0px;
   color: var(--deep-blue);
-
   font-family: "Cormorant Garamond", serif;
   font-size: 1.4rem;
   font-style: italic;
+  /* background-color: rebeccapurple; */
   /* border: 2px solid #d6b86a; */
 }
 
@@ -583,6 +560,7 @@
   font-size: 0.8rem;
   /* line-height: 1.8; */
 }
+
 .venue-address-text {
   /* border: 2px solid #d6b86a; */
   /* max-width: 300px; */
@@ -765,7 +743,14 @@
    MOBILE
 ========================= */
 
+/* Mobile */
+
 @media (max-width: 700px) {
+  .venues-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
   .map-section {
     margin-top: 70px;
     padding: 0 20px;
@@ -792,7 +777,7 @@
   }
 }
 
-@media (max-width: 450px) {
+/* @media (max-width: 450px) {
   .map-section {
     padding: 0 15px;
   }
@@ -800,7 +785,7 @@
   .map-frame {
     height: 300px;
   }
-}
+} */
 
 /* =========================================
    ALTERNATING CARD
@@ -862,7 +847,8 @@
   .venues-section {
     padding: 65px 18px;
   }
-/* 
+
+  /* 
   .venues-header {
     margin-bottom: 60px;
   } */
@@ -876,7 +862,7 @@
   }
 
   .venues-container {
-    gap: 80px;
+    gap: 40px;
   }
 
   .venue-card {
@@ -919,30 +905,58 @@
   }
 }
 
-
 /* =========================================
    VERY SMALL PHONES
 ========================================= */
 
-@media (max-width: 380px) {
+@media (max-width: 450px) {
   .venues-section {
-    padding-left: 14px;
-    padding-right: 14px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .venue-card {
     padding: 25px 15px;
   }
 
-  /* .venue-details h3 {
+  .venue-heading {
+    margin-bottom: 20px;
+    /* background: red; */
+  }
+
+  .venue-content {
+    gap: 10px
+      /* margin-bottom: 20px; */
+      /* background: red; */
+  }
+
+  .venue-details h3 {
     font-size: 1.3rem;
-  } */
+  }
+
+  .venue-time {
+    font-size: 1rem;
+  }
+
+  .venue-address-text {
+    font-size: 0.6rem;
+  }
 
   .venue-photo-wrapper {
     padding: 10px;
   }
 
   .map-wrapper {
-    height: 210px;
+    height: 350px;
+  }
+
+  .map-section {
+    padding: 0 15px;
+  }
+
+  .map-frame {
+    /* width: 100%; */
+    /* background-color: ; */
+    height: 300px;
   }
 }
