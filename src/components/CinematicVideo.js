@@ -10,8 +10,8 @@ const CinematicVideo = () => {
       {/* =====================================
           BACKGROUND VIDEO
       ===================================== */}
-      {/* 
-      <video
+
+      {/* <video
         className="cinematic-background"
         src={prenupTeaser}
         autoPlay

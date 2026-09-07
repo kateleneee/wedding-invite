@@ -27,7 +27,7 @@ import Landing from "./components/Landing";
 import CoverImage from "./assets/images/landing-yellow-escolta.png";
 import WeddingCarousel from "./components/Carousel";
 // import PhotoCarousel from "./components/PhotoCarousel";
-// import FloralVideo from "./components/FloralVideo";
+import FloralVideo from "./components/FloralVideo";
 import CinematicVideo from "./components/CinematicVideo";
 // import WeddingTimelineCard from "./components/WeddingTimelineCard";
 // import WeddingTimelineCard2 from "./components/WeddingTimelineCard2";
@@ -168,11 +168,11 @@ function App() {
           </section> */}
 
           {/* VIDEO */}
-          {/* <FloralVideo /> */}
           {/* <section id="" */}
 
           {/* GALLERY */}
           <section id="gallery">
+            <FloralVideo />
             <CinematicVideo />
             <PhotoGallery />
           </section>
