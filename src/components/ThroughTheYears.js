@@ -325,7 +325,7 @@ const ThroughTheYears = () => {
         </p>
 
         <h2 className="our-story-title">
-          Our Story
+          Through The Years
         </h2>
 
         <p className="our-story-intro">
