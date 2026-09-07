@@ -26,7 +26,7 @@
       transparent 35%
     ),
     #dcebf3; */
-    /* background:
+  /* background:
   radial-gradient(
     circle at 20% 20%,
     rgba(255, 235, 150, 0.35),
@@ -40,18 +40,14 @@
   #d9b94a; */
 
   background:
-  radial-gradient(
-    circle at 20% 20%,
-    rgba(255, 235, 150, 0.35),
-    transparent 30%
-  ),
-  radial-gradient(
-    circle at 80% 80%,
-    rgba(255, 248, 210, 0.35),
-    transparent 35%
-  ),
-  #d9b94a;
-  
+    radial-gradient(circle at 20% 20%,
+      rgba(255, 235, 150, 0.35),
+      transparent 30%),
+    radial-gradient(circle at 80% 80%,
+      rgba(255, 248, 210, 0.35),
+      transparent 35%),
+    #d9b94a;
+
 
   padding: 90px 24px;
 }
@@ -363,5 +359,89 @@
     bottom: 5%;
 
     font-size: 60px;
+  }
+}
+
+/* =========================
+   VIDEOGRAPHER CREDIT
+========================= */
+
+.videographer-credit {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 7px;
+  margin-top: 18px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+
+  color: rgba(63, 79, 85, 0.75);
+}
+
+.videographer-credit a {
+  color: #8f7624;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.videographer-credit a:hover {
+  color: #6f5b1c;
+  opacity: 0.85;
+}
+
+.credit-divider {
+  color: rgba(143, 118, 36, 0.55);
+  font-size: 0.7em;
+}
+
+
+/* Small decorative line */
+
+.videographer-credit::before,
+.videographer-credit::after {
+  content: "";
+  width: 24px;
+  height: 1px;
+
+  background: rgba(143, 118, 36, 0.35);
+}
+
+.videographer-credit::before {
+  margin-right: 3px;
+}
+
+.videographer-credit::after {
+  margin-left: 3px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .videographer-credit {
+    margin-top: 15px;
+    padding: 0 10px;
+
+    font-size: 0.82rem;
+    gap: 5px;
+  }
+
+  .videographer-credit::before,
+  .videographer-credit::after {
+    width: 15px;
   }
 }

@@ -174,7 +174,7 @@ function App() {
           {/* GALLERY */}
           <section id="gallery">
             <FloralVideo />
-            <CinematicVideo />
+            {/* <CinematicVideo /> */}
             <PhotoGallery />
           </section>
 

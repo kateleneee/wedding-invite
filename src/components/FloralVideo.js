@@ -2,6 +2,11 @@ import React from "react";
 import "./FloralVideo.css";
 import prenupVideo from "../assets/videos/prenup-video.mp4";
 
+const VIDEOGRAPHER_INFO = {
+  name: "K D R photocinema",
+  fb_link: "https://www.facebook.com/KDRPhotoCinema",
+  video_link: "https://www.facebook.com/share/v/1BnKDkbq93/"
+}
 const FloralVideo = () => {
   return (
     <section className="floral-video-section">
@@ -51,6 +56,29 @@ const FloralVideo = () => {
         <p className="floral-caption">
           A little glimpse of our favorite memories.
         </p>
+
+        {/* Videographer Credit */}
+        <div className="videographer-credit">
+          <span>Video by</span>
+
+          <a
+            href={VIDEOGRAPHER_INFO.fb_link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {VIDEOGRAPHER_INFO.name}
+          </a>
+
+          <span className="credit-divider">•</span>
+
+          <a
+            href={VIDEOGRAPHER_INFO.video_link}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View original video
+          </a>
+        </div>
 
       </div>
     </section>
