@@ -280,11 +280,13 @@ function App() {
 
           {/* FOOTER */}
           <footer className="footer">
-            <Heart size={22} fill="currentColor" />
+            {/* <Heart size={22} fill="currentColor" /> */}
 
             <h2>Daniel & Kaylene</h2>
-            <p>We can't wait to celebrate with you.</p>
-            <small>#DanielAndKaylene</small>
+            <p>Please use the hashtags below when sharing the photos online.</p>
+            <small>#DJfoundtheKAYEtoforever</small>
+            <br />
+            <small>#LovinKAYEeveryDJay</small>
           </footer>
         </main>
       )}
