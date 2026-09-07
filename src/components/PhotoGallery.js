@@ -39,7 +39,7 @@ import "./PhotoGallery.css";
 
 export default function PhotoGallery() {
   return (
-    <section id="gallery" className="scrapbook-gallery">
+    <section className="scrapbook-gallery">
       <div className="gallery-heading">
         <span className="eyebrow">OUR MOMENTS</span>
 

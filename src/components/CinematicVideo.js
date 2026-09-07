@@ -10,7 +10,7 @@ const CinematicVideo = () => {
       {/* =====================================
           BACKGROUND VIDEO
       ===================================== */}
-
+      {/* 
       <video
         className="cinematic-background"
         src={prenupTeaser}
@@ -18,7 +18,7 @@ const CinematicVideo = () => {
         muted
         loop
         playsInline
-      />
+      /> */}
 
       {/* =====================================
           DIM OVERLAY

@@ -26,11 +26,11 @@ import SaveTheDate from "./components/SaveTheDate";
 import Landing from "./components/Landing";
 import CoverImage from "./assets/images/landing-yellow-escolta.png";
 import WeddingCarousel from "./components/Carousel";
-import PhotoCarousel from "./components/PhotoCarousel";
-import FloralVideo from "./components/FloralVideo";
+// import PhotoCarousel from "./components/PhotoCarousel";
+// import FloralVideo from "./components/FloralVideo";
 import CinematicVideo from "./components/CinematicVideo";
-import WeddingTimelineCard from "./components/WeddingTimelineCard";
-import WeddingTimelineCard2 from "./components/WeddingTimelineCard2";
+// import WeddingTimelineCard from "./components/WeddingTimelineCard";
+// import WeddingTimelineCard2 from "./components/WeddingTimelineCard2";
 // import WeddingTimelineElegant from "./components/WeddingTimelineElegant";
 import WeddingTimelineScroll from "./components/WeddingTimelineScroll";
 
@@ -120,9 +120,9 @@ function App() {
           <section id="story">
             <WeddingCarousel />
           </section>
-          <section id="story">
+          {/* <section id="story">
             <PhotoCarousel />
-          </section>
+          </section> */}
           {/* <section id="story" className="section story-section">
             <div className="story-image">
               <div className="image-placeholder">
@@ -168,17 +168,21 @@ function App() {
           </section> */}
 
           {/* VIDEO */}
-          <FloralVideo />
-          <CinematicVideo />
+          {/* <FloralVideo /> */}
+          {/* <section id="" */}
 
           {/* GALLERY */}
-          <PhotoGallery />
+          <section id="gallery">
+            <CinematicVideo />
+            <PhotoGallery />
+          </section>
+
 
           {/* TIMELINE */}
           <section id="timeline">
             {/* <WeddingTimelineV2 /> */}
-            <WeddingTimelineCard />
-            <WeddingTimelineCard2 />
+            {/* <WeddingTimelineCard />
+            <WeddingTimelineCard2 /> */}
             {/* <WeddingTimelineElegant /> */}
             <WeddingTimelineScroll />
           </section>

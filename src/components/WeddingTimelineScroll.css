@@ -34,6 +34,7 @@
       #fffbea 50%,
       #eaf5f9 100%
     );
+      overflow-x: clip;
 }
 
 
@@ -892,7 +893,7 @@
 @media (max-width: 500px) {
 
   .wts2-section {
-    padding: 25px 7px;
+    padding: 25px 7pGx;
   }
 
 
