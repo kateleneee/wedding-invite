@@ -1,7 +1,7 @@
 import React from "react";
 import "./CinematicVideo.css";
 import prenupVideo from "../assets/videos/prenup-video.mp4";
-import prenupTeaser from "../assets/videos/prenup-teaser.mp4";
+// import prenupTeaser from "../assets/videos/prenup-teaser.mp4";
 
 const CinematicVideo = () => {
   return (
