@@ -1,3 +1,7 @@
+/* =========================================
+   WEDDING CAROUSEL
+========================================= */
+
 .wedding-carousel {
   --wedding-blue: #5e7690;
   --wedding-powder-blue: #e4f0f5;
@@ -8,6 +12,11 @@
   width: 100%;
   background: var(--wedding-cream);
 }
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
 
 .carousel-container {
   position: relative;
@@ -20,11 +29,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  touch-action: pan-y;
+  user-select: none;
+  -webkit-user-select: none;
+
+  isolation: isolate;
 }
 
-/* =========================
-   BACKGROUND
-========================= */
+
+/* =========================================
+   BACKGROUND IMAGE
+========================================= */
 
 .carousel-background {
   position: absolute;
@@ -32,42 +48,46 @@
 
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 
   filter:
-    grayscale(100%)
-    brightness(35%)
-    contrast(110%)
-    blur(3px);
+    grayscale(100%) brightness(35%) contrast(110%) blur(3px);
 
   transform: scale(1.05);
 
   z-index: 0;
+
+  transition:
+    background-image 0.6s ease;
 }
 
-/* =========================
-   OVERLAY
-========================= */
+
+/* =========================================
+   DARK OVERLAY
+========================================= */
 
 .carousel-overlay {
   position: absolute;
   inset: 0;
 
   background:
-    linear-gradient(
-      to bottom,
+    linear-gradient(to bottom,
       rgba(30, 42, 50, 0.35),
-      rgba(30, 42, 50, 0.82)
-    );
+      rgba(30, 42, 50, 0.82));
 
   z-index: 1;
+
+  pointer-events: none;
 }
 
-/* =========================
+
+/* =========================================
    CONTENT
-========================= */
+========================================= */
 
 .carousel-content {
   position: relative;
+
   z-index: 2;
 
   width: 100%;
@@ -82,11 +102,14 @@
   padding: 3rem 1rem 5rem;
 
   box-sizing: border-box;
+
+  pointer-events: none;
 }
 
-/* =========================
-   FOREGROUND PHOTO
-========================= */
+
+/* =========================================
+   FOREGROUND PHOTO FRAME
+========================================= */
 
 .carousel-photo-frame {
   width: min(720px, 75vw);
@@ -106,7 +129,14 @@
     0 20px 60px rgba(0, 0, 0, 0.4);
 
   box-sizing: border-box;
+
+  overflow: hidden;
 }
+
+
+/* =========================================
+   PHOTO
+========================================= */
 
 .carousel-photo {
   width: 100%;
@@ -115,11 +145,18 @@
   object-fit: contain;
 
   display: block;
+
+  pointer-events: none;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
 }
 
-/* =========================
+
+/* =========================================
    CAPTION
-========================= */
+========================================= */
 
 .carousel-caption {
   width: min(650px, 80vw);
@@ -129,10 +166,16 @@
   text-align: center;
 }
 
+
+/* =========================================
+   EYEBROW
+========================================= */
+
 .carousel-eyebrow {
   font-family: "Montserrat", sans-serif !important;
 
   font-size: 0.65rem !important;
+
   font-weight: 500 !important;
 
   letter-spacing: 0.3em !important;
@@ -142,16 +185,27 @@
   margin-block: 1.5rem 0.5rem !important;
 }
 
+
+/* =========================================
+   TITLE
+========================================= */
+
 .carousel-title {
   font-family: "Cormorant Garamond", Georgia, serif !important;
 
   font-size: clamp(2.1rem, 4vw, 3.6rem) !important;
 
   font-weight: 400 !important;
+
   line-height: 1.05 !important;
 
   color: white !important;
 }
+
+
+/* =========================================
+   DIVIDER
+========================================= */
 
 .carousel-divider {
   width: 45px;
@@ -161,6 +215,11 @@
 
   background: var(--wedding-gold);
 }
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
 
 .carousel-description {
   max-width: 520px;
@@ -178,14 +237,16 @@
   color: rgba(255, 255, 255, 0.92) !important;
 }
 
-/* =========================
+
+/* =========================================
    ARROWS
-========================= */
+========================================= */
 
 .carousel-arrow {
   position: absolute !important;
 
   top: 50%;
+
   transform: translateY(-50%);
 
   z-index: 4;
@@ -194,6 +255,7 @@
   height: 46px !important;
 
   border: 1px solid rgba(255, 247, 214, 0.7) !important;
+
   border-radius: 50% !important;
 
   background: rgba(94, 118, 144, 0.45) !important;
@@ -202,52 +264,73 @@
 
   backdrop-filter: blur(6px);
 
-  transition: all 0.3s ease !important;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease !important;
 }
+
 
 .carousel-arrow:hover {
   background: var(--wedding-yellow) !important;
+
   color: var(--wedding-blue) !important;
+
   border-color: var(--wedding-gold) !important;
+
+  transform: translateY(-50%) scale(1.05) !important;
 }
+
 
 .carousel-arrow-left {
   left: 2rem;
 }
 
+
 .carousel-arrow-right {
   right: 2rem;
 }
 
-/* =========================
+
+/* =========================================
    DOTS
-========================= */
+========================================= */
 
 .carousel-stepper {
   position: absolute !important;
 
   bottom: 1.3rem;
+
   left: 50%;
 
   transform: translateX(-50%);
 
   z-index: 4;
 
-  background: transparent !important;
-
   padding: 0 !important;
+
   display: flex;
+
   align-items: center;
   justify-content: center;
+
   gap: 10px;
 }
+
+
 .carousel-dot {
   width: 7px;
   height: 7px;
+
   padding: 0;
+
   border: none;
+
   border-radius: 50%;
+
   background: rgba(255, 255, 255, 0.4);
+
   cursor: pointer;
 
   transition:
@@ -256,61 +339,554 @@
     transform 0.3s ease;
 }
 
+
 .carousel-dot:hover {
   background: rgba(255, 247, 214, 0.8);
+
   transform: scale(1.2);
 }
 
+
 .carousel-dot.active {
   width: 22px;
+
   border-radius: 10px;
+
   background: var(--wedding-yellow);
 }
 
-/* .carousel-stepper .MuiMobileStepper-dot {
-  width: 6px;
-  height: 6px;
-  margin: 0 5px;
-  background-color: rgba(255, 255, 255, 0.4);
-}
 
-.carousel-stepper .MuiMobileStepper-dotActive {
-  background-color: var(--wedding-yellow);
-} */
+/* =========================================
+   SLIDE ANIMATIONS
+========================================= */
 
-.carousel-content {
-  animation: carouselFade 0.8s ease;
-}
-/* Slide in from the right */
 .carousel-content.slide-next {
-  animation: slideFromRight 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  animation:
+    slideFromRight 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Slide in from the left */
+
 .carousel-content.slide-prev {
-  animation: slideFromLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  animation:
+    slideFromLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
 
 @keyframes slideFromRight {
   from {
     opacity: 0;
+
     transform: translateX(45px);
   }
 
   to {
     opacity: 1;
+
     transform: translateX(0);
   }
 }
 
+
 @keyframes slideFromLeft {
   from {
     opacity: 0;
+
     transform: translateX(-45px);
   }
 
   to {
     opacity: 1;
+
     transform: translateX(0);
+  }
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .carousel-container {
+    height: clamp(600px, 80vh, 750px);
+  }
+
+  .carousel-photo-frame {
+    width: min(680px, 78vw);
+
+    height: min(430px, 50vh);
+  }
+
+  .carousel-arrow-left {
+    left: 1.2rem;
+  }
+
+  .carousel-arrow-right {
+    right: 1.2rem;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .carousel-container {
+    /*
+      Important:
+      Allows vertical page scrolling while
+      horizontal swipes are handled by React.
+    */
+    touch-action: pan-y;
+
+    height: 700px;
+  }
+
+
+  /* -----------------------------------------
+     HIDE ARROWS
+  ----------------------------------------- */
+
+  .carousel-arrow {
+    display: none !important;
+  }
+
+
+  /* -----------------------------------------
+     CONTENT
+  ----------------------------------------- */
+
+  .carousel-content {
+    padding: 2rem 1rem 4.5rem;
+
+    /*
+      Don't allow the content itself to
+      interfere with swipe detection.
+    */
+    pointer-events: none;
+  }
+
+
+  /* -----------------------------------------
+     PHOTO
+  ----------------------------------------- */
+
+  .carousel-photo-frame {
+    width: calc(100vw-70px);
+
+    height: auto;
+
+    aspect-ratio: 4 / 3;
+
+    padding: 8px;
+
+    box-shadow:
+      0 15px 40px rgba(0, 0, 0, 0.38);
+  }
+
+
+  .carousel-photo {
+    object-fit: contain;
+  }
+
+
+  /* -----------------------------------------
+     CAPTION
+  ----------------------------------------- */
+
+  .carousel-caption {
+    width: calc(100vw-55px);
+
+    margin-top: 1.4rem;
+  }
+
+
+  .carousel-eyebrow {
+    font-size: 0.58rem !important;
+
+    letter-spacing: 0.25em !important;
+
+    margin-block: 1rem 0.5rem !important;
+  }
+
+
+  .carousel-title {
+    font-size: clamp(2rem, 9vw, 2.8rem) !important;
+
+    line-height: 1.05 !important;
+  }
+
+
+  .carousel-description {
+    width: 100%;
+
+    max-width: 430px;
+
+    font-size: 1rem !important;
+
+    line-height: 1.45 !important;
+  }
+
+
+  /* -----------------------------------------
+     DOTS
+  ----------------------------------------- */
+
+  .carousel-stepper {
+    bottom: 1.4rem;
+
+    gap: 8px;
+  }
+
+
+  .carousel-dot {
+    width: 7px;
+    height: 7px;
+
+    /*
+      Larger invisible-ish tap area
+      without making the visual dot bigger.
+    */
+    margin: 0 3px;
+  }
+
+
+  .carousel-dot.active {
+    width: 22px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .carousel-container {
+    height: 650px;
+  }
+
+
+  .carousel-content {
+    padding:
+      1.5rem 0.8rem 4.2rem;
+  }
+
+
+  .carousel-photo-frame {
+    width: calc(100vw-50px);
+
+    aspect-ratio: 4 / 3;
+
+    padding: 7px;
+  }
+
+
+  .carousel-caption {
+    width: calc(100vw-40px);
+
+    margin-top: 1.2rem;
+  }
+
+
+  .carousel-eyebrow {
+    font-size: 0.55rem !important;
+
+    letter-spacing: 0.22em !important;
+  }
+
+
+  .carousel-title {
+    font-size: clamp(1.9rem, 9vw, 2.5rem) !important;
+  }
+
+
+  .carousel-description {
+    font-size: 0.95rem !important;
+
+    line-height: 1.4 !important;
+  }
+
+
+  .carousel-stepper {
+    bottom: 1.15rem;
+
+    gap: 6px;
+  }
+
+
+  .carousel-dot {
+    width: 6px;
+    height: 6px;
+
+    margin: 0 2px;
+  }
+
+
+  .carousel-dot.active {
+    width: 19px;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+  .carousel-container {
+    height: 610px;
+  }
+
+
+  .carousel-photo-frame {
+    width: calc(100vw-42px);
+  }
+
+
+  .carousel-caption {
+    width: calc(100vw-32px);
+  }
+
+
+  .carousel-title {
+    font-size: 1.85rem !important;
+  }
+
+
+  .carousel-description {
+    font-size: 0.9rem !important;
+  }
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .carousel-content.slide-next,
+  .carousel-content.slide-prev {
+    animation: none;
+  }
+
+  .carousel-dot,
+  .carousel-arrow {
+    transition: none !important;
+  }
+}
+
+/* ========================================= MOBILE ========================================= */
+@media (max-width: 768px) {
+  .carousel-container {
+    touch-action: pan-y;
+    height: 700px;
+  }
+
+  /* ----------------------------------------- SMALLER MOBILE ARROWS ----------------------------------------- */
+  .carousel-arrow {
+    display: flex !important;
+    width: 34px !important;
+    height: 34px !important;
+    padding: 0 !important;
+    border-width: 1px !important;
+    background: rgba(94, 118, 144, 0.38) !important;
+    color: var(--wedding-yellow) !important;
+    backdrop-filter: blur(5px);
+    opacity: 0.85;
+  }
+
+  .carousel-arrow svg {
+    font-size: 20px !important;
+  }
+
+  .carousel-arrow-left {
+    left: 0.65rem;
+  }
+
+  .carousel-arrow-right {
+    right: 0.65rem;
+  }
+
+  /* Remove the desktop hover enlargement on touch devices. */
+  .carousel-arrow:hover {
+    transform: translateY(-50%) !important;
+    background: rgba(94, 118, 144, 0.38) !important;
+    color: var(--wedding-yellow) !important;
+  }
+
+  /* ----------------------------------------- CONTENT ----------------------------------------- */
+  .carousel-content {
+    padding: 2rem 1rem 4.5rem;
+    pointer-events: none;
+  }
+
+  /* ----------------------------------------- PHOTO ----------------------------------------- */
+  .carousel-photo-frame {
+    width: calc(100vw - 70px);
+    height: auto;
+    aspect-ratio: 4 / 3;
+    padding: 8px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.38);
+  }
+
+  .carousel-photo {
+    object-fit: contain;
+  }
+
+  /* ----------------------------------------- CAPTION ----------------------------------------- */
+  .carousel-caption {
+    width: calc(100vw - 55px);
+    margin-top: 1.4rem;
+  }
+
+  .carousel-eyebrow {
+    font-size: 0.58rem !important;
+    letter-spacing: 0.25em !important;
+    margin-block: 1rem 0.5rem !important;
+  }
+
+  .carousel-title {
+    font-size: clamp(2rem, 9vw, 2.8rem) !important;
+    line-height: 1.05 !important;
+  }
+
+  .carousel-description {
+    width: 100%;
+    max-width: 430px;
+    font-size: 1rem !important;
+    line-height: 1.45 !important;
+  }
+
+  /* ----------------------------------------- DOTS ----------------------------------------- */
+  .carousel-stepper {
+    bottom: 1.4rem;
+    gap: 8px;
+  }
+
+  .carousel-dot {
+    width: 7px;
+    height: 7px;
+    margin: 0 3px;
+  }
+
+  .carousel-dot.active {
+    width: 22px;
+  }
+}
+
+/* ========================================= SMALL MOBILE ========================================= */
+@media (max-width: 480px) {
+  .carousel-container {
+    height: 650px;
+  }
+
+  /* Even smaller arrows */
+  .carousel-arrow {
+    width: 30px !important;
+    height: 30px !important;
+    opacity: 0.8;
+  }
+
+  .carousel-arrow svg {
+    font-size: 18px !important;
+  }
+
+  .carousel-arrow-left {
+    left: 0.45rem;
+  }
+
+  .carousel-arrow-right {
+    right: 0.45rem;
+  }
+
+  .carousel-content {
+    padding: 1.5rem 0.8rem 4.2rem;
+  }
+
+  .carousel-photo-frame {
+    width: calc(100vw - 50px);
+    aspect-ratio: 4 / 3;
+    padding: 7px;
+  }
+
+  .carousel-caption {
+    width: calc(100vw - 40px);
+    margin-top: 1.2rem;
+  }
+
+  .carousel-eyebrow {
+    font-size: 0.55rem !important;
+    letter-spacing: 0.22em !important;
+  }
+
+  .carousel-title {
+    font-size: clamp(1.9rem, 9vw, 2.5rem) !important;
+  }
+
+  .carousel-description {
+    font-size: 0.95rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .carousel-stepper {
+    bottom: 1.15rem;
+    gap: 6px;
+  }
+
+  .carousel-dot {
+    width: 6px;
+    height: 6px;
+    margin: 0 2px;
+  }
+
+  .carousel-dot.active {
+    width: 19px;
+  }
+}
+
+/* ========================================= VERY SMALL PHONES ========================================= */
+@media (max-width: 380px) {
+  .carousel-container {
+    height: 610px;
+  }
+
+  .carousel-arrow {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .carousel-arrow svg {
+    font-size: 17px !important;
+  }
+
+  .carousel-arrow-left {
+    left: 0.35rem;
+  }
+
+  .carousel-arrow-right {
+    right: 0.35rem;
+  }
+
+  .carousel-photo-frame {
+    width: calc(100vw - 42px);
+  }
+
+  .carousel-caption {
+    width: calc(100vw - 32px);
+  }
+
+  .carousel-title {
+    font-size: 1.85rem !important;
+  }
+
+  .carousel-description {
+    font-size: 0.9rem !important;
   }
 }
