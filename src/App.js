@@ -28,12 +28,13 @@ import CoverImage from "./assets/images/landing-yellow-escolta.png";
 import WeddingCarousel from "./components/Carousel";
 // import PhotoCarousel from "./components/PhotoCarousel";
 import FloralVideo from "./components/FloralVideo";
-import CinematicVideo from "./components/CinematicVideo";
+// import CinematicVideo from "./components/CinematicVideo";
 // import WeddingTimelineCard from "./components/WeddingTimelineCard";
 // import WeddingTimelineCard2 from "./components/WeddingTimelineCard2";
 // import WeddingTimelineElegant from "./components/WeddingTimelineElegant";
 import WeddingTimelineScroll from "./components/WeddingTimelineScroll";
 import Gifts from "./components/Gifts";
+import ThroughTheYears from "./components/ThroughTheYears";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -119,6 +120,7 @@ function App() {
 
           {/* STORY */}
           <section id="story">
+            <ThroughTheYears />
             <WeddingCarousel />
           </section>
           {/* <section id="story">
