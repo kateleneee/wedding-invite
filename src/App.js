@@ -5,7 +5,7 @@ import {
   // ChevronDown,
   ExternalLink,
   // Mail,
-  Gift,
+  // Gift,
   // Camera,
   // Users,
 } from "lucide-react";
@@ -33,8 +33,7 @@ import CinematicVideo from "./components/CinematicVideo";
 // import WeddingTimelineCard2 from "./components/WeddingTimelineCard2";
 // import WeddingTimelineElegant from "./components/WeddingTimelineElegant";
 import WeddingTimelineScroll from "./components/WeddingTimelineScroll";
-import metrobankQR from "./assets/images/metrobank-qr.jpg"
-import mayaQR from "./assets/images/maya-qr.png"
+import Gifts from "./components/Gifts";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -257,44 +256,8 @@ function App() {
           </section>
 
           {/* GIFTS */}
-          <section id="gifts" className="section gifts-section">
-            <div className="section-label">GIFT GUIDE</div>
+          <Gifts />
 
-            <h2>
-              Your presence
-              <br />
-              is our present
-            </h2>
-
-            <p>
-              Your presence on our special day means more to us than anything.
-            </p>
-
-            <div className="gift-box">
-              <Gift size={30} />
-
-              <p>
-                If you wish to bless us with a gift, a contribution toward our
-                future together would be deeply appreciated.
-              </p>
-              {/* QR CODES */}
-              <div className="gift-qr-container"> {/* MAYA */}
-                <div className="gift-qr-card">
-                  <div className="gift-qr">
-                    <img src={mayaQR} alt="Maya QR Code" />
-                  </div>
-                  <span className="gift-qr-label">Maya</span>
-                </div>
-                {/* METROBANK */}
-                <div className="gift-qr-card">
-                  <div className="gift-qr">
-                    <img src={metrobankQR} alt="Metrobank QR Code" />
-                  </div>
-                  <span className="gift-qr-label">Metrobank</span>
-                </div>
-              </div>
-            </div>
-          </section>
 
           {/* FOOTER */}
           <footer className="footer">
