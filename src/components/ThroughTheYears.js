@@ -101,19 +101,19 @@ import sporty7 from "../assets/images/Sporty/7.jpg";
 // =========================================
 // LIFE
 // =========================================
-import life1 from "../assets/images/LifeCelebrations/1.MP4";
-import life2 from "../assets/images/LifeCelebrations/2.HEIC";
-import life3 from "../assets/images/LifeCelebrations/3.MP4";
-import life4 from "../assets/images/LifeCelebrations/4.HEIC";
-import life5 from "../assets/images/LifeCelebrations/5.HEIC";
-import life6 from "../assets/images/LifeCelebrations/6.HEIC";
-import life7 from "../assets/images/LifeCelebrations/7.HEIC";
-import life8 from "../assets/images/LifeCelebrations/8.MOV";
-import life9 from "../assets/images/LifeCelebrations/9.HEIC";
-import life10 from "../assets/images/LifeCelebrations/10.HEIC";
-import life11 from "../assets/images/LifeCelebrations/11.HEIC";
-import life12 from "../assets/images/LifeCelebrations/12.MP4";
-import life13 from "../assets/images/Sporty/7.jpg";
+// import life1 from "../assets/images/LifeCelebrations/1.MP4";
+// import life2 from "../assets/images/LifeCelebrations/2.HEIC";
+// import life3 from "../assets/images/LifeCelebrations/3.MP4";
+// import life4 from "../assets/images/LifeCelebrations/4.HEIC";
+// import life5 from "../assets/images/LifeCelebrations/5.HEIC";
+// import life6 from "../assets/images/LifeCelebrations/6.HEIC";
+// import life7 from "../assets/images/LifeCelebrations/7.HEIC";
+// import life8 from "../assets/images/LifeCelebrations/8.MOV";
+// import life9 from "../assets/images/LifeCelebrations/9.HEIC";
+// import life10 from "../assets/images/LifeCelebrations/10.HEIC";
+// import life11 from "../assets/images/LifeCelebrations/11.HEIC";
+// import life12 from "../assets/images/LifeCelebrations/12.MP4";
+// import life13 from "../assets/images/Sporty/7.jpg";
 
 const photoGroups = [
   {
@@ -248,27 +248,27 @@ const photoGroups = [
       sporty7,
     ],
   },
-  {
-    id: "life",
-    title: "Life Celebrations",
-    subtitle: "Celebrating life, love, and everything in between.",
-    description: "The moments that made life ours. Birthdays, milestones, victories, little wins, and ordinary days that became extraordinary simply because we shared them.",
-    photos: [
-      life1,
-      life2,
-      life3,
-      life4,
-      life5,
-      life6,
-      life7,
-      life8,
-      life9,
-      life10,
-      life11,
-      life12,
-      life13
-    ],
-  },
+  // {
+  //   id: "life",
+  //   title: "Life Celebrations",
+  //   subtitle: "Celebrating life, love, and everything in between.",
+  //   description: "The moments that made life ours. Birthdays, milestones, victories, little wins, and ordinary days that became extraordinary simply because we shared them.",
+  //   photos: [
+  //     life1,
+  //     life2,
+  //     life3,
+  //     life4,
+  //     life5,
+  //     life6,
+  //     life7,
+  //     life8,
+  //     life9,
+  //     life10,
+  //     life11,
+  //     life12,
+  //     life13
+  //   ],
+  // },
 ];
 
 
