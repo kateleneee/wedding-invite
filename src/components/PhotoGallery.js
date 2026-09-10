@@ -32,8 +32,52 @@ import photo28 from "../assets/images/photo28.jpg";
 // import sketch3 from "../assets/images/sketch-3.png";
 
 import "./PhotoGallery.css";
+import { useEffect } from "react";
 
 export default function PhotoGallery() {
+
+  // Inside your gallery component
+  useEffect(() => {
+    const animatedElements = document.querySelectorAll(
+      [
+        ".gallery-heading",
+        ".gallery-heading .eyebrow",
+        ".gallery-heading h3",
+        ".gallery-heading > p",
+        ".scrapbook-image-list .MuiImageListItem-root",
+        ".gallery-story",
+        ".gallery-story-content",
+        ".story-line",
+        ".gallery-story-divider",
+      ].join(", ")
+    );
+
+    if (!animatedElements.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add("is-visible");
+          observerInstance.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.12,
+        rootMargin: "0px 0px -50px 0px",
+      }
+    );
+
+    animatedElements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <section className="scrapbook-gallery">
 
