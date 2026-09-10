@@ -159,7 +159,10 @@ export default function Venues() {
               title="map-location"
               src={venues[0].mapUrl}
               width="600" height="450"
-              allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+              // allowfullscreen=""
+              loading="lazy"
+            // referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
           </div>
 
           <div className="map-decoration map-decoration-one" />

@@ -157,14 +157,12 @@ export default function ResponsiveAppBar() {
         ModalProps={{
           keepMounted: true,
         }}
-        PaperProps={{
-          sx: {
-            width: { xs: "82%", sm: 320 },
-            maxWidth: 360,
-            backgroundColor: "#FAF9F0",
-            color: "#66727A",
-            boxShadow: "-8px 0 30px rgba(67, 83, 91, 0.12)",
-          },
+        sx={{
+          width: { xs: "82%", sm: 320 },
+          maxWidth: 360,
+          backgroundColor: "FAF9F0",
+          color: "#66727A",
+          boxShadow: "-8px 0 30px rgba(67, 83, 91, 0.12)",
         }}
       >
         {/* Drawer Header */}
