@@ -3,317 +3,542 @@
 ========================================= */
 
 .scrapbook-gallery {
-  /* width: 100%; */
-  min-height: 100vh;
-  padding: 90px 20px;
-  background: var(--blue);
-  /* overflow: hidden; */
+  position: relative;
+  width: 100%;
+  padding: 100px 24px 120px;
+  overflow: hidden;
+  padding: 0 10px;
+
+  background:
+    radial-gradient(circle at 10% 15%,
+      rgba(248, 235, 170, 0.6),
+      transparent 28%),
+    radial-gradient(circle at 90% 80%,
+      rgba(255, 255, 255, 0.75),
+      transparent 30%),
+    #dcebf3;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.gallery-heading {
+  max-width: 650px;
+  margin: 0 auto 70px;
+  text-align: center;
 }
 
 .gallery-heading {
+  width: 100%;
+  margin: 0 auto 75px;
   text-align: center;
-  padding: 0 10px;
 }
 
-.gallery-heading span {
-  font-size: 10px;
-  letter-spacing: 3px;
-  font-weight: 600;
+.gallery-heading .eyebrow {
+  background: var(--gold-secondary);
+  color: var(--deep-blue);
+
+  display: inline-block;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 0.95;
+
+  padding: 18px 34px;
+
+  transform: rotate(-2deg);
+
+  box-shadow:
+    0 10px 25px rgba(63, 79, 85, 0.13);
+
+  position: relative;
+  z-index: 2;
 }
 
 .gallery-heading h3 {
+  margin: 0px;
   font-family: "Cormorant Garamond", serif;
-  font-size: clamp(2rem, 6vw, 3.5rem);
+  /* font-family: "Great Vibes", cursive; */
+  font-size: clamp(44px, 7vw, 72px);
   font-weight: 500;
-  line-height: 0.9;
-  margin: 18px 0;
+  line-height: 0.95;
+
+  color: #3f4f55;
 }
 
-.gallery-heading p {
-  max-width: 400px;
+.gallery-heading>p {
+  max-width: 500px;
   margin: 0 auto;
-  font-size: 14px;
-  line-height: 1.7;
-  font-family: "Montserrat", sans-serif;
+
+  font-family: "Cormorant Garamond", serif;
+  font-family: "Great Vibes", cursive;
+  font-size: 18px;
+  line-height: 1.5;
+
+  color: #66727a;
 }
 
-.image-box {
-  width: 70vw;
-  margin: 0;
-  padding: 0px 14px;
-  justify-self: center;
-  color: var(--blue-dark);
-  background-color: var(--gold-secondary);
-  border: 1px solid var(--blue-dark);
-  /* background: red; */
-}
-
-.eyebrow {
-  display: inline-block;
-  padding: 7px 14px;
-  background: var(--gold-secondary);
-  border: 1px solid var(--blue-dark);
-  color: var(--deep-blue);
-  font-size: 0.58rem;
-  letter-spacing: 0.2em;
-  transform: rotate(-2deg);
-}
 
 /* =========================================
-   DESKTOP SCRAPBOOK
+   PHOTO GALLERIES
 ========================================= */
-/* 
-.polaroid-container {
-  position: relative;
 
-  width: min(900px, 100%);
+.scrapbook-image-list {
+  width: min(1050px, 100%) !important;
+  margin: 0 auto !important;
 
-  height: 650px;
-
-  margin: 65px auto 0;
+  overflow: visible !important;
 }
 
-.polaroid {
-  position: absolute;
-
-  width: 230px;
-
-  padding: 10px 10px 34px;
-
-  border: 0;
-
-  background: #fffdf6;
-
-  box-shadow:
-    0 15px 35px rgba(67, 83, 91, 0.18);
-
-  cursor: pointer;
-
-  transform: rotate(var(--rotation));
-
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
-
-  -webkit-tap-highlight-color: transparent;
-}
-
-.polaroid:hover {
-  transform:
-    rotate(0deg)
-    translateY(-15px)
-    scale(1.07);
-
-  box-shadow:
-    0 25px 50px rgba(67, 83, 91, 0.25);
-
-  z-index: 20;
-}
-
-.polaroid-photo {
-  width: 100%;
-
-  aspect-ratio: 1 / 1;
-
+.scrapbook-image-list .MuiImageListItem-root {
   overflow: hidden;
 
-  background: #e8e8e8;
+  /* border-radius: 4px; */
+  background: #faf9f0;
+
+  box-shadow:
+    0 8px 25px rgba(63, 79, 85, 0.08);
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
 }
 
-.polaroid-photo img {
+.scrapbook-image-list .MuiImageListItem-root:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 14px 32px rgba(63, 79, 85, 0.14);
+}
+
+.scrapbook-image-list img {
+  display: block;
+
   width: 100%;
-  height: 100%;
+  height: auto;
 
   object-fit: cover;
 
-  display: block;
-
-  transition: transform 0.5s ease;
+  transition:
+    transform 0.7s ease,
+    opacity 0.4s ease;
 }
 
-.polaroid:hover .polaroid-photo img {
-  transform: scale(1.05);
+.scrapbook-image-list .MuiImageListItem-root:hover img {
+  transform: scale(1.04);
+  opacity: 0.94;
 }
 
-.polaroid-caption {
-  margin-top: 10px;
 
-  font-family: "Great Vibes", cursive;
+/* =========================================
+   STORY TEXT
+========================================= */
 
-  font-size: 21px;
+.gallery-story {
+  position: relative;
 
-  color: #435c68;
+  width: min(950px, 92%);
+  margin: 105px auto;
 
-  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
 
-  overflow: hidden;
+  opacity: 0;
+  transform: translateY(45px) scale(0.97);
 
-  text-overflow: ellipsis;
+  animation: storyReveal 1s ease forwards;
 }
 
-.polaroid-heart {
+
+/* Opening text gets slightly more space */
+
+.gallery-story-intro {
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+
+/* =========================================
+   STORY CONTENT
+========================================= */
+
+.gallery-story-content {
+  position: relative;
+
+  width: min(680px, 100%);
+
+  padding: 10px 20px;
+
+  text-align: center;
+}
+
+.gallery-story p {
+  margin: 0;
+
+  font-family: "Cormorant Garamond", serif;
+
+  /* MORE VISIBLE */
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 500;
+
+  line-height: 1.45;
+
+  color: #35474e;
+
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.gallery-story strong {
+  font-weight: 700;
+  color: #263a42;
+}
+
+
+/* =========================================
+   DECORATIVE LINES
+========================================= */
+
+.story-line {
+  position: relative;
+
+  width: 130px;
+  height: 1px;
+
+  flex-shrink: 0;
+
+  background: #cbb76a;
+
+  opacity: 0.8;
+}
+
+
+/* Small gold detail at end of each line */
+
+.story-line::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+
+  width: 7px;
+  height: 7px;
+
+  background: #cbb76a;
+
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.story-line-left::after {
+  right: -2px;
+}
+
+.story-line-right::after {
+  left: -2px;
+}
+
+
+/* =========================================
+   LITTLE INNER LINES
+========================================= */
+
+.gallery-story-content::before,
+.gallery-story-content::after {
+  content: "";
+
   position: absolute;
 
-  right: 10px;
-  bottom: 8px;
+  width: 35px;
+  height: 1px;
 
-  width: 14px !important;
-  height: 14px !important;
-
-  color: #d99da5;
-} */
-
-/* =========================================
-   DESKTOP POSITIONS
-========================================= */
-
-/* .polaroid-1 {
-  left: 6%;
-  top: 45px;
+  background: rgba(203, 183, 106, 0.7);
 }
 
-.polaroid-2 {
-  left: 36%;
-  top: 0;
+.gallery-story-content::before {
+  top: -7px;
+  left: 50%;
+
+  transform: translateX(-50%);
 }
 
-.polaroid-3 {
-  right: 6%;
-  top: 70px;
-}
+.gallery-story-content::after {
+  bottom: -7px;
+  left: 50%;
 
-.polaroid-4 {
-  left: 20%;
-  top: 300px;
+  transform: translateX(-50%);
 }
-
-.polaroid-5 {
-  right: 18%;
-  top: 330px;
-} */
 
 
 /* =========================================
-   TABLET
+   FINAL STORY
 ========================================= */
 
-/* @media (max-width: 900px) {
+.gallery-story-final {
+  margin-top: 115px;
+  margin-bottom: 20px;
+}
 
-  .polaroid-container {
-    height: 700px;
+.gallery-story-final .gallery-story-content {
+  width: min(760px, 100%);
+}
+
+.gallery-story-emphasis {
+  font-size: clamp(29px, 4vw, 42px) !important;
+
+  font-weight: 600 !important;
+  font-style: italic;
+
+  line-height: 1.25 !important;
+
+  color: #30434b !important;
+}
+
+.gallery-story-divider {
+  width: 65px;
+  height: 2px;
+
+  margin: 30px auto;
+
+  background: #cbb76a;
+}
+
+.gallery-story-final>.gallery-story-content>p:not(.gallery-story-emphasis) {
+  font-size: clamp(20px, 2.5vw, 25px);
+  line-height: 1.55;
+}
+
+.gallery-story-ending {
+  margin-top: 28px !important;
+}
+
+
+/* =========================================
+   STORY ANIMATION
+========================================= */
+
+@keyframes storyReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(45px) scale(0.97);
   }
 
-  .polaroid {
-    width: 200px;
+  60% {
+    opacity: 1;
   }
 
-  .polaroid-1 {
-    left: 2%;
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* Lines animate outward */
+
+.story-line {
+  transform: scaleX(0);
+  transform-origin: center;
+  animation: lineReveal 1s ease 0.25s forwards;
+}
+
+@keyframes lineReveal {
+  from {
+    transform: scaleX(0);
   }
 
-  .polaroid-2 {
-    left: 37%;
+  to {
+    transform: scaleX(1);
   }
+}
 
-  .polaroid-3 {
-    right: 2%;
-  }
 
-  .polaroid-4 {
-    left: 15%;
-    top: 330px;
-  }
+/* =========================================
+   SLIGHT VARIATION BETWEEN TEXT SECTIONS
+========================================= */
 
-  .polaroid-5 {
-    right: 12%;
-    top: 360px;
-  }
-} */
+.gallery-story:nth-of-type(3) {
+  transform: translateY(45px) scale(0.97) rotate(-0.3deg);
+}
+
+.gallery-story:nth-of-type(5) {
+  transform: translateY(45px) scale(0.97) rotate(0.25deg);
+}
+
 
 /* =========================================
    MOBILE
 ========================================= */
-/* 
+
 @media (max-width: 600px) {
 
   .scrapbook-gallery {
-    padding: 75px 16px 90px;
+    padding: 65px 14px 90px;
   }
+
+
+  /* HEADER */
 
   .gallery-heading {
-    padding: 0 8px;
+    margin-bottom: 48px;
   }
 
-  .gallery-heading span {
-    font-size: 9px;
-    letter-spacing: 2.5px;
+  .gallery-heading .eyebrow {
+    font-size: 1.25rem;
+    letter-spacing: 0.1em;
+    padding: 14px 20px;
   }
 
-  .gallery-heading h2 {
-    font-size: 54px;
-
-    margin: 16px 0;
+  .gallery-heading h3 {
+    font-size: 42px;
+    line-height: 0.98;
   }
 
-  .gallery-heading p {
-    font-size: 13px;
-    line-height: 1.6;
-    max-width: 300px;
+  .gallery-heading>p {
+    font-size: 15px;
   }
-} */
+
+
+  /* GALLERY */
+
+  .scrapbook-image-list {
+    width: 100% !important;
+    columns: 2 !important;
+  }
+
+
+  /* STORY */
+
+  .gallery-story {
+    width: 100%;
+
+    margin: 65px auto;
+
+    gap: 12px;
+  }
+
+  .gallery-story-intro {
+    margin-top: 20px;
+    margin-bottom: 70px;
+  }
+
+  .gallery-story-content {
+    padding: 8px 4px;
+  }
+
+  .gallery-story p {
+    font-size: 21px;
+    line-height: 1.45;
+  }
+
+
+  /* Lines become shorter */
+
+  .story-line {
+    width: 35px;
+  }
+
+  .story-line::after {
+    width: 5px;
+    height: 5px;
+  }
+
+
+  /* FINAL */
+
+  .gallery-story-final {
+    margin-top: 75px;
+  }
+
+  .gallery-story-emphasis {
+    font-size: 26px !important;
+    line-height: 1.35 !important;
+  }
+
+  .gallery-story-divider {
+    width: 50px;
+    margin: 23px auto;
+  }
+
+  .gallery-story-final>.gallery-story-content>p:not(.gallery-story-emphasis) {
+    font-size: 19px;
+    line-height: 1.5;
+  }
+
+  .gallery-story-ending {
+    margin-top: 22px !important;
+  }
+}
+
 
 /* =========================================
-   SMALL PHONES
-   iPhone SE / small Android
+   VERY SMALL PHONES
 ========================================= */
 
-/* @media (max-width: 380px) {
+@media (max-width: 400px) {
 
   .scrapbook-gallery {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding: 60px 40px;
+    /* padding-left: 10px;
+    padding-right: 10px; */
   }
 
-  .gallery-heading h2 {
-    font-size: 48px;
+  .gallery-heading h3 {
+    font-size: 38px;
   }
 
-  .polaroid-container {
-    height: 800px;
+  .gallery-heading>p {
+    font-size: 14px;
   }
 
-  .polaroid {
-    width: 155px;
-
-    padding: 7px 7px 27px;
+  .gallery-story {
+    gap: 8px;
+    margin: 55px auto;
   }
 
-  .polaroid-1 {
-    left: 0;
-    top: 20px;
+  .gallery-story p {
+    font-size: 18px;
   }
 
-  .polaroid-2 {
-    right: 0;
-    top: 55px;
+  .story-line {
+    width: 20px;
   }
 
-  .polaroid-3 {
-    left: 14%;
-    top: 245px;
+  .gallery-story-emphasis {
+    font-size: 23px !important;
   }
 
-  .polaroid-4 {
-    left: 0;
-    top: 455px;
+  .gallery-story-final>.gallery-story-content>p:not(.gallery-story-emphasis) {
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .gallery-story,
+  .story-line,
+  .scrapbook-image-list img,
+  .scrapbook-image-list .MuiImageListItem-root {
+    animation: none;
+    transition: none;
+    transform: none;
   }
 
-  .polaroid-5 {
-    right: 0;
-    top: 505px;
+  .gallery-story {
+    opacity: 1;
   }
 
-  .polaroid-caption {
-    font-size: 16px;
+  .story-line {
+    transform: scaleX(1);
   }
-}  */
+}

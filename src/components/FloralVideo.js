@@ -24,11 +24,11 @@ const FloralVideo = () => {
       <div className="floral-video-content">
 
         <p className="floral-eyebrow">
-          A LITTLE MOMENT
+          A LITTLE BIT OF US
         </p>
 
         <h2 className="floral-title">
-          Moments to Remember
+          Love, in Focus
         </h2>
 
         <div className="floral-video-frame">
@@ -54,7 +54,7 @@ const FloralVideo = () => {
         </div>
 
         <p className="floral-caption">
-          A little glimpse of our favorite memories.
+          Guess We're Getting Married!
         </p>
 
         {/* Videographer Credit */}
