@@ -14,27 +14,19 @@ import Tooltip from "@mui/material/Tooltip";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 
 import "./App.css";
-import Envelope from "./components/Envelope";
-import PhotoGallery from "./components/PhotoGallery";
-import Venues from "./components/Venues";
-// import WeddingTimeline from "./components/WeddingTimeline";
-// import WeddingTimelineV2 from "./components/WeddingTimelineV2";
-import WeddingPlaylist from "./components/WeddingPlaylist";
-// import engagement from "./assets/images/engagement1.jpg";
-import ResponsiveAppBar from "./components/ResponsiveAppBar";
-import SaveTheDate from "./components/SaveTheDate";
-import Landing from "./components/Landing";
 import CoverImage from "./assets/images/landing-yellow-escolta.png";
-import WeddingCarousel from "./components/Carousel";
-// import PhotoCarousel from "./components/PhotoCarousel";
-import FloralVideo from "./components/FloralVideo";
-// import CinematicVideo from "./components/CinematicVideo";
-// import WeddingTimelineCard from "./components/WeddingTimelineCard";
-// import WeddingTimelineCard2 from "./components/WeddingTimelineCard2";
-// import WeddingTimelineElegant from "./components/WeddingTimelineElegant";
-import WeddingTimelineScroll from "./components/WeddingTimelineScroll";
-import Gifts from "./components/Gifts";
-import ThroughTheYears from "./components/ThroughTheYears";
+import Carousel from "../Carousel";
+import Envelope from "../Envelope";
+import FloralVideo from "../FloralVideo";
+import Gifts from "../Gifts";
+import Landing from "../Landing";
+import PhotoGallery from "../PhotoGallery";
+import ResponsiveAppBar from "../ResponsiveAppBar";
+import SaveTheDate from "../SaveTheDate";
+import ThroughTheYears from "../ThroughTheYears";
+import Venues from "../Venues";
+import WeddingPlaylist from "../WeddingPlaylist";
+import WeddingTimelineScroll from "../WeddingTimelineScroll";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -121,57 +113,8 @@ function App() {
           {/* STORY */}
           <section id="story">
             <ThroughTheYears />
-            <WeddingCarousel />
+            <Carousel />
           </section>
-          {/* <section id="story">
-            <PhotoCarousel />
-          </section> */}
-          {/* <section id="story" className="section story-section">
-            <div className="story-image">
-              <div className="image-placeholder">
-                YOUR PHOTO
-              </div>
-              <img
-                src={engagement}
-                alt={"engagement"}
-                className="lightbox-image"
-              />
-            </div>
-
-            <div className="story-content">
-              <div className="section-label">OUR STORY</div>
-
-              <h2>
-                From this moment
-                <br />
-                to forever
-              </h2>
-
-              <p>
-                What started as a simple hello slowly became something neither
-                of us expected.
-              </p>
-
-              <p>
-                Through ordinary days, little adventures, laughter, challenges,
-                and countless memories, we found our way to each other.
-              </p>
-
-              <p>
-                And now, we're excited to begin our next chapter together—with
-                the people we love most by our side.
-              </p>
-
-              <div className="heart-divider">
-                <span />
-                <Heart size={18} fill="currentColor" />
-                <span />
-              </div>
-            </div>
-          </section> */}
-
-          {/* VIDEO */}
-          {/* <section id="" */}
 
           {/* GALLERY */}
           <section id="gallery">
@@ -183,10 +126,6 @@ function App() {
 
           {/* TIMELINE */}
           <section id="timeline">
-            {/* <WeddingTimelineV2 /> */}
-            {/* <WeddingTimelineCard />
-            <WeddingTimelineCard2 /> */}
-            {/* <WeddingTimelineElegant /> */}
             <WeddingTimelineScroll />
           </section>
 
