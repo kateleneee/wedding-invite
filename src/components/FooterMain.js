@@ -37,9 +37,9 @@ const FooterMain = () => {
 
       <div className="footer-content">
         <div className="footer-monogram-wrapper">
-          <span className="monogram-accent monogram-accent-left"></span>
-
-          <span className="monogram-accent monogram-accent-right"></span>
+          {/* <span className="monogram-accent monogram-accent-left"></span>
+          <span className="name-line"></span>
+          <span className="monogram-accent monogram-accent-right"></span> */}
 
           <img
             src={monogram}
