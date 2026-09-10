@@ -21,7 +21,7 @@ import college2 from "../assets/images/CollegeDays/2.jpg";
 import college3 from "../assets/images/CollegeDays/3.jpg";
 import college4 from "../assets/images/CollegeDays/4.jpg";
 import college5 from "../assets/images/CollegeDays/5.jpg";
-import college6 from "../assets/images/CollegeDays/6.jpg";
+// import college6 from "../assets/images/CollegeDays/6.jpg";
 import college7 from "../assets/images/CollegeDays/7.jpg";
 import college8 from "../assets/images/CollegeDays/8.jpg";
 import college9 from "../assets/images/CollegeDays/9.jpg";
@@ -98,19 +98,36 @@ import sporty5 from "../assets/images/Sporty/5.jpg";
 import sporty6 from "../assets/images/Sporty/6.jpg";
 import sporty7 from "../assets/images/Sporty/7.jpg";
 
+// =========================================
+// LIFE
+// =========================================
+import life1 from "../assets/images/LifeCelebrations/1.MP4";
+import life2 from "../assets/images/LifeCelebrations/2.HEIC";
+import life3 from "../assets/images/LifeCelebrations/3.MP4";
+import life4 from "../assets/images/LifeCelebrations/4.HEIC";
+import life5 from "../assets/images/LifeCelebrations/5.HEIC";
+import life6 from "../assets/images/LifeCelebrations/6.HEIC";
+import life7 from "../assets/images/LifeCelebrations/7.HEIC";
+import life8 from "../assets/images/LifeCelebrations/8.MOV";
+import life9 from "../assets/images/LifeCelebrations/9.HEIC";
+import life10 from "../assets/images/LifeCelebrations/10.HEIC";
+import life11 from "../assets/images/LifeCelebrations/11.HEIC";
+import life12 from "../assets/images/LifeCelebrations/12.MP4";
+import life13 from "../assets/images/Sporty/7.jpg";
 
 const photoGroups = [
   {
     id: "college",
     title: "College Days",
-    subtitle: "Where it all began",
+    subtitle: "Where our story began",
+    description: "Two college students, crossing paths and slowly becoming each other’s person.",
     photos: [
       college1,
       college2,
       college3,
       college4,
       college5,
-      college6,
+      // college6,
       college7,
       college8,
       college9,
@@ -121,8 +138,18 @@ const photoGroups = [
 
   {
     id: "graduation",
-    title: "Graduation Days",
-    subtitle: "A milestone we shared",
+    title: "Graduation Day",
+    subtitle: "We made it out! Yay!",
+    description: (
+      <>
+        We got our diplomas, celebrated our next chapter, and DJ got the answer to his prayers.{" "}
+        <span className="highlight-text">
+          Spoiler: it was Kaye, of course!
+        </span>{" "}
+        😂🙏
+      </>
+    ),
+    // description: "We got our diplomas, celebrated our next chapter, and DJ got the answer to his prayers. <span> Spoiler: it was Kaye, of course! <span> 😂🙏",
     photos: [
       graduation1,
       graduation2,
@@ -134,7 +161,8 @@ const photoGroups = [
   {
     id: "review",
     title: "Review Days",
-    subtitle: "Struggling and trying together",
+    subtitle: 'The "Sleepless" Era',
+    description: "Through long review days and countless moments of doubt, we became each other’s constant source of support.",
     photos: [
       review1,
       review2,
@@ -148,7 +176,8 @@ const photoGroups = [
   {
     id: "oathtaking",
     title: "Oathtaking Era",
-    subtitle: "Dreams finally taking shape",
+    subtitle: "Dreams officially unlocked...and so did the stress. Char!",
+    description: "We got the title. We got the dream. We also got the stress. Hahaha! Good thing we got each other, too. 🤍",
     photos: [
       oathtaking1,
       oathtaking2,
@@ -162,7 +191,8 @@ const photoGroups = [
   {
     id: "working",
     title: "Working Era",
-    subtitle: "Building our lives, side by side",
+    subtitle: "Building our careers, building our lives.",
+    description: "From first jobs to bigger dreams, we learned to navigate the real world while growing side by side.",
     photos: [
       work1,
       work2,
@@ -176,8 +206,9 @@ const photoGroups = [
 
   {
     id: "sickness",
-    title: "Through Sickness",
-    subtitle: "In every season, together",
+    title: "In Sickness and in Health",
+    subtitle: "In Sickness and in Health",
+    description: "A chapter of growing pains, struggles, lessons learned, and slowly becoming better—not just for ourselves, but for each other. 🤍",
     photos: [
       sickness1,
       sickness2,
@@ -193,7 +224,8 @@ const photoGroups = [
   {
     id: "travels",
     title: "Travels",
-    subtitle: "Finding adventure wherever we go",
+    subtitle: "Collecting places, stories, and memories.",
+    description: "New places, new memories, and plenty of stories we’ll probably tell forever.",
     photos: [
       travel1,
       travel2,
@@ -201,11 +233,11 @@ const photoGroups = [
       travel4,
     ],
   },
-
   {
     id: "sporty",
     title: "Sporty Era",
-    subtitle: "Partners on and off the court",
+    subtitle: "Sweat, play, and a little friendly competition.",
+    description: "We found new ways to have fun, stay active, and cheer each other on—on and off the court.",
     photos: [
       sporty1,
       sporty2,
@@ -214,6 +246,27 @@ const photoGroups = [
       sporty5,
       sporty6,
       sporty7,
+    ],
+  },
+  {
+    id: "life",
+    title: "Life Celebrations",
+    subtitle: "Celebrating life, love, and everything in between.",
+    description: "The moments that made life ours. Birthdays, milestones, victories, little wins, and ordinary days that became extraordinary simply because we shared them.",
+    photos: [
+      life1,
+      life2,
+      life3,
+      life4,
+      life5,
+      life6,
+      life7,
+      life8,
+      life9,
+      life10,
+      life11,
+      life12,
+      life13
     ],
   },
 ];
@@ -378,9 +431,12 @@ const ThroughTheYears = () => {
                 {group.title}
               </h3>
 
-              <p>
+              <p className="story-card-subtitle">
                 {group.subtitle}
               </p>
+
+              {/* DESCRIPTION */}
+              <p className="story-card-description"> {group.description} </p>
 
               <span className="story-card-count">
                 {group.photos.length} moments

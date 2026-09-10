@@ -23,7 +23,6 @@
     #dcebf3;
 }
 
-
 /* =========================================
    HEADER
 ========================================= */
@@ -252,38 +251,52 @@
 }
 
 .story-card-content h3 {
-  margin: 0 0 3px;
-
+  margin: 0 0 5px;
   font-family: "Cormorant Garamond", serif;
-
-  font-size: clamp(24px, 3vw, 31px);
-
+  font-size: clamp(16px, 3vw, 22px);
   font-weight: 500;
-
   color: #3f4f55;
 }
 
-.story-card-content p {
-  margin: 0 0 8px;
-
-  font-family: "Cormorant Garamond", serif;
-
-  font-size: 16px;
-
+.story-card-subtitle {
+  font-weight: 700;
   font-style: italic;
+  /* margin-bottom: 8px; */
+}
 
+.story-card-content p {
+  margin: 0 0 0px;
+  font-size: 16px;
   color: #66727a;
+}
+
+.story-card-description {
+  font-size: 8px;
+  justify-self: center;
+}
+
+.story-card-content p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  line-height: 1.45;
+  margin: 4px 0;
+}
+
+.story-card-content .story-card-description {
+  font-size: 0.85rem;
+  line-height: 1.2;
+  margin: 5px 0;
+}
+
+.highlight-text {
+  font-weight: 700;
 }
 
 .story-card-count {
   font-family: "Cormorant Garamond", serif;
-
   font-size: 12px;
-
   letter-spacing: 0.12em;
-
   text-transform: uppercase;
-
   color: #b59a35;
 }
 
@@ -420,23 +433,18 @@
 
 .gallery-header h2 {
   margin: 0 0 5px;
-
   font-family: "Cormorant Garamond", serif;
-
-  font-size: 42px;
-
+  /* font-size: 26px; */
+  font-size: clamp(20px, 3vw, 26px);
   font-weight: 500;
-
   color: #3f4f55;
 }
 
 .gallery-header span {
   font-family: "Cormorant Garamond", serif;
-
   font-size: 17px;
-
   font-style: italic;
-
+  font-weight: 700;
   color: #66727a;
 }
 
@@ -647,6 +655,17 @@
   .story-card-count {
     font-size: 0.58rem;
     letter-spacing: 0.08em;
+  }
+
+  .story-card-description {
+    margin: 12px 0 18px;
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #5f6f78;
+    max-width: 90%;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   /* Keep the scrapbook feel, but make the rotation subtle */
