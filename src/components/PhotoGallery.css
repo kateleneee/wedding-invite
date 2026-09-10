@@ -430,7 +430,8 @@
 @media (max-width: 600px) {
 
   .scrapbook-gallery {
-    padding: 65px 14px 90px;
+    /* padding: 65px 14px 90px; */
+    padding: 60px 40px;
   }
 
 
