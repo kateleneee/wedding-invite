@@ -17,7 +17,7 @@ import ThroughTheYears from "./components/ThroughTheYears";
 import Venues from "./components/Venues";
 import WeddingPlaylist from "./components/WeddingPlaylist";
 import WeddingTimelineScroll from "./components/WeddingTimelineScroll";
-import CreditsFooter from "./components/CreditsFooter";
+import FooterCredits from "./components/FooterCredits";
 import RSVP from "./components/RSVP";
 import FooterMain from "./components/FooterMain";
 
@@ -168,7 +168,7 @@ function App() {
 
           {/* FOOTER */}
           <FooterMain />
-          <CreditsFooter />
+          <FooterCredits />
 
         </main>
       )}

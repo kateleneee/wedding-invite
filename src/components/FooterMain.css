@@ -4,56 +4,146 @@
 
 .footer {
   position: relative;
+
   width: 100%;
-  padding: 70px 24px 48px;
+  min-height: 390px;
+
+  padding: 75px 20px 55px;
+
+  box-sizing: border-box;
 
   display: flex;
-  flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   text-align: center;
 
   background:
-    radial-gradient(circle at 50% 15%,
-      rgba(255, 255, 255, 0.5) 0%,
-      transparent 38%),
     linear-gradient(135deg,
-      #d5eaf2 0%,
-      #e3f1f5 48%,
-      #d1e7f0 100%);
-
-  color: var(--blue-deep, #435c68);
+      #d6eaf2 0%,
+      #e3f1f5 50%,
+      #d3e8f0 100%);
 
   overflow: hidden;
-  isolation: isolate;
 }
 
 
 /* =========================================================
-   SUBTLE BACKGROUND TEXTURE
+   BACKGROUND LIGHT
 ========================================================= */
 
-.footer::before {
-  content: "";
+.footer-light {
   position: absolute;
-  inset: 0;
-
-  background:
-    repeating-linear-gradient(105deg,
-      rgba(255, 255, 255, 0.1) 0px,
-      rgba(255, 255, 255, 0.1) 2px,
-      transparent 9px,
-      transparent 18px);
-
-  opacity: 0.45;
 
   pointer-events: none;
-  z-index: -1;
+
+  filter: blur(55px);
+
+  opacity: 0;
+
+  background: #fff7d6;
+}
+
+
+/* Large upper glow */
+
+.footer-light-one {
+  width: 240px;
+  height: 100px;
+
+  top: -45px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  animation:
+    backgroundGlowOne 8s ease-in-out infinite;
+}
+
+
+/* Smaller side glow */
+
+.footer-light-two {
+  width: 180px;
+  height: 80px;
+
+  right: -50px;
+  bottom: 20px;
+
+  opacity: 0;
+
+  animation:
+    backgroundGlowTwo 10s ease-in-out 1s infinite;
 }
 
 
 /* =========================================================
-   MONOGRAM
+   MINIMAL BACKGROUND DETAILS
+========================================================= */
+
+.footer-detail {
+  position: absolute;
+
+  width: 65px;
+  height: 1px;
+
+  background:
+    linear-gradient(90deg,
+      transparent,
+      rgba(203, 183, 106, 0.35),
+      transparent);
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+
+/* Left detail */
+
+.footer-detail-left {
+  left: 7%;
+  top: 24%;
+
+  transform:
+    rotate(-12deg) translateX(-20px);
+
+  animation:
+    detailReveal 2.5s ease-out 0.8s forwards,
+    detailFloatLeft 9s ease-in-out 3.3s infinite;
+}
+
+
+/* Right detail */
+
+.footer-detail-right {
+  right: 7%;
+  bottom: 24%;
+
+  transform:
+    rotate(-12deg) translateX(20px);
+
+  animation:
+    detailRevealRight 2.5s ease-out 1.2s forwards,
+    detailFloatRight 10s ease-in-out 3.8s infinite;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.footer-content {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   MONOGRAM WRAPPER
 ========================================================= */
 
 .footer-monogram-wrapper {
@@ -62,65 +152,23 @@
   width: 110px;
   height: 110px;
 
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-
-  animation:
-    monogramFloat 4.5s ease-in-out 1.8s infinite;
-}
-
-
-/* Soft glow behind monogram */
-.footer-monogram-wrapper::before {
-  content: "";
-
-  position: absolute;
-  width: 72px;
-  height: 72px;
-
-  border-radius: 50%;
-
-  background: rgba(255, 247, 214, 0.28);
-
-  filter: blur(20px);
-
-  opacity: 0;
-
-  animation: monogramAura 2.2s ease-out 0.8s forwards;
-}
-
-
-/* Tiny floating sparkle */
-.footer-monogram-wrapper::after {
-  content: "✦";
-
-  position: absolute;
-
-  top: 7px;
-  right: 9px;
-
-  font-family: serif;
-  font-size: 13px;
-
-  color: #cbb76a;
-
-  opacity: 0;
-
-  animation:
-    monogramSpark 1.2s ease-out 1.3s forwards;
 }
 
 
 /* =========================================================
-   MONOGRAM IMAGE
+   MONOGRAM
+   SAME ELEGANT SHOW ANIMATION
 ========================================================= */
 
 .footer-monogram {
   position: relative;
-  z-index: 2;
+
+  z-index: 3;
 
   width: 72px;
   height: 72px;
@@ -129,14 +177,160 @@
 
   opacity: 0;
 
-  transform-origin: center;
+  animation:
+    monogramShow 2s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+}
 
-  /* Light champagne glow only */
-  filter:
-    drop-shadow(0 0 8px rgba(255, 247, 214, 0.5)) drop-shadow(0 0 18px rgba(255, 247, 214, 0.25));
+
+/* =========================================================
+   MONOGRAM ACCENTS
+========================================================= */
+
+.monogram-accent {
+  position: absolute;
+
+  width: 28px;
+  height: 1px;
+
+  background:
+    linear-gradient(90deg,
+      transparent,
+      rgba(203, 183, 106, 0.65));
+
+  opacity: 0;
+
+  z-index: 2;
+}
+
+
+/* Left */
+
+.monogram-accent-left {
+  left: 0;
+
+  transform-origin: right;
 
   animation:
-    monogramReveal 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+    accentRevealLeft 1.4s ease-out 1.15s forwards;
+}
+
+
+/* Right */
+
+.monogram-accent-right {
+  right: 0;
+
+  transform:
+    scaleX(-1);
+
+  transform-origin: right;
+
+  animation:
+    accentRevealRight 1.4s ease-out 1.3s forwards;
+}
+
+
+/* =========================================================
+   MONOGRAM SHOW
+========================================================= */
+
+@keyframes monogramShow {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(28px) scale(0.72);
+
+    filter:
+      drop-shadow(0 0 0 rgba(255, 247, 214, 0));
+  }
+
+  25% {
+    opacity: 0.35;
+
+    transform:
+      translateY(15px) scale(0.82);
+
+    filter:
+      drop-shadow(0 0 8px rgba(255, 247, 214, 0.25));
+  }
+
+  55% {
+    opacity: 1;
+
+    transform:
+      translateY(-4px) scale(1.06);
+
+    filter:
+      drop-shadow(0 0 15px rgba(255, 247, 214, 0.6));
+  }
+
+  75% {
+    transform:
+      translateY(1px) scale(0.985);
+
+    filter:
+      drop-shadow(0 0 10px rgba(255, 247, 214, 0.4));
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0) scale(1);
+
+    filter:
+      drop-shadow(0 0 7px rgba(255, 247, 214, 0.3));
+  }
+}
+
+
+/* =========================================================
+   MONOGRAM ACCENT ANIMATION
+========================================================= */
+
+@keyframes accentRevealLeft {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      scaleX(0) translateX(10px);
+  }
+
+  60% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      scaleX(1) translateX(0);
+  }
+}
+
+
+@keyframes accentRevealRight {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      scaleX(0) translateX(-10px);
+  }
+
+  60% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      scaleX(-1) translateX(0);
+  }
 }
 
 
@@ -144,23 +338,69 @@
    COUPLE NAME
 ========================================================= */
 
-.footer h2 {
-  margin: 0 0 9px;
+.footer-name {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 16px;
+
+  opacity: 0;
+
+  transform: translateY(12px);
+
+  animation:
+    nameShow 1.4s cubic-bezier(0.22, 1, 0.36, 1) 1.15s forwards;
+}
+
+
+.footer-name h2 {
+  margin: 0;
 
   font-family: "Great Vibes", cursive;
+
   font-size: 58px;
+
   font-weight: 400;
-  line-height: 1.05;
 
-  color: #435c68;
+  line-height: 1;
 
-  text-shadow:
-    0 2px 5px rgba(67, 92, 104, 0.12);
+  color: #4b6574;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   NAME LINES
+========================================================= */
+
+.name-line {
+  width: 38px;
+  height: 1px;
+
+  background:
+    linear-gradient(90deg,
+      transparent,
+      rgba(203, 183, 106, 0.65));
+
+  transform: scaleX(0);
 
   opacity: 0;
 
   animation:
-    footerTextReveal 1s ease-out 0.65s forwards;
+    nameLineShow 1.1s ease-out 1.55s forwards;
+}
+
+
+.name-line:last-child {
+  background:
+    linear-gradient(90deg,
+      rgba(203, 183, 106, 0.65),
+      transparent);
 }
 
 
@@ -169,21 +409,28 @@
 ========================================================= */
 
 .footer-date {
-  margin: 0 0 25px;
+  display: block;
+
+  margin: 14px 0 25px;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: 0.95rem;
+
+  font-size: 0.9rem;
+
   font-weight: 600;
 
-  letter-spacing: 0.24em;
+  letter-spacing: 0.22em;
+
   text-transform: uppercase;
 
-  color: #a9944f;
+  color: #ad9852;
 
   opacity: 0;
 
+  transform: translateY(8px);
+
   animation:
-    footerTextReveal 1s ease-out 0.85s forwards;
+    dateShow 1.2s ease-out 1.75s forwards;
 }
 
 
@@ -193,191 +440,250 @@
 
 .footer-hashtags {
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
 
-  gap: 2px;
-
-  margin-top: 0;
+  gap: 3px;
 }
 
-.footer-hashtags small {
-  display: block;
 
+.footer-hashtags small {
   font-family: "Cormorant Garamond", serif;
-  font-size: 0.78rem;
+
+  font-size: 0.77rem;
+
   font-weight: 500;
 
-  line-height: 1.7;
-  letter-spacing: 0.09em;
+  line-height: 1.65;
 
-  color: #607887;
+  letter-spacing: 0.08em;
+
+  color: #68808d;
 
   opacity: 0;
 
+  transform: translateY(6px);
+
   animation:
-    footerHashtagReveal 0.9s ease-out forwards;
+    hashtagShow 1s ease-out forwards;
 }
+
 
 .footer-hashtags small:first-child {
-  animation-delay: 1.05s;
+  animation-delay: 2.05s;
 }
 
+
 .footer-hashtags small:last-child {
-  animation-delay: 1.18s;
+  animation-delay: 2.18s;
 }
 
 
 /* =========================================================
-   MONOGRAM REVEAL
+   NAME ANIMATION
 ========================================================= */
 
-@keyframes monogramReveal {
+@keyframes nameShow {
+
   0% {
     opacity: 0;
 
     transform:
-      translateY(18px) scale(0.55) rotate(-12deg);
-
-    filter:
-      drop-shadow(0 0 0 rgba(255, 247, 214, 0)) drop-shadow(0 0 0 rgba(255, 247, 214, 0));
-  }
-
-  35% {
-    opacity: 1;
-
-    transform:
-      translateY(-7px) scale(1.16) rotate(5deg);
-
-    filter:
-      drop-shadow(0 0 12px rgba(255, 247, 214, 0.65)) drop-shadow(0 0 26px rgba(255, 247, 214, 0.35));
+      translateY(12px);
   }
 
   60% {
-    transform:
-      translateY(2px) scale(0.96) rotate(-2deg);
+    opacity: 0.8;
 
-    filter:
-      drop-shadow(0 0 9px rgba(255, 247, 214, 0.5)) drop-shadow(0 0 18px rgba(255, 247, 214, 0.25));
+    transform:
+      translateY(-2px);
   }
 
   100% {
     opacity: 1;
 
     transform:
-      translateY(0) scale(1) rotate(0);
-
-    filter:
-      drop-shadow(0 0 7px rgba(255, 247, 214, 0.45)) drop-shadow(0 0 15px rgba(255, 247, 214, 0.2));
+      translateY(0);
   }
 }
 
 
-/* =========================================================
-   MONOGRAM GLOW
-========================================================= */
-
-@keyframes monogramAura {
+@keyframes nameLineShow {
 
   0% {
     opacity: 0;
-    transform: scale(0.5);
-  }
 
-  35% {
-    opacity: 0.9;
-    transform: scale(1.15);
-  }
-
-  65% {
-    opacity: 0.45;
-    transform: scale(1.3);
+    transform:
+      scaleX(0);
   }
 
   100% {
-    opacity: 0.2;
-    transform: scale(1);
+    opacity: 1;
+
+    transform:
+      scaleX(1);
   }
 }
 
 
 /* =========================================================
-   MONOGRAM FLOAT
+   DATE ANIMATION
 ========================================================= */
 
-@keyframes monogramFloat {
+@keyframes dateShow {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(8px);
+
+    letter-spacing: 0.12em;
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+
+    letter-spacing: 0.22em;
+  }
+}
+
+
+/* =========================================================
+   HASHTAG ANIMATION
+========================================================= */
+
+@keyframes hashtagShow {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(6px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================================
+   BACKGROUND ANIMATIONS
+========================================================= */
+
+@keyframes backgroundGlowOne {
+
+  0%,
+  100% {
+    opacity: 0.15;
+
+    transform:
+      translateX(-50%) translateY(0) scale(0.95);
+  }
+
+  50% {
+    opacity: 0.28;
+
+    transform:
+      translateX(-50%) translateY(8px) scale(1.05);
+  }
+}
+
+
+@keyframes backgroundGlowTwo {
+
+  0%,
+  100% {
+    opacity: 0;
+
+    transform:
+      translateX(15px) translateY(0);
+  }
+
+  50% {
+    opacity: 0.12;
+
+    transform:
+      translateX(-10px) translateY(-8px);
+  }
+}
+
+
+/* =========================================================
+   BACKGROUND DETAIL ANIMATIONS
+========================================================= */
+
+@keyframes detailReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      rotate(-12deg) translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      rotate(-12deg) translateX(0);
+  }
+}
+
+
+@keyframes detailRevealRight {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      rotate(-12deg) translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      rotate(-12deg) translateX(0);
+  }
+}
+
+
+@keyframes detailFloatLeft {
 
   0%,
   100% {
     transform:
-      translateY(0) rotate(0);
+      rotate(-12deg) translateX(0);
   }
 
   50% {
     transform:
-      translateY(-5px) rotate(1deg);
+      rotate(-12deg) translateX(6px);
   }
 }
 
 
-/* =========================================================
-   SPARKLE
-========================================================= */
+@keyframes detailFloatRight {
 
-@keyframes monogramSpark {
-
-  0% {
-    opacity: 0;
-    transform:
-      scale(0) rotate(-30deg);
-  }
-
-  45% {
-    opacity: 0.9;
-    transform:
-      scale(1.3) rotate(10deg);
-  }
-
+  0%,
   100% {
-    opacity: 0.35;
     transform:
-      scale(1) rotate(0);
-  }
-}
-
-
-/* =========================================================
-   TEXT REVEAL
-========================================================= */
-
-@keyframes footerTextReveal {
-
-  from {
-    opacity: 0;
-    transform: translateY(14px);
+      rotate(-12deg) translateX(0);
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-
-/* =========================================================
-   HASHTAG REVEAL
-========================================================= */
-
-@keyframes footerHashtagReveal {
-
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  50% {
+    transform:
+      rotate(-12deg) translateX(-6px);
   }
 }
 
@@ -386,58 +692,75 @@
    MOBILE
 ========================================================= */
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
 
   .footer {
-    padding: 52px 18px 38px;
+    min-height: 350px;
+
+    padding:
+      60px 18px 45px;
   }
 
+
   .footer-monogram-wrapper {
-    width: 90px;
-    height: 90px;
+    width: 95px;
+    height: 95px;
 
     margin-bottom: 17px;
   }
 
+
   .footer-monogram {
-    width: 62px;
-    height: 62px;
+    width: 64px;
+    height: 64px;
   }
 
-  .footer-monogram-wrapper::before {
-    width: 65px;
-    height: 65px;
 
-    filter: blur(14px);
+  .monogram-accent {
+    width: 22px;
   }
 
-  .footer-monogram-wrapper::after {
-    top: 4px;
-    right: 6px;
 
-    font-size: 10px;
+  .footer-name {
+    gap: 9px;
   }
 
-  .footer h2 {
-    margin-bottom: 7px;
 
-    font-size: 48px;
+  .footer-name h2 {
+    font-size: 45px;
   }
+
+
+  .name-line {
+    width: 21px;
+  }
+
 
   .footer-date {
-    margin-bottom: 21px;
+    margin-top: 11px;
+
+    margin-bottom: 22px;
 
     font-size: 0.78rem;
-    letter-spacing: 0.19em;
+
+    letter-spacing: 0.18em;
   }
 
-  .footer-hashtags {
-    gap: 1px;
-  }
 
   .footer-hashtags small {
-    font-size: 0.68rem;
-    letter-spacing: 0.065em;
+    font-size: 0.7rem;
+
+    letter-spacing: 0.06em;
+  }
+
+
+  .footer-detail-left {
+    left: -12px;
+  }
+
+
+  .footer-detail-right {
+    right: -12px;
   }
 }
 
@@ -446,55 +769,47 @@
    VERY SMALL PHONES
 ========================================================= */
 
-@media (max-width: 360px) {
+@media (max-width: 380px) {
 
-  .footer {
-    padding: 44px 14px 32px;
+  .footer-name {
+    gap: 6px;
   }
 
-  .footer-monogram-wrapper {
-    width: 82px;
-    height: 82px;
 
-    margin-bottom: 15px;
+  .footer-name h2 {
+    font-size: 40px;
   }
 
-  .footer-monogram {
-    width: 56px;
-    height: 56px;
+
+  .name-line {
+    width: 15px;
   }
 
-  .footer h2 {
-    font-size: 43px;
-  }
 
   .footer-date {
     font-size: 0.72rem;
-    letter-spacing: 0.16em;
-  }
-
-  .footer-hashtags small {
-    font-size: 0.61rem;
   }
 }
 
 
 /* =========================================================
-   REDUCED MOTION
+   ACCESSIBILITY
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
-  .footer-monogram-wrapper,
-  .footer-monogram-wrapper::before,
-  .footer-monogram-wrapper::after,
+  .footer-light,
+  .footer-detail,
   .footer-monogram,
-  .footer h2,
+  .monogram-accent,
+  .footer-name,
+  .name-line,
   .footer-date,
   .footer-hashtags small {
-    animation: none;
+    animation: none !important;
 
     opacity: 1;
+
     transform: none;
   }
 }

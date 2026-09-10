@@ -1,8 +1,8 @@
 import React from "react";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import "./CreditsFooter.css";
+import "./FooterCredits.css";
 
-const Footer = () => {
+const FooterCredits = () => {
   return (
     <footer className="site-footer">
       <span>Created with love for ate & kuya ♡</span>
@@ -21,4 +21,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterCredits;
