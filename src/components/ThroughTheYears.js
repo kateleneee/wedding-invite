@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   Dialog,
@@ -275,6 +275,46 @@ const photoGroups = [
 const ThroughTheYears = () => {
   const [selectedGroup, setSelectedGroup] = useState(null);
   const [selectedPhoto, setSelectedPhoto] = useState(null);
+
+
+  useEffect(() => {
+    const animatedElements = document.querySelectorAll(
+      [
+        ".our-story-header",
+        ".story-card",
+        ".gallery-header",
+        ".story-gallery-photo",
+        ".story-photo-grid",
+      ].join(", ")
+    );
+
+    if (!animatedElements.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries, observerInstance) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add("is-visible");
+
+          // Animate only once
+          observerInstance.unobserve(entry.target);
+        });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -60px 0px",
+      }
+    );
+
+    animatedElements.forEach((element) => {
+      observer.observe(element);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
 
   // =========================================

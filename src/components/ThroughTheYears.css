@@ -1,32 +1,19 @@
-/* =========================================
-   OUR STORY SECTION
+/* =========================================  
+ OUR STORY SECTION
    Powder Blue + Butter Yellow
 ========================================= */
-
 .our-story-section {
   position: relative;
-
   width: 100%;
   min-height: 700px;
-
-  padding: 100px 24px;
-
+  padding: 100px 50px;
   overflow: hidden;
-
-  background:
-    radial-gradient(circle at 10% 15%,
-      rgba(248, 235, 170, 0.55),
-      transparent 28%),
-    radial-gradient(circle at 90% 85%,
-      rgba(255, 255, 255, 0.7),
-      transparent 30%),
-    #dcebf3;
+  background: radial-gradient(circle at 10% 15%, rgba(248, 235, 170, 0.55), transparent 28%), radial-gradient(circle at 90% 85%, rgba(255, 255, 255, 0.7), transparent 30%), #dcebf3;
 }
 
-/* =========================================
-   HEADER
+/* =========================================  
+ HEADER
 ========================================= */
-
 .our-story-header {
   position: relative;
   z-index: 5;
@@ -37,100 +24,62 @@
 
 .our-story-eyebrow {
   margin: 0 0 10px;
-
   font-family: "Cormorant Garamond", serif;
-
   font-size: 14px;
-
   letter-spacing: 0.28em;
-
   text-transform: uppercase;
-
   color: #66727a;
 }
 
 .our-story-title {
   margin: 0 0 18px;
-
   font-family: "Cormorant Garamond", serif;
-
   font-size: clamp(46px, 7vw, 76px);
-
   font-weight: 500;
-
   line-height: 0.95;
-
   color: #3f4f55;
 }
 
 .our-story-intro {
   max-width: 500px;
-
   margin: auto;
-
   font-family: "Cormorant Garamond", serif;
-
   font-size: 19px;
-
   line-height: 1.5;
-
   color: #66727a;
 }
 
-
-/* =========================================
-   CATEGORY GRID
+/* =========================================  
+ CATEGORY GRID
 ========================================= */
-
 .story-grid {
   position: relative;
   z-index: 5;
-
   width: min(1050px, 100%);
-
   margin: auto;
-
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 55px 45px;
 }
 
-
-/* =========================================
-   STORY CARD
+/* =========================================  
+ STORY CARD
 ========================================= */
-
 .story-card {
   position: relative;
-
   padding: 12px;
-
   cursor: pointer;
-
   background: #faf9f0;
-
-  box-shadow:
-    0 20px 45px rgba(63, 79, 85, 0.13),
-    0 5px 12px rgba(63, 79, 85, 0.08);
-
-  transition:
-    transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
-    box-shadow 0.45s ease;
+  box-shadow: 0 20px 45px rgba(63, 79, 85, 0.13), 0 5px 12px rgba(63, 79, 85, 0.08);
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.45s ease;
 }
 
 .story-card:hover {
   transform: translateY(-8px) rotate(0deg) !important;
-
-  box-shadow:
-    0 30px 60px rgba(63, 79, 85, 0.18),
-    0 8px 18px rgba(63, 79, 85, 0.1);
+  box-shadow: 0 30px 60px rgba(63, 79, 85, 0.18), 0 8px 18px rgba(63, 79, 85, 0.1);
 }
 
-
 /* Individual rotations */
-
 .story-card-1 {
   transform: rotate(-1.5deg);
 }
@@ -147,74 +96,50 @@
   transform: rotate(-1.4deg);
 }
 
-
-/* =========================================
-   CARD PHOTO
+/* =========================================  
+ CARD PHOTO
 ========================================= */
-
 .story-card-photo {
   position: relative;
-
   width: 100%;
-
   aspect-ratio: 4 / 3;
-
   overflow: hidden;
-
   background: #cbdde7;
 }
 
 .story-card-photo img {
   display: block;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
-  transition:
-    transform 0.7s ease;
+  transition: transform 0.7s ease;
 }
 
 .story-card:hover .story-card-photo img {
   transform: scale(1.045);
 }
 
-
-/* =========================================
-   CARD OVERLAY
+/* =========================================  
+ CARD OVERLAY
 ========================================= */
-
 .story-card-overlay {
   position: absolute;
-
   inset: 0;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
-
   opacity: 0;
-
   background: rgba(63, 79, 85, 0.38);
-
   transition: opacity 0.4s ease;
 }
 
 .story-card-overlay span {
   padding: 8px 15px;
-
   border: 1px solid rgba(250, 249, 240, 0.8);
-
   color: #faf9f0;
-
   font-family: "Cormorant Garamond", serif;
-
   font-size: 15px;
-
   letter-spacing: 0.08em;
-
   text-transform: uppercase;
 }
 
@@ -222,31 +147,22 @@
   opacity: 1;
 }
 
-
-/* =========================================
-   CARD CONTENT
+/* =========================================  
+ CARD CONTENT
 ========================================= */
-
 .story-card-content {
   position: relative;
-
   padding: 20px 10px 10px;
-
   text-align: center;
 }
 
 .story-card-number {
   position: absolute;
-
   top: 19px;
   left: 14px;
-
   font-family: "Cormorant Garamond", serif;
-
   font-size: 12px;
-
   letter-spacing: 0.1em;
-
   color: #d3b84c;
 }
 
@@ -296,56 +212,39 @@
   color: #b59a35;
 }
 
-
-/* =========================================
-   DECORATIVE ELEMENTS
+/* =========================================  
+ DECORATIVE ELEMENTS
 ========================================= */
-
 .story-decoration {
   position: absolute;
-
   z-index: 2;
-
   pointer-events: none;
-
   font-family: Georgia, serif;
-
   color: #f8ebaa;
-
-  text-shadow:
-    0 4px 12px rgba(94, 118, 144, 0.15);
+  text-shadow: 0 4px 12px rgba(94, 118, 144, 0.15);
 }
 
 .story-flower-left {
   top: 8%;
   left: 3%;
-
   font-size: 85px;
-
   transform: rotate(-20deg);
 }
 
 .story-flower-right {
   top: 12%;
   right: 4%;
-
   font-size: 70px;
-
   color: #faf9f0;
-
   transform: rotate(15deg);
 }
 
 .story-dot {
   position: absolute;
-
   z-index: 2;
-
   width: 7px;
   height: 7px;
-
   border-radius: 50%;
-
   background: #d3b84c;
 }
 
@@ -364,66 +263,45 @@
   left: 18%;
 }
 
-
-/* =========================================
-   GALLERY DIALOG
+/* =========================================  
+ GALLERY DIALOG
 ========================================= */
-
 .story-gallery-dialog .MuiDialog-paper {
   position: relative;
-
   margin: 20px;
-
   max-height: calc(100% - 40px);
-
   border-radius: 2px;
-
   background: #faf9f0;
-
-  box-shadow:
-    0 30px 80px rgba(63, 79, 85, 0.3);
+  box-shadow: 0 30px 80px rgba(63, 79, 85, 0.3);
 }
 
 .story-gallery-content {
   padding: 55px 45px 45px !important;
 }
 
-
 /* Gallery close */
-
 .gallery-close-button {
   position: absolute !important;
-
   top: 12px;
   right: 12px;
-
   z-index: 10;
-
   color: #66727a !important;
 }
 
-
-/* =========================================
-   GALLERY HEADER
+/* =========================================  
+ GALLERY HEADER
 ========================================= */
-
 .gallery-header {
   margin-bottom: 35px;
-
   text-align: center;
 }
 
 .gallery-header p {
   margin: 0 0 5px;
-
   font-family: "Cormorant Garamond", serif;
-
   font-size: 12px;
-
   letter-spacing: 0.15em;
-
   text-transform: uppercase;
-
   color: #d3b84c;
 }
 
@@ -444,84 +322,57 @@
   color: #66727a;
 }
 
-
-/* =========================================
-   GALLERY PHOTO GRID
+/* =========================================  
+ GALLERY PHOTO GRID
 ========================================= */
-
 .story-photo-grid {
   display: grid;
-
   grid-template-columns: repeat(3, 1fr);
-
   gap: 14px;
 }
 
 .story-gallery-photo {
   position: relative;
-
   padding: 0;
-
   width: 100%;
-
   aspect-ratio: 1 / 1;
-
   border: none;
-
   overflow: hidden;
-
   cursor: pointer;
-
   background: #dcebf3;
 }
 
 .story-gallery-photo img {
   display: block;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
-  transition:
-    transform 0.5s ease,
-    opacity 0.4s ease;
+  transition: transform 0.5s ease, opacity 0.4s ease;
 }
 
 .story-gallery-photo:hover img {
   transform: scale(1.05);
-
   opacity: 0.88;
 }
 
-
-/* =========================================
-   LIGHTBOX
+/* =========================================  
+ LIGHTBOX
 ========================================= */
-
 .story-lightbox .MuiDialog-paper {
   margin: 0;
-
   max-width: none;
-
   max-height: none;
-
   width: 100%;
   height: 100%;
-
   border-radius: 0;
-
   background: rgba(32, 43, 48, 0.96);
 }
 
 .lightbox-container {
   position: relative;
-
   width: 100%;
   height: 100%;
-
   display: flex;
-
   align-items: center;
   justify-content: center;
 }
@@ -529,44 +380,29 @@
 .lightbox-image {
   max-width: calc(100% - 180px);
   max-height: calc(100% - 130px);
-
   object-fit: contain;
-
-  box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
-
-/* =========================================
-   LIGHTBOX BUTTONS
+/* =========================================  
+ LIGHTBOX BUTTONS
 ========================================= */
-
 .lightbox-close {
   position: absolute !important;
-
   top: 20px;
   right: 25px;
-
   z-index: 10;
-
   color: #faf9f0 !important;
 }
 
 .lightbox-arrow {
   position: absolute !important;
-
   z-index: 10;
-
   width: 48px !important;
   height: 48px !important;
-
   color: #faf9f0 !important;
-
   background: rgba(250, 249, 240, 0.08) !important;
-
-  transition:
-    background 0.3s ease,
-    transform 0.3s ease !important;
+  transition: background 0.3s ease, transform 0.3s ease !important;
 }
 
 .lightbox-arrow:hover {
@@ -581,34 +417,23 @@
   right: 30px;
 }
 
-
-/* =========================================
-   COUNTER
+/* =========================================  
+ COUNTER
 ========================================= */
-
 .lightbox-counter {
   position: absolute;
-
   bottom: 25px;
-
   left: 50%;
-
   transform: translateX(-50%);
-
   font-family: "Cormorant Garamond", serif !important;
-
   font-size: 15px !important;
-
   letter-spacing: 0.12em;
-
   color: rgba(250, 249, 240, 0.8);
 }
 
-
-/* =========================================
-   MOBILE
+/* =========================================  
+ MOBILE
 ========================================= */
-
 @media (max-width: 600px) {
   .story-grid {
     grid-template-columns: 1fr;
@@ -687,12 +512,10 @@
   }
 }
 
-/* =========================================
-   SMALL PHONES
+/* =========================================  
+ SMALL PHONES
 ========================================= */
-
 @media (max-width: 400px) {
-
   .our-story-section {
     padding-left: 14px;
     padding-right: 14px;
@@ -716,5 +539,314 @@
 
   .lightbox-image {
     max-width: calc(100% - 60px);
+  }
+}
+
+/* =========================================================
+   SCROLL ANIMATIONS
+========================================================= */
+
+/* ---------------------------------------------------------
+   Default hidden state
+--------------------------------------------------------- */
+
+.our-story-header,
+.story-card,
+.gallery-header,
+.story-gallery-photo,
+.story-photo-grid {
+  opacity: 0;
+}
+
+
+/* ---------------------------------------------------------
+   Header animation
+--------------------------------------------------------- */
+
+.our-story-header {
+  transform: translateY(35px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.our-story-header.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ---------------------------------------------------------
+   Story card animation
+--------------------------------------------------------- */
+
+.story-card {
+  transform:
+    translateY(50px) scale(0.97) rotate(var(--card-rotation, 0deg));
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease;
+}
+
+
+/* Individual card rotations */
+
+.story-card-1 {
+  --card-rotation: -1.5deg;
+}
+
+.story-card-2 {
+  --card-rotation: 1.3deg;
+}
+
+.story-card-3 {
+  --card-rotation: 1deg;
+}
+
+.story-card-4 {
+  --card-rotation: -1.4deg;
+}
+
+.story-card-5 {
+  --card-rotation: -1deg;
+}
+
+.story-card-6 {
+  --card-rotation: 1deg;
+}
+
+.story-card-7 {
+  --card-rotation: 1deg;
+}
+
+.story-card-8 {
+  --card-rotation: -1deg;
+}
+
+
+/* Visible card */
+
+.story-card.is-visible {
+  opacity: 1;
+
+  transform:
+    translateY(0) scale(1) rotate(var(--card-rotation));
+}
+
+
+/* ---------------------------------------------------------
+   Stagger cards
+--------------------------------------------------------- */
+
+.story-card:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.story-card:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+.story-card:nth-child(3) {
+  transition-delay: 0.25s;
+}
+
+.story-card:nth-child(4) {
+  transition-delay: 0.35s;
+}
+
+.story-card:nth-child(5) {
+  transition-delay: 0.45s;
+}
+
+.story-card:nth-child(6) {
+  transition-delay: 0.55s;
+}
+
+.story-card:nth-child(7) {
+  transition-delay: 0.65s;
+}
+
+.story-card:nth-child(8) {
+  transition-delay: 0.75s;
+}
+
+
+/* ---------------------------------------------------------
+   Gallery header
+--------------------------------------------------------- */
+
+.gallery-header {
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gallery-header.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ---------------------------------------------------------
+   Gallery grid
+--------------------------------------------------------- */
+
+.story-photo-grid {
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.story-photo-grid.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ---------------------------------------------------------
+   Individual gallery photos
+--------------------------------------------------------- */
+
+.story-gallery-photo {
+  transform: translateY(35px) scale(0.96);
+
+  transition:
+    opacity 0.7s ease,
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.story-gallery-photo.is-visible {
+  opacity: 1;
+
+  transform:
+    translateY(0) scale(1);
+}
+
+
+/* Stagger gallery images */
+
+.story-gallery-photo:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.story-gallery-photo:nth-child(2) {
+  transition-delay: 0.12s;
+}
+
+.story-gallery-photo:nth-child(3) {
+  transition-delay: 0.19s;
+}
+
+.story-gallery-photo:nth-child(4) {
+  transition-delay: 0.26s;
+}
+
+.story-gallery-photo:nth-child(5) {
+  transition-delay: 0.33s;
+}
+
+.story-gallery-photo:nth-child(6) {
+  transition-delay: 0.40s;
+}
+
+.story-gallery-photo:nth-child(7) {
+  transition-delay: 0.47s;
+}
+
+.story-gallery-photo:nth-child(8) {
+  transition-delay: 0.54s;
+}
+
+.story-gallery-photo:nth-child(9) {
+  transition-delay: 0.61s;
+}
+
+/* ---------------------------------------------------------
+   Decorative elements
+--------------------------------------------------------- */
+
+.story-decoration,
+.story-dot {
+  opacity: 0;
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* When section enters viewport */
+
+.our-story-section:has(.our-story-header.is-visible) .story-decoration {
+  opacity: 1;
+}
+
+.our-story-section:has(.our-story-header.is-visible) .story-dot {
+  opacity: 1;
+}
+
+
+/* ---------------------------------------------------------
+   Subtle decorative movement
+--------------------------------------------------------- */
+
+.our-story-section:has(.our-story-header.is-visible) .story-flower-left {
+  transform: rotate(-20deg) translateY(-5px);
+}
+
+.our-story-section:has(.our-story-header.is-visible) .story-flower-right {
+  transform: rotate(15deg) translateY(5px);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .story-card {
+    transform:
+      translateY(35px) scale(0.98) rotate(var(--card-rotation, 0deg));
+  }
+
+  .story-card.is-visible {
+    transform:
+      translateY(0) scale(1) rotate(var(--card-rotation));
+  }
+
+  .story-gallery-photo {
+    transform:
+      translateY(25px) scale(0.97);
+  }
+
+  .story-gallery-photo.is-visible {
+    transform:
+      translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .our-story-header,
+  .story-card,
+  .gallery-header,
+  .story-photo-grid,
+  .story-gallery-photo,
+  .story-decoration,
+  .story-dot {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
