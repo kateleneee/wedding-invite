@@ -1,0 +1,482 @@
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+  position: relative;
+  width: 100%;
+  padding: 72px 24px 48px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  background: var(--blue-deep, #435c68);
+  color: #fffdf2;
+
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Very subtle background atmosphere */
+.footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 50% 20%,
+      rgba(255, 247, 214, 0.08),
+      transparent 35%);
+
+  pointer-events: none;
+  z-index: -1;
+}
+
+
+/* =========================================================
+   MONOGRAM
+========================================================= */
+
+.footer-monogram-wrapper {
+  position: relative;
+
+  width: 110px;
+  height: 110px;
+
+  margin-bottom: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  animation:
+    monogramFloat 4.5s ease-in-out 1.5s infinite;
+}
+
+
+/* Soft champagne aura
+   No borders or circles */
+.footer-monogram-wrapper::before {
+  content: "";
+
+  position: absolute;
+  width: 75px;
+  height: 75px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 247, 214, 0.14);
+
+  filter: blur(22px);
+
+  opacity: 0;
+
+  animation: monogramAura 2.4s ease-out 0.8s forwards;
+}
+
+
+/* Small decorative light behind monogram */
+.footer-monogram-wrapper::after {
+  content: "";
+
+  position: absolute;
+  width: 8px;
+  height: 8px;
+
+  top: 8px;
+  right: 14px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 247, 214, 0.65);
+
+  filter: blur(1px);
+
+  opacity: 0;
+
+  animation: monogramSpark 1.2s ease-out 1.4s forwards;
+}
+
+
+/* =========================================================
+   MONOGRAM IMAGE
+========================================================= */
+
+.footer-monogram {
+  position: relative;
+  z-index: 2;
+
+  width: 72px;
+  height: 72px;
+
+  object-fit: contain;
+
+  filter:
+    drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2)) drop-shadow(0 0 14px rgba(255, 247, 214, 0.18));
+
+  opacity: 0;
+
+  transform-origin: center;
+
+  animation:
+    monogramReveal 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+}
+
+
+/* =========================================================
+   COUPLE NAME
+========================================================= */
+
+.footer h2 {
+  margin: 0 0 10px;
+
+  font-family: "Great Vibes", cursive;
+  font-size: 58px;
+  font-weight: 400;
+  line-height: 1.05;
+
+  color: #fffdf2;
+
+  text-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+
+  animation:
+    footerTextReveal 1s ease-out 0.65s forwards;
+}
+
+
+/* =========================================================
+   DATE
+========================================================= */
+
+.footer-date {
+  margin: 0 0 25px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1rem;
+  font-weight: 500;
+
+  letter-spacing: 0.22em;
+  /* text-transform: uppercase; */
+
+  color: #f7e9a6;
+
+  opacity: 0;
+
+  animation:
+    footerTextReveal 1s ease-out 0.85s forwards;
+}
+
+
+/* =========================================================
+   HASHTAGS
+========================================================= */
+
+.footer-hashtags {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+
+  margin-top: 2px;
+}
+
+.footer-hashtags small {
+  display: block;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.7;
+
+  letter-spacing: 0.1em;
+
+  color: rgba(255, 253, 242, 0.82);
+
+  text-shadow:
+    0 1px 5px rgba(0, 0, 0, 0.15);
+
+  opacity: 0;
+
+  animation:
+    footerHashtagReveal 0.9s ease-out forwards;
+}
+
+.footer-hashtags small:first-child {
+  animation-delay: 1.05s;
+}
+
+.footer-hashtags small:last-child {
+  animation-delay: 1.2s;
+}
+
+
+/* =========================================================
+   MONOGRAM ANIMATION
+========================================================= */
+
+/*
+   Main entrance:
+
+   1. Starts slightly smaller
+   2. Rotates very slightly
+   3. Fades in
+   4. Expands past its normal size
+   5. Settles into place
+*/
+
+@keyframes monogramReveal {
+  0% {
+    opacity: 0;
+    transform:
+      scale(0.55) rotate(-12deg) translateY(14px);
+
+    filter:
+      drop-shadow(0 2px 4px rgba(0, 0, 0, 0)) drop-shadow(0 0 0 rgba(255, 247, 214, 0));
+  }
+
+  45% {
+    opacity: 1;
+    transform:
+      scale(1.12) rotate(4deg) translateY(-4px);
+
+    filter:
+      drop-shadow(0 6px 12px rgba(0, 0, 0, 0.18)) drop-shadow(0 0 22px rgba(255, 247, 214, 0.35));
+  }
+
+  70% {
+    transform:
+      scale(0.97) rotate(-1.5deg) translateY(1px);
+  }
+
+  100% {
+    opacity: 1;
+    transform:
+      scale(1) rotate(0) translateY(0);
+
+    filter:
+      drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2)) drop-shadow(0 0 14px rgba(255, 247, 214, 0.18));
+  }
+}
+
+
+/* =========================================================
+   MONOGRAM AURA
+========================================================= */
+
+@keyframes monogramAura {
+  0% {
+    opacity: 0;
+    transform: scale(0.45);
+  }
+
+  35% {
+    opacity: 0.9;
+    transform: scale(1.05);
+  }
+
+  65% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 0.28;
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================================
+   MONOGRAM FLOAT
+========================================================= */
+
+@keyframes monogramFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(1deg);
+  }
+}
+
+
+/* =========================================================
+   MONOGRAM SPARK
+========================================================= */
+
+@keyframes monogramSpark {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 0.9;
+    transform: scale(1.4);
+  }
+
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================================
+   TEXT ANIMATION
+========================================================= */
+
+@keyframes footerTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   HASHTAG ANIMATION
+========================================================= */
+
+@keyframes footerHashtagReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 52px 18px 38px;
+  }
+
+  .footer-monogram-wrapper {
+    width: 90px;
+    height: 90px;
+
+    margin-bottom: 18px;
+  }
+
+  .footer-monogram {
+    width: 62px;
+    height: 62px;
+  }
+
+  .footer-monogram-wrapper::before {
+    width: 62px;
+    height: 62px;
+
+    filter: blur(18px);
+  }
+
+  .footer-monogram-wrapper::after {
+    width: 6px;
+    height: 6px;
+
+    top: 5px;
+    right: 10px;
+  }
+
+  .footer h2 {
+    margin-bottom: 8px;
+
+    font-size: 48px;
+    line-height: 1.05;
+  }
+
+  .footer-date {
+    margin-bottom: 22px;
+
+    font-size: 0.82rem;
+    letter-spacing: 0.18em;
+  }
+
+  .footer-hashtags {
+    gap: 1px;
+  }
+
+  .footer-hashtags small {
+    font-size: 0.68rem;
+    letter-spacing: 0.07em;
+    line-height: 1.8;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 360px) {
+  .footer {
+    padding: 45px 14px 32px;
+  }
+
+  .footer-monogram-wrapper {
+    width: 82px;
+    height: 82px;
+
+    margin-bottom: 16px;
+  }
+
+  .footer-monogram {
+    width: 56px;
+    height: 56px;
+  }
+
+  .footer h2 {
+    font-size: 43px;
+  }
+
+  .footer-date {
+    font-size: 0.76rem;
+  }
+
+  .footer-hashtags small {
+    font-size: 0.63rem;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .footer-monogram-wrapper,
+  .footer-monogram-wrapper::before,
+  .footer-monogram-wrapper::after,
+  .footer-monogram,
+  .footer h2,
+  .footer-date,
+  .footer-hashtags small {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

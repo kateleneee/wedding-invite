@@ -7,10 +7,10 @@
   justify-content: center;
   gap: 8px;
 
-  background: var(--blue-dark);
+  background: var(--blue-footer);
 
   font-family: "Cormorant Garamond", serif;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   letter-spacing: 0.08em;
 
   color: #fffbea;

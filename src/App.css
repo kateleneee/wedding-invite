@@ -8,6 +8,8 @@
   --cream: #fffdf6;
   --text: #43535b;
   --white: #ffffff;
+  --blue-deep: #3f5f7a;
+  --blue-footer: #435c68;
 
   font-family: "DM Sans", sans-serif;
   color: var(--text);
@@ -548,42 +550,6 @@ button {
 }
 
 /* =========================
-   RSVP
-========================= */
-
-.rsvp-section {
-  background: var(--yellow-light);
-}
-
-.rsvp-section>p {
-  max-width: 450px;
-  margin: auto;
-}
-
-.rsvp-card {
-  max-width: 550px;
-  margin: 50px auto 0;
-  background: white;
-  padding: 50px 30px;
-  box-shadow: 0 15px 40px rgba(67, 83, 91, .08);
-}
-
-.rsvp-card h3 {
-  font-family: "Cormorant Garamond";
-  font-size: 25px;
-}
-
-.rsvp-card>strong {
-  font-family: "Cormorant Garamond";
-  font-size: 35px;
-}
-
-.rsvp-card p {
-  max-width: 400px;
-  margin: 20px auto 30px;
-}
-
-/* =========================
    GALLERY
 ========================= */
 
@@ -607,31 +573,6 @@ button {
   justify-content: center;
   letter-spacing: 3px;
   font-size: 11px;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer {
-  text-align: center;
-  padding: 50px 20px;
-  background: #435c68;
-  color: white;
-}
-
-.footer h2 {
-  font-family: "Great Vibes";
-  font-size: 55px;
-  font-weight: 400;
-}
-
-.footer p {
-  opacity: .8;
-}
-
-.footer small {
-  opacity: .6;
 }
 
 /* =========================
@@ -751,17 +692,3 @@ button {
   user-select: none;
   -webkit-user-drag: none;
 } */
-
-.image-divider {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  overflow: hidden;
-}
-
-.image-divider img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}

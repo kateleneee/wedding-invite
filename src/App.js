@@ -19,6 +19,7 @@ import WeddingPlaylist from "./components/WeddingPlaylist";
 import WeddingTimelineScroll from "./components/WeddingTimelineScroll";
 import CreditsFooter from "./components/CreditsFooter";
 import RSVP from "./components/RSVP";
+import FooterMain from "./components/FooterMain";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -166,17 +167,9 @@ function App() {
 
 
           {/* FOOTER */}
-          <footer className="footer">
-            {/* <Heart size={22} fill="currentColor" /> */}
-
-            <h2>Daniel & Kaylene</h2>
-            <p>Please use the hashtags below when sharing the photos online.</p>
-            <small>#DJfoundtheKAYEtoforever</small>
-            <br />
-            <small>#LovinKAYEeveryDJay</small>
-          </footer>
-
+          <FooterMain />
           <CreditsFooter />
+
         </main>
       )}
     </>
