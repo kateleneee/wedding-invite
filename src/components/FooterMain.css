@@ -5,7 +5,7 @@
 .footer {
   position: relative;
   width: 100%;
-  padding: 72px 24px 48px;
+  padding: 70px 24px 48px;
 
   display: flex;
   flex-direction: column;
@@ -13,23 +13,39 @@
 
   text-align: center;
 
-  background: var(--blue-deep, #435c68);
-  color: #fffdf2;
+  background:
+    radial-gradient(circle at 50% 15%,
+      rgba(255, 255, 255, 0.5) 0%,
+      transparent 38%),
+    linear-gradient(135deg,
+      #d5eaf2 0%,
+      #e3f1f5 48%,
+      #d1e7f0 100%);
+
+  color: var(--blue-deep, #435c68);
 
   overflow: hidden;
   isolation: isolate;
 }
 
-/* Very subtle background atmosphere */
+
+/* =========================================================
+   SUBTLE BACKGROUND TEXTURE
+========================================================= */
+
 .footer::before {
   content: "";
   position: absolute;
   inset: 0;
 
   background:
-    radial-gradient(circle at 50% 20%,
-      rgba(255, 247, 214, 0.08),
-      transparent 35%);
+    repeating-linear-gradient(105deg,
+      rgba(255, 255, 255, 0.1) 0px,
+      rgba(255, 255, 255, 0.1) 2px,
+      transparent 9px,
+      transparent 18px);
+
+  opacity: 0.45;
 
   pointer-events: none;
   z-index: -1;
@@ -46,58 +62,55 @@
   width: 110px;
   height: 110px;
 
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
   animation:
-    monogramFloat 4.5s ease-in-out 1.5s infinite;
+    monogramFloat 4.5s ease-in-out 1.8s infinite;
 }
 
 
-/* Soft champagne aura
-   No borders or circles */
+/* Soft glow behind monogram */
 .footer-monogram-wrapper::before {
   content: "";
 
   position: absolute;
-  width: 75px;
-  height: 75px;
+  width: 72px;
+  height: 72px;
 
   border-radius: 50%;
 
-  background: rgba(255, 247, 214, 0.14);
+  background: rgba(255, 247, 214, 0.28);
 
-  filter: blur(22px);
+  filter: blur(20px);
 
   opacity: 0;
 
-  animation: monogramAura 2.4s ease-out 0.8s forwards;
+  animation: monogramAura 2.2s ease-out 0.8s forwards;
 }
 
 
-/* Small decorative light behind monogram */
+/* Tiny floating sparkle */
 .footer-monogram-wrapper::after {
-  content: "";
+  content: "✦";
 
   position: absolute;
-  width: 8px;
-  height: 8px;
 
-  top: 8px;
-  right: 14px;
+  top: 7px;
+  right: 9px;
 
-  border-radius: 50%;
+  font-family: serif;
+  font-size: 13px;
 
-  background: rgba(255, 247, 214, 0.65);
-
-  filter: blur(1px);
+  color: #cbb76a;
 
   opacity: 0;
 
-  animation: monogramSpark 1.2s ease-out 1.4s forwards;
+  animation:
+    monogramSpark 1.2s ease-out 1.3s forwards;
 }
 
 
@@ -114,12 +127,13 @@
 
   object-fit: contain;
 
-  filter:
-    drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2)) drop-shadow(0 0 14px rgba(255, 247, 214, 0.18));
-
   opacity: 0;
 
   transform-origin: center;
+
+  /* Light champagne glow only */
+  filter:
+    drop-shadow(0 0 8px rgba(255, 247, 214, 0.5)) drop-shadow(0 0 18px rgba(255, 247, 214, 0.25));
 
   animation:
     monogramReveal 1.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
@@ -131,17 +145,17 @@
 ========================================================= */
 
 .footer h2 {
-  margin: 0 0 10px;
+  margin: 0 0 9px;
 
   font-family: "Great Vibes", cursive;
   font-size: 58px;
   font-weight: 400;
   line-height: 1.05;
 
-  color: #fffdf2;
+  color: #435c68;
 
   text-shadow:
-    0 3px 12px rgba(0, 0, 0, 0.2);
+    0 2px 5px rgba(67, 92, 104, 0.12);
 
   opacity: 0;
 
@@ -158,13 +172,13 @@
   margin: 0 0 25px;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 0.95rem;
+  font-weight: 600;
 
-  letter-spacing: 0.22em;
-  /* text-transform: uppercase; */
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
 
-  color: #f7e9a6;
+  color: #a9944f;
 
   opacity: 0;
 
@@ -181,25 +195,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3px;
 
-  margin-top: 2px;
+  gap: 2px;
+
+  margin-top: 0;
 }
 
 .footer-hashtags small {
   display: block;
 
   font-family: "Cormorant Garamond", serif;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 500;
+
   line-height: 1.7;
+  letter-spacing: 0.09em;
 
-  letter-spacing: 0.1em;
-
-  color: rgba(255, 253, 242, 0.82);
-
-  text-shadow:
-    0 1px 5px rgba(0, 0, 0, 0.15);
+  color: #607887;
 
   opacity: 0;
 
@@ -212,81 +224,78 @@
 }
 
 .footer-hashtags small:last-child {
-  animation-delay: 1.2s;
+  animation-delay: 1.18s;
 }
 
 
 /* =========================================================
-   MONOGRAM ANIMATION
+   MONOGRAM REVEAL
 ========================================================= */
-
-/*
-   Main entrance:
-
-   1. Starts slightly smaller
-   2. Rotates very slightly
-   3. Fades in
-   4. Expands past its normal size
-   5. Settles into place
-*/
 
 @keyframes monogramReveal {
   0% {
     opacity: 0;
+
     transform:
-      scale(0.55) rotate(-12deg) translateY(14px);
+      translateY(18px) scale(0.55) rotate(-12deg);
 
     filter:
-      drop-shadow(0 2px 4px rgba(0, 0, 0, 0)) drop-shadow(0 0 0 rgba(255, 247, 214, 0));
+      drop-shadow(0 0 0 rgba(255, 247, 214, 0)) drop-shadow(0 0 0 rgba(255, 247, 214, 0));
   }
 
-  45% {
+  35% {
     opacity: 1;
+
     transform:
-      scale(1.12) rotate(4deg) translateY(-4px);
+      translateY(-7px) scale(1.16) rotate(5deg);
 
     filter:
-      drop-shadow(0 6px 12px rgba(0, 0, 0, 0.18)) drop-shadow(0 0 22px rgba(255, 247, 214, 0.35));
+      drop-shadow(0 0 12px rgba(255, 247, 214, 0.65)) drop-shadow(0 0 26px rgba(255, 247, 214, 0.35));
   }
 
-  70% {
+  60% {
     transform:
-      scale(0.97) rotate(-1.5deg) translateY(1px);
+      translateY(2px) scale(0.96) rotate(-2deg);
+
+    filter:
+      drop-shadow(0 0 9px rgba(255, 247, 214, 0.5)) drop-shadow(0 0 18px rgba(255, 247, 214, 0.25));
   }
 
   100% {
     opacity: 1;
+
     transform:
-      scale(1) rotate(0) translateY(0);
+      translateY(0) scale(1) rotate(0);
 
     filter:
-      drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2)) drop-shadow(0 0 14px rgba(255, 247, 214, 0.18));
+      drop-shadow(0 0 7px rgba(255, 247, 214, 0.45)) drop-shadow(0 0 15px rgba(255, 247, 214, 0.2));
   }
 }
 
 
 /* =========================================================
-   MONOGRAM AURA
+   MONOGRAM GLOW
 ========================================================= */
 
 @keyframes monogramAura {
+
   0% {
     opacity: 0;
-    transform: scale(0.45);
+    transform: scale(0.5);
   }
 
   35% {
     opacity: 0.9;
-    transform: scale(1.05);
+    transform: scale(1.15);
   }
 
   65% {
-    opacity: 0.5;
-    transform: scale(1.2);
+    opacity: 0.45;
+    transform: scale(1.3);
   }
 
   100% {
-    opacity: 0.28;
+    opacity: 0.2;
     transform: scale(1);
   }
 }
@@ -300,42 +309,49 @@
 
   0%,
   100% {
-    transform: translateY(0) rotate(0deg);
+    transform:
+      translateY(0) rotate(0);
   }
 
   50% {
-    transform: translateY(-6px) rotate(1deg);
+    transform:
+      translateY(-5px) rotate(1deg);
   }
 }
 
 
 /* =========================================================
-   MONOGRAM SPARK
+   SPARKLE
 ========================================================= */
 
 @keyframes monogramSpark {
+
   0% {
     opacity: 0;
-    transform: scale(0);
+    transform:
+      scale(0) rotate(-30deg);
   }
 
-  50% {
+  45% {
     opacity: 0.9;
-    transform: scale(1.4);
+    transform:
+      scale(1.3) rotate(10deg);
   }
 
   100% {
     opacity: 0.35;
-    transform: scale(1);
+    transform:
+      scale(1) rotate(0);
   }
 }
 
 
 /* =========================================================
-   TEXT ANIMATION
+   TEXT REVEAL
 ========================================================= */
 
 @keyframes footerTextReveal {
+
   from {
     opacity: 0;
     transform: translateY(14px);
@@ -349,10 +365,11 @@
 
 
 /* =========================================================
-   HASHTAG ANIMATION
+   HASHTAG REVEAL
 ========================================================= */
 
 @keyframes footerHashtagReveal {
+
   from {
     opacity: 0;
     transform: translateY(8px);
@@ -370,6 +387,7 @@
 ========================================================= */
 
 @media (max-width: 480px) {
+
   .footer {
     padding: 52px 18px 38px;
   }
@@ -378,7 +396,7 @@
     width: 90px;
     height: 90px;
 
-    margin-bottom: 18px;
+    margin-bottom: 17px;
   }
 
   .footer-monogram {
@@ -387,32 +405,30 @@
   }
 
   .footer-monogram-wrapper::before {
-    width: 62px;
-    height: 62px;
+    width: 65px;
+    height: 65px;
 
-    filter: blur(18px);
+    filter: blur(14px);
   }
 
   .footer-monogram-wrapper::after {
-    width: 6px;
-    height: 6px;
+    top: 4px;
+    right: 6px;
 
-    top: 5px;
-    right: 10px;
+    font-size: 10px;
   }
 
   .footer h2 {
-    margin-bottom: 8px;
+    margin-bottom: 7px;
 
     font-size: 48px;
-    line-height: 1.05;
   }
 
   .footer-date {
-    margin-bottom: 22px;
+    margin-bottom: 21px;
 
-    font-size: 0.82rem;
-    letter-spacing: 0.18em;
+    font-size: 0.78rem;
+    letter-spacing: 0.19em;
   }
 
   .footer-hashtags {
@@ -421,8 +437,7 @@
 
   .footer-hashtags small {
     font-size: 0.68rem;
-    letter-spacing: 0.07em;
-    line-height: 1.8;
+    letter-spacing: 0.065em;
   }
 }
 
@@ -432,15 +447,16 @@
 ========================================================= */
 
 @media (max-width: 360px) {
+
   .footer {
-    padding: 45px 14px 32px;
+    padding: 44px 14px 32px;
   }
 
   .footer-monogram-wrapper {
     width: 82px;
     height: 82px;
 
-    margin-bottom: 16px;
+    margin-bottom: 15px;
   }
 
   .footer-monogram {
@@ -453,11 +469,12 @@
   }
 
   .footer-date {
-    font-size: 0.76rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
   }
 
   .footer-hashtags small {
-    font-size: 0.63rem;
+    font-size: 0.61rem;
   }
 }
 
@@ -476,6 +493,7 @@
   .footer-date,
   .footer-hashtags small {
     animation: none;
+
     opacity: 1;
     transform: none;
   }
