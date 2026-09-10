@@ -1,13 +1,12 @@
-// import React from "react";
 import { weddingData } from "../data/weddingData";
-import "./Landing.css";
 import { ChevronDown } from "lucide-react";
+import "./Landing.css";
 
 const newDate = new Date(weddingData.date.complete)
 const monthAbbreviation = newDate.toLocaleString('default', { month: 'short' })
 function Landing({
-  firstName = weddingData.couple.groom.firstName,
-  secondName = weddingData.couple.bride.firstName,
+  groomsName = weddingData.couple.groom.firstName,
+  bridesName = weddingData.couple.bride.firstName,
   // weddingDate = "02 · Dec · 2026",
   weddingDate = `${weddingData.date.date} · ${monthAbbreviation} · ${weddingData.date.year}`,
 }) {
@@ -19,25 +18,14 @@ function Landing({
       <div className="landing-content">
         <div>
           <p className="landing-eyebrow">The Wedding of</p>
-
           <h1 className="landing-names">
-            <span>{firstName}</span>
-            {/* <span>&</span> */}
+            <span>{groomsName}</span>
             <span className="landing-ampersand">&amp;</span>
-
-            <span>{secondName}</span>
+            <span>{bridesName}</span>
           </h1>
           <p className="landing-eyebrow">{weddingDate}</p>
         </div>
 
-        <div
-          style={{
-            // background: "red",
-            height: 100,
-            display: "flex",
-            flexGrow: 1,
-          }}
-        ></div>
         <div className="scroll-button-container">
           <button
             className="scroll-button"
