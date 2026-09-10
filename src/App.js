@@ -15,18 +15,18 @@ import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 
 import "./App.css";
 import CoverImage from "./assets/images/landing-yellow-escolta.png";
-import Carousel from "../Carousel";
-import Envelope from "../Envelope";
-import FloralVideo from "../FloralVideo";
-import Gifts from "../Gifts";
-import Landing from "../Landing";
-import PhotoGallery from "../PhotoGallery";
-import ResponsiveAppBar from "../ResponsiveAppBar";
-import SaveTheDate from "../SaveTheDate";
-import ThroughTheYears from "../ThroughTheYears";
-import Venues from "../Venues";
-import WeddingPlaylist from "../WeddingPlaylist";
-import WeddingTimelineScroll from "../WeddingTimelineScroll";
+import Carousel from "./components/Carousel";
+import Envelope from "./components/Envelope";
+import FloralVideo from "./components/FloralVideo";
+import Gifts from "./components/Gifts";
+import Landing from "./components/Landing";
+import PhotoGallery from "./components/PhotoGallery";
+import ResponsiveAppBar from "./components/ResponsiveAppBar";
+import SaveTheDate from "./components/SaveTheDate";
+import ThroughTheYears from "./components/ThroughTheYears";
+import Venues from "./components/Venues";
+import WeddingPlaylist from "./components/WeddingPlaylist";
+import WeddingTimelineScroll from "./components/WeddingTimelineScroll";
 
 function App() {
   const [opened, setOpened] = useState(false);
