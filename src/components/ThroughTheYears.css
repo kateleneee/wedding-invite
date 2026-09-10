@@ -1,570 +1,44 @@
-/* =========================================  
- OUR STORY SECTION
+/* =========================================================
+   OUR STORY SECTION
    Powder Blue + Butter Yellow
-========================================= */
+========================================================= */
+
 .our-story-section {
   position: relative;
   width: 100%;
   min-height: 700px;
   padding: 100px 50px;
+
   overflow: hidden;
-  background: radial-gradient(circle at 10% 15%, rgba(248, 235, 170, 0.55), transparent 28%), radial-gradient(circle at 90% 85%, rgba(255, 255, 255, 0.7), transparent 30%), #dcebf3;
+
+  background:
+    radial-gradient(circle at 10% 15%,
+      rgba(248, 235, 170, 0.55),
+      transparent 28%),
+    radial-gradient(circle at 90% 85%,
+      rgba(255, 255, 255, 0.7),
+      transparent 30%),
+    #dcebf3;
 }
 
-/* =========================================  
- HEADER
-========================================= */
-.our-story-header {
-  position: relative;
-  z-index: 5;
-  max-width: 650px;
-  margin: 0 auto 65px;
-  text-align: center;
-}
-
-.our-story-eyebrow {
-  margin: 0 0 10px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 14px;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  color: #66727a;
-}
-
-.our-story-title {
-  margin: 0 0 18px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(46px, 7vw, 76px);
-  font-weight: 500;
-  line-height: 0.95;
-  color: #3f4f55;
-}
-
-.our-story-intro {
-  max-width: 500px;
-  margin: auto;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 19px;
-  line-height: 1.5;
-  color: #66727a;
-}
-
-/* =========================================  
- CATEGORY GRID
-========================================= */
-.story-grid {
-  position: relative;
-  z-index: 5;
-  width: min(1050px, 100%);
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 55px 45px;
-}
-
-/* =========================================  
- STORY CARD
-========================================= */
-.story-card {
-  position: relative;
-  padding: 12px;
-  cursor: pointer;
-  background: #faf9f0;
-  box-shadow: 0 20px 45px rgba(63, 79, 85, 0.13), 0 5px 12px rgba(63, 79, 85, 0.08);
-  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.45s ease;
-}
-
-.story-card:hover {
-  transform: translateY(-8px) rotate(0deg) !important;
-  box-shadow: 0 30px 60px rgba(63, 79, 85, 0.18), 0 8px 18px rgba(63, 79, 85, 0.1);
-}
-
-/* Individual rotations */
-.story-card-1 {
-  transform: rotate(-1.5deg);
-}
-
-.story-card-2 {
-  transform: rotate(1.3deg);
-}
-
-.story-card-3 {
-  transform: rotate(1deg);
-}
-
-.story-card-4 {
-  transform: rotate(-1.4deg);
-}
-
-/* =========================================  
- CARD PHOTO
-========================================= */
-.story-card-photo {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  overflow: hidden;
-  background: #cbdde7;
-}
-
-.story-card-photo img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.7s ease;
-}
-
-.story-card:hover .story-card-photo img {
-  transform: scale(1.045);
-}
-
-/* =========================================  
- CARD OVERLAY
-========================================= */
-.story-card-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  background: rgba(63, 79, 85, 0.38);
-  transition: opacity 0.4s ease;
-}
-
-.story-card-overlay span {
-  padding: 8px 15px;
-  border: 1px solid rgba(250, 249, 240, 0.8);
-  color: #faf9f0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 15px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.story-card:hover .story-card-overlay {
-  opacity: 1;
-}
-
-/* =========================================  
- CARD CONTENT
-========================================= */
-.story-card-content {
-  position: relative;
-  padding: 20px 10px 10px;
-  text-align: center;
-}
-
-.story-card-number {
-  position: absolute;
-  top: 19px;
-  left: 14px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  color: #d3b84c;
-}
-
-.story-card-content h3 {
-  margin: 0 0 5px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(16px, 3vw, 22px);
-  font-weight: 500;
-  color: #3f4f55;
-}
-
-.story-card-subtitle {
-  font-weight: 700;
-  font-style: italic;
-  /* margin-bottom: 8px; */
-}
-
-.story-card-content p {
-  margin: 0 0 0px;
-  font-size: 16px;
-  color: #66727a;
-}
-
-.story-card-content p {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1rem;
-  line-height: 1.45;
-  margin: 4px 0;
-}
-
-.story-card-content .story-card-description {
-  font-size: 0.85rem;
-  line-height: 1.2;
-  /* margin: 5px 0; */
-  /* justify-self: center; */
-}
-
-.highlight-text {
-  font-weight: 700;
-}
-
-.story-card-count {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #b59a35;
-}
-
-/* =========================================  
- DECORATIVE ELEMENTS
-========================================= */
-.story-decoration {
-  position: absolute;
-  z-index: 2;
-  pointer-events: none;
-  font-family: Georgia, serif;
-  color: #f8ebaa;
-  text-shadow: 0 4px 12px rgba(94, 118, 144, 0.15);
-}
-
-.story-flower-left {
-  top: 8%;
-  left: 3%;
-  font-size: 85px;
-  transform: rotate(-20deg);
-}
-
-.story-flower-right {
-  top: 12%;
-  right: 4%;
-  font-size: 70px;
-  color: #faf9f0;
-  transform: rotate(15deg);
-}
-
-.story-dot {
-  position: absolute;
-  z-index: 2;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #d3b84c;
-}
-
-.story-dot-1 {
-  top: 25%;
-  left: 12%;
-}
-
-.story-dot-2 {
-  top: 40%;
-  right: 10%;
-}
-
-.story-dot-3 {
-  bottom: 15%;
-  left: 18%;
-}
-
-/* =========================================  
- GALLERY DIALOG
-========================================= */
-.story-gallery-dialog .MuiDialog-paper {
-  position: relative;
-  margin: 20px;
-  max-height: calc(100% - 40px);
-  border-radius: 2px;
-  background: #faf9f0;
-  box-shadow: 0 30px 80px rgba(63, 79, 85, 0.3);
-}
-
-.story-gallery-content {
-  padding: 55px 45px 45px !important;
-}
-
-/* Gallery close */
-.gallery-close-button {
-  position: absolute !important;
-  top: 12px;
-  right: 12px;
-  z-index: 10;
-  color: #66727a !important;
-}
-
-/* =========================================  
- GALLERY HEADER
-========================================= */
-.gallery-header {
-  margin-bottom: 35px;
-  text-align: center;
-}
-
-.gallery-header p {
-  margin: 0 0 5px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 12px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #d3b84c;
-}
-
-.gallery-header h2 {
-  margin: 0 0 5px;
-  font-family: "Cormorant Garamond", serif;
-  /* font-size: 26px; */
-  font-size: clamp(20px, 3vw, 26px);
-  font-weight: 500;
-  color: #3f4f55;
-}
-
-.gallery-header span {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 17px;
-  font-style: italic;
-  font-weight: 700;
-  color: #66727a;
-}
-
-/* =========================================  
- GALLERY PHOTO GRID
-========================================= */
-.story-photo-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-
-.story-gallery-photo {
-  position: relative;
-  padding: 0;
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border: none;
-  overflow: hidden;
-  cursor: pointer;
-  background: #dcebf3;
-}
-
-.story-gallery-photo img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease, opacity 0.4s ease;
-}
-
-.story-gallery-photo:hover img {
-  transform: scale(1.05);
-  opacity: 0.88;
-}
-
-/* =========================================  
- LIGHTBOX
-========================================= */
-.story-lightbox .MuiDialog-paper {
-  margin: 0;
-  max-width: none;
-  max-height: none;
-  width: 100%;
-  height: 100%;
-  border-radius: 0;
-  background: rgba(32, 43, 48, 0.96);
-}
-
-.lightbox-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.lightbox-image {
-  max-width: calc(100% - 180px);
-  max-height: calc(100% - 130px);
-  object-fit: contain;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-}
-
-/* =========================================  
- LIGHTBOX BUTTONS
-========================================= */
-.lightbox-close {
-  position: absolute !important;
-  top: 20px;
-  right: 25px;
-  z-index: 10;
-  color: #faf9f0 !important;
-}
-
-.lightbox-arrow {
-  position: absolute !important;
-  z-index: 10;
-  width: 48px !important;
-  height: 48px !important;
-  color: #faf9f0 !important;
-  background: rgba(250, 249, 240, 0.08) !important;
-  transition: background 0.3s ease, transform 0.3s ease !important;
-}
-
-.lightbox-arrow:hover {
-  background: rgba(250, 249, 240, 0.16) !important;
-}
-
-.lightbox-prev {
-  left: 30px;
-}
-
-.lightbox-next {
-  right: 30px;
-}
-
-/* =========================================  
- COUNTER
-========================================= */
-.lightbox-counter {
-  position: absolute;
-  bottom: 25px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: "Cormorant Garamond", serif !important;
-  font-size: 15px !important;
-  letter-spacing: 0.12em;
-  color: rgba(250, 249, 240, 0.8);
-}
-
-/* =========================================  
- MOBILE
-========================================= */
-@media (max-width: 600px) {
-  .story-grid {
-    grid-template-columns: 1fr;
-    gap: 30px 14px;
-    width: 100%;
-    padding: 40px;
-  }
-
-  .our-story-header {
-    margin: 0 auto 15px;
-  }
-
-  .story-card {
-    padding: 7px;
-  }
-
-  .story-card-photo {
-    aspect-ratio: 1 / 1;
-  }
-
-  .story-card-content {
-    padding: 10px 5px 8px;
-  }
-
-  .story-card-number {
-    font-size: 0.65rem;
-  }
-
-  .story-card-content h3 {
-    font-size: 1.15rem;
-    line-height: 1.05;
-  }
-
-  .story-card-content p {
-    font-size: 0.78rem;
-    line-height: 1.2;
-    margin: 5px 0;
-  }
-
-  .story-card-count {
-    font-size: 0.58rem;
-    letter-spacing: 0.08em;
-  }
-
-  /* Keep the scrapbook feel, but make the rotation subtle */
-  .story-card-1 {
-    transform: rotate(-1deg);
-  }
-
-  .story-card-2 {
-    transform: rotate(1deg);
-  }
-
-  .story-card-3 {
-    transform: rotate(1deg);
-  }
-
-  .story-card-4 {
-    transform: rotate(-1deg);
-  }
-
-  .story-card-5 {
-    transform: rotate(-1deg);
-  }
-
-  .story-card-6 {
-    transform: rotate(1deg);
-  }
-
-  .story-card-7 {
-    transform: rotate(1deg);
-  }
-
-  .story-card-8 {
-    transform: rotate(-1deg);
-  }
-}
-
-/* =========================================  
- SMALL PHONES
-========================================= */
-@media (max-width: 400px) {
-  .our-story-section {
-    padding-left: 14px;
-    padding-right: 14px;
-  }
-
-  .story-grid {
-    gap: 30px;
-  }
-
-  .story-card-content {
-    padding-top: 17px;
-  }
-
-  .story-card-content h3 {
-    font-size: 26px;
-  }
-
-  .story-photo-grid {
-    gap: 6px;
-  }
-
-  .lightbox-image {
-    max-width: calc(100% - 60px);
-  }
-}
 
 /* =========================================================
-   SCROLL ANIMATIONS
+   HEADER
 ========================================================= */
 
-/* ---------------------------------------------------------
-   Default hidden state
---------------------------------------------------------- */
-
-.our-story-header,
-.story-card,
-.gallery-header,
-.story-gallery-photo,
-.story-photo-grid {
-  opacity: 0;
-}
-
-
-/* ---------------------------------------------------------
-   Header animation
---------------------------------------------------------- */
-
 .our-story-header {
+  position: relative;
+  z-index: 5;
+
+  max-width: 650px;
+  margin: 0 auto 65px;
+
+  text-align: center;
+
+  opacity: 0;
+
   transform: translateY(35px);
+
   transition:
     opacity 0.9s ease,
     transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
@@ -575,14 +49,84 @@
   transform: translateY(0);
 }
 
+.our-story-eyebrow {
+  margin: 0 0 10px;
 
-/* ---------------------------------------------------------
-   Story card animation
---------------------------------------------------------- */
+  font-family: "Cormorant Garamond", serif;
+  font-size: 14px;
+  font-weight: 500;
+
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+
+  color: #66727a;
+}
+
+.our-story-title {
+  margin: 0 0 18px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(46px, 7vw, 76px);
+  font-weight: 500;
+
+  line-height: 0.95;
+
+  color: #3f4f55;
+}
+
+.our-story-intro {
+  max-width: 500px;
+  margin: auto;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 19px;
+  line-height: 1.5;
+
+  color: #66727a;
+}
+
+
+/* =========================================================
+   CATEGORY GRID
+========================================================= */
+
+.story-grid {
+  position: relative;
+  z-index: 5;
+
+  width: min(1050px, 100%);
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 55px 45px;
+}
+
+
+/* =========================================================
+   STORY CARD
+========================================================= */
 
 .story-card {
+  --card-rotation: 0deg;
+
+  position: relative;
+
+  padding: 12px;
+
+  cursor: pointer;
+
+  background: #faf9f0;
+
+  box-shadow:
+    0 20px 45px rgba(63, 79, 85, 0.13),
+    0 5px 12px rgba(63, 79, 85, 0.08);
+
+  opacity: 0;
+
   transform:
-    translateY(50px) scale(0.97) rotate(var(--card-rotation, 0deg));
+    translateY(50px) scale(0.97) rotate(var(--card-rotation));
 
   transition:
     opacity 0.8s ease,
@@ -591,7 +135,7 @@
 }
 
 
-/* Individual card rotations */
+/* Individual scrapbook rotations */
 
 .story-card-1 {
   --card-rotation: -1.5deg;
@@ -636,9 +180,21 @@
 }
 
 
-/* ---------------------------------------------------------
-   Stagger cards
---------------------------------------------------------- */
+/* Hover */
+
+.story-card:hover {
+  transform:
+    translateY(-8px) scale(1.015) rotate(0deg) !important;
+
+  box-shadow:
+    0 30px 60px rgba(63, 79, 85, 0.18),
+    0 8px 18px rgba(63, 79, 85, 0.1);
+}
+
+
+/* =========================================================
+   CARD STAGGER
+========================================================= */
 
 .story-card:nth-child(1) {
   transition-delay: 0.05s;
@@ -673,106 +229,177 @@
 }
 
 
-/* ---------------------------------------------------------
-   Gallery header
---------------------------------------------------------- */
+/* =========================================================
+   CARD PHOTO
+========================================================= */
 
-.gallery-header {
-  transform: translateY(30px);
+.story-card-photo {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 4 / 3;
+
+  overflow: hidden;
+
+  background: #cbdde7;
+}
+
+.story-card-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
 
   transition:
-    opacity 0.8s ease,
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+    transform 0.7s ease,
+    filter 0.5s ease;
 }
 
-.gallery-header.is-visible {
+.story-card:hover .story-card-photo img {
+  transform: scale(1.045);
+}
+
+
+/* =========================================================
+   CARD OVERLAY
+========================================================= */
+
+.story-card-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+
+  background: rgba(63, 79, 85, 0.38);
+
+  transition: opacity 0.4s ease;
+}
+
+.story-card-overlay span {
+  padding: 8px 15px;
+
+  border: 1px solid rgba(250, 249, 240, 0.8);
+
+  color: #faf9f0;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+.story-card:hover .story-card-overlay {
   opacity: 1;
-  transform: translateY(0);
 }
 
 
-/* ---------------------------------------------------------
-   Gallery grid
---------------------------------------------------------- */
+/* =========================================================
+   CARD CONTENT
+========================================================= */
 
-.story-photo-grid {
-  transform: translateY(30px);
+.story-card-content {
+  position: relative;
 
-  transition:
-    opacity 0.8s ease,
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  padding: 20px 10px 10px;
+
+  text-align: center;
 }
 
-.story-photo-grid.is-visible {
-  opacity: 1;
-  transform: translateY(0);
+.story-card-number {
+  position: absolute;
+
+  top: 19px;
+  left: 14px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 12px;
+
+  letter-spacing: 0.1em;
+
+  color: #d3b84c;
+}
+
+.story-card-content h3 {
+  margin: 0 0 5px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(16px, 3vw, 22px);
+  font-weight: 500;
+
+  line-height: 1.1;
+
+  color: #3f4f55;
+}
+
+.story-card-subtitle {
+  margin: 4px 0 !important;
+
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: 1rem !important;
+
+  font-style: italic;
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  color: #66727a;
+}
+
+.story-card-description {
+  margin: 5px 0 8px !important;
+
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: 0.85rem !important;
+
+  line-height: 1.25 !important;
+
+  color: #66727a;
+}
+
+.highlight-text {
+  font-weight: 700;
+}
+
+.story-card-count {
+  display: inline-block;
+
+  margin-top: 4px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 12px;
+
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  color: #b59a35;
 }
 
 
-/* ---------------------------------------------------------
-   Individual gallery photos
---------------------------------------------------------- */
+/* =========================================================
+   DECORATIVE ELEMENTS
+========================================================= */
 
-.story-gallery-photo {
-  transform: translateY(35px) scale(0.96);
+.story-decoration {
+  position: absolute;
+  z-index: 2;
 
-  transition:
-    opacity 0.7s ease,
-    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-}
+  pointer-events: none;
 
-.story-gallery-photo.is-visible {
-  opacity: 1;
+  font-family: Georgia, serif;
 
-  transform:
-    translateY(0) scale(1);
-}
+  color: #f8ebaa;
 
+  text-shadow:
+    0 4px 12px rgba(94, 118, 144, 0.15);
 
-/* Stagger gallery images */
-
-.story-gallery-photo:nth-child(1) {
-  transition-delay: 0.05s;
-}
-
-.story-gallery-photo:nth-child(2) {
-  transition-delay: 0.12s;
-}
-
-.story-gallery-photo:nth-child(3) {
-  transition-delay: 0.19s;
-}
-
-.story-gallery-photo:nth-child(4) {
-  transition-delay: 0.26s;
-}
-
-.story-gallery-photo:nth-child(5) {
-  transition-delay: 0.33s;
-}
-
-.story-gallery-photo:nth-child(6) {
-  transition-delay: 0.40s;
-}
-
-.story-gallery-photo:nth-child(7) {
-  transition-delay: 0.47s;
-}
-
-.story-gallery-photo:nth-child(8) {
-  transition-delay: 0.54s;
-}
-
-.story-gallery-photo:nth-child(9) {
-  transition-delay: 0.61s;
-}
-
-/* ---------------------------------------------------------
-   Decorative elements
---------------------------------------------------------- */
-
-.story-decoration,
-.story-dot {
   opacity: 0;
 
   transition:
@@ -780,8 +407,61 @@
     transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.story-flower-left {
+  top: 8%;
+  left: 3%;
 
-/* When section enters viewport */
+  font-size: 85px;
+
+  transform: rotate(-20deg);
+}
+
+.story-flower-right {
+  top: 12%;
+  right: 4%;
+
+  font-size: 70px;
+
+  color: #faf9f0;
+
+  transform: rotate(15deg);
+}
+
+.story-dot {
+  position: absolute;
+  z-index: 2;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #d3b84c;
+
+  opacity: 0;
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.story-dot-1 {
+  top: 25%;
+  left: 12%;
+}
+
+.story-dot-2 {
+  top: 40%;
+  right: 10%;
+}
+
+.story-dot-3 {
+  bottom: 15%;
+  left: 18%;
+}
+
+
+/* Decorative elements appear with header */
 
 .our-story-section:has(.our-story-header.is-visible) .story-decoration {
   opacity: 1;
@@ -791,17 +471,468 @@
   opacity: 1;
 }
 
-
-/* ---------------------------------------------------------
-   Subtle decorative movement
---------------------------------------------------------- */
-
 .our-story-section:has(.our-story-header.is-visible) .story-flower-left {
-  transform: rotate(-20deg) translateY(-5px);
+  transform:
+    rotate(-20deg) translateY(-5px);
 }
 
 .our-story-section:has(.our-story-header.is-visible) .story-flower-right {
-  transform: rotate(15deg) translateY(5px);
+  transform:
+    rotate(15deg) translateY(5px);
+}
+
+
+/* =========================================================
+   GALLERY DIALOG
+   IMPORTANT:
+   These elements DO NOT use the page IntersectionObserver.
+========================================================= */
+
+.story-gallery-dialog {
+  z-index: 1400;
+}
+
+.story-gallery-dialog .MuiDialog-paper {
+  position: relative;
+
+  width: 100%;
+  margin: 20px;
+
+  max-height: calc(100% - 40px);
+
+  border-radius: 4px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(135deg,
+      #e4f0f5 0%,
+      #fff7d6 50%,
+      #e4f0f5 100%);
+
+  box-shadow:
+    0 30px 80px rgba(63, 79, 85, 0.3);
+
+  animation:
+    galleryDialogShow 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes galleryDialogShow {
+  from {
+    opacity: 0;
+    transform:
+      translateY(25px) scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   GALLERY CONTENT
+========================================================= */
+
+.story-gallery-content {
+  position: relative;
+
+  padding: 55px 45px 45px !important;
+
+  background:
+    radial-gradient(circle at 10% 10%,
+      rgba(247, 233, 166, 0.35),
+      transparent 30%),
+    radial-gradient(circle at 90% 90%,
+      rgba(255, 255, 255, 0.5),
+      transparent 30%),
+    #e4f0f5;
+}
+
+
+/* =========================================================
+   GALLERY CLOSE BUTTON
+========================================================= */
+
+.gallery-close-button {
+  position: absolute !important;
+
+  top: 12px;
+  right: 12px;
+
+  z-index: 10;
+
+  color: #66727a !important;
+
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease !important;
+}
+
+.gallery-close-button:hover {
+  color: #3f4f55 !important;
+
+  transform: rotate(90deg);
+}
+
+
+/* =========================================================
+   GALLERY HEADER
+========================================================= */
+
+.gallery-header {
+  margin-bottom: 35px;
+
+  text-align: center;
+
+  animation:
+    galleryHeaderShow 0.7s 0.15s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes galleryHeaderShow {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-header p {
+  margin: 0 0 5px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 12px;
+
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #d3b84c;
+}
+
+.gallery-header h2 {
+  margin: 0 0 5px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 500;
+
+  color: #3f4f55;
+}
+
+.gallery-header span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 17px;
+
+  font-style: italic;
+  font-weight: 700;
+
+  color: #66727a;
+}
+
+
+/* =========================================================
+   GALLERY PHOTO GRID
+========================================================= */
+
+.story-photo-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 14px;
+
+  animation:
+    galleryGridShow 0.7s 0.25s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes galleryGridShow {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   GALLERY PHOTO
+========================================================= */
+
+.story-gallery-photo {
+  position: relative;
+
+  display: block;
+
+  padding: 0;
+
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  border: none;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  background: #dcebf3;
+
+  opacity: 0;
+
+  animation:
+    galleryPhotoShow 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes galleryPhotoShow {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(18px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0) scale(1);
+  }
+}
+
+
+/* Gallery photo stagger */
+
+.story-gallery-photo:nth-child(1) {
+  animation-delay: 0.30s;
+}
+
+.story-gallery-photo:nth-child(2) {
+  animation-delay: 0.37s;
+}
+
+.story-gallery-photo:nth-child(3) {
+  animation-delay: 0.44s;
+}
+
+.story-gallery-photo:nth-child(4) {
+  animation-delay: 0.51s;
+}
+
+.story-gallery-photo:nth-child(5) {
+  animation-delay: 0.58s;
+}
+
+.story-gallery-photo:nth-child(6) {
+  animation-delay: 0.65s;
+}
+
+.story-gallery-photo:nth-child(7) {
+  animation-delay: 0.72s;
+}
+
+.story-gallery-photo:nth-child(8) {
+  animation-delay: 0.79s;
+}
+
+.story-gallery-photo:nth-child(9) {
+  animation-delay: 0.86s;
+}
+
+.story-gallery-photo:nth-child(10) {
+  animation-delay: 0.93s;
+}
+
+
+/* Gallery image */
+
+.story-gallery-photo img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease,
+    opacity 0.4s ease;
+}
+
+.story-gallery-photo:hover img {
+  transform: scale(1.05);
+
+  opacity: 0.88;
+}
+
+
+/* =========================================================
+   LIGHTBOX
+========================================================= */
+
+.story-lightbox .MuiDialog-paper {
+  margin: 0;
+
+  max-width: none;
+  max-height: none;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 0;
+
+  background: rgba(32, 43, 48, 0.96);
+}
+
+.lightbox-container {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-image {
+  max-width: calc(100% - 180px);
+  max-height: calc(100% - 130px);
+
+  object-fit: contain;
+
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.3);
+
+  animation:
+    lightboxImageShow 0.4s ease-out both;
+}
+
+@keyframes lightboxImageShow {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================================
+   LIGHTBOX BUTTONS
+========================================================= */
+
+.lightbox-close {
+  position: absolute !important;
+
+  top: 20px;
+  right: 25px;
+
+  z-index: 10;
+
+  color: #faf9f0 !important;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease !important;
+}
+
+.lightbox-close:hover {
+  transform: rotate(90deg);
+
+  opacity: 0.75;
+}
+
+.lightbox-arrow {
+  position: absolute !important;
+
+  z-index: 10;
+
+  width: 48px !important;
+  height: 48px !important;
+
+  color: #faf9f0 !important;
+
+  background:
+    rgba(250, 249, 240, 0.08) !important;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease !important;
+}
+
+.lightbox-arrow:hover {
+  background:
+    rgba(250, 249, 240, 0.16) !important;
+}
+
+.lightbox-prev {
+  left: 30px;
+}
+
+.lightbox-next {
+  right: 30px;
+}
+
+
+/* =========================================================
+   LIGHTBOX COUNTER
+========================================================= */
+
+.lightbox-counter {
+  position: absolute;
+
+  bottom: 25px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-family: "Cormorant Garamond", serif !important;
+  font-size: 15px !important;
+
+  letter-spacing: 0.12em;
+
+  color:
+    rgba(250, 249, 240, 0.8);
+}
+
+
+/* =========================================================
+   MOBILE — TABLET / PHONES
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .our-story-section {
+    padding: 85px 30px;
+  }
+
+  .story-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 40px 25px;
+  }
+
+  .story-gallery-content {
+    padding: 50px 30px 35px !important;
+  }
+
+  .story-photo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 
@@ -810,9 +941,61 @@
 ========================================================= */
 
 @media (max-width: 600px) {
+
+  .our-story-section {
+    min-height: auto;
+
+    padding:
+      75px 18px 80px;
+  }
+
+
+  /* Header */
+
+  .our-story-header {
+    margin:
+      0 auto 15px;
+
+    padding:
+      0 10px;
+  }
+
+  .our-story-eyebrow {
+    font-size: 12px;
+
+    letter-spacing: 0.22em;
+  }
+
+  .our-story-title {
+    font-size: clamp(42px, 14vw, 62px);
+
+    line-height: 0.95;
+  }
+
+  .our-story-intro {
+    font-size: 17px;
+
+    line-height: 1.4;
+  }
+
+
+  /* Cards */
+
+  .story-grid {
+    grid-template-columns: 1fr;
+
+    gap: 30px 14px;
+
+    width: 100%;
+
+    padding: 40px 22px 0;
+  }
+
   .story-card {
+    padding: 7px;
+
     transform:
-      translateY(35px) scale(0.98) rotate(var(--card-rotation, 0deg));
+      translateY(35px) scale(0.98) rotate(var(--card-rotation));
   }
 
   .story-card.is-visible {
@@ -820,14 +1003,256 @@
       translateY(0) scale(1) rotate(var(--card-rotation));
   }
 
-  .story-gallery-photo {
-    transform:
-      translateY(25px) scale(0.97);
+
+  /* Mobile scrapbook rotations */
+
+  .story-card-1 {
+    --card-rotation: -1deg;
   }
 
-  .story-gallery-photo.is-visible {
-    transform:
-      translateY(0) scale(1);
+  .story-card-2 {
+    --card-rotation: 1deg;
+  }
+
+  .story-card-3 {
+    --card-rotation: 1deg;
+  }
+
+  .story-card-4 {
+    --card-rotation: -1deg;
+  }
+
+  .story-card-5 {
+    --card-rotation: -1deg;
+  }
+
+  .story-card-6 {
+    --card-rotation: 1deg;
+  }
+
+  .story-card-7 {
+    --card-rotation: 1deg;
+  }
+
+  .story-card-8 {
+    --card-rotation: -1deg;
+  }
+
+
+  /* Photo */
+
+  .story-card-photo {
+    aspect-ratio: 1 / 1;
+  }
+
+
+  /* Card content */
+
+  .story-card-content {
+    padding:
+      10px 5px 8px;
+  }
+
+  .story-card-number {
+    top: 10px;
+    left: 9px;
+
+    font-size: 0.65rem;
+  }
+
+  .story-card-content h3 {
+    font-size: 1.15rem;
+
+    line-height: 1.05;
+
+    padding: 0 18px;
+  }
+
+  .story-card-subtitle {
+    font-size: 0.85rem !important;
+
+    line-height: 1.15 !important;
+  }
+
+  .story-card-description {
+    font-size: 0.78rem !important;
+
+    line-height: 1.2 !important;
+
+    margin:
+      5px 0 !important;
+  }
+
+  .story-card-count {
+    font-size: 0.58rem;
+
+    letter-spacing: 0.08em;
+  }
+
+
+  /* Decorations */
+
+  .story-flower-left {
+    top: 4%;
+    left: -3%;
+
+    font-size: 55px;
+  }
+
+  .story-flower-right {
+    top: 8%;
+    right: -2%;
+
+    font-size: 48px;
+  }
+
+  .story-dot-1 {
+    top: 18%;
+    left: 8%;
+  }
+
+  .story-dot-2 {
+    top: 35%;
+    right: 7%;
+  }
+
+  .story-dot-3 {
+    bottom: 8%;
+    left: 10%;
+  }
+
+
+  /* Gallery */
+
+  .story-gallery-dialog .MuiDialog-paper {
+    width: calc(100% - 20px);
+
+    margin: 10px;
+
+    max-height:
+      calc(100% - 20px);
+  }
+
+  .story-gallery-content {
+    padding:
+      50px 16px 25px !important;
+  }
+
+  .gallery-header {
+    margin-bottom: 22px;
+  }
+
+  .gallery-header p {
+    font-size: 10px;
+
+    letter-spacing: 0.13em;
+  }
+
+  .gallery-header h2 {
+    font-size: 24px;
+  }
+
+  .gallery-header span {
+    font-size: 15px;
+  }
+
+  .story-photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 8px;
+  }
+
+  .gallery-close-button {
+    top: 5px;
+    right: 5px;
+  }
+
+
+  /* Lightbox */
+
+  .lightbox-image {
+    max-width:
+      calc(100% - 70px);
+
+    max-height:
+      calc(100% - 120px);
+  }
+
+  .lightbox-arrow {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .lightbox-prev {
+    left: 8px;
+  }
+
+  .lightbox-next {
+    right: 8px;
+  }
+
+  .lightbox-close {
+    top: 12px;
+    right: 12px;
+  }
+
+  .lightbox-counter {
+    bottom: 18px;
+
+    font-size: 13px !important;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .our-story-section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .story-grid {
+    padding-left: 16px;
+    padding-right: 16px;
+
+    gap: 28px;
+  }
+
+  .story-card-content {
+    padding-top: 16px;
+  }
+
+  .story-card-content h3 {
+    font-size: 26px;
+  }
+
+  .story-photo-grid {
+    gap: 6px;
+  }
+
+  .story-gallery-content {
+    padding:
+      48px 10px 20px !important;
+  }
+
+  .gallery-header h2 {
+    font-size: 22px;
+  }
+
+  .gallery-header span {
+    font-size: 14px;
+  }
+
+  .lightbox-image {
+    max-width:
+      calc(100% - 55px);
+
+    max-height:
+      calc(100% - 110px);
   }
 }
 
@@ -840,13 +1265,24 @@
 
   .our-story-header,
   .story-card,
+  .story-decoration,
+  .story-dot,
+  .story-gallery-dialog .MuiDialog-paper,
   .gallery-header,
   .story-photo-grid,
   .story-gallery-photo,
-  .story-decoration,
-  .story-dot {
+  .lightbox-image {
     opacity: 1;
+
     transform: none;
+
+    animation: none;
+
     transition: none;
+  }
+
+  .story-card:hover {
+    transform:
+      rotate(var(--card-rotation)) !important;
   }
 }

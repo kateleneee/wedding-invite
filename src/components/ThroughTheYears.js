@@ -282,9 +282,9 @@ const ThroughTheYears = () => {
       [
         ".our-story-header",
         ".story-card",
-        ".gallery-header",
-        ".story-gallery-photo",
-        ".story-photo-grid",
+        // ".gallery-header",
+        // ".story-gallery-photo",
+        // ".story-photo-grid",
       ].join(", ")
     );
 
