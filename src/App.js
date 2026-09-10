@@ -1,14 +1,4 @@
 import { useState } from "react";
-import {
-  // CalendarDays,
-  // Heart,
-  // ChevronDown,
-  ExternalLink,
-  // Mail,
-  // Gift,
-  // Camera,
-  // Users,
-} from "lucide-react";
 import Fab from "@mui/material/Fab";
 import Tooltip from "@mui/material/Tooltip";
 import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
@@ -27,6 +17,8 @@ import ThroughTheYears from "./components/ThroughTheYears";
 import Venues from "./components/Venues";
 import WeddingPlaylist from "./components/WeddingPlaylist";
 import WeddingTimelineScroll from "./components/WeddingTimelineScroll";
+import CreditsFooter from "./components/CreditsFooter";
+import RSVP from "./components/RSVP";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -165,36 +157,9 @@ function App() {
           {/* WEDDING PLAYLIST */}
           <WeddingPlaylist />
 
+
           {/* RSVP */}
-          <section id="rsvp" className="section rsvp-section">
-            <div className="section-label">RSVP</div>
-
-            <h2>
-              Will you join
-              <br />
-              us?
-            </h2>
-
-            <p>We'd love to celebrate this special day with you.</p>
-
-            <div className="rsvp-card">
-              <h3>Kindly respond by</h3>
-
-              <strong>October 15, 2026</strong>
-
-              <p>Please let us know if you'll be able to celebrate with us.</p>
-
-              <a
-                className="primary-button"
-                href="https://forms.google.com"
-                target="_blank"
-                rel="noreferrer"
-              >
-                RSVP Now
-                <ExternalLink size={16} />
-              </a>
-            </div>
-          </section>
+          <RSVP />
 
           {/* GIFTS */}
           <Gifts />
@@ -210,6 +175,8 @@ function App() {
             <br />
             <small>#LovinKAYEeveryDJay</small>
           </footer>
+
+          <CreditsFooter />
         </main>
       )}
     </>

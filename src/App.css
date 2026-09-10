@@ -751,3 +751,17 @@ button {
   user-select: none;
   -webkit-user-drag: none;
 } */
+
+.image-divider {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+}
+
+.image-divider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
