@@ -487,7 +487,7 @@ const ThroughTheYears = () => {
               </h2>
 
               <span>
-                {selectedGroup.subtitle}sdsd
+                {selectedGroup.subtitle}
               </span>
 
             </div>

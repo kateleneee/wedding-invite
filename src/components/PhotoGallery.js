@@ -12,7 +12,7 @@ import photo8 from "../assets/images/KDR-127.jpg";
 import photo9 from "../assets/images/KDR-153.jpg";
 import photo10 from "../assets/images/KDR-158.jpg";
 import photo11 from "../assets/images/KDR-211.jpg";
-// import photo12 from "../assets/images/KDR-256.jpg";
+import photo12 from "../assets/images/KDR-256.jpg";
 import photo13 from "../assets/images/KDR-266.jpg";
 import photo14 from "../assets/images/KDR-273.jpg";
 import photo15 from "../assets/images/KDR-293.jpg";
@@ -26,6 +26,7 @@ import photo22 from "../assets/images/fb (2).jpg";
 import photo23 from "../assets/images/fb (3).jpg";
 import photo24 from "../assets/images/fb (4).jpg";
 import photo25 from "../assets/images/fb (5).jpg";
+import photo28 from "../assets/images/photo28.jpg";
 // import sketch1 from "../assets/images/sketch-1.png";
 // import sketch2 from "../assets/images/sketch-2.png";
 // import sketch3 from "../assets/images/sketch-3.png";
@@ -170,12 +171,13 @@ function StoryText({ children, className = "" }) {
 
 const galleryOne = [
   { img: photo1, title: "Our moments" },
-  { img: photo2, title: "Our moments" },
   { img: photo22, title: "Our moments" },
-  // { img: sketch1, title: "Our moments" },
+  { img: photo2, title: "Our moments" },
+  { img: photo28, title: "Our moments" },
   { img: photo3, title: "Our moments" },
-  { img: photo4, title: "Our moments" },
   { img: photo5, title: "Our moments" },
+  { img: photo12, title: "Our moments" },
+  { img: photo4, title: "Our moments" },
 ];
 
 
@@ -185,13 +187,13 @@ const galleryOne = [
 
 const galleryTwo = [
   { img: photo6, title: "Our moments" },
-  { img: photo8, title: "Our moments" },
-  { img: photo9, title: "Our moments" },
-  { img: photo23, title: "Our moments" },
   { img: photo10, title: "Our moments" },
+  { img: photo23, title: "Our moments" },
   { img: photo11, title: "Our moments" },
   { img: photo13, title: "Our moments" },
+  { img: photo8, title: "Our moments" },
   { img: photo14, title: "Our moments" },
+  { img: photo9, title: "Our moments" },
 ];
 
 
