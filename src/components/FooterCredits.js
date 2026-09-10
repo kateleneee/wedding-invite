@@ -5,8 +5,8 @@ import "./FooterCredits.css";
 const FooterCredits = () => {
   return (
     <footer className="site-footer">
-      <span>Created with love for ate & kuya ♡</span>
-      <span>Made by Kate</span>
+      <span>Made with love for ate & kuya ♡</span>
+      <span>by Kate</span>
 
       <a
         href="https://instagram.com/kateleneee"
