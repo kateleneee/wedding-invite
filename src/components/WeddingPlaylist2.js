@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Box, Container, Typography, Link } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import "./WeddingPlaylist2.css"
 import prenupTeaser from '../assets/videos/prenup-teaser.mp4'
 
