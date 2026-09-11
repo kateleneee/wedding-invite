@@ -20,6 +20,7 @@ import WeddingTimelineScroll from "./components/WeddingTimelineScroll";
 import FooterCredits from "./components/FooterCredits";
 import RSVP from "./components/RSVP";
 import FooterMain from "./components/FooterMain";
+import FAQs from "./components/FAQs";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -167,6 +168,10 @@ function App() {
           {/* GIFTS */}
           <Gifts />
 
+          {/* FAQs */}
+          <section id="faqs">
+            <FAQs />
+          </section>
 
           {/* FOOTER */}
           <FooterMain />

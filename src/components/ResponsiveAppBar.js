@@ -28,6 +28,7 @@ const menuItems = [
   { label: "Our Songs", id: "playlist" },
   { label: "RSVP", id: "rsvp" },
   { label: "Gift Guide", id: "gifts" },
+  { label: "FAQs", id: "faqs" },
 ];
 
 export default function ResponsiveAppBar() {

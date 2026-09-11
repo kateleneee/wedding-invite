@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Montserrat:wght@300;400;500&display=swap");
+
+.faqs-section {
+  width: 100%;
+
+  padding: 100px 20px;
+
+  background: #eef6f9;
+
+  color: #26383f;
+}
+
+.faqs-container {
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0 auto;
+}
+
+/* Label */
+
+.faqs-label {
+  margin-bottom: 12px !important;
+
+  text-align: center;
+
+  color: #bd9a4b !important;
+
+  font-family:
+    "Montserrat",
+    sans-serif !important;
+
+  font-size: 0.68rem !important;
+
+  font-weight: 500 !important;
+
+  letter-spacing: 0.3em !important;
+
+  text-transform: uppercase;
+}
+
+/* Title */
+
+.faqs-title {
+  margin-bottom: 50px !important;
+
+  text-align: center;
+
+  color: #26383f !important;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif !important;
+
+  font-size:
+    clamp(3.2rem, 8vw, 5.5rem) !important;
+
+  font-weight: 400 !important;
+
+  line-height: 0.9 !important;
+}
+
+.faqs-title em {
+  color: #bd9a4b;
+
+  font-style: italic;
+
+  font-weight: 400;
+}
+
+/* FAQ list */
+
+.faqs-list {
+  width: 100%;
+}
+
+/* Individual FAQ */
+
+.faq-item {
+  background: transparent !important;
+
+  border-bottom:
+    1px solid rgba(38, 56, 63, 0.15) !important;
+
+  box-shadow: none !important;
+}
+
+.faq-item:first-child {
+  border-top:
+    1px solid rgba(38, 56, 63, 0.15) !important;
+}
+
+/* Remove MUI default pseudo-element */
+
+.faq-item::before {
+  display: none !important;
+}
+
+/* Question */
+
+.faq-question {
+  min-height: 68px !important;
+
+  padding:
+    0 4px !important;
+}
+
+.faq-question .MuiTypography-root {
+  color: #26383f;
+
+  font-family:
+    "Montserrat",
+    sans-serif;
+
+  font-size: 0.9rem;
+
+  font-weight: 400;
+
+  letter-spacing: 0.01em;
+}
+
+.faq-question .MuiSvgIcon-root {
+  color: #bd9a4b;
+
+  font-size: 20px;
+}
+
+/* Answer */
+
+.faq-answer {
+  padding:
+    0 45px 25px 4px !important;
+}
+
+.faq-answer .MuiTypography-root {
+  color: #64757c;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-size: 1.2rem;
+
+  line-height: 1.5;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .faqs-section {
+    padding:
+      75px 18px;
+  }
+
+  .faqs-title {
+    margin-bottom: 35px !important;
+
+    font-size:
+      3.5rem !important;
+  }
+
+  .faq-question {
+    min-height: 62px !important;
+  }
+
+  .faq-question .MuiTypography-root {
+    font-size: 0.82rem;
+  }
+
+  .faq-answer {
+    padding:
+      0 30px 22px 4px !important;
+  }
+
+  .faq-answer .MuiTypography-root {
+    font-size: 1.1rem;
+  }
+}
