@@ -22,6 +22,7 @@ import RSVP from "./components/RSVP";
 import FooterMain from "./components/FooterMain";
 import FAQs from "./components/FAQs";
 import EngagementCarousel from "./components/EngagementCarousel";
+import Entourage from "./components/Entourage";
 // import AttireGuide from "./components/AttireGuide";
 
 function App() {
@@ -129,6 +130,9 @@ function App() {
 
           {/* ENTOURAGE */}
           <section id="entourage" className="section entourage-section">
+            <Entourage />
+          </section>
+          {/* <section id="entourage" className="section entourage-section">
             <div className="section-label">OUR ENTOURAGE</div>
 
             <h2>
@@ -158,7 +162,7 @@ function App() {
                 <p>Joshua Soriano</p>
               </div>
             </div>
-          </section>
+          </section> */}
 
           {/* WEDDING PLAYLIST */}
           <section id="playlist">
