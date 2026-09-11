@@ -1286,3 +1286,50 @@
       rotate(var(--card-rotation)) !important;
   }
 }
+
+.story-gallery-photo {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 0;
+  border: 0;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  background: #dcebf0;
+}
+
+.story-gallery-image,
+.story-gallery-video {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.story-gallery-video {
+  pointer-events: none;
+}
+
+.lightbox-image,
+.lightbox-video {
+  max-width: 90vw;
+  max-height: 85vh;
+
+  width: auto;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+.lightbox-video {
+  background: #000;
+}

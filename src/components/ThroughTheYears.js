@@ -101,18 +101,18 @@ import sporty7 from "../assets/images/Sporty/7.jpg";
 // =========================================
 // LIFE
 // =========================================
-// import life1 from "../assets/images/LifeCelebrations/1.MP4";
-// import life2 from "../assets/images/LifeCelebrations/2.HEIC";
-// import life3 from "../assets/images/LifeCelebrations/3.MP4";
-// import life4 from "../assets/images/LifeCelebrations/4.HEIC";
-// import life5 from "../assets/images/LifeCelebrations/5.HEIC";
-// import life6 from "../assets/images/LifeCelebrations/6.HEIC";
-// import life7 from "../assets/images/LifeCelebrations/7.HEIC";
-// import life8 from "../assets/images/LifeCelebrations/8.MOV";
-// import life9 from "../assets/images/LifeCelebrations/9.HEIC";
-// import life10 from "../assets/images/LifeCelebrations/10.HEIC";
-// import life11 from "../assets/images/LifeCelebrations/11.HEIC";
-// import life12 from "../assets/images/LifeCelebrations/12.MP4";
+import life1 from "../assets/images/LifeCelebrations/1.jpg";
+import life2 from "../assets/images/LifeCelebrations/2.jpg";
+import life3 from "../assets/images/LifeCelebrations/3.jpg";
+import life4 from "../assets/images/LifeCelebrations/4.jpg";
+import life5 from "../assets/images/LifeCelebrations/5.jpg";
+import life6 from "../assets/images/LifeCelebrations/6.jpg";
+import life7 from "../assets/images/LifeCelebrations/7.jpg";
+import life8 from "../assets/images/LifeCelebrations/8.jpg";
+import life9 from "../assets/images/LifeCelebrations/bf1.mp4";
+import life10 from "../assets/images/LifeCelebrations/bf2.mp4";
+import life11 from "../assets/images/LifeCelebrations/bf3.mp4";
+import life12 from "../assets/images/LifeCelebrations/bf4.mp4";
 // import life13 from "../assets/images/Sporty/7.jpg";
 
 const photoGroups = [
@@ -248,27 +248,27 @@ const photoGroups = [
       sporty7,
     ],
   },
-  // {
-  //   id: "life",
-  //   title: "Life Celebrations",
-  //   subtitle: "Celebrating life, love, and everything in between.",
-  //   description: "The moments that made life ours. Birthdays, milestones, victories, little wins, and ordinary days that became extraordinary simply because we shared them.",
-  //   photos: [
-  //     life1,
-  //     life2,
-  //     life3,
-  //     life4,
-  //     life5,
-  //     life6,
-  //     life7,
-  //     life8,
-  //     life9,
-  //     life10,
-  //     life11,
-  //     life12,
-  //     life13
-  //   ],
-  // },
+  {
+    id: "life",
+    title: "Life Celebrations",
+    subtitle: "Celebrating life, love, and everything in between.",
+    description: "The moments that made life ours. Birthdays, milestones, victories, little wins, and ordinary days that became extraordinary simply because we shared them.",
+    photos: [
+      life1,
+      life12,
+      life2,
+      life3,
+      life11,
+      life8,
+      life5,
+      life10,
+      life6,
+      life7,
+      life9,
+      life4,
+      // life13
+    ],
+  },
 ];
 
 
@@ -535,7 +535,7 @@ const ThroughTheYears = () => {
 
             {/* PHOTO GRID */}
 
-            <div className="story-photo-grid">
+            {/* <div className="story-photo-grid">
 
               {selectedGroup.photos.map((photo, index) => (
 
@@ -554,7 +554,47 @@ const ThroughTheYears = () => {
 
               ))}
 
+            </div> */}
+
+            <div className="story-photo-grid">
+
+              {selectedGroup.photos.map((media, index) => {
+
+                const isVideo =
+                  typeof media === "string" &&
+                  media.toLowerCase().endsWith(".mp4");
+
+                return (
+                  <button
+                    key={index}
+                    className="story-gallery-photo"
+                    onClick={() => handleOpenPhoto(index)}
+                  >
+
+                    {isVideo ? (
+                      <video
+                        src={media}
+                        muted
+                        loop
+                        playsInline
+                        autoPlay
+                        preload="metadata"
+                        className="story-gallery-video"
+                      />
+                    ) : (
+                      <img
+                        src={media}
+                        alt={`${selectedGroup.title} ${index + 1}`}
+                        className="story-gallery-image"
+                      />
+                    )}
+
+                  </button>
+                );
+              })}
+
             </div>
+
 
           </DialogContent>
 
@@ -599,8 +639,33 @@ const ThroughTheYears = () => {
 
 
           {/* IMAGE */}
+          {selectedGroup && selectedPhoto !== null && (() => {
+            const media = selectedGroup.photos[selectedPhoto];
 
-          {selectedGroup && selectedPhoto !== null && (
+            const isVideo =
+              typeof media === "string" &&
+              media.toLowerCase().endsWith(".mp4");
+
+            return isVideo ? (
+              <video
+                className="lightbox-video"
+                src={media}
+                controls
+                autoPlay
+                playsInline
+                preload="metadata"
+              />
+            ) : (
+              <img
+                className="lightbox-image"
+                src={media}
+                alt={`${selectedGroup.title} ${selectedPhoto + 1}`}
+              />
+            );
+          })()}
+
+
+          {/* {selectedGroup && selectedPhoto !== null && (
 
             <img
               className="lightbox-image"
@@ -608,7 +673,7 @@ const ThroughTheYears = () => {
               alt={`${selectedGroup.title} ${selectedPhoto + 1}`}
             />
 
-          )}
+          )} */}
 
 
           {/* NEXT */}

@@ -5,7 +5,7 @@ import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 
 import "./App.css";
 import CoverImage from "./assets/images/landing-yellow-escolta.png";
-import Carousel from "./components/Carousel";
+// import Carousel from "./components/Carousel";
 import Envelope from "./components/Envelope";
 import FloralVideo from "./components/FloralVideo";
 import Gifts from "./components/Gifts";
@@ -111,7 +111,7 @@ function App() {
             <ThroughTheYears />
             {/* <Engagement /> */}
             <EngagementCarousel />
-            <Carousel />
+            {/* <Carousel /> */}
           </section>
 
           {/* GALLERY */}
