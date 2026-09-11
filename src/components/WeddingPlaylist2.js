@@ -46,22 +46,6 @@ export default function WeddingPlaylist() {
     };
   }, []);
 
-  const handleScrollToMusic = (event) => {
-    event.preventDefault();
-
-    const musicSection = document.getElementById("music");
-
-    // Prevent null.getBoundingClientRect or similar errors
-    if (!musicSection) {
-      return;
-    }
-
-    musicSection.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
-  };
-
   return (
     <Box className="wedding-page">
 
