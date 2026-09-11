@@ -22,7 +22,7 @@ import RSVP from "./components/RSVP";
 import FooterMain from "./components/FooterMain";
 import FAQs from "./components/FAQs";
 import EngagementCarousel from "./components/EngagementCarousel";
-// import Engagement from "./components/Engagement";
+// import AttireGuide from "./components/AttireGuide";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -165,6 +165,9 @@ function App() {
             <WeddingPlaylist />
           </section>
 
+
+          {/* ATTIRE GUIDE */}
+          {/* <AttireGuide /> */}
 
           {/* RSVP */}
           <RSVP />
