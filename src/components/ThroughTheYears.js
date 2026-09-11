@@ -75,7 +75,7 @@ import sickness2 from "../assets/images/Anorexia/2.jpg";
 import sickness3 from "../assets/images/Anorexia/3.jpg";
 import sickness4 from "../assets/images/Anorexia/4.jpg";
 import sickness5 from "../assets/images/Anorexia/5.jpg";
-import sickness6 from "../assets/images/Anorexia/6.jpg";
+// import sickness6 from "../assets/images/Anorexia/6.jpg";
 import sickness7 from "../assets/images/Anorexia/7.jpg";
 import sickness8 from "../assets/images/Anorexia/8.jpg";
 
@@ -207,7 +207,7 @@ const photoGroups = [
   {
     id: "sickness",
     title: "In Sickness and in Health",
-    subtitle: "In Sickness and in Health",
+    // subtitle: "In Sickness and in Health",
     description: "A chapter of growing pains, struggles, lessons learned, and slowly becoming better—not just for ourselves, but for each other. 🤍",
     photos: [
       sickness1,
@@ -215,7 +215,7 @@ const photoGroups = [
       sickness3,
       sickness4,
       sickness5,
-      sickness6,
+      // sickness6,
       sickness7,
       sickness8,
     ],

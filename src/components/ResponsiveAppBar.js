@@ -21,7 +21,7 @@ const menuItems = [
   { label: "Home", id: "home" },
   { label: "Wedding", id: "wedding" },
   { label: "Venues", id: "venues" },
-  { label: "Our Story", id: "story" },
+  { label: "Our Journey", id: "story" },
   { label: "Gallery", id: "gallery" },
   { label: "Timeline", id: "timeline" },
   { label: "Entourage", id: "entourage" },
