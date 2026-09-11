@@ -1,0 +1,101 @@
+.gallery-preview {
+  position: relative;
+  width: 100%;
+  /* max-width: 1000px; */
+  height: 500px;
+  /* margin: 40px auto; */
+  overflow: hidden;
+  /* border-radius: 20px; */
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-preview-image {
+  /* 
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease; */
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.gallery-preview-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.35);
+  transition: background 0.3s ease;
+}
+
+.gallery-preview-text {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.gallery-preview-text h2 {
+  margin: 0 0 10px;
+  font-size: 2.5rem;
+  font-weight: 600;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+}
+
+.gallery-preview-text p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+/* Hover effect */
+.gallery-preview:hover .gallery-preview-image {
+  transform: scale(1.05);
+}
+
+.gallery-preview:hover .gallery-preview-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.gallery-preview:hover .gallery-preview-text {
+  transform: scale(1.03);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .gallery-preview {
+    height: 350px;
+    /* margin: 30px auto; */
+    /* border-radius: 15px; */
+  }
+
+  .gallery-preview-text h2 {
+    font-size: 2rem;
+  }
+
+  .gallery-preview-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-preview {
+    height: 280px;
+  }
+
+  .gallery-preview-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .gallery-preview-text p {
+    font-size: 0.95rem;
+  }
+}

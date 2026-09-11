@@ -31,7 +31,7 @@ import photo28 from "../assets/images/photo28.jpg";
 // import sketch2 from "../assets/images/sketch-2.png";
 // import sketch3 from "../assets/images/sketch-3.png";
 
-import "./PhotoGallery.css";
+import "./Gallery.css";
 import { useEffect } from "react";
 
 export default function PhotoGallery() {
