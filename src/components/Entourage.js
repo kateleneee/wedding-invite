@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Typography } from "@mui/material";
+
 import "./Entourage.css";
 
 
@@ -105,10 +106,124 @@ const flowerAttendants = [
 
 
 /* =========================================================
-   COMPONENTS
+   SCROLL ANIMATION
+   ========================================================= */
+
+function useEntourageAnimation() {
+
+  useEffect(() => {
+
+    const sections = document.querySelectorAll(
+      ".entourage-section"
+    );
+
+
+    if (!sections.length) {
+      return;
+    }
+
+
+    /*
+      If the browser doesn't support IntersectionObserver,
+      simply show everything.
+    */
+
+    if (!("IntersectionObserver" in window)) {
+
+      sections.forEach((section) => {
+        section.classList.add("entourage-visible");
+      });
+
+      return;
+    }
+
+
+    /*
+      Give every section its initial hidden state.
+    */
+
+    sections.forEach((section) => {
+      section.classList.add("entourage-hidden");
+    });
+
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+
+        entries.forEach((entry) => {
+
+          if (!entry.isIntersecting) {
+            return;
+          }
+
+
+          const section = entry.target;
+
+
+          /*
+            requestAnimationFrame prevents the browser
+            from skipping the initial transition.
+          */
+
+          requestAnimationFrame(() => {
+
+            section.classList.remove(
+              "entourage-hidden"
+            );
+
+            section.classList.add(
+              "entourage-visible"
+            );
+
+          });
+
+
+          /*
+            Animate each section only once.
+          */
+
+          observer.unobserve(section);
+
+        });
+
+      },
+      {
+        /*
+          A small amount of the section needs to be
+          visible before the animation starts.
+        */
+
+        threshold: 0.08,
+
+        /*
+          Start slightly before the section reaches
+          the bottom portion of the screen.
+        */
+
+        rootMargin: "0px 0px -70px 0px",
+      }
+    );
+
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+
+    return () => {
+      observer.disconnect();
+    };
+
+  }, []);
+}
+
+
+/* =========================================================
+   REUSABLE COMPONENTS
    ========================================================= */
 
 function SectionHeading({ children }) {
+
   return (
     <Box className="entourage-heading">
 
@@ -126,6 +241,7 @@ function SectionHeading({ children }) {
 
 
 function PersonName({ children }) {
+
   return (
     <Typography className="person-name">
       {children}
@@ -135,18 +251,45 @@ function PersonName({ children }) {
 
 
 /* =========================================================
-   MAIN
+   MAIN COMPONENT
    ========================================================= */
 
 export default function WeddingEntourage() {
+
+  /*
+    Activate scroll reveal.
+  */
+
+  useEntourageAnimation();
+
+
   return (
+
     <Box className="wedding-entourage">
 
-      {/* ARCH FRAME */}
 
-      <div className="wedding-entourage__arch wedding-entourage__arch--outer" />
+      {/* =====================================================
+          ARCH FRAME
+      ===================================================== */}
 
-      <div className="wedding-entourage__arch wedding-entourage__arch--inner" />
+      <div
+        className="
+          wedding-entourage__arch
+          wedding-entourage__arch--outer
+        "
+      />
+
+      <div
+        className="
+          wedding-entourage__arch
+          wedding-entourage__arch--inner
+        "
+      />
+
+
+      {/* =====================================================
+          TOP ORNAMENT
+      ===================================================== */}
 
       <div className="wedding-entourage__top-mark">
         ✦
@@ -154,7 +297,7 @@ export default function WeddingEntourage() {
 
 
       {/* =====================================================
-          TITLE
+          HEADER
       ===================================================== */}
 
       <header className="entourage-header">
@@ -163,10 +306,15 @@ export default function WeddingEntourage() {
           The Entourage
         </Typography>
 
+
         <div className="entourage-header__rule">
+
           <span />
+
           <i>✦</i>
+
           <span />
+
         </div>
 
       </header>
@@ -176,13 +324,20 @@ export default function WeddingEntourage() {
           PARENTS
       ===================================================== */}
 
-      <section className="entourage-section entourage-section--parents">
+      <section className="
+        entourage-section
+        entourage-section--parents
+      ">
 
         <Typography className="blessing-label">
           With the blessing of our parents
         </Typography>
 
+
         <Box className="parents">
+
+
+          {/* BRIDE'S PARENTS */}
 
           <Box className="parents__side">
 
@@ -190,12 +345,17 @@ export default function WeddingEntourage() {
               Bride's Parents
             </Typography>
 
+
             <Box className="parents__names">
+
               {parents.bride.map((name, index) => (
+
                 <PersonName key={index}>
                   {name}
                 </PersonName>
+
               ))}
+
             </Box>
 
           </Box>
@@ -204,18 +364,25 @@ export default function WeddingEntourage() {
           <div className="parents__divider" />
 
 
+          {/* GROOM'S PARENTS */}
+
           <Box className="parents__side">
 
             <Typography className="parents__label">
               Groom's Parents
             </Typography>
 
+
             <Box className="parents__names">
+
               {parents.groom.map((name, index) => (
+
                 <PersonName key={index}>
                   {name}
                 </PersonName>
+
               ))}
+
             </Box>
 
           </Box>
@@ -235,7 +402,9 @@ export default function WeddingEntourage() {
           Principal Sponsors
         </SectionHeading>
 
+
         <Box className="principal-sponsors">
+
 
           {/* NINANG */}
 
@@ -245,14 +414,18 @@ export default function WeddingEntourage() {
               Ninang
             </Typography>
 
+
             <div className="sponsor-column__rule" />
+
 
             <Box className="sponsor-column__names">
 
               {ninangs.map((name, index) => (
+
                 <PersonName key={index}>
                   {name}
                 </PersonName>
+
               ))}
 
             </Box>
@@ -271,66 +444,21 @@ export default function WeddingEntourage() {
               Ninong
             </Typography>
 
+
             <div className="sponsor-column__rule" />
+
 
             <Box className="sponsor-column__names">
 
               {ninongs.map((name, index) => (
+
                 <PersonName key={index}>
                   {name}
                 </PersonName>
+
               ))}
 
             </Box>
-
-          </Box>
-
-        </Box>
-
-      </section>
-
-
-      {/* =====================================================
-          HONOR ATTENDANTS
-      ===================================================== */}
-
-      <section className="entourage-section">
-
-        <SectionHeading>
-          Honor Attendants
-        </SectionHeading>
-
-        <Box className="honor-attendants">
-
-          <Box className="honor-attendant">
-
-            <Typography className="honor-attendant__role">
-              Maid of Honor
-            </Typography>
-
-            {maidOfHonor.map((name, index) => (
-              <PersonName key={index}>
-                {name}
-              </PersonName>
-            ))}
-
-          </Box>
-
-
-          <div className="honor-attendants__divider" />
-
-
-          <Box className="honor-attendant">
-
-            <Typography className="honor-attendant__role">
-              Best Man
-            </Typography>
-
-            {bestMan.map((name, index) => (
-              <PersonName key={index}>
-                {name}
-              </PersonName>
-            ))}
 
           </Box>
 
@@ -349,7 +477,11 @@ export default function WeddingEntourage() {
           Secondary Sponsors
         </SectionHeading>
 
+
         <Box className="secondary-sponsors">
+
+
+          {/* VEIL */}
 
           <Box className="secondary-sponsor">
 
@@ -357,18 +489,24 @@ export default function WeddingEntourage() {
               Veil
             </Typography>
 
+
             <div className="secondary-sponsor__mark">
               — ✦ —
             </div>
 
+
             {secondarySponsors.veil.map((name, index) => (
+
               <PersonName key={index}>
                 {name}
               </PersonName>
+
             ))}
 
           </Box>
 
+
+          {/* CORD */}
 
           <Box className="secondary-sponsor">
 
@@ -376,18 +514,24 @@ export default function WeddingEntourage() {
               Cord
             </Typography>
 
+
             <div className="secondary-sponsor__mark">
               — ✦ —
             </div>
 
+
             {secondarySponsors.cord.map((name, index) => (
+
               <PersonName key={index}>
                 {name}
               </PersonName>
+
             ))}
 
           </Box>
 
+
+          {/* CANDLE */}
 
           <Box className="secondary-sponsor">
 
@@ -395,14 +539,18 @@ export default function WeddingEntourage() {
               Candle
             </Typography>
 
+
             <div className="secondary-sponsor__mark">
               — ✦ —
             </div>
 
+
             {secondarySponsors.candle.map((name, index) => (
+
               <PersonName key={index}>
                 {name}
               </PersonName>
+
             ))}
 
           </Box>
@@ -412,6 +560,65 @@ export default function WeddingEntourage() {
       </section>
 
 
+      {/* =====================================================
+          HONOR ATTENDANTS
+      ===================================================== */}
+
+      <section className="entourage-section">
+
+        <SectionHeading>
+          Honor Attendants
+        </SectionHeading>
+
+
+        <Box className="honor-attendants">
+
+
+          {/* MAID OF HONOR */}
+
+          <Box className="honor-attendant">
+
+            <Typography className="honor-attendant__role">
+              Maid of Honor
+            </Typography>
+
+
+            {maidOfHonor.map((name, index) => (
+
+              <PersonName key={index}>
+                {name}
+              </PersonName>
+
+            ))}
+
+          </Box>
+
+
+          <div className="honor-attendants__divider" />
+
+
+          {/* BEST MAN */}
+
+          <Box className="honor-attendant">
+
+            <Typography className="honor-attendant__role">
+              Best Man
+            </Typography>
+
+
+            {bestMan.map((name, index) => (
+
+              <PersonName key={index}>
+                {name}
+              </PersonName>
+
+            ))}
+
+          </Box>
+
+        </Box>
+
+      </section>
 
 
       {/* =====================================================
@@ -424,12 +631,15 @@ export default function WeddingEntourage() {
           Bridesmaids
         </SectionHeading>
 
+
         <Box className="party-grid">
 
           {bridesmaids.map((name, index) => (
+
             <PersonName key={index}>
               {name}
             </PersonName>
+
           ))}
 
         </Box>
@@ -447,12 +657,15 @@ export default function WeddingEntourage() {
           Groomsmen
         </SectionHeading>
 
+
         <Box className="party-grid">
 
           {groomsmen.map((name, index) => (
+
             <PersonName key={index}>
               {name}
             </PersonName>
+
           ))}
 
         </Box>
@@ -464,18 +677,24 @@ export default function WeddingEntourage() {
           RING BEARER
       ===================================================== */}
 
-      <section className="entourage-section entourage-section--small">
+      <section className="
+        entourage-section
+        entourage-section--small
+      ">
 
         <SectionHeading>
           Ring Bearer
         </SectionHeading>
 
+
         <Box className="single-person">
 
           {ringBearers.map((name, index) => (
+
             <PersonName key={index}>
               {name}
             </PersonName>
+
           ))}
 
         </Box>
@@ -487,18 +706,24 @@ export default function WeddingEntourage() {
           FLOWER GIRLS / GUYS
       ===================================================== */}
 
-      <section className="entourage-section entourage-section--small">
+      <section className="
+        entourage-section
+        entourage-section--small
+      ">
 
         <SectionHeading>
           Flower Girls &amp; Guys
         </SectionHeading>
 
+
         <Box className="children-list">
 
           {flowerAttendants.map((name, index) => (
+
             <PersonName key={index}>
               {name}
             </PersonName>
+
           ))}
 
         </Box>
@@ -506,7 +731,9 @@ export default function WeddingEntourage() {
       </section>
 
 
-      {/* FOOTER */}
+      {/* =====================================================
+          FOOTER
+      ===================================================== */}
 
       <footer className="entourage-footer">
 
@@ -521,5 +748,6 @@ export default function WeddingEntourage() {
       </footer>
 
     </Box>
+
   );
 }

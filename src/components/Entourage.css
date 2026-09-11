@@ -1,11 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+);
 
 
 /* =========================================================
-   COLOR PALETTE
+   COLOR SYSTEM
    ========================================================= */
 
 .wedding-entourage {
+
   --powder-blue: #c9e1e8;
   --powder-blue-light: #d9ebf0;
 
@@ -15,44 +17,24 @@
   --ink: #293b3f;
   --muted: #617378;
 
-  --border: rgba(41, 59, 63, 0.78);
-  --inner-border: rgba(41, 59, 63, 0.35);
+  --border: rgba(41, 59, 63, 0.82);
+  --inner-border: rgba(41, 59, 63, 0.38);
+
   --soft-line: rgba(41, 59, 63, 0.18);
+
 }
 
 
 /* =========================================================
-   MAIN ARCH
+   MAIN ARCH CARD
    ========================================================= */
 
-/*
-   The entire card is now an arch.
-
-   Instead of:
-   ┌───────────────┐
-   │               │
-   │               │
-   └───────────────┘
-
-   It becomes:
-
-          _______
-       .-'       '-.
-      /             \
-     |               |
-     |               |
-     |_______________|
-*/
-
 .wedding-entourage {
+
   position: relative;
 
   width: min(100%, 900px);
 
-  /*
-     Important:
-     Gives the arch enough vertical room.
-  */
   min-height: 1100px;
 
   margin: 50px auto;
@@ -64,59 +46,71 @@
   overflow: hidden;
 
   /*
-     MAIN BACKGROUND IS ITSELF AN ARCH
+    Powder blue is ONLY on the main card.
+    Sections remain transparent.
   */
+
   background:
     linear-gradient(135deg,
       var(--powder-blue),
       var(--powder-blue-light));
 
   /*
-     Large rounded top.
+    Main arch silhouette.
   */
-  border-radius: 460px 460px 0 0;
+
+  border-radius:
+    460px 460px 0 0;
 
   color: var(--ink);
+
+  /*
+    No animation on the card itself.
+  */
+
+  opacity: 1;
+
+  transform: none;
+
 }
 
 
 /* =========================================================
-   THICK ARCH BORDER
+   OUTER ARCH BORDER
    ========================================================= */
 
-/*
-   This creates the substantial outer frame.
-*/
-
 .wedding-entourage__arch--outer {
+
   position: absolute;
 
-  /*
-     Keep the arch inside the blue background.
-  */
   top: 20px;
   right: 20px;
   bottom: 20px;
   left: 20px;
 
-  border: 4px solid var(--border);
+  /*
+    Thick elegant border.
+  */
 
-  border-radius: 430px 430px 0 0;
+  border:
+    4px solid var(--border);
+
+  border-radius:
+    430px 430px 0 0;
 
   pointer-events: none;
 
   z-index: 1;
+
 }
 
 
-/*
-   Fine inner gold/ink line.
-
-   This gives the border a more expensive,
-   engraved invitation feel.
-*/
+/* =========================================================
+   INNER ARCH BORDER
+   ========================================================= */
 
 .wedding-entourage__arch--inner {
+
   position: absolute;
 
   top: 32px;
@@ -124,13 +118,16 @@
   bottom: 32px;
   left: 32px;
 
-  border: 1px solid var(--inner-border);
+  border:
+    1px solid var(--inner-border);
 
-  border-radius: 415px 415px 0 0;
+  border-radius:
+    415px 415px 0 0;
 
   pointer-events: none;
 
   z-index: 1;
+
 }
 
 
@@ -139,6 +136,7 @@
    ========================================================= */
 
 .wedding-entourage__top-mark {
+
   position: absolute;
 
   top: 43px;
@@ -148,13 +146,16 @@
 
   z-index: 3;
 
-  font-family: "Cormorant Garamond", serif;
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
   font-size: 14px;
 
   font-weight: 600;
 
   color: var(--gold);
+
 }
 
 
@@ -163,6 +164,7 @@
    ========================================================= */
 
 .entourage-header {
+
   position: relative;
 
   z-index: 3;
@@ -170,45 +172,47 @@
   text-align: center;
 
   margin-bottom: 78px;
+
 }
 
 
-/*
-   MUCH SMALLER THAN BEFORE.
-
-   It now behaves like a title,
-   rather than the main visual centerpiece.
-*/
-
 .entourage-header__title {
+
   margin: 0 !important;
 
-  font-family: "Cormorant Garamond", serif !important;
+  font-family:
+    "Cormorant Garamond",
+    serif !important;
 
-  font-size: 42px !important;
+  font-size:
+    42px !important;
 
-  font-weight: 500 !important;
+  font-weight:
+    500 !important;
 
-  line-height: 1 !important;
+  line-height:
+    1 !important;
 
-  letter-spacing: .08em !important;
+  letter-spacing:
+    .08em !important;
 
-  text-transform: uppercase;
+  text-transform:
+    uppercase;
 
-  color: var(--ink);
+  color:
+    var(--ink);
 
-  /*
-     Slightly muted so it doesn't dominate.
-  */
   opacity: .92;
+
 }
 
 
 /* =========================================================
-   HEADER ORNAMENT
+   HEADER GOLD RULE
    ========================================================= */
 
 .entourage-header__rule {
+
   display: flex;
 
   align-items: center;
@@ -218,22 +222,29 @@
   gap: 12px;
 
   margin-top: 18px;
+
 }
 
 
 .entourage-header__rule span {
+
   width: 52px;
 
   height: 1px;
 
-  background: var(--gold);
+  background:
+    var(--gold);
 
   opacity: .7;
+
 }
 
 
 .entourage-header__rule i {
-  font-family: "Cormorant Garamond", serif;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
   font-size: 11px;
 
@@ -242,6 +253,7 @@
   font-weight: 600;
 
   color: var(--gold);
+
 }
 
 
@@ -250,6 +262,7 @@
    ========================================================= */
 
 .entourage-section {
+
   position: relative;
 
   z-index: 3;
@@ -257,17 +270,149 @@
   margin-bottom: 82px;
 
   /*
-     VERY IMPORTANT:
-     absolutely no cards/backgrounds.
+    Absolutely no background.
   */
-  background: transparent !important;
 
-  box-shadow: none !important;
+  background:
+    transparent !important;
+
+  box-shadow:
+    none !important;
+
 }
 
 
+/* Smaller final sections */
+
 .entourage-section--small {
+
   margin-bottom: 62px;
+
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+/*
+  We animate the CONTENT of each section,
+  rather than moving the entire card.
+
+  This keeps the arch completely stable.
+*/
+
+
+.entourage-section.entourage-hidden>* {
+
+  opacity: 0;
+
+  transform:
+    translateY(24px);
+
+  filter:
+    blur(3px);
+
+}
+
+
+.entourage-section.entourage-visible>* {
+
+  opacity: 1;
+
+  transform:
+    translateY(0);
+
+  filter:
+    blur(0);
+
+  transition:
+
+    opacity .75s ease,
+
+    transform .75s cubic-bezier(.22,
+      1,
+      .36,
+      1),
+
+    filter .75s ease;
+
+}
+
+
+/* =========================================================
+   STAGGER
+   ========================================================= */
+
+.entourage-section.entourage-visible .entourage-heading {
+
+  transition-delay:
+    .03s;
+
+}
+
+
+.entourage-section.entourage-visible .blessing-label {
+
+  transition-delay:
+    .03s;
+
+}
+
+
+.entourage-section.entourage-visible .parents {
+
+  transition-delay:
+    .10s;
+
+}
+
+
+.entourage-section.entourage-visible .principal-sponsors {
+
+  transition-delay:
+    .10s;
+
+}
+
+
+.entourage-section.entourage-visible .secondary-sponsors {
+
+  transition-delay:
+    .10s;
+
+}
+
+
+.entourage-section.entourage-visible .honor-attendants {
+
+  transition-delay:
+    .10s;
+
+}
+
+
+.entourage-section.entourage-visible .party-grid {
+
+  transition-delay:
+    .10s;
+
+}
+
+
+.entourage-section.entourage-visible .single-person {
+
+  transition-delay:
+    .10s;
+
+}
+
+
+.entourage-section.entourage-visible .children-list {
+
+  transition-delay:
+    .10s;
+
 }
 
 
@@ -276,45 +421,63 @@
    ========================================================= */
 
 .entourage-heading {
+
   display: flex;
 
   align-items: center;
 
   justify-content: center;
 
-  gap: 17px;
+  gap: 18px;
 
-  margin-bottom: 31px;
+  margin-bottom: 33px;
+
 }
 
 
 .entourage-heading__title {
+
   margin: 0 !important;
 
   white-space: nowrap;
 
-  font-family: "DM Sans", sans-serif !important;
+  font-family:
+    "DM Sans",
+    sans-serif !important;
 
-  font-size: 10px !important;
+  /*
+    Larger section heading.
+  */
 
-  font-weight: 700 !important;
+  font-size:
+    13px !important;
 
-  letter-spacing: .30em !important;
+  font-weight:
+    700 !important;
 
-  text-transform: uppercase;
+  letter-spacing:
+    .27em !important;
 
-  color: var(--ink);
+  text-transform:
+    uppercase;
+
+  color:
+    var(--ink);
+
 }
 
 
 .entourage-heading__line {
-  width: 70px;
+
+  width: 78px;
 
   height: 1px;
 
-  background: var(--ink);
+  background:
+    var(--ink);
 
-  opacity: .28;
+  opacity: .30;
+
 }
 
 
@@ -323,37 +486,51 @@
    ========================================================= */
 
 .entourage-section--parents {
+
   text-align: center;
 
   margin-bottom: 88px;
+
 }
 
 
 .blessing-label {
-  margin: 0 0 31px !important;
 
-  font-family: "DM Sans", sans-serif !important;
+  margin:
+    0 0 31px !important;
 
-  font-size: 9px !important;
+  font-family:
+    "DM Sans",
+    sans-serif !important;
 
-  font-weight: 700 !important;
+  font-size:
+    10px !important;
 
-  letter-spacing: .24em !important;
+  font-weight:
+    700 !important;
 
-  text-transform: uppercase;
+  letter-spacing:
+    .24em !important;
 
-  color: var(--gold);
+  text-transform:
+    uppercase;
+
+  color:
+    var(--gold);
+
 }
 
 
 /* =========================================================
-   PARENT COLUMNS
+   PARENTS GRID
    ========================================================= */
 
 .parents {
+
   display: grid;
 
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns:
+    1fr auto 1fr;
 
   align-items: center;
 
@@ -361,53 +538,85 @@
 
   margin: 0 auto;
 
-  background: transparent !important;
+  background:
+    transparent !important;
+
 }
 
 
 .parents__side {
-  padding: 0 30px;
 
-  text-align: center;
+  padding:
+    0 30px;
 
-  background: transparent !important;
+  text-align:
+    center;
+
+  background:
+    transparent !important;
+
 }
 
 
 .parents__label {
-  margin: 0 0 13px !important;
 
-  font-family: "DM Sans", sans-serif !important;
+  margin:
+    0 0 13px !important;
 
-  font-size: 8px !important;
+  font-family:
+    "DM Sans",
+    sans-serif !important;
 
-  font-weight: 700 !important;
+  /*
+    Larger parent role.
+  */
 
-  letter-spacing: .25em !important;
+  font-size:
+    10px !important;
 
-  text-transform: uppercase;
+  font-weight:
+    700 !important;
 
-  color: var(--gold);
+  letter-spacing:
+    .24em !important;
+
+  text-transform:
+    uppercase;
+
+  color:
+    var(--gold);
+
 }
 
 
 .parents__names {
-  display: flex;
 
-  flex-direction: column;
+  display:
+    flex;
 
-  gap: 5px;
+  flex-direction:
+    column;
+
+  gap:
+    5px;
+
 }
 
 
 .parents__divider {
-  width: 2px;
 
-  height: 64px;
+  width:
+    2px;
 
-  background: var(--gold);
+  height:
+    64px;
 
-  opacity: .45;
+  background:
+    var(--gold);
+
+  opacity:
+    .45;
+
 }
 
 
@@ -416,19 +625,29 @@
    ========================================================= */
 
 .person-name {
-  margin: 0 !important;
 
-  font-family: "Cormorant Garamond", serif !important;
+  margin:
+    0 !important;
 
-  font-size: 20px !important;
+  font-family:
+    "Cormorant Garamond",
+    serif !important;
 
-  font-weight: 500 !important;
+  font-size:
+    20px !important;
 
-  line-height: 1.08 !important;
+  font-weight:
+    500 !important;
 
-  text-align: center;
+  line-height:
+    1.08 !important;
 
-  color: var(--ink);
+  text-align:
+    center;
+
+  color:
+    var(--ink);
+
 }
 
 
@@ -437,80 +656,122 @@
    ========================================================= */
 
 .principal-sponsors {
-  display: grid;
 
-  grid-template-columns: 1fr auto 1fr;
+  display:
+    grid;
 
-  max-width: 680px;
+  grid-template-columns:
+    1fr auto 1fr;
 
-  margin: 0 auto;
+  max-width:
+    680px;
 
-  background: transparent !important;
+  margin:
+    0 auto;
 
-  box-shadow: none !important;
+  background:
+    transparent !important;
+
+  box-shadow:
+    none !important;
+
 }
 
 
 .sponsor-column {
-  padding: 0 35px;
 
-  background: transparent !important;
+  padding:
+    0 35px;
 
-  box-shadow: none !important;
+  background:
+    transparent !important;
+
 }
 
 
 .sponsor-column__title {
-  margin: 0 !important;
 
-  text-align: center;
+  margin:
+    0 !important;
 
-  font-family: "DM Sans", sans-serif !important;
+  text-align:
+    center;
 
-  font-size: 10px !important;
+  font-family:
+    "DM Sans",
+    sans-serif !important;
 
-  font-weight: 700 !important;
+  /*
+    Larger Ninang / Ninong.
+  */
 
-  letter-spacing: .35em !important;
+  font-size:
+    12px !important;
 
-  text-transform: uppercase;
+  font-weight:
+    700 !important;
 
-  color: var(--gold);
+  letter-spacing:
+    .34em !important;
+
+  text-transform:
+    uppercase;
+
+  color:
+    var(--gold);
+
 }
 
 
 .sponsor-column__rule {
-  width: 34px;
 
-  height: 2px;
+  width:
+    34px;
 
-  margin: 11px auto 17px;
+  height:
+    2px;
 
-  background: var(--gold);
+  margin:
+    11px auto 17px;
 
-  opacity: .65;
+  background:
+    var(--gold);
+
+  opacity:
+    .65;
+
 }
 
 
 /*
-   TIGHTER SPONSOR SPACING
+  Tight spacing between sponsor names.
 */
 
 .sponsor-column__names {
-  display: flex;
 
-  flex-direction: column;
+  display:
+    flex;
 
-  gap: 6px;
+  flex-direction:
+    column;
+
+  gap:
+    6px;
+
 }
 
 
 .principal-sponsors__divider {
-  width: 2px;
 
-  background: var(--soft-line);
+  width:
+    2px;
 
-  opacity: .8;
+  background:
+    var(--soft-line);
+
+  opacity:
+    .8;
+
 }
 
 
@@ -519,80 +780,125 @@
    ========================================================= */
 
 .secondary-sponsors {
-  display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  display:
+    grid;
 
-  max-width: 700px;
+  grid-template-columns:
+    repeat(3, 1fr);
 
-  margin: 0 auto;
+  max-width:
+    700px;
 
-  background: transparent !important;
+  margin:
+    0 auto;
+
+  background:
+    transparent !important;
+
 }
 
 
 .secondary-sponsor {
-  position: relative;
 
-  padding: 0 25px;
+  position:
+    relative;
 
-  text-align: center;
+  padding:
+    0 25px;
 
-  background: transparent !important;
+  text-align:
+    center;
 
-  box-shadow: none !important;
+  background:
+    transparent !important;
+
 }
 
 
 .secondary-sponsor:not(:last-child)::after {
-  content: "";
 
-  position: absolute;
+  content:
+    "";
 
-  top: 0;
+  position:
+    absolute;
 
-  right: 0;
+  top:
+    0;
 
-  width: 1px;
+  right:
+    0;
 
-  height: 75px;
+  width:
+    1px;
 
-  background: var(--soft-line);
+  height:
+    75px;
+
+  background:
+    var(--soft-line);
+
 }
 
 
 .secondary-sponsor__title {
-  margin: 0 !important;
 
-  font-family: "DM Sans", sans-serif !important;
+  margin:
+    0 !important;
 
-  font-size: 9px !important;
+  font-family:
+    "DM Sans",
+    sans-serif !important;
 
-  font-weight: 700 !important;
+  /*
+    Larger secondary sponsor roles.
+  */
 
-  letter-spacing: .34em !important;
+  font-size:
+    11px !important;
 
-  text-transform: uppercase;
+  font-weight:
+    700 !important;
 
-  color: var(--gold);
+  letter-spacing:
+    .32em !important;
+
+  text-transform:
+    uppercase;
+
+  color:
+    var(--gold);
+
 }
 
 
 .secondary-sponsor__mark {
-  margin: 8px 0 13px;
 
-  font-family: "Cormorant Garamond", serif;
+  margin:
+    8px 0 13px;
 
-  font-size: 11px;
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
-  font-weight: 600;
+  font-size:
+    11px;
 
-  color: var(--gold);
+  font-weight:
+    600;
+
+  color:
+    var(--gold);
+
 }
 
 
 .secondary-sponsor .person-name+.person-name {
-  margin-top: 4px !important;
+
+  margin-top:
+    4px !important;
+
 }
 
 
@@ -601,52 +907,84 @@
    ========================================================= */
 
 .honor-attendants {
-  display: grid;
 
-  grid-template-columns: 1fr auto 1fr;
+  display:
+    grid;
 
-  align-items: center;
+  grid-template-columns:
+    1fr auto 1fr;
 
-  max-width: 580px;
+  align-items:
+    center;
 
-  margin: 0 auto;
+  max-width:
+    580px;
 
-  background: transparent !important;
+  margin:
+    0 auto;
+
+  background:
+    transparent !important;
+
 }
 
 
 .honor-attendant {
-  padding: 0 30px;
 
-  text-align: center;
+  padding:
+    0 30px;
 
-  background: transparent !important;
+  text-align:
+    center;
+
+  background:
+    transparent !important;
+
 }
 
 
 .honor-attendant__role {
-  margin: 0 0 8px !important;
 
-  font-family: "DM Sans", sans-serif !important;
+  margin:
+    0 0 8px !important;
 
-  font-size: 8px !important;
+  /*
+    Larger Best Man / Maid of Honor.
+  */
 
-  font-weight: 700 !important;
+  font-family:
+    "DM Sans",
+    sans-serif !important;
 
-  letter-spacing: .30em !important;
+  font-size:
+    10px !important;
 
-  text-transform: uppercase;
+  font-weight:
+    700 !important;
 
-  color: var(--gold);
+  letter-spacing:
+    .28em !important;
+
+  text-transform:
+    uppercase;
+
+  color:
+    var(--gold);
+
 }
 
 
 .honor-attendants__divider {
-  width: 2px;
 
-  height: 55px;
+  width:
+    2px;
 
-  background: var(--soft-line);
+  height:
+    55px;
+
+  background:
+    var(--soft-line);
+
 }
 
 
@@ -655,19 +993,28 @@
    ========================================================= */
 
 .party-grid {
-  display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  display:
+    grid;
 
-  max-width: 660px;
+  grid-template-columns:
+    repeat(3, 1fr);
 
-  margin: 0 auto;
+  max-width:
+    660px;
 
-  column-gap: 35px;
+  margin:
+    0 auto;
 
-  row-gap: 15px;
+  column-gap:
+    35px;
 
-  background: transparent !important;
+  row-gap:
+    15px;
+
+  background:
+    transparent !important;
+
 }
 
 
@@ -676,11 +1023,16 @@
    ========================================================= */
 
 .single-person {
-  display: flex;
 
-  justify-content: center;
+  display:
+    flex;
 
-  background: transparent !important;
+  justify-content:
+    center;
+
+  background:
+    transparent !important;
+
 }
 
 
@@ -689,19 +1041,28 @@
    ========================================================= */
 
 .children-list {
-  display: flex;
 
-  justify-content: center;
+  display:
+    flex;
 
-  flex-wrap: wrap;
+  justify-content:
+    center;
 
-  gap: 8px 40px;
+  flex-wrap:
+    wrap;
 
-  max-width: 650px;
+  gap:
+    8px 40px;
 
-  margin: 0 auto;
+  max-width:
+    650px;
 
-  background: transparent !important;
+  margin:
+    0 auto;
+
+  background:
+    transparent !important;
+
 }
 
 
@@ -710,43 +1071,66 @@
    ========================================================= */
 
 .entourage-footer {
-  position: relative;
 
-  z-index: 3;
+  position:
+    relative;
 
-  display: flex;
+  z-index:
+    3;
 
-  align-items: center;
+  display:
+    flex;
 
-  justify-content: center;
+  align-items:
+    center;
 
-  gap: 15px;
+  justify-content:
+    center;
 
-  margin-top: 10px;
+  gap:
+    15px;
+
+  margin-top:
+    10px;
+
 }
 
 
 .entourage-footer span {
-  width: 55px;
 
-  height: 1px;
+  width:
+    55px;
 
-  background: var(--gold);
+  height:
+    1px;
 
-  opacity: .55;
+  background:
+    var(--gold);
+
+  opacity:
+    .55;
+
 }
 
 
 .entourage-footer .MuiTypography-root {
-  font-family: "DM Sans", sans-serif !important;
 
-  font-size: 7px !important;
+  font-family:
+    "DM Sans",
+    sans-serif !important;
 
-  font-weight: 700 !important;
+  font-size:
+    7px !important;
 
-  letter-spacing: .34em !important;
+  font-weight:
+    700 !important;
 
-  color: var(--gold);
+  letter-spacing:
+    .34em !important;
+
+  color:
+    var(--gold);
+
 }
 
 
@@ -757,89 +1141,155 @@
 @media (max-width: 700px) {
 
   .wedding-entourage {
-    padding: 130px 55px 75px;
 
-    border-radius: 330px 330px 0 0;
+    padding:
+      130px 55px 75px;
+
+    border-radius:
+      330px 330px 0 0;
+
   }
 
 
   .wedding-entourage__arch--outer {
-    top: 18px;
-    right: 18px;
-    bottom: 18px;
-    left: 18px;
 
-    border-width: 3px;
+    top:
+      18px;
 
-    border-radius: 305px 305px 0 0;
+    right:
+      18px;
+
+    bottom:
+      18px;
+
+    left:
+      18px;
+
+    border-width:
+      3px;
+
+    border-radius:
+      305px 305px 0 0;
+
   }
 
 
   .wedding-entourage__arch--inner {
-    top: 29px;
-    right: 29px;
-    bottom: 29px;
-    left: 29px;
 
-    border-radius: 294px 294px 0 0;
+    top:
+      29px;
+
+    right:
+      29px;
+
+    bottom:
+      29px;
+
+    left:
+      29px;
+
+    border-radius:
+      294px 294px 0 0;
+
   }
 
 
   .entourage-header__title {
-    font-size: 36px !important;
+
+    font-size:
+      36px !important;
+
+  }
+
+
+  .entourage-heading__title {
+
+    font-size:
+      12px !important;
+
   }
 
 
   .principal-sponsors {
-    grid-template-columns: 1fr;
+
+    grid-template-columns:
+      1fr;
+
   }
 
 
   .principal-sponsors__divider {
-    width: 45px;
 
-    height: 2px;
+    width:
+      45px;
 
-    margin: 25px auto;
+    height:
+      2px;
+
+    margin:
+      25px auto;
+
   }
 
 
   .sponsor-column {
-    padding: 0;
+
+    padding:
+      0;
+
   }
 
 
   .secondary-sponsors {
-    grid-template-columns: 1fr;
 
-    gap: 32px;
+    grid-template-columns:
+      1fr;
+
+    gap:
+      32px;
+
   }
 
 
   .secondary-sponsor {
-    padding: 0;
+
+    padding:
+      0;
+
   }
 
 
   .secondary-sponsor:not(:last-child)::after {
-    top: auto;
 
-    right: 50%;
+    top:
+      auto;
 
-    bottom: -17px;
+    right:
+      50%;
 
-    width: 45px;
+    bottom:
+      -17px;
 
-    height: 1px;
+    width:
+      45px;
 
-    transform: translateX(50%);
+    height:
+      1px;
+
+    transform:
+      translateX(50%);
+
   }
 
 
   .party-grid {
-    grid-template-columns: repeat(2, 1fr);
 
-    column-gap: 20px;
+    grid-template-columns:
+      repeat(2, 1fr);
+
+    column-gap:
+      20px;
+
   }
 
 }
@@ -852,109 +1302,205 @@
 @media (max-width: 480px) {
 
   .wedding-entourage {
-    min-height: auto;
 
-    padding: 105px 32px 65px;
+    min-height:
+      auto;
 
-    border-radius: 230px 230px 0 0;
+    padding:
+      105px 32px 65px;
+
+    border-radius:
+      230px 230px 0 0;
+
   }
 
 
   .wedding-entourage__arch--outer {
-    top: 13px;
-    right: 13px;
-    bottom: 13px;
-    left: 13px;
 
-    border-width: 3px;
+    top:
+      13px;
 
-    border-radius: 210px 210px 0 0;
+    right:
+      13px;
+
+    bottom:
+      13px;
+
+    left:
+      13px;
+
+    border-width:
+      3px;
+
+    border-radius:
+      210px 210px 0 0;
+
   }
 
 
   .wedding-entourage__arch--inner {
-    top: 22px;
-    right: 22px;
-    bottom: 22px;
-    left: 22px;
 
-    border-radius: 201px 201px 0 0;
+    top:
+      22px;
+
+    right:
+      22px;
+
+    bottom:
+      22px;
+
+    left:
+      22px;
+
+    border-radius:
+      201px 201px 0 0;
+
   }
 
 
   .entourage-header {
-    margin-bottom: 65px;
+
+    margin-bottom:
+      65px;
+
   }
 
 
   .entourage-header__title {
-    font-size: 31px !important;
 
-    letter-spacing: .09em !important;
-  }
+    font-size:
+      30px !important;
 
+    letter-spacing:
+      .08em !important;
 
-  .entourage-header__rule span {
-    width: 35px;
-  }
-
-
-  .parents {
-    grid-template-columns: 1fr;
-
-    gap: 26px;
-  }
-
-
-  .parents__side {
-    padding: 0;
-  }
-
-
-  .parents__divider {
-    width: 42px;
-
-    height: 2px;
-
-    margin: 0 auto;
-  }
-
-
-  .party-grid {
-    grid-template-columns: 1fr;
   }
 
 
   .entourage-heading {
-    gap: 9px;
-  }
 
+    gap:
+      9px;
 
-  .entourage-heading__line {
-    width: 22px;
   }
 
 
   .entourage-heading__title {
-    font-size: 8px !important;
 
-    letter-spacing: .20em !important;
+    font-size:
+      10px !important;
+
+    letter-spacing:
+      .19em !important;
+
+  }
+
+
+  .entourage-heading__line {
+
+    width:
+      22px;
+
+  }
+
+
+  .parents {
+
+    grid-template-columns:
+      1fr;
+
+    gap:
+      26px;
+
+  }
+
+
+  .parents__side {
+
+    padding:
+      0;
+
+  }
+
+
+  .parents__divider {
+
+    width:
+      42px;
+
+    height:
+      2px;
+
+    margin:
+      0 auto;
+
+  }
+
+
+  .party-grid {
+
+    grid-template-columns:
+      1fr;
+
   }
 
 
   .honor-attendants {
-    grid-template-columns: 1fr;
 
-    gap: 25px;
+    grid-template-columns:
+      1fr;
+
+    gap:
+      25px;
+
   }
 
 
   .honor-attendants__divider {
-    width: 42px;
 
-    height: 2px;
+    width:
+      42px;
 
-    margin: 0 auto;
+    height:
+      2px;
+
+    margin:
+      0 auto;
+
+  }
+
+
+  .person-name {
+
+    font-size:
+      19px !important;
+
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .entourage-section.entourage-hidden>*,
+  .entourage-section.entourage-visible>* {
+
+    opacity:
+      1 !important;
+
+    transform:
+      none !important;
+
+    filter:
+      none !important;
+
+    transition:
+      none !important;
+
   }
 
 }
