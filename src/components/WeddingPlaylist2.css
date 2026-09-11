@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap");
+
+/* ================================
+   WEDDING PLAYLIST PAGE
+   ================================ */
+
+.wedding-page {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background: #b9d7e5;
+}
+
+/* ================================
+   BACKGROUND VIDEO
+   ================================ */
+
+.wedding-page .background-video-wrapper {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  z-index: 0;
+
+  background: #9ebbc8;
+}
+
+.wedding-page .background-video {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  filter:
+    grayscale(100%) brightness(0.55) contrast(1.05);
+}
+
+/* Video overlay */
+
+.wedding-page .background-video-wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(180deg,
+      rgba(20, 38, 45, 0.35),
+      rgba(20, 38, 45, 0.55));
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+/* ================================
+   MUSIC SECTION
+   ================================ */
+
+.wedding-page .music-section {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 20px;
+
+  background: transparent;
+}
+
+/* ================================
+   CONTENT
+   ================================ */
+
+.wedding-page .music-container {
+  width: 100%;
+  max-width: 760px;
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+/* ================================
+   LABEL
+   ================================ */
+
+.wedding-page .section-label {
+  margin-bottom: 12px !important;
+
+  color: #f2d486 !important;
+
+  font-family: "Montserrat", sans-serif !important;
+
+  font-size: 0.7rem !important;
+
+  font-weight: 500 !important;
+
+  letter-spacing: 0.3em !important;
+
+  text-transform: uppercase;
+}
+
+/* ================================
+   TITLE
+   ================================ */
+
+.wedding-page .section-title {
+  margin: 0 !important;
+
+  color: #ffffff !important;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif !important;
+
+  font-size:
+    clamp(2rem, 9vw, 4rem) !important;
+
+  font-weight: 400 !important;
+
+  line-height: 0.9 !important;
+}
+
+.wedding-page .section-title em {
+  color: #f2d486;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif;
+
+  font-style: italic;
+
+  font-weight: 400;
+}
+
+/* ================================
+   DESCRIPTION
+   ================================ */
+
+.wedding-page .section-description {
+  max-width: 550px;
+
+  margin:
+    22px auto 35px !important;
+
+  color:
+    rgba(255, 255, 255, 0.9) !important;
+
+  font-family:
+    "Cormorant Garamond",
+    Georgia,
+    serif !important;
+
+  font-size:
+    1.35rem !important;
+
+  font-style: italic;
+
+  font-weight: 400 !important;
+
+  line-height: 1.45 !important;
+}
+
+/* ================================
+   SPOTIFY
+   ================================ */
+
+.wedding-page .spotify-card {
+  position: relative;
+
+  width: 95%;
+
+  padding: 6px;
+  justify-self: center;
+
+  background:
+    rgba(255, 255, 255, 0.92);
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+.wedding-page #spotify-player {
+  display: block;
+
+  width: 100%;
+
+  height: 352px;
+
+  border: 0;
+
+  border-radius: 5px;
+}
+
+/* ================================
+   MOBILE
+   ================================ */
+
+@media (max-width: 600px) {
+  .wedding-page .music-section {
+    padding: 60px 16px;
+  }
+
+  .wedding-page .section-title {
+    font-size:
+      clamp(3.5rem, 17vw, 5rem) !important;
+  }
+
+  .wedding-page .section-description {
+    font-size:
+      1.2rem !important;
+
+    margin-bottom:
+      28px !important;
+  }
+
+  .wedding-page #spotify-player {
+    height: 500px;
+  }
+}
+
+/* ================================
+   REDUCED MOTION
+   ================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .wedding-page .background-video {
+    animation: none;
+  }
+}

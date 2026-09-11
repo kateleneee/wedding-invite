@@ -15,7 +15,7 @@ import ResponsiveAppBar from "./components/ResponsiveAppBar";
 import SaveTheDate from "./components/SaveTheDate";
 import ThroughTheYears from "./components/ThroughTheYears";
 import Venues from "./components/Venues";
-import WeddingPlaylist from "./components/WeddingPlaylist";
+import WeddingPlaylist from "./components/WeddingPlaylist2";
 import WeddingTimelineScroll from "./components/WeddingTimelineScroll";
 import FooterCredits from "./components/FooterCredits";
 import RSVP from "./components/RSVP";
@@ -156,7 +156,9 @@ function App() {
           </section>
 
           {/* WEDDING PLAYLIST */}
-          <WeddingPlaylist />
+          <section id="playlist">
+            <WeddingPlaylist />
+          </section>
 
 
           {/* RSVP */}
