@@ -21,6 +21,7 @@ import FooterCredits from "./components/FooterCredits";
 import RSVP from "./components/RSVP";
 import FooterMain from "./components/FooterMain";
 import FAQs from "./components/FAQs";
+// import Engagement from "./components/Engagement";
 
 function App() {
   const [opened, setOpened] = useState(false);
@@ -107,6 +108,7 @@ function App() {
           {/* STORY */}
           <section id="story">
             <ThroughTheYears />
+            {/* <Engagement /> */}
             <Carousel />
           </section>
 
