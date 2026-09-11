@@ -21,6 +21,7 @@ import FooterCredits from "./components/FooterCredits";
 import RSVP from "./components/RSVP";
 import FooterMain from "./components/FooterMain";
 import FAQs from "./components/FAQs";
+import EngagementCarousel from "./components/EngagementCarousel";
 // import Engagement from "./components/Engagement";
 
 function App() {
@@ -109,6 +110,7 @@ function App() {
           <section id="story">
             <ThroughTheYears />
             {/* <Engagement /> */}
+            <EngagementCarousel />
             <Carousel />
           </section>
 
