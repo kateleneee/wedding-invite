@@ -364,6 +364,58 @@ export default function WeddingEntourage() {
 
 
       {/* =====================================================
+          HONOR ATTENDANTS
+      ===================================================== */}
+
+      <section className="entourage-section">
+
+        <SectionTitle>
+          Honor Attendants
+        </SectionTitle>
+
+        <div
+          className="honor-grid"
+          data-reveal
+        >
+
+          <div className="honor-person">
+
+            <Typography className="role-title">
+              Maid of Honor
+            </Typography>
+
+            <Name>
+              {maidOfHonor}
+            </Name>
+
+          </div>
+
+
+          <div className="honor-center">
+            <span />
+            {/* <i>✦</i> */}
+            {/* <span /> */}
+          </div>
+
+
+          <div className="honor-person">
+
+            <Typography className="role-title">
+              Best Man
+            </Typography>
+
+            <Name>
+              {bestMan}
+            </Name>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      {/* =====================================================
           SECONDARY SPONSORS
       ===================================================== */}
 
@@ -425,59 +477,6 @@ export default function WeddingEntourage() {
         </div>
 
       </section>
-
-
-      {/* =====================================================
-          HONOR ATTENDANTS
-      ===================================================== */}
-
-      <section className="entourage-section">
-
-        <SectionTitle>
-          Honor Attendants
-        </SectionTitle>
-
-        <div
-          className="honor-grid"
-          data-reveal
-        >
-
-          <div className="honor-person">
-
-            <Typography className="role-title">
-              Maid of Honor
-            </Typography>
-
-            <Name>
-              {maidOfHonor}
-            </Name>
-
-          </div>
-
-
-          <div className="honor-center">
-            <span />
-            <i>✦</i>
-            <span />
-          </div>
-
-
-          <div className="honor-person">
-
-            <Typography className="role-title">
-              Best Man
-            </Typography>
-
-            <Name>
-              {bestMan}
-            </Name>
-
-          </div>
-
-        </div>
-
-      </section>
-
 
       {/* =====================================================
           BRIDESMAIDS

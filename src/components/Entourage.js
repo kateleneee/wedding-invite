@@ -468,6 +468,67 @@ export default function WeddingEntourage() {
 
 
       {/* =====================================================
+          HONOR ATTENDANTS
+      ===================================================== */}
+
+      <section className="entourage-section">
+
+        <SectionHeading>
+          Honor Attendants
+        </SectionHeading>
+
+
+        <Box className="honor-attendants">
+
+
+          {/* MAID OF HONOR */}
+
+          <Box className="honor-attendant">
+
+            <Typography className="honor-attendant__role">
+              Maid of Honor
+            </Typography>
+
+
+            {maidOfHonor.map((name, index) => (
+
+              <PersonName key={index}>
+                {name}
+              </PersonName>
+
+            ))}
+
+          </Box>
+
+
+          <div className="honor-attendants__divider" />
+
+
+          {/* BEST MAN */}
+
+          <Box className="honor-attendant">
+
+            <Typography className="honor-attendant__role">
+              Best Man
+            </Typography>
+
+
+            {bestMan.map((name, index) => (
+
+              <PersonName key={index}>
+                {name}
+              </PersonName>
+
+            ))}
+
+          </Box>
+
+        </Box>
+
+      </section>
+
+
+      {/* =====================================================
           SECONDARY SPONSORS
       ===================================================== */}
 
@@ -559,66 +620,6 @@ export default function WeddingEntourage() {
 
       </section>
 
-
-      {/* =====================================================
-          HONOR ATTENDANTS
-      ===================================================== */}
-
-      <section className="entourage-section">
-
-        <SectionHeading>
-          Honor Attendants
-        </SectionHeading>
-
-
-        <Box className="honor-attendants">
-
-
-          {/* MAID OF HONOR */}
-
-          <Box className="honor-attendant">
-
-            <Typography className="honor-attendant__role">
-              Maid of Honor
-            </Typography>
-
-
-            {maidOfHonor.map((name, index) => (
-
-              <PersonName key={index}>
-                {name}
-              </PersonName>
-
-            ))}
-
-          </Box>
-
-
-          <div className="honor-attendants__divider" />
-
-
-          {/* BEST MAN */}
-
-          <Box className="honor-attendant">
-
-            <Typography className="honor-attendant__role">
-              Best Man
-            </Typography>
-
-
-            {bestMan.map((name, index) => (
-
-              <PersonName key={index}>
-                {name}
-              </PersonName>
-
-            ))}
-
-          </Box>
-
-        </Box>
-
-      </section>
 
 
       {/* =====================================================
