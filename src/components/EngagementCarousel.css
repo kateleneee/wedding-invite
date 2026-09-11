@@ -565,17 +565,16 @@
     text-align: center;
   }
 
-  .slide-label {
+  /* .slide-label {
     margin-bottom: 8px !important;
-  }
+  } */
 
   .slide-title {
-    font-size: 2.25rem !important;
+    font-size: 1.5rem !important;
   }
 
   .slide-text {
     margin-top: 12px !important;
-
     font-size: 1rem !important;
 
     line-height: 1.4 !important;

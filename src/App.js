@@ -130,7 +130,7 @@ function App() {
           </section>
 
           {/* ENTOURAGE */}
-          <section id="entourage" className="section entourage-section">
+          <section id="entourage" >
             <Entourage />
             <Entourage2 />
           </section>

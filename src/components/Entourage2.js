@@ -10,13 +10,13 @@ import "./Entourage2.css";
 */
 
 const brideParents = [
-  "Bride's Father",
-  "Bride's Mother",
+  "Joel D. Panlilio",
+  "Edna P. Panlilio",
 ];
 
 const groomParents = [
-  "Groom's Father",
-  "Groom's Mother",
+  "Monico Bolibol",
+  "Susan Bolibol",
 ];
 
 const ninangs = [
@@ -63,6 +63,7 @@ const bridesmaids = [
   "Bridesmaid Name",
   "Bridesmaid Name",
   "Bridesmaid Name",
+  "Bridesmaid Name",
 ];
 
 const groomsmen = [
@@ -72,10 +73,11 @@ const groomsmen = [
   "Groomsman Name",
   "Groomsman Name",
   "Groomsman Name",
+  "Groomsman Name",
 ];
 
-const maidOfHonor = "Maid of Honor Name";
-const bestMan = "Best Man Name";
+const maidOfHonor = "Katelene Panlilio";
+const bestMan = "Joshua Soriano";
 
 const ringBearer = "Ring Bearer Name";
 
@@ -479,10 +481,72 @@ export default function WeddingEntourage() {
       </section>
 
       {/* =====================================================
+    BRIDAL PARTY
+===================================================== */}
+
+      <section className="entourage-section">
+
+        <SectionTitle>
+          Bridal Party
+        </SectionTitle>
+
+        <div
+          className="bridal-party-grid"
+          data-reveal
+        >
+
+          {/* -------------------------------------------------
+        BRIDESMAIDS
+    ------------------------------------------------- */}
+
+          <div className="bridal-party-group">
+
+            <p className="party-role">
+              Bridesmaids
+            </p>
+
+            <div className="party-names">
+              {bridesmaids.map((name, index) => (
+                <Name key={`bridesmaid-${name}-${index}`}>
+                  {name}
+                </Name>
+              ))}
+            </div>
+
+          </div>
+
+
+          {/* -------------------------------------------------
+        GROOMSMEN
+    ------------------------------------------------- */}
+
+          <div className="bridal-party-group">
+
+            <p className="party-role">
+              Groomsmen
+            </p>
+
+            <div className="party-names">
+              {groomsmen.map((name, index) => (
+                <Name key={`groomsman-${name}-${index}`}>
+                  {name}
+                </Name>
+              ))}
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+
+      {/* =====================================================
           BRIDESMAIDS
       ===================================================== */}
 
-      <section className="entourage-section">
+      {/* <section className="entourage-section">
 
         <SectionTitle>
           Bridesmaids
@@ -499,14 +563,14 @@ export default function WeddingEntourage() {
           ))}
         </div>
 
-      </section>
+      </section> */}
 
 
       {/* =====================================================
           GROOMSMEN
       ===================================================== */}
 
-      <section className="entourage-section">
+      {/* <section className="entourage-section">
 
         <SectionTitle>
           Groomsmen
@@ -523,7 +587,7 @@ export default function WeddingEntourage() {
           ))}
         </div>
 
-      </section>
+      </section> */}
 
 
       {/* =====================================================
@@ -578,7 +642,7 @@ export default function WeddingEntourage() {
           FOOTER
       ===================================================== */}
 
-      <footer
+      {/* <footer
         className="entourage-footer"
         data-reveal
       >
@@ -591,7 +655,7 @@ export default function WeddingEntourage() {
 
         <div className="footer-line" />
 
-      </footer>
+      </footer> */}
 
     </Box>
   );

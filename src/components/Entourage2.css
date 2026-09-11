@@ -1,9 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
-);
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap");
 
 
 /* =========================================================
-   DESIGN SYSTEM
+   ENTourage — RESPONSIVE WEDDING DESIGN SYSTEM
    ========================================================= */
 
 .entourage-page {
@@ -23,35 +22,20 @@
   --ink: #303b3d;
   --muted: #687477;
 
-  --line: rgba(168, 134, 28, .42);
-
-}
-
-
-/* =========================================================
-   MAIN CARD
-   ========================================================= */
-
-.entourage-page {
+  --line: rgba(168, 134, 28, .35);
 
   position: relative;
 
-  width: min(100%, 920px);
+  width: min(920px, calc(100% - 30px));
 
   margin: 50px auto;
 
   padding:
-    150px 105px 90px;
+    145px clamp(55px, 9vw, 105px) 85px;
 
   box-sizing: border-box;
 
   overflow: hidden;
-
-  /*
-    Warm ivory instead of blue.
-
-    Yellow/gold is now the main visual identity.
-  */
 
   background:
     linear-gradient(145deg,
@@ -60,10 +44,6 @@
       #fff7df 100%);
 
   color: var(--ink);
-
-  /*
-    Large architectural arch.
-  */
 
   border-radius:
     470px 470px 0 0;
@@ -79,19 +59,10 @@
    ========================================================= */
 
 .entourage-arch {
-
   position: absolute;
-
   pointer-events: none;
-
   z-index: 1;
-
 }
-
-
-/*
-   Main gold border
-*/
 
 .entourage-arch-outer {
 
@@ -100,18 +71,11 @@
   bottom: 18px;
   left: 18px;
 
-  border:
-    5px solid var(--gold);
+  border: 5px solid var(--gold);
 
   border-radius:
     445px 445px 0 0;
-
 }
-
-
-/*
-   Secondary blue border
-*/
 
 .entourage-arch-inner {
 
@@ -120,18 +84,11 @@
   bottom: 33px;
   left: 33px;
 
-  border:
-    2px solid var(--blue);
+  border: 2px solid var(--blue);
 
   border-radius:
     430px 430px 0 0;
-
 }
-
-
-/*
-   Tiny inner gold line
-*/
 
 .entourage-page::before {
 
@@ -153,12 +110,11 @@
   pointer-events: none;
 
   z-index: 1;
-
 }
 
 
 /* =========================================================
-   ARCH TOP ORNAMENT
+   TOP ORNAMENT
    ========================================================= */
 
 .arch-top-ornament {
@@ -168,13 +124,10 @@
   top: 52px;
   left: 50%;
 
-  transform:
-    translateX(-50%);
+  transform: translateX(-50%);
 
   display: flex;
-
   align-items: center;
-
   gap: 9px;
 
   z-index: 5;
@@ -186,21 +139,16 @@
     serif;
 
   font-size: 15px;
-
 }
-
 
 .arch-top-ornament span {
 
   width: 35px;
-
   height: 1px;
 
-  background:
-    var(--gold);
+  background: var(--gold);
 
   opacity: .55;
-
 }
 
 
@@ -216,33 +164,25 @@
 
   text-align: center;
 
-  margin-bottom: 90px;
-
+  margin-bottom: 78px;
 }
-
 
 .header-small {
 
-  margin: 0 0 12px !important;
+  margin: 0 0 11px !important;
 
   font-family:
     "DM Sans",
     sans-serif !important;
 
-  font-size:
-    9px !important;
+  font-size: 9px !important;
 
-  font-weight:
-    700 !important;
+  font-weight: 700 !important;
 
-  letter-spacing:
-    .42em !important;
+  letter-spacing: .38em !important;
 
-  color:
-    var(--blue-dark);
-
+  color: var(--blue-dark);
 }
-
 
 .header-title {
 
@@ -252,24 +192,17 @@
     "Cormorant Garamond",
     serif !important;
 
-  font-size:
-    56px !important;
+  font-size: clamp(40px, 6vw, 56px) !important;
 
-  font-weight:
-    500 !important;
+  font-weight: 500 !important;
 
-  line-height:
-    .9 !important;
+  line-height: .92 !important;
 
-  letter-spacing:
-    .04em !important;
+  letter-spacing: .035em !important;
 
-  text-transform:
-    uppercase;
+  text-transform: uppercase;
 
-  color:
-    var(--gold-dark);
-
+  color: var(--gold-dark);
 }
 
 
@@ -282,46 +215,35 @@
   display: flex;
 
   justify-content: center;
-
   align-items: center;
 
   gap: 12px;
 
-  margin-top: 22px;
-
+  margin-top: 20px;
 }
-
 
 .header-ornament span {
 
-  width: 75px;
-
+  width: 65px;
   height: 1px;
 
-  background:
-    var(--gold);
+  background: var(--gold);
 
   opacity: .55;
-
 }
-
 
 .header-ornament b {
 
-  color:
-    var(--blue-dark);
+  color: var(--blue-dark);
 
-  font-size:
-    9px;
+  font-size: 9px;
 
-  font-weight:
-    400;
-
+  font-weight: 400;
 }
 
 
 /* =========================================================
-   SECTION
+   SECTIONS
    ========================================================= */
 
 .entourage-section {
@@ -330,8 +252,7 @@
 
   z-index: 5;
 
-  margin-bottom: 88px;
-
+  margin-bottom: 72px;
 }
 
 
@@ -344,15 +265,12 @@
   display: flex;
 
   align-items: center;
-
   justify-content: center;
 
-  gap: 17px;
+  gap: 15px;
 
-  margin-bottom: 35px;
-
+  margin-bottom: 31px;
 }
-
 
 .entourage-section-title>p {
 
@@ -362,35 +280,29 @@
     "DM Sans",
     sans-serif !important;
 
-  font-size:
-    13px !important;
+  font-size: 12px !important;
 
-  font-weight:
-    700 !important;
+  font-weight: 700 !important;
 
-  letter-spacing:
-    .28em !important;
+  letter-spacing: .24em !important;
 
-  text-transform:
-    uppercase;
+  text-transform: uppercase;
 
-  color:
-    var(--ink);
+  text-align: center;
 
+  color: var(--ink);
 }
-
 
 .gold-line {
 
-  width: 65px;
-
+  width: 58px;
   height: 1px;
 
-  background:
-    var(--gold);
+  flex: 0 0 auto;
+
+  background: var(--gold);
 
   opacity: .7;
-
 }
 
 
@@ -401,147 +313,85 @@
 .parent-blessing {
 
   margin:
-    0 0 36px !important;
+    0 0 30px !important;
 
-  text-align:
-    center;
+  text-align: center;
 
   font-family:
     "DM Sans",
     sans-serif !important;
 
-  font-size:
-    10px !important;
+  font-size: 9px !important;
 
-  font-weight:
-    700 !important;
+  font-weight: 700 !important;
 
-  letter-spacing:
-    .27em !important;
+  letter-spacing: .22em !important;
 
-  text-transform:
-    uppercase;
+  line-height: 1.5 !important;
 
-  color:
-    var(--blue-dark);
+  text-transform: uppercase;
 
+  color: var(--blue-dark);
 }
-
 
 .parents-layout {
 
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
-    1fr auto 1fr;
+    minmax(0, 1fr) minmax(0, 1fr);
 
-  align-items:
-    center;
+  align-items: start;
 
-  max-width:
-    650px;
+  max-width: 650px;
 
-  margin:
-    auto;
+  margin: auto;
 
+  column-gap: 25px;
 }
-
 
 .parent-side {
 
-  text-align:
-    center;
+  min-width: 0;
 
+  text-align: center;
 }
-
 
 .small-label {
 
-  margin:
-    0 0 13px !important;
+  margin: 0 0 11px !important;
 
   font-family:
     "DM Sans",
     sans-serif !important;
 
-  font-size:
-    9px !important;
+  font-size: 8px !important;
 
-  font-weight:
-    700 !important;
+  font-weight: 700 !important;
 
-  letter-spacing:
-    .24em !important;
+  letter-spacing: .20em !important;
 
-  text-transform:
-    uppercase;
+  text-transform: uppercase;
 
-  color:
-    var(--gold-dark);
-
+  color: var(--gold-dark);
 }
-
 
 .names-stack {
 
-  display:
-    flex;
+  display: flex;
 
-  flex-direction:
-    column;
+  flex-direction: column;
 
-  gap:
-    3px;
+  gap: 4px;
 
+  align-items: center;
 }
 
 
+/* Parent divider becomes vertical */
 .center-divider {
 
-  display:
-    flex;
-
-  flex-direction:
-    column;
-
-  align-items:
-    center;
-
-  gap:
-    5px;
-
-  margin:
-    0 35px;
-
-}
-
-
-.center-divider span {
-
-  width:
-    1px;
-
-  height:
-    25px;
-
-  background:
-    var(--gold);
-
-}
-
-
-.center-divider i {
-
-  font-style:
-    normal;
-
-  color:
-    var(--blue-dark);
-
-  font-size:
-    8px;
-
+  display: none;
 }
 
 
@@ -551,187 +401,154 @@
 
 .entourage-name {
 
-  margin:
-    0 !important;
+  margin: 0 !important;
+
+  max-width: 100%;
 
   font-family:
     "Cormorant Garamond",
     serif !important;
 
-  font-size:
-    20px !important;
+  font-size: 19px !important;
 
-  font-weight:
-    500 !important;
+  font-weight: 500 !important;
 
-  line-height:
-    1.05 !important;
+  line-height: 1.05 !important;
 
-  color:
-    var(--ink);
+  letter-spacing: .005em;
 
+  color: var(--ink);
+
+  white-space: nowrap;
+
+  text-align: center;
 }
 
 
 /* =========================================================
-   PRINCIPAL SPONSORS
+   PRINCIPAL SPONSORS / NINONG / NINANG
    ========================================================= */
 
 .principal-grid {
 
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
-    1fr auto 1fr;
+    minmax(0, 1fr) minmax(0, 1fr);
 
-  max-width:
-    700px;
+  max-width: 700px;
 
-  margin:
-    auto;
+  margin: auto;
 
+  column-gap: 30px;
 }
-
 
 .sponsor-group {
 
-  text-align:
-    center;
+  min-width: 0;
 
+  text-align: center;
 }
-
 
 .role-title {
 
-  margin:
-    0 !important;
+  margin: 0 !important;
 
   font-family:
     "DM Sans",
     sans-serif !important;
 
-  font-size:
-    12px !important;
+  font-size: 11px !important;
 
-  font-weight:
-    700 !important;
+  font-weight: 700 !important;
 
-  letter-spacing:
-    .35em !important;
+  letter-spacing: .28em !important;
 
-  text-transform:
-    uppercase;
+  text-transform: uppercase;
 
-  color:
-    var(--gold-dark);
-
+  color: var(--gold-dark);
 }
-
 
 .gold-short-line {
 
-  width:
-    32px;
+  width: 30px;
+  height: 2px;
 
-  height:
-    2px;
+  margin: 10px auto 13px;
 
-  margin:
-    12px auto 15px;
-
-  background:
-    var(--gold);
-
+  background: var(--gold);
 }
-
 
 .sponsor-names {
 
-  display:
-    flex;
+  display: flex;
 
-  flex-direction:
-    column;
+  flex-direction: column;
 
-  /*
-    Tighter than before.
-  */
+  gap: 5px;
 
-  gap:
-    5px;
-
+  align-items: center;
 }
-
 
 .vertical-rule {
 
-  width:
-    1px;
-
-  background:
-    var(--line);
-
-  margin:
-    0 35px;
-
+  display: none;
 }
-
 
 /* =========================================================
    SECONDARY SPONSORS
+   2 COLUMNS + CENTER LAST ITEM WHEN ODD
    ========================================================= */
 
 .secondary-grid {
-
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
-    repeat(3, 1fr);
+    repeat(2, minmax(0, 1fr));
 
-  max-width:
-    730px;
+  column-gap: 8px;
+  row-gap: 18px;
 
-  margin:
-    auto;
-
+  max-width: 730px;
+  margin: auto;
 }
-
 
 .secondary-group {
+  position: relative;
 
-  position:
-    relative;
+  min-width: 0;
 
-  text-align:
-    center;
+  text-align: center;
 
-  padding:
-    0 25px;
-
+  padding: 0 5px;
 }
 
-
-.secondary-group+.secondary-group {
-
-  border-left:
-    1px solid var(--line);
-
+/* Vertical divider between columns */
+.secondary-group:nth-child(even) {
+  border-left: 1px solid var(--line);
 }
 
+/* Remove divider from the first column */
+.secondary-group:nth-child(odd) {
+  border-left: 0;
+}
 
-.blue-diamond {
+/*
+  If the total number of secondary sponsors is odd,
+  center the final item.
+*/
+.secondary-group:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 50%;
+}
 
-  margin:
-    11px 0 13px;
-
-  color:
-    var(--blue-dark);
-
-  font-size:
-    7px;
-
+/*
+  Horizontal divider for rows after the first.
+*/
+.secondary-group:nth-child(n + 3) {
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
 }
 
 
@@ -741,74 +558,29 @@
 
 .honor-grid {
 
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
-    1fr auto 1fr;
+    minmax(0, 1fr) minmax(0, 1fr);
 
-  align-items:
-    center;
+  align-items: center;
 
-  max-width:
-    620px;
+  max-width: 620px;
 
-  margin:
-    auto;
+  margin: auto;
 
+  column-gap: 30px;
 }
-
 
 .honor-person {
 
-  text-align:
-    center;
+  min-width: 0;
 
+  text-align: center;
 }
-
 
 .honor-center {
-
-  display:
-    flex;
-
-  align-items:
-    center;
-
-  gap:
-    7px;
-
-  margin:
-    0 35px;
-
-}
-
-
-.honor-center span {
-
-  width:
-    1px;
-
-  height:
-    28px;
-
-  background:
-    var(--gold);
-
-}
-
-
-.honor-center i {
-
-  font-style:
-    normal;
-
-  font-size:
-    8px;
-
-  color:
-    var(--blue-dark);
-
+  display: none;
 }
 
 
@@ -818,27 +590,20 @@
 
 .party-grid {
 
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
-    repeat(3, 1fr);
+    repeat(3, minmax(0, 1fr));
 
-  column-gap:
-    30px;
+  column-gap: 25px;
 
-  row-gap:
-    13px;
+  row-gap: 11px;
 
-  max-width:
-    690px;
+  max-width: 690px;
 
-  margin:
-    auto;
+  margin: auto;
 
-  text-align:
-    center;
-
+  text-align: center;
 }
 
 
@@ -848,39 +613,50 @@
 
 .single-name {
 
-  display:
-    flex;
+  display: flex;
 
-  justify-content:
-    center;
+  justify-content: center;
 
+  align-items: center;
+
+  min-width: 0;
+
+  text-align: center;
 }
 
 
 /* =========================================================
-   CHILDREN
+   FLOWER GIRLS / FLOWER BOYS
+   2 COLUMNS + CENTER LAST ITEM WHEN ODD
    ========================================================= */
 
 .children-grid {
+  display: grid;
 
-  display:
-    flex;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
 
-  justify-content:
-    center;
+  column-gap: 12px;
+  row-gap: 9px;
 
-  flex-wrap:
-    wrap;
+  max-width: 700px;
+  margin: auto;
 
-  gap:
-    8px 40px;
+  text-align: center;
+}
 
-  max-width:
-    700px;
+.children-grid .single-name {
+  min-width: 0;
+}
 
-  margin:
-    auto;
-
+/*
+  If the total number of children is odd,
+  center the final child.
+*/
+.children-grid>.single-name:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 50%;
 }
 
 
@@ -890,68 +666,45 @@
 
 .entourage-footer {
 
-  position:
-    relative;
+  position: relative;
 
-  z-index:
-    5;
+  z-index: 5;
 
-  display:
-    flex;
+  display: flex;
 
-  justify-content:
-    center;
+  justify-content: center;
+  align-items: center;
 
-  align-items:
-    center;
+  gap: 12px;
 
-  gap:
-    14px;
-
-  margin-top:
-    5px;
-
+  margin-top: 0;
 }
-
 
 .footer-line {
 
-  width:
-    55px;
+  width: 50px;
+  height: 1px;
 
-  height:
-    1px;
+  background: var(--gold);
 
-  background:
-    var(--gold);
-
-  opacity:
-    .55;
-
+  opacity: .55;
 }
-
 
 .entourage-footer p {
 
-  margin:
-    0 !important;
+  margin: 0 !important;
 
   font-family:
     "DM Sans",
     sans-serif !important;
 
-  font-size:
-    7px !important;
+  font-size: 7px !important;
 
-  font-weight:
-    700 !important;
+  font-weight: 700 !important;
 
-  letter-spacing:
-    .35em !important;
+  letter-spacing: .30em !important;
 
-  color:
-    var(--blue-dark);
-
+  color: var(--blue-dark);
 }
 
 
@@ -960,52 +713,25 @@
    ========================================================= */
 
 [data-reveal] {
-
-  will-change:
-    opacity,
-    transform;
-
+  will-change: opacity, transform;
 }
-
 
 .reveal-hidden {
 
-  opacity:
-    0;
+  opacity: 0;
 
-  transform:
-    translateY(24px);
-
+  transform: translateY(18px);
 }
-
 
 .reveal-visible {
 
-  opacity:
-    1;
+  opacity: 1;
 
-  transform:
-    translateY(0);
+  transform: translateY(0);
 
   transition:
     opacity .8s ease,
-    transform .8s cubic-bezier(.22,
-      1,
-      .36,
-      1);
-
-}
-
-
-/* =========================================================
-   STAGGER
-   ========================================================= */
-
-.entourage-section .reveal-visible:nth-child(1) {
-
-  transition-delay:
-    .03s;
-
+    transform .8s cubic-bezier(.22, 1, .36, 1);
 }
 
 
@@ -1017,71 +743,80 @@
 
   .entourage-page {
 
+    width: calc(100% - 24px);
+
+    margin: 30px auto;
+
     padding:
-      130px 60px 75px;
+      125px 55px 75px;
 
     border-radius:
-      350px 350px 0 0;
-
+      360px 360px 0 0;
   }
-
 
   .entourage-arch-outer {
 
     border-radius:
-      325px 325px 0 0;
-
+      335px 335px 0 0;
   }
-
 
   .entourage-arch-inner {
 
     border-radius:
-      310px 310px 0 0;
-
+      320px 320px 0 0;
   }
 
+  .entourage-page::before {
+
+    border-radius:
+      310px 310px 0 0;
+  }
 
   .header-title {
-
-    font-size:
-      47px !important;
-
+    font-size: 46px !important;
   }
 
+  .entourage-section {
+    margin-bottom: 62px;
+  }
+
+  .entourage-name {
+    font-size: 18px !important;
+  }
 
   .secondary-grid {
-
     grid-template-columns:
-      1fr;
+      repeat(2, minmax(0, 1fr));
 
-    gap:
-      28px;
-
+    row-gap: 22px;
   }
 
+  .secondary-group:nth-child(odd) {
+    border-left: 0;
+  }
 
-  .secondary-group+.secondary-group {
-
+  .secondary-group:nth-child(even) {
     border-left:
-      0;
+      1px solid var(--line);
+  }
 
+  .secondary-group:nth-child(n + 3) {
     border-top:
       1px solid var(--line);
 
-    padding-top:
-      28px;
-
+    padding-top: 22px;
   }
 
-
-  .party-grid {
+  .party-grid,
+  .children-grid {
 
     grid-template-columns:
-      repeat(2, 1fr);
+      repeat(2, minmax(0, 1fr));
 
+    column-gap: 20px;
+
+    row-gap: 10px;
   }
-
 }
 
 
@@ -1093,292 +828,400 @@
 
   .entourage-page {
 
-    width:
-      calc(100% - 20px);
+    /*
+      Wider card on phones.
+      Leaves only a small margin on each side.
+    */
 
-    margin:
-      20px auto;
+    width: calc(100% - 10px);
+
+    margin: 15px auto;
 
     padding:
-      105px 32px 60px;
+      105px 22px 55px;
 
     border-radius:
-      240px 240px 0 0;
-
+      250px 250px 0 0;
   }
 
+
+  /* ---------------------------------------------------------
+     ARCH
+     --------------------------------------------------------- */
 
   .entourage-arch-outer {
 
-    top:
-      12px;
+    top: 11px;
+    right: 11px;
+    bottom: 11px;
+    left: 11px;
 
-    right:
-      12px;
-
-    bottom:
-      12px;
-
-    left:
-      12px;
-
-    border-width:
-      4px;
+    border-width: 3px;
 
     border-radius:
-      220px 220px 0 0;
-
+      232px 232px 0 0;
   }
-
 
   .entourage-arch-inner {
 
-    top:
-      25px;
+    top: 23px;
+    right: 23px;
+    bottom: 23px;
+    left: 23px;
 
-    right:
-      25px;
-
-    bottom:
-      25px;
-
-    left:
-      25px;
+    border-width: 1.5px;
 
     border-radius:
-      207px 207px 0 0;
-
+      220px 220px 0 0;
   }
-
 
   .entourage-page::before {
 
-    top:
-      35px;
-
-    right:
-      35px;
-
-    bottom:
-      35px;
-
-    left:
-      35px;
+    top: 32px;
+    right: 32px;
+    bottom: 32px;
+    left: 32px;
 
     border-radius:
-      197px 197px 0 0;
-
+      211px 211px 0 0;
   }
 
+
+  /* ---------------------------------------------------------
+     TOP ORNAMENT
+     --------------------------------------------------------- */
 
   .arch-top-ornament {
 
-    top:
-      38px;
+    top: 34px;
 
+    gap: 7px;
+
+    font-size: 12px;
   }
-
 
   .arch-top-ornament span {
-
-    width:
-      22px;
-
+    width: 20px;
   }
 
+
+  /* ---------------------------------------------------------
+     HEADER
+     --------------------------------------------------------- */
 
   .entourage-header {
 
-    margin-bottom:
-      65px;
-
+    margin-bottom: 58px;
   }
-
 
   .header-small {
 
-    font-size:
-      8px !important;
+    margin-bottom: 9px !important;
 
-    letter-spacing:
-      .30em !important;
+    font-size: 7px !important;
 
+    letter-spacing: .28em !important;
   }
-
 
   .header-title {
 
-    font-size:
-      38px !important;
+    font-size: 34px !important;
 
+    letter-spacing: .025em !important;
   }
 
+  .header-ornament {
+
+    gap: 8px;
+
+    margin-top: 16px;
+  }
 
   .header-ornament span {
-
-    width:
-      40px;
-
+    width: 32px;
   }
 
+  .header-ornament b {
+    font-size: 8px;
+  }
+
+
+  /* ---------------------------------------------------------
+     SECTION
+     --------------------------------------------------------- */
 
   .entourage-section {
 
-    margin-bottom:
-      68px;
-
+    margin-bottom: 52px;
   }
-
 
   .entourage-section-title {
 
-    gap:
-      9px;
+    gap: 7px;
 
-    margin-bottom:
-      28px;
-
+    margin-bottom: 24px;
   }
-
 
   .entourage-section-title>p {
 
-    font-size:
-      10px !important;
+    font-size: 8px !important;
 
-    letter-spacing:
-      .19em !important;
+    letter-spacing: .16em !important;
 
+    line-height: 1.3 !important;
   }
-
 
   .gold-line {
-
-    width:
-      25px;
-
+    width: 20px;
   }
 
+
+  /* ---------------------------------------------------------
+     PARENTS — 2 COLUMNS
+     --------------------------------------------------------- */
+
+  .parent-blessing {
+
+    margin-bottom: 23px !important;
+
+    font-size: 7px !important;
+
+    letter-spacing: .16em !important;
+  }
 
   .parents-layout {
 
     grid-template-columns:
-      1fr;
+      repeat(2, minmax(0, 1fr));
 
-    gap:
-      25px;
+    column-gap: 14px;
 
+    max-width: 100%;
+  }
+
+  .parent-side {
+    min-width: 0;
+  }
+
+  .small-label {
+
+    margin-bottom: 9px !important;
+
+    font-size: 7px !important;
+
+    letter-spacing: .15em !important;
   }
 
 
-  .center-divider {
+  /* ---------------------------------------------------------
+     ALL NAMES
+     --------------------------------------------------------- */
 
-    flex-direction:
-      row;
+  .entourage-name {
 
-    margin:
-      0 auto;
+    font-size: 16px !important;
 
+    line-height: 1 !important;
+
+    letter-spacing: 0 !important;
+
+    white-space: nowrap;
   }
 
 
-  .center-divider span {
-
-    width:
-      28px;
-
-    height:
-      1px;
-
-  }
-
+  /* ---------------------------------------------------------
+     NINONG / NINANG
+     --------------------------------------------------------- */
 
   .principal-grid {
 
     grid-template-columns:
-      1fr;
+      repeat(2, minmax(0, 1fr));
 
+    column-gap: 12px;
+
+    max-width: 100%;
   }
 
+  .role-title {
 
-  .vertical-rule {
+    font-size: 8px !important;
 
-    width:
-      50px;
+    letter-spacing: .17em !important;
+  }
 
-    height:
-      1px;
+  .gold-short-line {
+
+    width: 24px;
+
+    height: 1px;
 
     margin:
-      27px auto;
-
+      8px auto 10px;
   }
 
+  .sponsor-names {
+    gap: 6px;
+  }
+
+
+  /* ---------------------------------------------------------
+     SECONDARY SPONSORS — 2 COLUMNS
+     --------------------------------------------------------- */
 
   .secondary-grid {
 
-    gap:
-      25px;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
 
+    column-gap: 8px;
+
+    row-gap: 18px;
   }
 
+  .secondary-group {
+
+    padding: 0 5px;
+  }
+
+  .secondary-group:nth-child(n + 3) {
+
+    padding-top: 18px;
+  }
+
+  .blue-diamond {
+
+    margin:
+      7px 0 9px;
+
+    font-size: 6px;
+  }
+
+
+  /* ---------------------------------------------------------
+     HONOR ATTENDANTS — 2 COLUMNS
+     --------------------------------------------------------- */
 
   .honor-grid {
 
     grid-template-columns:
-      1fr;
+      repeat(2, minmax(0, 1fr));
 
-    gap:
-      25px;
+    column-gap: 12px;
 
+    max-width: 100%;
   }
 
 
-  .honor-center {
-
-    margin:
-      0 auto;
-
-  }
-
-
-  .honor-center span {
-
-    width:
-      28px;
-
-    height:
-      1px;
-
-  }
-
+  /* ---------------------------------------------------------
+     BRIDAL PARTY — 2 COLUMNS
+     --------------------------------------------------------- */
 
   .party-grid {
 
     grid-template-columns:
-      1fr;
+      repeat(2, minmax(0, 1fr));
 
-    row-gap:
-      9px;
+    column-gap: 12px;
 
+    row-gap: 9px;
+
+    max-width: 100%;
   }
 
+
+  /* =========================================================
+   FLOWER GIRLS / FLOWER BOYS
+   2 COLUMNS + CENTER LAST ITEM WHEN ODD
+   ========================================================= */
 
   .children-grid {
+    display: grid;
 
-    gap:
-      8px 20px;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
 
+    column-gap: 12px;
+    row-gap: 9px;
+
+    max-width: 700px;
+    margin: auto;
+
+    text-align: center;
   }
 
+  .children-grid .single-name {
+    min-width: 0;
+  }
+
+  /*
+  If the total number of children is odd,
+  center the final child.
+*/
+  .children-grid>.single-name:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%;
+  }
+
+
+  /* ---------------------------------------------------------
+     FOOTER
+     --------------------------------------------------------- */
+
+  .entourage-footer {
+
+    gap: 8px;
+  }
+
+  .footer-line {
+    width: 28px;
+  }
+
+  .entourage-footer p {
+
+    font-size: 6px !important;
+
+    letter-spacing: .22em !important;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+  .entourage-page {
+
+    width: calc(100% - 6px);
+
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 
   .entourage-name {
-
-    font-size:
-      19px !important;
-
+    font-size: 14px !important;
   }
 
+  .header-title {
+    font-size: 31px !important;
+  }
+
+  .entourage-section-title>p {
+    font-size: 7px !important;
+  }
+
+  .parents-layout,
+  .principal-grid,
+  .secondary-grid,
+  .honor-grid,
+  .party-grid,
+  .children-grid {
+
+    column-gap: 8px;
+  }
 }
 
 
@@ -1391,14 +1234,212 @@
   .reveal-hidden,
   .reveal-visible {
 
-    opacity:
-      1 !important;
+    opacity: 1 !important;
 
-    transform:
-      none !important;
+    transform: none !important;
 
-    transition:
-      none !important;
+    transition: none !important;
+  }
+}
+
+/* =========================================================
+   BRIDAL PARTY
+   ========================================================= */
+
+.bridal-party-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr) minmax(0, 1fr);
+
+  width: 100%;
+
+  max-width: 690px;
+
+  margin: 0 auto;
+
+  column-gap: 28px;
+
+}
+
+
+/* =========================================================
+   BRIDAL PARTY GROUP
+   ========================================================= */
+
+.bridal-party-group {
+
+  min-width: 0;
+
+  text-align: center;
+
+}
+
+
+/* Divider between Bridesmaids / Groomsmen */
+
+.bridal-party-group+.bridal-party-group {
+
+  border-left:
+    1px solid var(--line);
+
+}
+
+
+/* =========================================================
+   ROLE LABEL
+   ========================================================= */
+
+.party-role {
+
+  margin:
+    0 0 14px !important;
+
+  font-family:
+    "DM Sans",
+    sans-serif !important;
+
+  font-size:
+    10px !important;
+
+  font-weight:
+    700 !important;
+
+  letter-spacing:
+    .22em !important;
+
+  line-height:
+    1.2 !important;
+
+  text-transform:
+    uppercase;
+
+  color:
+    var(--gold-dark);
+
+}
+
+
+/* Small gold accent */
+
+.party-role::after {
+
+  content: "";
+
+  display: block;
+
+  width: 25px;
+
+  height: 1px;
+
+  margin:
+    9px auto 0;
+
+  background:
+    var(--gold);
+
+}
+
+
+/* =========================================================
+   NAMES
+   ========================================================= */
+
+.party-names {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  gap:
+    7px;
+
+}
+
+
+.party-names .entourage-name {
+
+  margin: 0 !important;
+
+  white-space: nowrap;
+
+  font-size:
+    18px !important;
+
+  line-height:
+    1.05 !important;
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .bridal-party-grid {
+
+    grid-template-columns:
+      minmax(0, 1fr) minmax(0, 1fr);
+
+    column-gap:
+      10px;
+
+  }
+
+
+  .bridal-party-group+.bridal-party-group {
+
+    padding-left:
+      8px;
+
+  }
+
+
+  .party-role {
+
+    margin-bottom:
+      12px !important;
+
+    font-size:
+      7px !important;
+
+    letter-spacing:
+      .14em !important;
+
+  }
+
+
+  .party-role::after {
+
+    width:
+      20px;
+
+    margin-top:
+      7px;
+
+  }
+
+
+  .party-names {
+
+    gap:
+      6px;
+
+  }
+
+
+  .party-names .entourage-name {
+
+    font-size:
+      15px !important;
 
   }
 
