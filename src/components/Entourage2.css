@@ -1,0 +1,1405 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+);
+
+
+/* =========================================================
+   DESIGN SYSTEM
+   ========================================================= */
+
+.entourage-page {
+
+  --gold: #c8a536;
+  --gold-dark: #a98720;
+  --gold-soft: #dfc96d;
+  --gold-pale: #f3e8bd;
+
+  --blue: #8fb8c5;
+  --blue-dark: #517f8c;
+  --blue-light: #dcebef;
+
+  --cream: #fffdf7;
+  --paper: #fffaf0;
+
+  --ink: #303b3d;
+  --muted: #687477;
+
+  --line: rgba(168, 134, 28, .42);
+
+}
+
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.entourage-page {
+
+  position: relative;
+
+  width: min(100%, 920px);
+
+  margin: 50px auto;
+
+  padding:
+    150px 105px 90px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  /*
+    Warm ivory instead of blue.
+
+    Yellow/gold is now the main visual identity.
+  */
+
+  background:
+    linear-gradient(145deg,
+      #fffdf7 0%,
+      #fffaf0 55%,
+      #fff7df 100%);
+
+  color: var(--ink);
+
+  /*
+    Large architectural arch.
+  */
+
+  border-radius:
+    470px 470px 0 0;
+
+  box-shadow:
+    0 20px 70px rgba(71, 69, 46, .10);
+
+}
+
+
+/* =========================================================
+   ARCH BORDER
+   ========================================================= */
+
+.entourage-arch {
+
+  position: absolute;
+
+  pointer-events: none;
+
+  z-index: 1;
+
+}
+
+
+/*
+   Main gold border
+*/
+
+.entourage-arch-outer {
+
+  top: 18px;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+
+  border:
+    5px solid var(--gold);
+
+  border-radius:
+    445px 445px 0 0;
+
+}
+
+
+/*
+   Secondary blue border
+*/
+
+.entourage-arch-inner {
+
+  top: 33px;
+  right: 33px;
+  bottom: 33px;
+  left: 33px;
+
+  border:
+    2px solid var(--blue);
+
+  border-radius:
+    430px 430px 0 0;
+
+}
+
+
+/*
+   Tiny inner gold line
+*/
+
+.entourage-page::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 43px;
+  right: 43px;
+  bottom: 43px;
+  left: 43px;
+
+  border:
+    1px solid rgba(200, 165, 54, .25);
+
+  border-radius:
+    420px 420px 0 0;
+
+  pointer-events: none;
+
+  z-index: 1;
+
+}
+
+
+/* =========================================================
+   ARCH TOP ORNAMENT
+   ========================================================= */
+
+.arch-top-ornament {
+
+  position: absolute;
+
+  top: 52px;
+  left: 50%;
+
+  transform:
+    translateX(-50%);
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  z-index: 5;
+
+  color: var(--gold);
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 15px;
+
+}
+
+
+.arch-top-ornament span {
+
+  width: 35px;
+
+  height: 1px;
+
+  background:
+    var(--gold);
+
+  opacity: .55;
+
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.entourage-header {
+
+  position: relative;
+
+  z-index: 5;
+
+  text-align: center;
+
+  margin-bottom: 90px;
+
+}
+
+
+.header-small {
+
+  margin: 0 0 12px !important;
+
+  font-family:
+    "DM Sans",
+    sans-serif !important;
+
+  font-size:
+    9px !important;
+
+  font-weight:
+    700 !important;
+
+  letter-spacing:
+    .42em !important;
+
+  color:
+    var(--blue-dark);
+
+}
+
+
+.header-title {
+
+  margin: 0 !important;
+
+  font-family:
+    "Cormorant Garamond",
+    serif !important;
+
+  font-size:
+    56px !important;
+
+  font-weight:
+    500 !important;
+
+  line-height:
+    .9 !important;
+
+  letter-spacing:
+    .04em !important;
+
+  text-transform:
+    uppercase;
+
+  color:
+    var(--gold-dark);
+
+}
+
+
+/* =========================================================
+   HEADER ORNAMENT
+   ========================================================= */
+
+.header-ornament {
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 22px;
+
+}
+
+
+.header-ornament span {
+
+  width: 75px;
+
+  height: 1px;
+
+  background:
+    var(--gold);
+
+  opacity: .55;
+
+}
+
+
+.header-ornament b {
+
+  color:
+    var(--blue-dark);
+
+  font-size:
+    9px;
+
+  font-weight:
+    400;
+
+}
+
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+
+.entourage-section {
+
+  position: relative;
+
+  z-index: 5;
+
+  margin-bottom: 88px;
+
+}
+
+
+/* =========================================================
+   SECTION TITLES
+   ========================================================= */
+
+.entourage-section-title {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 17px;
+
+  margin-bottom: 35px;
+
+}
+
+
+.entourage-section-title>p {
+
+  margin: 0 !important;
+
+  font-family:
+    "DM Sans",
+    sans-serif !important;
+
+  font-size:
+    13px !important;
+
+  font-weight:
+    700 !important;
+
+  letter-spacing:
+    .28em !important;
+
+  text-transform:
+    uppercase;
+
+  color:
+    var(--ink);
+
+}
+
+
+.gold-line {
+
+  width: 65px;
+
+  height: 1px;
+
+  background:
+    var(--gold);
+
+  opacity: .7;
+
+}
+
+
+/* =========================================================
+   PARENTS
+   ========================================================= */
+
+.parent-blessing {
+
+  margin:
+    0 0 36px !important;
+
+  text-align:
+    center;
+
+  font-family:
+    "DM Sans",
+    sans-serif !important;
+
+  font-size:
+    10px !important;
+
+  font-weight:
+    700 !important;
+
+  letter-spacing:
+    .27em !important;
+
+  text-transform:
+    uppercase;
+
+  color:
+    var(--blue-dark);
+
+}
+
+
+.parents-layout {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr auto 1fr;
+
+  align-items:
+    center;
+
+  max-width:
+    650px;
+
+  margin:
+    auto;
+
+}
+
+
+.parent-side {
+
+  text-align:
+    center;
+
+}
+
+
+.small-label {
+
+  margin:
+    0 0 13px !important;
+
+  font-family:
+    "DM Sans",
+    sans-serif !important;
+
+  font-size:
+    9px !important;
+
+  font-weight:
+    700 !important;
+
+  letter-spacing:
+    .24em !important;
+
+  text-transform:
+    uppercase;
+
+  color:
+    var(--gold-dark);
+
+}
+
+
+.names-stack {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  gap:
+    3px;
+
+}
+
+
+.center-divider {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  gap:
+    5px;
+
+  margin:
+    0 35px;
+
+}
+
+
+.center-divider span {
+
+  width:
+    1px;
+
+  height:
+    25px;
+
+  background:
+    var(--gold);
+
+}
+
+
+.center-divider i {
+
+  font-style:
+    normal;
+
+  color:
+    var(--blue-dark);
+
+  font-size:
+    8px;
+
+}
+
+
+/* =========================================================
+   GENERAL NAME
+   ========================================================= */
+
+.entourage-name {
+
+  margin:
+    0 !important;
+
+  font-family:
+    "Cormorant Garamond",
+    serif !important;
+
+  font-size:
+    20px !important;
+
+  font-weight:
+    500 !important;
+
+  line-height:
+    1.05 !important;
+
+  color:
+    var(--ink);
+
+}
+
+
+/* =========================================================
+   PRINCIPAL SPONSORS
+   ========================================================= */
+
+.principal-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr auto 1fr;
+
+  max-width:
+    700px;
+
+  margin:
+    auto;
+
+}
+
+
+.sponsor-group {
+
+  text-align:
+    center;
+
+}
+
+
+.role-title {
+
+  margin:
+    0 !important;
+
+  font-family:
+    "DM Sans",
+    sans-serif !important;
+
+  font-size:
+    12px !important;
+
+  font-weight:
+    700 !important;
+
+  letter-spacing:
+    .35em !important;
+
+  text-transform:
+    uppercase;
+
+  color:
+    var(--gold-dark);
+
+}
+
+
+.gold-short-line {
+
+  width:
+    32px;
+
+  height:
+    2px;
+
+  margin:
+    12px auto 15px;
+
+  background:
+    var(--gold);
+
+}
+
+
+.sponsor-names {
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  /*
+    Tighter than before.
+  */
+
+  gap:
+    5px;
+
+}
+
+
+.vertical-rule {
+
+  width:
+    1px;
+
+  background:
+    var(--line);
+
+  margin:
+    0 35px;
+
+}
+
+
+/* =========================================================
+   SECONDARY SPONSORS
+   ========================================================= */
+
+.secondary-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  max-width:
+    730px;
+
+  margin:
+    auto;
+
+}
+
+
+.secondary-group {
+
+  position:
+    relative;
+
+  text-align:
+    center;
+
+  padding:
+    0 25px;
+
+}
+
+
+.secondary-group+.secondary-group {
+
+  border-left:
+    1px solid var(--line);
+
+}
+
+
+.blue-diamond {
+
+  margin:
+    11px 0 13px;
+
+  color:
+    var(--blue-dark);
+
+  font-size:
+    7px;
+
+}
+
+
+/* =========================================================
+   HONOR ATTENDANTS
+   ========================================================= */
+
+.honor-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr auto 1fr;
+
+  align-items:
+    center;
+
+  max-width:
+    620px;
+
+  margin:
+    auto;
+
+}
+
+
+.honor-person {
+
+  text-align:
+    center;
+
+}
+
+
+.honor-center {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    7px;
+
+  margin:
+    0 35px;
+
+}
+
+
+.honor-center span {
+
+  width:
+    1px;
+
+  height:
+    28px;
+
+  background:
+    var(--gold);
+
+}
+
+
+.honor-center i {
+
+  font-style:
+    normal;
+
+  font-size:
+    8px;
+
+  color:
+    var(--blue-dark);
+
+}
+
+
+/* =========================================================
+   BRIDAL PARTY
+   ========================================================= */
+
+.party-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  column-gap:
+    30px;
+
+  row-gap:
+    13px;
+
+  max-width:
+    690px;
+
+  margin:
+    auto;
+
+  text-align:
+    center;
+
+}
+
+
+/* =========================================================
+   SINGLE NAME
+   ========================================================= */
+
+.single-name {
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+}
+
+
+/* =========================================================
+   CHILDREN
+   ========================================================= */
+
+.children-grid {
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    8px 40px;
+
+  max-width:
+    700px;
+
+  margin:
+    auto;
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.entourage-footer {
+
+  position:
+    relative;
+
+  z-index:
+    5;
+
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  align-items:
+    center;
+
+  gap:
+    14px;
+
+  margin-top:
+    5px;
+
+}
+
+
+.footer-line {
+
+  width:
+    55px;
+
+  height:
+    1px;
+
+  background:
+    var(--gold);
+
+  opacity:
+    .55;
+
+}
+
+
+.entourage-footer p {
+
+  margin:
+    0 !important;
+
+  font-family:
+    "DM Sans",
+    sans-serif !important;
+
+  font-size:
+    7px !important;
+
+  font-weight:
+    700 !important;
+
+  letter-spacing:
+    .35em !important;
+
+  color:
+    var(--blue-dark);
+
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+
+[data-reveal] {
+
+  will-change:
+    opacity,
+    transform;
+
+}
+
+
+.reveal-hidden {
+
+  opacity:
+    0;
+
+  transform:
+    translateY(24px);
+
+}
+
+
+.reveal-visible {
+
+  opacity:
+    1;
+
+  transform:
+    translateY(0);
+
+  transition:
+    opacity .8s ease,
+    transform .8s cubic-bezier(.22,
+      1,
+      .36,
+      1);
+
+}
+
+
+/* =========================================================
+   STAGGER
+   ========================================================= */
+
+.entourage-section .reveal-visible:nth-child(1) {
+
+  transition-delay:
+    .03s;
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 720px) {
+
+  .entourage-page {
+
+    padding:
+      130px 60px 75px;
+
+    border-radius:
+      350px 350px 0 0;
+
+  }
+
+
+  .entourage-arch-outer {
+
+    border-radius:
+      325px 325px 0 0;
+
+  }
+
+
+  .entourage-arch-inner {
+
+    border-radius:
+      310px 310px 0 0;
+
+  }
+
+
+  .header-title {
+
+    font-size:
+      47px !important;
+
+  }
+
+
+  .secondary-grid {
+
+    grid-template-columns:
+      1fr;
+
+    gap:
+      28px;
+
+  }
+
+
+  .secondary-group+.secondary-group {
+
+    border-left:
+      0;
+
+    border-top:
+      1px solid var(--line);
+
+    padding-top:
+      28px;
+
+  }
+
+
+  .party-grid {
+
+    grid-template-columns:
+      repeat(2, 1fr);
+
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .entourage-page {
+
+    width:
+      calc(100% - 20px);
+
+    margin:
+      20px auto;
+
+    padding:
+      105px 32px 60px;
+
+    border-radius:
+      240px 240px 0 0;
+
+  }
+
+
+  .entourage-arch-outer {
+
+    top:
+      12px;
+
+    right:
+      12px;
+
+    bottom:
+      12px;
+
+    left:
+      12px;
+
+    border-width:
+      4px;
+
+    border-radius:
+      220px 220px 0 0;
+
+  }
+
+
+  .entourage-arch-inner {
+
+    top:
+      25px;
+
+    right:
+      25px;
+
+    bottom:
+      25px;
+
+    left:
+      25px;
+
+    border-radius:
+      207px 207px 0 0;
+
+  }
+
+
+  .entourage-page::before {
+
+    top:
+      35px;
+
+    right:
+      35px;
+
+    bottom:
+      35px;
+
+    left:
+      35px;
+
+    border-radius:
+      197px 197px 0 0;
+
+  }
+
+
+  .arch-top-ornament {
+
+    top:
+      38px;
+
+  }
+
+
+  .arch-top-ornament span {
+
+    width:
+      22px;
+
+  }
+
+
+  .entourage-header {
+
+    margin-bottom:
+      65px;
+
+  }
+
+
+  .header-small {
+
+    font-size:
+      8px !important;
+
+    letter-spacing:
+      .30em !important;
+
+  }
+
+
+  .header-title {
+
+    font-size:
+      38px !important;
+
+  }
+
+
+  .header-ornament span {
+
+    width:
+      40px;
+
+  }
+
+
+  .entourage-section {
+
+    margin-bottom:
+      68px;
+
+  }
+
+
+  .entourage-section-title {
+
+    gap:
+      9px;
+
+    margin-bottom:
+      28px;
+
+  }
+
+
+  .entourage-section-title>p {
+
+    font-size:
+      10px !important;
+
+    letter-spacing:
+      .19em !important;
+
+  }
+
+
+  .gold-line {
+
+    width:
+      25px;
+
+  }
+
+
+  .parents-layout {
+
+    grid-template-columns:
+      1fr;
+
+    gap:
+      25px;
+
+  }
+
+
+  .center-divider {
+
+    flex-direction:
+      row;
+
+    margin:
+      0 auto;
+
+  }
+
+
+  .center-divider span {
+
+    width:
+      28px;
+
+    height:
+      1px;
+
+  }
+
+
+  .principal-grid {
+
+    grid-template-columns:
+      1fr;
+
+  }
+
+
+  .vertical-rule {
+
+    width:
+      50px;
+
+    height:
+      1px;
+
+    margin:
+      27px auto;
+
+  }
+
+
+  .secondary-grid {
+
+    gap:
+      25px;
+
+  }
+
+
+  .honor-grid {
+
+    grid-template-columns:
+      1fr;
+
+    gap:
+      25px;
+
+  }
+
+
+  .honor-center {
+
+    margin:
+      0 auto;
+
+  }
+
+
+  .honor-center span {
+
+    width:
+      28px;
+
+    height:
+      1px;
+
+  }
+
+
+  .party-grid {
+
+    grid-template-columns:
+      1fr;
+
+    row-gap:
+      9px;
+
+  }
+
+
+  .children-grid {
+
+    gap:
+      8px 20px;
+
+  }
+
+
+  .entourage-name {
+
+    font-size:
+      19px !important;
+
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .reveal-hidden,
+  .reveal-visible {
+
+    opacity:
+      1 !important;
+
+    transform:
+      none !important;
+
+    transition:
+      none !important;
+
+  }
+
+}

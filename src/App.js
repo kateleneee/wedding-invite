@@ -23,6 +23,7 @@ import FooterMain from "./components/FooterMain";
 import FAQs from "./components/FAQs";
 import EngagementCarousel from "./components/EngagementCarousel";
 import Entourage from "./components/Entourage";
+import Entourage2 from "./components/Entourage2";
 // import AttireGuide from "./components/AttireGuide";
 
 function App() {
@@ -131,6 +132,7 @@ function App() {
           {/* ENTOURAGE */}
           <section id="entourage" className="section entourage-section">
             <Entourage />
+            <Entourage2 />
           </section>
           {/* <section id="entourage" className="section entourage-section">
             <div className="section-label">OUR ENTOURAGE</div>
