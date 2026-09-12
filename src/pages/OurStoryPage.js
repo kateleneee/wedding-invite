@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./OurStoryPage.css";
 import { useNavigate } from "react-router-dom";
-import { Fab, Tooltip } from "@mui/material";
-import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
+// import { Fab, Tooltip } from "@mui/material";
+// import ArrowBackRoundedIcon from "@mui/icons-material/ArrowBackRounded";
 
 // import storyCollege from "../assets/images/CollegeDays/5.jpg";
 // Replace these with your actual photos
@@ -271,7 +271,7 @@ const OurStory = () => {
 
   return (
     <section className="our-story" id="our-story">
-      <Tooltip title="Back" placement="left">
+      {/* <Tooltip title="Back" placement="left">
         <Fab
           aria-label="Back "
           onClick={handleBack}
@@ -301,7 +301,7 @@ const OurStory = () => {
         >
           <ArrowBackRoundedIcon />
         </Fab>
-      </Tooltip>
+      </Tooltip> */}
       <div className="story-shell">
 
         {/* Header */}
@@ -422,6 +422,16 @@ const OurStory = () => {
 
               <div className="story-heart">♡</div>
               <p>To DJ.</p>
+
+              <div className="our-story-back">
+                <button
+                  className="our-story-back-button"
+                  onClick={() => navigate("/")}
+                >
+                  <span className="back-arrow">←</span>
+                  Back to Our Invitation
+                </button>
+              </div>
             </div>
           )}
 
@@ -468,16 +478,6 @@ const OurStory = () => {
             →
           </button>
 
-        </div>
-
-        <div className="our-story-back">
-          <button
-            className="our-story-back-button"
-            onClick={() => navigate("/")}
-          >
-            <span className="back-arrow">←</span>
-            Back to Our Invitation
-          </button>
         </div>
       </div>
     </section>
