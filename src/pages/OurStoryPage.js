@@ -470,6 +470,15 @@ const OurStory = () => {
 
         </div>
 
+        <div className="our-story-back">
+          <button
+            className="our-story-back-button"
+            onClick={() => navigate("/")}
+          >
+            <span className="back-arrow">←</span>
+            Back to Our Invitation
+          </button>
+        </div>
       </div>
     </section>
   );

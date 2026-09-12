@@ -773,3 +773,84 @@
     animation: none;
   }
 }
+
+/* =========================================================
+   BACK TO INVITATION
+========================================================= */
+
+.our-story-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 4rem 1.5rem 5rem;
+}
+
+.our-story-back-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+
+  padding: 0.85rem 1.8rem;
+
+  border: 1px solid rgba(164, 136, 81, 0.5);
+  border-radius: 999px;
+
+  background: transparent;
+
+  color: #5e7690;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.our-story-back-button:hover {
+  background: #5e7690;
+  border-color: #5e7690;
+
+  color: #fff;
+
+  transform: translateY(-2px);
+}
+
+.back-arrow {
+  font-size: 1rem;
+  line-height: 1;
+
+  transition: transform 0.3s ease;
+}
+
+.our-story-back-button:hover .back-arrow {
+  transform: translateX(-4px);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .our-story-back {
+    padding: 3rem 1rem 4rem;
+  }
+
+  .our-story-back-button {
+    padding: 0.8rem 1.4rem;
+
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+  }
+}
