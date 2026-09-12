@@ -33,10 +33,12 @@ function Invitation() {
   return (
     <div className="invitation">
       <p className="invitation-title">You are invited!</p>
-
       <p className="invitation-message">
         <span>
-          Together with our families, we joyfully invite you to join us,
+          We, DJ and Kaye,
+        </span>
+        <span>
+          together with our families, joyfully invite you to join us,
         </span>
         <span>
           as we celebrate our love, our marriage, and our future together.

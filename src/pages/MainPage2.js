@@ -83,7 +83,6 @@ function MainPage() {
       </section>
 
 
-
       {/* STORY */}
       <section id="journey">
         <ThroughTheYears />

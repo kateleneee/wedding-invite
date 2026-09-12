@@ -209,6 +209,7 @@ export default function ResponsiveAppBar() {
                 sx={{
                   borderRadius: 2,
                   px: 2,
+                  py: 0.25,
                   "&:hover": {
                     backgroundColor: "rgba(220, 235, 243, 0.65)",
                   },
