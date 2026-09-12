@@ -18,6 +18,9 @@ const GalleryPreview2 = () => {
 
   return (
     <section className="photo-preview-section">
+      <p className="photo-preview-title">
+        OUR PRENUP GALLERY
+      </p>
       <div
         className="photo-preview-frame"
         onClick={handleGalleryClick}
@@ -43,11 +46,11 @@ const GalleryPreview2 = () => {
             </p> */}
 
 
-            <h2>PRENUP</h2>
+            <h2>PRENUP PHOTOS</h2>
             <span className="photo-preview-line"></span>
 
             <p className="photo-preview-subtitle">
-              Click to see more photos
+              Click to see photos from our shoot
             </p>
           </div>
         </div>

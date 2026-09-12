@@ -4,7 +4,7 @@
 
 .photo-preview-section {
   width: 100%;
-  height: 75vh;
+  /* height: 75vh; */
 
   padding: 30px 20px;
   box-sizing: border-box;
@@ -12,10 +12,24 @@
   background: #fff3bd;
 
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 
   overflow: hidden;
+}
+
+.photo-preview-title {
+  margin: 0 0 2rem;
+
+  color: #3d3935;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: 1.1;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 
@@ -219,7 +233,7 @@
 
   color: #fff;
 
-  white-space: nowrap;
+  white-space: wrap;
 
   text-shadow:
     0 2px 10px rgba(0, 0, 0, 0.28);
@@ -337,9 +351,14 @@
 
 @media (max-width: 768px) {
   .photo-preview-section {
-    height: 75vh;
+    /* height: 75vh; */
 
     padding: 25px 15px;
+  }
+
+  .photo-preview-title {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
   }
 
   .photo-preview-frame {

@@ -11,7 +11,7 @@ function Landing({
   weddingDate = `${weddingData.date.date} · ${monthAbbreviation} · ${weddingData.date.year}`,
 }) {
   return (
-    <section id="home" className=" landing-section">
+    <section className=" landing-section">
       <div className="landing-overlay" aria-hidden="true" />
       <div className="landing-frame" aria-hidden="true" />
 

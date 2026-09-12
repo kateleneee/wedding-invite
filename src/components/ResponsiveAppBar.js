@@ -19,16 +19,17 @@ import CloseIcon from "@mui/icons-material/Close";
 
 const menuItems = [
   { label: "Home", id: "home" },
-  { label: "Wedding", id: "wedding" },
-  { label: "Venues", id: "venues" },
-  { label: "Our Journey", id: "story" },
-  { label: "Gallery", id: "gallery" },
-  { label: "Timeline", id: "timeline" },
+  { label: "Invitation", id: "invitation" },
+  { label: "Journey", id: "journey" },
+  // { label: "Engagement", id: "engagement" },
+  { label: "Prenup Gallery", id: "gallery" },
+  { label: "Songs", id: "playlist" },
+  { label: "Event Details", id: "event-details" },
   { label: "Entourage", id: "entourage" },
-  { label: "Our Songs", id: "playlist" },
-  { label: "RSVP", id: "rsvp" },
-  { label: "Gift Guide", id: "gifts" },
+  { label: "Timeline", id: "timeline" },
   { label: "FAQs", id: "faqs" },
+  { label: "Gift Guide", id: "gifts" },
+  { label: "RSVP", id: "rsvp" },
 ];
 
 export default function ResponsiveAppBar() {

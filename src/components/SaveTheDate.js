@@ -60,7 +60,7 @@ function DateCard({ image, number, label, alt }) {
 
 export default function SaveTheDate() {
   return (
-    <section className="wedding-date" id="wedding">
+    <section className="wedding-date">
       <Invitation />
 
       <div className="date-images">

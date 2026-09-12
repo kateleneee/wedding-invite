@@ -388,7 +388,7 @@ const ThroughTheYears = () => {
 
 
   return (
-    <section className="our-story-section" id="our-story">
+    <section className="our-story-section">
 
       {/* =====================================
           DECORATIVE ELEMENTS

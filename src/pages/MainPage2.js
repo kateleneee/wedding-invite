@@ -73,40 +73,27 @@ function MainPage() {
       <ResponsiveAppBar />
 
       {/* LANDING */}
-      <Landing coverImage={CoverImage} />
+      <section id="home">
+        <Landing coverImage={CoverImage} />
+      </section>
 
       {/* SAVE THE DATE */}
-      <SaveTheDate />
+      <section id="invitation">
+        <SaveTheDate />
+      </section>
 
-      {/* VENUE */}
-      <Venues />
+
 
       {/* STORY */}
-      <section id="story">
+      <section id="journey">
         <ThroughTheYears />
-        {/* <Engagement /> */}
         <EngagementCarousel />
-        {/* <Carousel /> */}
       </section>
 
       {/* GALLERY */}
       <section id="gallery">
-        <FloralVideo />
-        {/* <CinematicVideo /> */}
-        {/* <PhotoGallery /> */}
         <GalleryPreview2 />
-      </section>
-
-
-      {/* TIMELINE */}
-      <section id="timeline">
-        <WeddingTimelineScroll />
-      </section>
-
-      {/* ENTOURAGE */}
-      <section id="entourage" >
-        <Entourage />
-        <Entourage2 />
+        <FloralVideo />
       </section>
 
       {/* WEDDING PLAYLIST */}
@@ -114,20 +101,34 @@ function MainPage() {
         <WeddingPlaylist />
       </section>
 
+      {/* EVENT DETAILS */}
+      <section id="event-details">
+        {/* ATTIRE GUIDE */}
 
-      {/* ATTIRE GUIDE */}
-      {/* <AttireGuide /> */}
+        {/* VENUES */}
+        <Venues />
+      </section>
 
-      {/* RSVP */}
-      <RSVP />
+      {/* ENTOURAGE */}
+      <section id="entourage" >
+        <Entourage2 />
+      </section>
 
-      {/* GIFTS */}
-      <Gifts />
+      {/* TIMELINE */}
+      <section id="timeline">
+        <WeddingTimelineScroll />
+      </section>
 
       {/* FAQs */}
       <section id="faqs">
         <FAQs />
       </section>
+
+      {/* GIFTS */}
+      <Gifts />
+
+      {/* RSVP */}
+      <RSVP />
 
       {/* FOOTER */}
       <FooterMain />
