@@ -23,9 +23,9 @@ const GalleryPage = () => {
 
   return (
     <div className="gallery-page">
-      <Tooltip title="Back to envelope" placement="left">
+      <Tooltip title="Back" placement="left">
         <Fab
-          aria-label="Back to envelope"
+          aria-label="Back "
           onClick={handleBack}
           sx={{
             position: "fixed",

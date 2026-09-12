@@ -22,6 +22,7 @@ import EngagementCarousel from "../components/EngagementCarousel";
 import Entourage2 from "../components/Entourage2";
 import GalleryPreview2 from "../components/GalleryPreview2";
 // import AttireGuide from "./components/AttireGuide";
+import OurStoryPreview from "../components/OurStoryPreview";
 import { useNavigate } from "react-router-dom";
 
 function MainPage() {
@@ -86,6 +87,7 @@ function MainPage() {
       {/* STORY */}
       <section id="journey">
         <ThroughTheYears />
+        <OurStoryPreview />
         <EngagementCarousel />
       </section>
 

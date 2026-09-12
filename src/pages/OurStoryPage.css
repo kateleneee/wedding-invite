@@ -1,0 +1,775 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap");
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.our-story {
+  --story-blue: #5e7690;
+  --story-dark: #35454a;
+  --story-text: #66757a;
+  --story-gold: #a48851;
+  --story-gold-light: #cbb76a;
+  --story-cream: #fffaf0;
+  --story-blue-light: #eef6f8;
+
+  width: 100%;
+  padding: clamp(5rem, 10vw, 9rem) 1.5rem;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(circle at 15% 10%,
+      rgba(228, 240, 245, 0.9),
+      transparent 35%),
+    radial-gradient(circle at 90% 80%,
+      rgba(255, 247, 214, 0.7),
+      transparent 35%),
+    var(--story-cream);
+
+  color: var(--story-dark);
+}
+
+
+/* =========================================================
+   SHELL
+========================================================= */
+
+.story-shell {
+  width: min(100%, 1000px);
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.story-header {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 6vw, 5rem);
+}
+
+.story-kicker {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  color: var(--story-gold);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+}
+
+.story-header h2 {
+  margin: 0;
+
+  color: var(--story-blue);
+
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(4rem, 9vw, 7rem);
+  font-weight: 400;
+
+  line-height: 0.9;
+}
+
+.story-header h2 span {
+  color: var(--story-gold);
+}
+
+.story-header p {
+  max-width: 480px;
+  margin: 1.5rem auto 0;
+
+  color: var(--story-text);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   STORY COVER
+========================================================= */
+
+.story-cover {
+  position: relative;
+
+  width: 100%;
+  height: min(65vh, 560px);
+
+  overflow: hidden;
+
+  margin-bottom: 3rem;
+
+  background: #dcebf0;
+}
+
+.story-cover img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  filter: brightness(0.72);
+
+  transition: transform 1s ease;
+}
+
+.story-cover:hover img {
+  transform: scale(1.025);
+}
+
+.story-cover-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem;
+
+  box-sizing: border-box;
+
+  color: white;
+  text-align: center;
+
+  background:
+    linear-gradient(to bottom,
+      rgba(35, 50, 55, 0.08),
+      rgba(35, 50, 55, 0.5));
+}
+
+.story-cover-overlay>span {
+  margin-bottom: 1.5rem;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 500;
+
+  letter-spacing: 0.35em;
+}
+
+.story-cover-overlay strong {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 300;
+
+  line-height: 0.9;
+}
+
+.story-cover-overlay small {
+  margin-top: 0.5rem;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.story-cover-divider {
+  width: 35px;
+  height: 1px;
+
+  margin: 1.5rem 0;
+
+  background: rgba(255, 255, 255, 0.7);
+}
+
+
+/* =========================================================
+   CHAPTER NAVIGATION
+========================================================= */
+
+.story-chapters {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  margin-bottom: 5rem;
+
+  padding-bottom: 1rem;
+
+  overflow-x: auto;
+
+  scrollbar-width: none;
+}
+
+.story-chapters::-webkit-scrollbar {
+  display: none;
+}
+
+.story-chapter {
+  flex: 0 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  gap: 0.3rem;
+
+  padding: 0.5rem 1rem;
+
+  border: 0;
+
+  border-left: 1px solid rgba(164, 136, 81, 0.25);
+
+  background: transparent;
+
+  color: #9ba5a8;
+
+  cursor: pointer;
+
+  text-align: left;
+
+  transition:
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.story-chapter span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+}
+
+.story-chapter strong {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.story-chapter:hover {
+  color: var(--story-blue);
+}
+
+.story-chapter.active {
+  color: var(--story-gold);
+  border-color: var(--story-gold);
+}
+
+
+/* =========================================================
+   STORY CONTENT
+========================================================= */
+
+.story-content {
+  width: min(100%, 720px);
+  margin: 0 auto;
+
+  animation: storyFade 0.5s ease;
+}
+
+@keyframes storyFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   CHAPTER HEADING
+========================================================= */
+
+.story-chapter-heading {
+  text-align: center;
+
+  margin-bottom: 3rem;
+}
+
+.story-chapter-number {
+  display: block;
+
+  margin-bottom: 1rem;
+
+  color: var(--story-gold);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.6rem;
+  font-weight: 500;
+
+  letter-spacing: 0.3em;
+}
+
+.story-chapter-heading h3 {
+  margin: 0;
+
+  color: var(--story-dark);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.7rem, 6vw, 4.5rem);
+  font-weight: 300;
+
+  line-height: 0.95;
+}
+
+.story-chapter-heading p {
+  margin: 1rem 0 0;
+
+  color: var(--story-gold);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.15rem;
+  font-style: italic;
+}
+
+
+/* =========================================================
+   QUOTE
+========================================================= */
+
+.story-quote {
+  position: relative;
+
+  margin: 0 auto 3rem;
+
+  padding: 2rem 2.5rem;
+
+  color: var(--story-blue);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  font-style: italic;
+  font-weight: 400;
+
+  line-height: 1.25;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(164, 136, 81, 0.35);
+  border-bottom: 1px solid rgba(164, 136, 81, 0.35);
+}
+
+.story-quote span {
+  color: var(--story-gold);
+  font-size: 2rem;
+}
+
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.story-badge {
+  width: fit-content;
+
+  margin: -1rem auto 2.5rem;
+  padding: 0.45rem 1rem;
+
+  color: var(--story-gold);
+
+  border: 1px solid rgba(164, 136, 81, 0.35);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.55rem;
+  font-weight: 500;
+
+  letter-spacing: 0.15em;
+}
+
+
+/* =========================================================
+   STORY TEXT
+========================================================= */
+
+.story-text p {
+  margin: 0 0 1.5rem;
+
+  color: var(--story-text);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(1.15rem, 2vw, 1.35rem);
+  font-weight: 400;
+
+  line-height: 1.7;
+}
+
+.story-text p:first-child::first-letter {
+  color: var(--story-gold);
+
+  float: left;
+
+  margin: 0.1rem 0.45rem 0 0;
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 4rem;
+  font-weight: 500;
+
+  line-height: 0.75;
+}
+
+
+/* =========================================================
+   ENDING
+========================================================= */
+
+.story-ending {
+  margin-top: 5rem;
+  padding: 5rem 1rem;
+
+  text-align: center;
+
+  border-top: 1px solid rgba(164, 136, 81, 0.3);
+}
+
+.story-ending>span {
+  color: var(--story-gold);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+}
+
+.story-ending h3 {
+  margin: 1.5rem 0;
+
+  color: var(--story-blue);
+
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 300;
+
+  line-height: 1;
+}
+
+.story-heart {
+  color: var(--story-gold);
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: 3rem;
+}
+
+.story-ending p {
+  margin: 0.5rem 0 0;
+
+  color: var(--story-gold);
+  font-family: "Cormorant Garamond", serif;
+  font-style: oblique;
+  font-weight: 700;
+  /* font-family: "Great Vibes", cursive; */
+  font-size: 3rem;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.story-navigation {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  margin-top: 4rem;
+}
+
+.story-nav-button {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--story-blue);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.story-nav-button:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.story-nav-button:not(:disabled):hover {
+  color: var(--story-gold);
+}
+
+
+/* =========================================================
+   PROGRESS
+========================================================= */
+
+.story-progress {
+  flex: 1;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.75rem;
+
+  max-width: 300px;
+
+  color: #9ba5a8;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+}
+
+.story-progress>div {
+  flex: 1;
+
+  height: 1px;
+
+  background: rgba(53, 69, 74, 0.15);
+}
+
+.story-progress i {
+  display: block;
+
+  height: 100%;
+
+  background: var(--story-gold);
+
+  transition: width 0.4s ease;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .our-story {
+    padding: 5rem 1.25rem;
+  }
+
+  .story-cover {
+    height: min(60vh, 500px);
+  }
+
+  .story-chapters {
+    margin-bottom: 4rem;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .our-story {
+    padding: 4rem 1rem;
+  }
+
+  .story-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .story-kicker {
+    font-size: 0.55rem;
+    letter-spacing: 0.22em;
+  }
+
+  .story-header h2 {
+    font-size: clamp(3.4rem, 17vw, 5rem);
+  }
+
+  .story-header p {
+    max-width: 320px;
+
+    margin-top: 1.25rem;
+
+    font-size: 1rem;
+  }
+
+
+  /* Cover */
+
+  .story-cover {
+    height: 440px;
+
+    margin-bottom: 2rem;
+  }
+
+  .story-cover-overlay {
+    padding: 1.5rem;
+  }
+
+  .story-cover-overlay>span {
+    font-size: 0.55rem;
+    letter-spacing: 0.25em;
+  }
+
+  .story-cover-overlay strong {
+    font-size: 2.7rem;
+  }
+
+
+  /* Chapters */
+
+  .story-chapters {
+    margin: 0 -1rem 3rem;
+    padding: 0 1rem 0.75rem;
+
+    gap: 0.25rem;
+  }
+
+  .story-chapter {
+    padding: 0.4rem 0.7rem;
+  }
+
+  .story-chapter strong {
+    font-size: 0.9rem;
+  }
+
+
+  /* Content */
+
+  .story-chapter-heading {
+    margin-bottom: 2rem;
+  }
+
+  .story-chapter-number {
+    font-size: 0.52rem;
+  }
+
+  .story-chapter-heading h3 {
+    font-size: clamp(2.4rem, 12vw, 3.5rem);
+  }
+
+  .story-chapter-heading p {
+    font-size: 1rem;
+  }
+
+
+  /* Quote */
+
+  .story-quote {
+    margin-bottom: 2rem;
+
+    padding: 1.5rem 1rem;
+
+    font-size: 1.4rem;
+  }
+
+
+  /* Text */
+
+  .story-text p {
+    margin-bottom: 1.25rem;
+
+    font-size: 1.12rem;
+    line-height: 1.65;
+  }
+
+  .story-text p:first-child::first-letter {
+    font-size: 3.3rem;
+  }
+
+
+  /* Ending */
+
+  .story-ending {
+    margin-top: 3.5rem;
+    padding: 3.5rem 0;
+  }
+
+  .story-ending h3 {
+    font-size: 2.7rem;
+  }
+
+  .story-ending p {
+    font-size: 2.7rem;
+  }
+
+
+  /* Navigation */
+
+  .story-navigation {
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+
+  .story-nav-button {
+    font-size: 0.55rem;
+  }
+
+  .story-nav-button span {
+    display: none;
+  }
+
+  .story-progress {
+    max-width: 180px;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+  .our-story {
+    padding: 3.5rem 0.85rem;
+  }
+
+  .story-cover {
+    height: 390px;
+  }
+
+  .story-cover-overlay strong {
+    font-size: 2.35rem;
+  }
+
+  .story-chapter-heading h3 {
+    font-size: 2.25rem;
+  }
+
+  .story-text p {
+    font-size: 1.05rem;
+  }
+
+  .story-quote {
+    font-size: 1.25rem;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .story-cover img,
+  .story-content,
+  .story-progress i {
+    transition: none;
+    animation: none;
+  }
+}
