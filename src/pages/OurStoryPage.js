@@ -236,9 +236,9 @@ const OurStory = () => {
 
   const chapter = chapters[activeChapter];
 
-  const handleBack = () => {
-    navigate(-1);
-  };
+  // const handleBack = () => {
+  //   navigate(-1);
+  // };
 
   const goToChapter = (index) => {
     setActiveChapter(index);
@@ -426,7 +426,7 @@ const OurStory = () => {
               <div className="our-story-back">
                 <button
                   className="our-story-back-button"
-                  onClick={() => navigate("/")}
+                  onClick={() => navigate(-1)}
                 >
                   <span className="back-arrow">←</span>
                   Back to Our Invitation
