@@ -9,48 +9,48 @@ import mainColorPalette from "../assets/images/main-color-palette.png";
    PALETTE COMPONENT
 ========================================================= */
 
-const ColorPalette = ({ colors }) => {
-  return (
-    <div className="color-palette">
-      {colors.map((color, index) => (
-        <div className="palette-item" key={index}>
-          <div
-            className="palette-arch"
-            style={{ backgroundColor: color.value }}
-          />
+// const ColorPalette = ({ colors }) => {
+//   return (
+//     <div className="color-palette">
+//       {colors.map((color, index) => (
+//         <div className="palette-item" key={index}>
+//           <div
+//             className="palette-arch"
+//             style={{ backgroundColor: color.value }}
+//           />
 
-          <span className="palette-name">
-            {color.name}
-          </span>
-        </div>
-      ))}
-    </div>
-  );
-};
+//           <span className="palette-name">
+//             {color.name}
+//           </span>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
 
 /* =========================================================
    ATTIRE GUIDE
 ========================================================= */
 
 const AttireGuide = () => {
-  const colors = [
-    {
-      name: "Powder Blue",
-      value: "#DCEBF0",
-    },
-    {
-      name: "Dusty Blue",
-      value: "#9BB7C5",
-    },
-    {
-      name: "Champagne",
-      value: "#E8D9B5",
-    },
-    {
-      name: "Soft Yellow",
-      value: "#FFF1B8",
-    },
-  ];
+  // const colors = [
+  //   {
+  //     name: "Powder Blue",
+  //     value: "#DCEBF0",
+  //   },
+  //   {
+  //     name: "Dusty Blue",
+  //     value: "#9BB7C5",
+  //   },
+  //   {
+  //     name: "Champagne",
+  //     value: "#E8D9B5",
+  //   },
+  //   {
+  //     name: "Soft Yellow",
+  //     value: "#FFF1B8",
+  //   },
+  // ];
 
   return (
     <main className="attire-page">
