@@ -524,32 +524,6 @@ button {
 }
 
 /* =========================
-   ENTOURAGE
-========================= */
-
-.entourage-section {
-  background: var(--blue);
-}
-
-.entourage-list {
-  max-width: 800px;
-  margin: 60px auto 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-}
-
-.entourage-group h3 {
-  font-family: "Cormorant Garamond";
-  font-size: 24px;
-  margin-bottom: 5px;
-}
-
-.entourage-group p {
-  margin: 0;
-}
-
-/* =========================
    GALLERY
 ========================= */
 

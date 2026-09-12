@@ -95,10 +95,10 @@ export default function WeddingPlaylist() {
               component="h3"
               className="section-title"
             >
-              Songs for{" "}
+              Songs That Sound Like{" "}
 
               <Box component="em">
-                Forever
+                Us
               </Box>
             </Typography>
 
